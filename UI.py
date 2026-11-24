@@ -1,8 +1,11 @@
-import utils
-import tkinter as tk
-from PIL import Image, ImageTk
 import os
 import sys
+import tkinter as tk
+from collections.abc import Callable
+
+from PIL import Image, ImageTk
+
+import utils
 
 # VAR GLOBALI
 
@@ -17,9 +20,9 @@ sec_testo = "testo"
 root = None     # finestra principale
 larghezza_max_contenuto = 980   # larghezza massima della colonna centrale
 
-dati_pagina = {}
-dati_img = {}
-dati_testo = {}
+dati_pagina: dict = {}
+dati_img: dict = {}
+dati_testo: dict = {}
 
 # ---------------- TEMI ---------------- #
 
@@ -141,47 +144,53 @@ def pulisci_finestra(finestra):
         widget.destroy()
 
 
-def bottone(contenitore, testo, comando, stile="primario", font=None, padx=18, pady=8):
+class Bottone(tk.Label):
     """Bottone piatto con effetto hover. stile: primario, secondario, successo, errore"""
-    colori = {
-        "primario": (C["primario"], C["primario_hover"], C["testo_primario"]),
-        "secondario": (C["secondario"], C["secondario_hover"], C["testo"]),
-        "successo": (C["successo"], C["successo"], C["testo_primario"]),
-        "errore": (C["errore"], C["errore"], C["testo_primario"]),
-    }
-    bg, bg_hover, fg = colori.get(stile, colori["primario"])
 
-    btn = tk.Label(
-        contenitore, text=testo, bg=bg, fg=fg,
-        font=font or font_testo(0, "bold"),
-        padx=padx, pady=pady, cursor="hand2",
-    )
-    btn._abilitato = True
+    def __init__(self, contenitore, testo, comando, stile="primario", font=None, padx=18, pady=8):
+        colori = {
+            "primario": (C["primario"], C["primario_hover"], C["testo_primario"]),
+            "secondario": (C["secondario"], C["secondario_hover"], C["testo"]),
+            "successo": (C["successo"], C["successo"], C["testo_primario"]),
+            "errore": (C["errore"], C["errore"], C["testo_primario"]),
+        }
+        self._bg, self._bg_hover, self._fg = colori.get(stile, colori["primario"])
 
-    def on_enter(_):
-        if btn._abilitato:
-            btn.config(bg=bg_hover)
+        super().__init__(
+            contenitore, text=testo, bg=self._bg, fg=self._fg,
+            font=font or font_testo(0, "bold"),
+            padx=padx, pady=pady, cursor="hand2",
+        )
+        self.comando = comando
+        self.abilitato = True
 
-    def on_leave(_):
-        if btn._abilitato:
-            btn.config(bg=bg)
+        self.bind("<Enter>", self._on_enter)
+        self.bind("<Leave>", self._on_leave)
+        self.bind("<ButtonRelease-1>", self._on_click)
 
-    def on_click(_):
-        if btn._abilitato and comando:
-            comando()
+    def _on_enter(self, _):
+        if self.abilitato:
+            self.config(bg=self._bg_hover)
 
-    def set_abilitato(stato):
-        btn._abilitato = stato
+    def _on_leave(self, _):
+        if self.abilitato:
+            self.config(bg=self._bg)
+
+    def _on_click(self, _):
+        if self.abilitato and self.comando:
+            self.comando()
+
+    def set_abilitato(self, stato):
+        self.abilitato = stato
         if stato:
-            btn.config(bg=bg, fg=fg, cursor="hand2")
+            self.config(bg=self._bg, fg=self._fg, cursor="hand2")
         else:
-            btn.config(bg=C["secondario"], fg=C["testo_secondario"], cursor="arrow")
+            self.config(bg=C["secondario"], fg=C["testo_secondario"], cursor="arrow")
 
-    btn.set_abilitato = set_abilitato
-    btn.bind("<Enter>", on_enter)
-    btn.bind("<Leave>", on_leave)
-    btn.bind("<ButtonRelease-1>", on_click)
-    return btn
+
+def bottone(contenitore, testo, comando, stile="primario", font=None, padx=18, pady=8):
+    """Scorciatoia per creare un Bottone."""
+    return Bottone(contenitore, testo, comando, stile, font, padx, pady)
 
 
 def card(contenitore, padx=24, pady=20):
@@ -253,6 +262,10 @@ class Opzione(tk.Frame):
             return bool(self.var.get())
         return self.var.get() == self.valore
 
+    def clicca(self):
+        """Come un click del mouse (usato dalle scorciatoie 1-9)."""
+        self._click(None)
+
     def _click(self, _):
         if self.bloccata:
             return
@@ -299,10 +312,7 @@ class Opzione(tk.Frame):
         esito = ""
         colore_esito = C["testo"]
 
-        if self.stato == "corretta":
-            bordo, sfondo, colore_ind = C["successo"], C["successo_bg"], C["successo"]
-            esito, colore_esito = "✓", C["successo"]
-        elif self.stato == "mancata":
+        if self.stato == "corretta" or self.stato == "mancata":
             bordo, sfondo, colore_ind = C["successo"], C["successo_bg"], C["successo"]
             esito, colore_esito = "✓", C["successo"]
         elif self.stato == "errata":
@@ -329,18 +339,23 @@ def crea_widget_immagine(contenitore, percorso_file, larghezza_max=300, altezza_
 
         foto_tk = ImageTk.PhotoImage(img_originale)
 
-        lbl_img = tk.Label(contenitore, image=foto_tk, bg=C["card"], bd=0)
+        return LabelImmagine(contenitore, foto_tk, bg=C["card"], bd=0)
 
-        lbl_img.image = foto_tk
-        return lbl_img
-
-    except Exception as e:
+    except (OSError, ValueError) as e:  # file illeggibile o formato non supportato
         print(f"Errore caricamento: {e}")
         return tk.Label(contenitore, text="Errore Immagine", bg=C["card"], fg=C["errore"])
 
 
+class LabelImmagine(tk.Label):
+    """Label che tiene un riferimento all'immagine, altrimenti il garbage collector la cancella."""
+
+    def __init__(self, contenitore, immagine, **kwargs):
+        super().__init__(contenitore, image=immagine, **kwargs)
+        self.immagine = immagine
+
+
 # Rubata da stack overflow (e poi sistemata):
-_scrollabili = []   # tutte le ScrollableFrame create (per smistare la rotella del mouse)
+_scrollabili: list["ScrollableFrame"] = []   # tutte le ScrollableFrame create (per smistare la rotella del mouse)
 
 
 def _rotella_globale(event):
@@ -352,7 +367,7 @@ def _rotella_globale(event):
         return
     try:
         w = event.widget.winfo_containing(event.x_root, event.y_root)
-    except Exception:
+    except (AttributeError, tk.TclError):  # event.widget può essere una stringa o un widget distrutto
         w = None
     while w is not None:
         if w in _scrollabili:
@@ -365,7 +380,8 @@ def _rotella_globale(event):
 class ScrollableFrame(tk.Frame):
     def __init__(self, container, *args, sfondo="sfondo", **kwargs):
         super().__init__(container, *args, **kwargs)
-        self.on_resize = None   # funzione(larghezza) chiamata quando cambia la larghezza
+        # funzione(larghezza) chiamata quando cambia la larghezza
+        self.on_resize: Callable[[int], None] | None = None
         self.sfondo = sfondo    # chiave del colore di sfondo nel tema
 
         # 1. Canvas e Scrollbar
@@ -460,7 +476,7 @@ class PannelloDomande(tk.Frame):
         super().__init__(contenitore)
         self.on_click = on_click
         self.on_marca = on_marca
-        self.caselle = []
+        self.caselle: list[_Casella] = []
 
         self.separatore = tk.Frame(self, width=1)
         self.separatore.pack(side="right", fill="y")
@@ -492,25 +508,8 @@ class PannelloDomande(tk.Frame):
 
     def _crea_caselle(self, n):
         for c in self.caselle:
-            c["bordo"].destroy()
-        self.caselle = []
-
-        tasto_destro = ["<Button-3>"] + (["<Button-2>"] if sys.platform == "darwin" else [])
-        for i in range(n):
-            bordo = tk.Frame(self.griglia, cursor="hand2")
-            bordo.grid(row=i // self.colonne, column=i % self.colonne, padx=3, pady=3)
-            numero = tk.Label(bordo, text=str(i + 1), width=4, pady=4)
-            numero.pack(padx=2, pady=2)
-            flag = tk.Label(numero, text="⚑", bd=0, padx=0, pady=0)
-            casella = {"bordo": bordo, "numero": numero, "flag": flag, "colore_bordo": None}
-
-            for w in (bordo, numero, flag):
-                w.bind("<ButtonRelease-1>", lambda _, i=i: self.on_click and self.on_click(i))
-                for seq in tasto_destro:
-                    w.bind(seq, lambda _, i=i: self.on_marca and self.on_marca(i))
-                w.bind("<Enter>", lambda _, c=casella: c["bordo"].config(bg=C["testo_secondario"]))
-                w.bind("<Leave>", lambda _, c=casella: c["bordo"].config(bg=c["colore_bordo"]))
-            self.caselle.append(casella)
+            c.bordo.destroy()
+        self.caselle = [_Casella(self, i) for i in range(n)]
 
     def _applica_tema(self):
         for w in (self, self.header, self.riga_stats, self.griglia):
@@ -541,22 +540,16 @@ class PannelloDomande(tk.Frame):
         conteggi = {"corretta": 0, "parziale": 0, "errata": 0, "marcata": 0}
 
         for i, (esito, marcata) in enumerate(stati):
-            c = self.caselle[i]
             bg, fg = stili.get(esito, stili[None])
             if i == corrente:
-                c["colore_bordo"] = C["primario"]
+                colore_bordo = C["primario"]
             elif marcata:
-                c["colore_bordo"] = C["marcata"]
+                colore_bordo = C["marcata"]
             else:
-                c["colore_bordo"] = bg
-            c["bordo"].config(bg=c["colore_bordo"])
-            c["numero"].config(bg=bg, fg=fg, font=font_info("bold"))
-            c["flag"].config(bg=bg, fg=C["marcata"], font=font_piccolo(""))
+                colore_bordo = bg
+            self.caselle[i].aggiorna(bg, fg, colore_bordo, marcata)
             if marcata:
-                c["flag"].place(relx=1.0, rely=0.0, anchor="ne")
                 conteggi["marcata"] += 1
-            else:
-                c["flag"].place_forget()
             if esito in conteggi:
                 conteggi[esito] += 1
 
@@ -586,10 +579,57 @@ class PannelloDomande(tk.Frame):
         totale = sf.winfo_height()
         if totale <= 1:
             return
-        b = self.caselle[i]["bordo"]
+        b = self.caselle[i].bordo
         y = b.winfo_rooty() - sf.winfo_rooty()
         h = b.winfo_height()
         alto, basso = self.scroll.canvas.yview()
         if y < alto * totale or y + h > basso * totale:
             vista = self.scroll.canvas.winfo_height()
             self.scroll.canvas.yview_moveto(max(0.0, (y + h / 2 - vista / 2) / totale))
+
+
+class _Casella:
+    """Un numero nella griglia del PannelloDomande."""
+
+    def __init__(self, pannello, i):
+        self.pannello = pannello
+        self.i = i
+        self.colore_bordo = C["sfondo"]
+
+        self.bordo = tk.Frame(pannello.griglia, cursor="hand2")
+        self.bordo.grid(row=i // pannello.colonne, column=i % pannello.colonne, padx=3, pady=3)
+        self.numero = tk.Label(self.bordo, text=str(i + 1), width=4, pady=4)
+        self.numero.pack(padx=2, pady=2)
+        self.flag = tk.Label(self.numero, text="⚑", bd=0, padx=0, pady=0)
+
+        tasto_destro = ["<Button-3>"] + (["<Button-2>"] if sys.platform == "darwin" else [])
+        for w in (self.bordo, self.numero, self.flag):
+            w.bind("<ButtonRelease-1>", self._click)
+            for seq in tasto_destro:
+                w.bind(seq, self._marca)
+            w.bind("<Enter>", self._entra)
+            w.bind("<Leave>", self._esci)
+
+    def _click(self, _):
+        if self.pannello.on_click:
+            self.pannello.on_click(self.i)
+
+    def _marca(self, _):
+        if self.pannello.on_marca:
+            self.pannello.on_marca(self.i)
+
+    def _entra(self, _):
+        self.bordo.config(bg=C["testo_secondario"])
+
+    def _esci(self, _):
+        self.bordo.config(bg=self.colore_bordo)
+
+    def aggiorna(self, bg, fg, colore_bordo, marcata):
+        self.colore_bordo = colore_bordo
+        self.bordo.config(bg=colore_bordo)
+        self.numero.config(bg=bg, fg=fg, font=font_info("bold"))
+        self.flag.config(bg=bg, fg=C["marcata"], font=font_piccolo(""))
+        if marcata:
+            self.flag.place(relx=1.0, rely=0.0, anchor="ne")
+        else:
+            self.flag.place_forget()

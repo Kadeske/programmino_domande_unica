@@ -1,37 +1,40 @@
-import UI
-import utils
-import tkinter as tk
-from tkinter import messagebox
-from tkinter import filedialog
 import json
 import os
+import tkinter as tk
+from collections.abc import Callable
+from tkinter import filedialog, messagebox
+
+import UI
+import utils
 
 # ---------VAR GLOBALI-----------#
 
-domande = []  # tutte le domande del quiz, nell'ordine in cui vengono proposte
+domande: list[dict] = []  # tutte le domande del quiz, nell'ordine in cui vengono proposte
 indice = -1  # indice della domanda attuale (len(domande) = schermata finale)
-punti = 0
+punti = 0.0
 campo_check_domanda = "isCompleted"
 campo_risposte_domanda = "risposte"
 campo_ordine_opzioni = "_ordine_opzioni"
 campo_esito = "_esito"  # 'corretta', 'parziale', 'errata' (dopo la verifica)
 campo_marcata = "_marcata"  # domanda marcata dall'utente
 
-elenco_file = []  # elenco file con domande scelti
+elenco_file: list[str] = []  # elenco file con domande scelti
 randomizza_domande = True
 randomizza_ordine_opzioni = True
 
 # tipologie di domande accettate
 # singola, multiple, aperta,
 
-root = None
-scroll = None  # contenitore scorrevole
-app_frame = None  # frame dell'app, è scorrevole
-pannello = None  # barra laterale con l'elenco delle domande
-pannello_visibile = True
-btn_marca = None  # bottone "marca" della schermata domanda attuale
+# assegnati in main(), prima che venga usato qualsiasi altro widget
+root: tk.Tk
+scroll: UI.ScrollableFrame  # contenitore scorrevole
+app_frame: tk.Frame  # frame dell'app, è scorrevole
 
-azioni_tastiera = {}  # tasto -> funzione, aggiornato ad ogni schermata
+pannello: UI.PannelloDomande | None = None  # barra laterale con l'elenco delle domande
+pannello_visibile = True
+btn_marca: UI.Bottone | None = None  # bottone "marca" della schermata domanda attuale
+
+azioni_tastiera: dict[str, Callable[[], object]] = {}  # tasto -> funzione, aggiornato ad ogni schermata
 # ------------------------------#
 
 
@@ -52,9 +55,9 @@ def nuova_schermata(max_larghezza=None):
     colonna = tk.Frame(app_frame, bg=UI.C["sfondo"])
     colonna.pack(fill="x", pady=(24, 40))
 
-    callback_wrap = []
+    callback_wrap: list[Callable[[int], object]] = []
 
-    def ridimensiona(_=None):
+    def ridimensiona(_: int | None = None):
         w = scroll.canvas.winfo_width()
         margine = max(20, (w - max_larghezza) // 2)
         colonna.pack_configure(padx=margine)
@@ -144,7 +147,7 @@ def conta_domande(percorso):
     try:
         with open(percorso, "r", encoding="utf-8") as f:
             return len(json.load(f))
-    except Exception:
+    except (OSError, json.JSONDecodeError, TypeError):
         return None
 
 
@@ -204,8 +207,8 @@ def genera_schermata_scelta_file():
         anchor="w",
     ).pack(fill="x", pady=(0, 10))
 
-    btn_inizia = None
-    scelte = []
+    btn_inizia: UI.Bottone | None = None
+    scelte: list[tuple[tk.BooleanVar, str]] = []
 
     def aggiorna_bottone():
         if btn_inizia is not None:
@@ -306,7 +309,7 @@ def genera_schermata_scelta_file():
         randomizza_ordine_opzioni = var_ordine_opzioni_random.get()
         inizio_quiz()
 
-    btn_inizia = UI.bottone(
+    btn = UI.bottone(
         colonna,
         "Inizia il quiz  →",
         conferma,
@@ -315,10 +318,11 @@ def genera_schermata_scelta_file():
         padx=28,
         pady=12,
     )
-    btn_inizia.pack(anchor="e")
+    btn.pack(anchor="e")
+    btn_inizia = btn
     aggiorna_bottone()
 
-    azioni_tastiera["Return"] = lambda: btn_inizia._abilitato and conferma()
+    azioni_tastiera["Return"] = lambda: btn.abilitato and conferma()
     azioni_tastiera["KP_Enter"] = azioni_tastiera["Return"]
 
 
@@ -341,9 +345,9 @@ def g_risp_multiple(finestra, dati, callback_wrap):
     for opzione in ordina_opzioni(dati):
         var = tk.BooleanVar()
 
-        if dati[campo_check_domanda]:  # controllo domanda già validata
-            if opzione in dati[campo_risposte_domanda]:
-                var.set(True)
+        # controllo domanda già validata
+        if dati[campo_check_domanda] and opzione in dati[campo_risposte_domanda]:
+            var.set(True)
 
         opz = UI.Opzione(finestra, opzione, var, multipla=True)
         opz.pack(fill="x", pady=4)
@@ -358,11 +362,9 @@ def g_risp_singola(finestra, dati, callback_wrap):
 
     var = tk.StringVar()
     # Set risposta data precedentemente (se verificata)
-    if dati[campo_check_domanda]:
-        if len(dati[campo_risposte_domanda]) > 0:
-            var.set(
-                dati[campo_risposte_domanda][0]
-            )  # può avere solo una soluzione, quindi segno la prima
+    # può avere solo una soluzione, quindi segno la prima
+    if dati[campo_check_domanda] and len(dati[campo_risposte_domanda]) > 0:
+        var.set(dati[campo_risposte_domanda][0])
 
     for opzione in ordina_opzioni(dati):
         opz = UI.Opzione(finestra, opzione, var, valore=opzione, multipla=False)
@@ -566,7 +568,7 @@ def genera_schermata(dati, img=None):
         ridisegna()
 
     bottone_tema(barra, ridisegna).pack(side="right")
-    btn_marca = UI.bottone(
+    btn_marca = btn = UI.bottone(
         barra,
         testo_marca(dati),
         lambda: cambia_marca(indice),
@@ -576,8 +578,8 @@ def genera_schermata(dati, img=None):
         pady=5,
     )
     if dati.get(campo_marcata):
-        btn_marca.config(fg=C["marcata"])
-    btn_marca.pack(side="right", padx=(0, 6))
+        btn.config(fg=C["marcata"])
+    btn.pack(side="right", padx=(0, 6))
     for testo, comando in (
         ("A+", lambda: cambia_dimensione(2)),
         ("A−", lambda: cambia_dimensione(-2)),
@@ -648,14 +650,15 @@ def genera_schermata(dati, img=None):
         ).pack(pady=(0, 12))
 
     # CARICA OPZIONI (in base al tipo di domande)
-    dati_opzioni = None
+    lista_opzioni: list[UI.Opzione] = []  # per "multiple" e "singola"
+    entry: tk.Entry | None = None  # per "aperta"
     match tipo_domanda:
         case "multiple":
-            dati_opzioni = g_risp_multiple(card_domanda, dati, callback_wrap)
+            lista_opzioni = g_risp_multiple(card_domanda, dati, callback_wrap)
         case "singola":
-            dati_opzioni = g_risp_singola(card_domanda, dati, callback_wrap)
+            lista_opzioni = g_risp_singola(card_domanda, dati, callback_wrap)
         case "aperta":
-            dati_opzioni = g_risp_aperta(card_domanda, dati, callback_wrap)
+            entry = g_risp_aperta(card_domanda, dati, callback_wrap)
 
     # banner esito (nascosto finché non si valida)
     banner = tk.Label(
@@ -698,21 +701,21 @@ def genera_schermata(dati, img=None):
 
     # LOGICA VALIDA (in base alla tipologia)
     def valida_risposte():
-        if dati[campo_check_domanda] and btn_valida._abilitato is False:
+        if dati[campo_check_domanda] and not btn_valida.abilitato:
             return
         match tipo_domanda:
             case "multiple":
-                esito, testo = valida_risposte_multiple(dati, soluzioni, dati_opzioni)
+                esito, testo = valida_risposte_multiple(dati, soluzioni, lista_opzioni)
             case "singola":
-                esito, testo = valida_risposta_singola(dati, soluzioni, dati_opzioni)
-            case "aperta":
-                esito, testo = valida_risposta_aperta(dati, soluzioni, dati_opzioni)
+                esito, testo = valida_risposta_singola(dati, soluzioni, lista_opzioni)
+            case "aperta" if entry is not None:
+                esito, testo = valida_risposta_aperta(dati, soluzioni, entry)
             case _:
                 return
 
         colori = {
             "corretta": (C["successo_bg"], C["successo"], "✓  "),
-            "parziale": (C["successo_bg"], C["successo"], "◐  "),
+            "parziale": (C["avviso_bg"], C["avviso"], "◐  "),
             "errata": (C["errore_bg"], C["errore"], "✗  "),
             None: (C["errore_bg"], C["errore"], "!  "),
         }
@@ -735,7 +738,7 @@ def genera_schermata(dati, img=None):
 
     btn_valida.bind(
         "<ButtonRelease-1>",
-        lambda _: btn_valida._abilitato and valida_risposte(),
+        lambda _: btn_valida.abilitato and valida_risposte(),
         add="+",
     )
 
@@ -753,8 +756,8 @@ def genera_schermata(dati, img=None):
         azioni_tastiera["Left"] = carica_domanda_precedente
     azioni_tastiera["m"] = azioni_tastiera["M"] = lambda: cambia_marca(indice)
     if tipo_domanda in ("multiple", "singola"):
-        for i, opz in enumerate(dati_opzioni[:9]):
-            azioni_tastiera[str(i + 1)] = lambda o=opz: o._click(None)
+        for i, opz in enumerate(lista_opzioni[:9]):
+            azioni_tastiera[str(i + 1)] = opz.clicca
 
     # valida automaticamente (senza dare punti) se la domanda è già stata completata
     if dati[campo_check_domanda]:
@@ -834,7 +837,7 @@ def ricomincia():
     global domande, indice, punti
     domande = []
     indice = -1
-    punti = 0
+    punti = 0.0
     genera_schermata_scelta_file()
 
 
@@ -933,12 +936,10 @@ def carica_nuova_domanda():
 
 
 def main():
-    global root, app_frame, scroll
+    global root, app_frame, scroll, pannello
 
     UI.init_settings_UI()
     utils.init_config()
-    if utils.config is None:
-        utils.config = {}
 
     root = tk.Tk()
     root.title("Quiz")
@@ -951,7 +952,6 @@ def main():
     scroll = UI.ScrollableFrame(root)
     scroll.pack(side="right", fill="both", expand=True)
 
-    global pannello
     pannello = UI.PannelloDomande(root, on_click=vai_a_domanda, on_marca=cambia_marca)
 
     app_frame = scroll.scrollable_frame

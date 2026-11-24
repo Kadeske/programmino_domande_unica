@@ -1,6 +1,6 @@
-import random
-import os
 import json
+import os
+import random
 
 # ---------------VAR GLOBALI-------------------#
 
@@ -11,11 +11,12 @@ sec_config = "config"
 # -------------------#
 
 
-config = {}
+config: dict = {}
 settings_path_domande_selezionato = ""
 
 
 # ----------------------------------------------#
+
 
 def randomizza_lista(list_inp):
     new_list = []
@@ -46,25 +47,23 @@ def elenca_file_json(cartella="./"):
 
 
 def get_settings(section):
-    settings = None
-    res = None
-
     try:
-        with open(settings_path, 'r', encoding='utf-8') as file:
+        with open(settings_path, "r", encoding="utf-8") as file:
             settings = json.load(file)
     except FileNotFoundError:
         print("Errore", f"File {settings_path} non trovato!")
+        return None
     except json.JSONDecodeError:
         print("Errore", f"Il file {settings_path} non è formattato correttamente.")
+        return None
 
-    try:
-        res = settings[section]
-    except Exception:
+    if section not in settings:
         print(f"Sezione {section} non presente nel file {settings_path}")
+        return None
 
-    return res
+    return settings[section]
 
 
 def init_config():
     global config
-    config = get_settings(sec_config)
+    config = get_settings(sec_config) or {}
