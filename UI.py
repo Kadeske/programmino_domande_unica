@@ -40,6 +40,9 @@ TEMI = {
         "successo_bg": "#dcfce7",
         "errore": "#dc2626",
         "errore_bg": "#fee2e2",
+        "avviso": "#d97706",
+        "avviso_bg": "#fef3c7",
+        "marcata": "#c026d3",
         "progresso_bg": "#dde2ea",
         "input_bg": "#ffffff",
     },
@@ -59,6 +62,9 @@ TEMI = {
         "successo_bg": "#14532d",
         "errore": "#f87171",
         "errore_bg": "#7f1d1d",
+        "avviso": "#fbbf24",
+        "avviso_bg": "#78350f",
+        "marcata": "#e879f9",
         "progresso_bg": "#374151",
         "input_bg": "#111827",
     },
@@ -334,10 +340,33 @@ def crea_widget_immagine(contenitore, percorso_file, larghezza_max=300, altezza_
 
 
 # Rubata da stack overflow (e poi sistemata):
+_scrollabili = []   # tutte le ScrollableFrame create (per smistare la rotella del mouse)
+
+
+def _rotella_globale(event):
+    """Scorre la ScrollableFrame che si trova sotto al puntatore (o la prima, se nessuna)."""
+    for s in list(_scrollabili):
+        if not s.winfo_exists():
+            _scrollabili.remove(s)
+    if not _scrollabili:
+        return
+    try:
+        w = event.widget.winfo_containing(event.x_root, event.y_root)
+    except Exception:
+        w = None
+    while w is not None:
+        if w in _scrollabili:
+            w._on_mousewheel(event)
+            return
+        w = w.master
+    _scrollabili[0]._on_mousewheel(event)
+
+
 class ScrollableFrame(tk.Frame):
-    def __init__(self, container, *args, **kwargs):
+    def __init__(self, container, *args, sfondo="sfondo", **kwargs):
         super().__init__(container, *args, **kwargs)
         self.on_resize = None   # funzione(larghezza) chiamata quando cambia la larghezza
+        self.sfondo = sfondo    # chiave del colore di sfondo nel tema
 
         # 1. Canvas e Scrollbar
         # highlightthickness=0 rimuove i bordi brutti
@@ -372,10 +401,11 @@ class ScrollableFrame(tk.Frame):
         self._bind_mouse_scroll()
 
     def applica_tema(self):
-        self.config(bg=C["sfondo"])
-        self.canvas.config(bg=C["sfondo"])
-        self.scrollable_frame.config(bg=C["sfondo"])
-        self.scrollbar.config(bg=C["secondario"], troughcolor=C["sfondo"],
+        sfondo = C[self.sfondo]
+        self.config(bg=sfondo)
+        self.canvas.config(bg=sfondo)
+        self.scrollable_frame.config(bg=sfondo)
+        self.scrollbar.config(bg=C["secondario"], troughcolor=sfondo,
                               activebackground=C["secondario_hover"])
 
     def _on_frame_configure(self, event):
@@ -396,12 +426,16 @@ class ScrollableFrame(tk.Frame):
         self.canvas.yview_moveto(0)
 
     def _bind_mouse_scroll(self):
+        primo = not _scrollabili
+        _scrollabili.append(self)
+        if not primo:
+            return
         top = self.winfo_toplevel()
         if sys.platform.startswith('linux'):
-            top.bind_all("<Button-4>", self._on_mousewheel)
-            top.bind_all("<Button-5>", self._on_mousewheel)
+            top.bind_all("<Button-4>", _rotella_globale)
+            top.bind_all("<Button-5>", _rotella_globale)
         else:
-            top.bind_all("<MouseWheel>", self._on_mousewheel)
+            top.bind_all("<MouseWheel>", _rotella_globale)
 
     def _on_mousewheel(self, event):
         # non scrollare se il contenuto sta tutto nella finestra
@@ -414,3 +448,148 @@ class ScrollableFrame(tk.Frame):
                 self.canvas.yview_scroll(1, "units")
         else:
             self.canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
+
+class PannelloDomande(tk.Frame):
+    """Barra laterale con i numeri di tutte le domande, colorati in base all'esito.
+    on_click(i): chiamata col click sinistro, on_marca(i): col click destro."""
+
+    colonne = 5
+
+    def __init__(self, contenitore, on_click=None, on_marca=None):
+        super().__init__(contenitore)
+        self.on_click = on_click
+        self.on_marca = on_marca
+        self.caselle = []
+
+        self.separatore = tk.Frame(self, width=1)
+        self.separatore.pack(side="right", fill="y")
+
+        # intestazione con i conteggi
+        self.header = tk.Frame(self, padx=14, pady=14)
+        self.header.pack(side="top", fill="x")
+        self.lbl_titolo = tk.Label(self.header, text="DOMANDE", anchor="w")
+        self.lbl_titolo.pack(fill="x")
+        self.lbl_fatte = tk.Label(self.header, anchor="w")
+        self.lbl_fatte.pack(fill="x", pady=(6, 0))
+        self.riga_stats = tk.Frame(self.header)
+        self.riga_stats.pack(fill="x", pady=(2, 0))
+        self.lbl_stats = {}
+        for n, chiave in enumerate(("corretta", "parziale", "errata", "marcata")):
+            lbl = tk.Label(self.riga_stats, anchor="w")
+            lbl.grid(row=n // 2, column=n % 2, sticky="w", padx=(0, 12))
+            self.lbl_stats[chiave] = lbl
+
+        self.lbl_aiuto = tk.Label(self, text="Click: vai alla domanda\nClick destro / M: marca",
+                                  justify="left", anchor="w", padx=14, pady=10)
+        self.lbl_aiuto.pack(side="bottom", fill="x")
+
+        # griglia scorrevole dei numeri
+        self.scroll = ScrollableFrame(self, sfondo="card")
+        self.scroll.pack(side="top", fill="both", expand=True)
+        self.griglia = tk.Frame(self.scroll.scrollable_frame, padx=11, pady=4)
+        self.griglia.pack(anchor="nw")
+
+    def _crea_caselle(self, n):
+        for c in self.caselle:
+            c["bordo"].destroy()
+        self.caselle = []
+
+        tasto_destro = ["<Button-3>"] + (["<Button-2>"] if sys.platform == "darwin" else [])
+        for i in range(n):
+            bordo = tk.Frame(self.griglia, cursor="hand2")
+            bordo.grid(row=i // self.colonne, column=i % self.colonne, padx=3, pady=3)
+            numero = tk.Label(bordo, text=str(i + 1), width=4, pady=4)
+            numero.pack(padx=2, pady=2)
+            flag = tk.Label(numero, text="⚑", bd=0, padx=0, pady=0)
+            casella = {"bordo": bordo, "numero": numero, "flag": flag, "colore_bordo": None}
+
+            for w in (bordo, numero, flag):
+                w.bind("<ButtonRelease-1>", lambda _, i=i: self.on_click and self.on_click(i))
+                for seq in tasto_destro:
+                    w.bind(seq, lambda _, i=i: self.on_marca and self.on_marca(i))
+                w.bind("<Enter>", lambda _, c=casella: c["bordo"].config(bg=C["testo_secondario"]))
+                w.bind("<Leave>", lambda _, c=casella: c["bordo"].config(bg=c["colore_bordo"]))
+            self.caselle.append(casella)
+
+    def _applica_tema(self):
+        for w in (self, self.header, self.riga_stats, self.griglia):
+            w.config(bg=C["card"])
+        self.separatore.config(bg=C["bordo"])
+        self.scroll.applica_tema()
+        self.lbl_titolo.config(bg=C["card"], fg=C["testo_secondario"], font=font_piccolo("bold"))
+        self.lbl_fatte.config(bg=C["card"], fg=C["testo"], font=font_info())
+        self.lbl_aiuto.config(bg=C["card"], fg=C["testo_secondario"], font=font_piccolo(""))
+        colori = {"corretta": C["successo"], "parziale": C["avviso"],
+                  "errata": C["errore"], "marcata": C["marcata"]}
+        for chiave, lbl in self.lbl_stats.items():
+            lbl.config(bg=C["card"], fg=colori[chiave], font=font_info("bold"))
+
+    def aggiorna(self, stati, corrente=None):
+        """stati: lista di (esito, marcata) con esito in None, 'corretta', 'parziale', 'errata'.
+        corrente: indice della domanda attuale (o None)."""
+        if len(stati) != len(self.caselle):
+            self._crea_caselle(len(stati))
+        self._applica_tema()
+
+        stili = {
+            None: (C["sfondo"], C["testo_secondario"]),
+            "corretta": (C["successo_bg"], C["successo"]),
+            "parziale": (C["avviso_bg"], C["avviso"]),
+            "errata": (C["errore_bg"], C["errore"]),
+        }
+        conteggi = {"corretta": 0, "parziale": 0, "errata": 0, "marcata": 0}
+
+        for i, (esito, marcata) in enumerate(stati):
+            c = self.caselle[i]
+            bg, fg = stili.get(esito, stili[None])
+            if i == corrente:
+                c["colore_bordo"] = C["primario"]
+            elif marcata:
+                c["colore_bordo"] = C["marcata"]
+            else:
+                c["colore_bordo"] = bg
+            c["bordo"].config(bg=c["colore_bordo"])
+            c["numero"].config(bg=bg, fg=fg, font=font_info("bold"))
+            c["flag"].config(bg=bg, fg=C["marcata"], font=font_piccolo(""))
+            if marcata:
+                c["flag"].place(relx=1.0, rely=0.0, anchor="ne")
+                conteggi["marcata"] += 1
+            else:
+                c["flag"].place_forget()
+            if esito in conteggi:
+                conteggi[esito] += 1
+
+        n_fatte = conteggi["corretta"] + conteggi["parziale"] + conteggi["errata"]
+        self.lbl_fatte.config(text=f"Fatte {n_fatte} / {len(stati)}")
+        nomi = {"corretta": "Corrette", "parziale": "Parziali", "errata": "Errate", "marcata": "Marcate"}
+        for chiave, lbl in self.lbl_stats.items():
+            lbl.config(text=f"{nomi[chiave]} {conteggi[chiave]}")
+
+        self.after_idle(lambda: self._dopo_aggiornamento(corrente))
+
+    def _dopo_aggiornamento(self, corrente):
+        if not self.winfo_exists():
+            return
+        self.update_idletasks()
+        # il pannello è largo quanto la griglia
+        larghezza = max(self.griglia.winfo_reqwidth(), self.header.winfo_reqwidth())
+        if self.scroll.canvas.winfo_pixels(self.scroll.canvas.cget("width")) != larghezza:
+            self.scroll.canvas.config(width=larghezza)
+            self.update_idletasks()
+        if corrente is not None and 0 <= corrente < len(self.caselle):
+            self._mostra(corrente)
+
+    def _mostra(self, i):
+        """Scorre la griglia in modo che la casella i sia visibile."""
+        sf = self.scroll.scrollable_frame
+        totale = sf.winfo_height()
+        if totale <= 1:
+            return
+        b = self.caselle[i]["bordo"]
+        y = b.winfo_rooty() - sf.winfo_rooty()
+        h = b.winfo_height()
+        alto, basso = self.scroll.canvas.yview()
+        if y < alto * totale or y + h > basso * totale:
+            vista = self.scroll.canvas.winfo_height()
+            self.scroll.canvas.yview_moveto(max(0.0, (y + h / 2 - vista / 2) / totale))
