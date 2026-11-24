@@ -1,0 +1,1782 @@
+[
+  {
+    "domanda": "Quale affermazione su bagging e boosting è corretta?",
+    "opzioni": [
+      "Il bagging riduce soprattutto la varianza (alberi profondi, indipendenti); il boosting riduce soprattutto il bias (alberi poco profondi, in sequenza)",
+      "Il bagging riduce soprattutto il bias e il boosting soprattutto la varianza",
+      "Entrambi addestrano gli alberi in parallelo, indipendentemente l'uno dall'altro",
+      "Nel boosting gli alberi sono profondi e addestrati in parallelo",
+      "Nel bagging ogni albero corregge gli errori residui del precedente",
+      "Nessuno dei due richiede un training set"
+    ],
+    "soluzioni": [
+      "Il bagging riduce soprattutto la varianza (alberi profondi, indipendenti); il boosting riduce soprattutto il bias (alberi poco profondi, in sequenza)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "k-NN per la regressione con k = 3, distanza euclidea e media. Si vuole stimare il valore y per x = 5 usando i punti in tabella. Calcolare la predizione. (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "21"
+    ],
+    "tipologia": "aperta",
+    "img": "alf_001.png"
+  },
+  {
+    "domanda": "In k-means, i punti (1D) 1, 2, 6, 7 sono divisi in due cluster: {1, 2} e {6, 7}. Calcolare l'inertia. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "1,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Un punto ha silhouette s ≈ 0. Che cosa significa?",
+    "opzioni": [
+      "Il punto si trova vicino al confine tra due cluster",
+      "Il punto è perfettamente assegnato al suo cluster",
+      "Il punto è quasi certamente assegnato al cluster sbagliato",
+      "Il punto coincide con il centroide del suo cluster",
+      "Il suo cluster è vuoto",
+      "Il valore di k scelto è ottimo"
+    ],
+    "soluzioni": [
+      "Il punto si trova vicino al confine tra due cluster"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Un modello di regressione logistica ha w = (1.2, −0.5), b = −1. Per l'esempio x = (2, 2) calcolare la probabilità P(y = 1 | x) = σ(z). (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,60"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Un MLP ha un layer di ingresso con 10 neuroni, un layer nascosto con 8 neuroni e un layer di uscita con 3 neuroni (layer completamente connessi, con bias). Quanti parametri ha in totale? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "115"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Quanto vale km.cluster_centers_.shape al termine del codice mostrato, considerando che il k-means restituisce i centroidi?",
+    "opzioni": [
+      "(4, 2)",
+      "(300, 2)",
+      "(2, 4)",
+      "(4, 300)",
+      "(300, 4)",
+      "(4, 1)"
+    ],
+    "soluzioni": [
+      "(4, 2)"
+    ],
+    "tipologia": "singola",
+    "img": "alf_002.png"
+  },
+  {
+    "domanda": "Perché tra i layer di un MLP serve una funzione di attivazione non lineare?",
+    "opzioni": [
+      "Senza di essa due layer lineari in sequenza equivalgono a un solo layer lineare, e la rete non potrebbe risolvere problemi come lo XOR",
+      "Per ridurre il numero di parametri della rete",
+      "Per garantire che l'uscita sia sempre una probabilità",
+      "Per evitare di dover usare il bias",
+      "Per rendere la rete più veloce nel forward pass",
+      "Per poter usare ingressi non scalati"
+    ],
+    "soluzioni": [
+      "Senza di essa due layer lineari in sequenza equivalgono a un solo layer lineare, e la rete non potrebbe risolvere problemi come lo XOR"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Per un esempio con classe vera y = 1, un modello di regressione logistica assegna probabilità p = 0.8. Calcolare la log-loss. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,22"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Un MLP per immagini 28×28 appiattite ha 784 ingressi, un layer nascosto da 64 neuroni e un layer di uscita da 10 neuroni (layer completamente connessi, con bias). Quanti parametri ha? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "50890"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Un MLP ha prodotto per un esempio i logit (2, 1, 1) per le classi A, B, C. Calcolare la probabilità della classe A con la softmax, p_A. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,58"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Nella decomposizione dell'errore atteso, quale termine NON può essere ridotto scegliendo un modello migliore?",
+    "opzioni": [
+      "Il rumore irriducibile σ²",
+      "Il bias²",
+      "La varianza",
+      "Sia bias² che varianza",
+      "Nessuno: tutti i termini si possono annullare con abbastanza dati"
+    ],
+    "soluzioni": [
+      "Il rumore irriducibile σ²"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Un modello con alto bias e bassa varianza tipicamente:",
+    "opzioni": [
+      "È stabile ma fuori bersaglio (underfitting)",
+      "È giusto in media ma instabile (overfitting)",
+      "È il caso ideale",
+      "Cambia molto da un training set all'altro",
+      "Ha errore di training nullo"
+    ],
+    "soluzioni": [
+      "È stabile ma fuori bersaglio (underfitting)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Un albero di decisione molto profondo, rispetto a uno poco profondo, ha in genere:",
+    "opzioni": [
+      "Basso bias e alta varianza",
+      "Alto bias e bassa varianza",
+      "Alto bias e alta varianza",
+      "Basso bias e bassa varianza",
+      "Lo stesso bias e la stessa varianza"
+    ],
+    "soluzioni": [
+      "Basso bias e alta varianza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "All'aumentare della complessità del modello, secondo il compromesso bias-varianza:",
+    "opzioni": [
+      "Il bias diminuisce e la varianza aumenta",
+      "Il bias aumenta e la varianza diminuisce",
+      "Bias e varianza diminuiscono entrambi",
+      "Bias e varianza aumentano entrambi",
+      "Il rumore σ² diminuisce"
+    ],
+    "soluzioni": [
+      "Il bias diminuisce e la varianza aumenta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Cosa misura la varianza di un modello f̂?",
+    "opzioni": [
+      "Quanto f̂ cambia al cambiare del training set",
+      "La distanza tra la previsione media e la funzione vera",
+      "Il rumore presente nei dati",
+      "La dispersione delle etichette del training set",
+      "Il numero di parametri del modello"
+    ],
+    "soluzioni": [
+      "Quanto f̂ cambia al cambiare del training set"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nel bootstrap (n estrazioni con reinserimento da n esempi, n grande) quale frazione di esempi unici si ottiene circa in ogni campione? (formula 1 − 1/e) (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,63"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Nel bagging, come vengono aggregate le predizioni degli alberi in un problema di regressione?",
+    "opzioni": [
+      "Con la media delle predizioni",
+      "Con il voto di maggioranza",
+      "Con una somma pesata dal learning rate",
+      "Scegliendo l'albero con errore minore",
+      "Con il prodotto delle predizioni"
+    ],
+    "soluzioni": [
+      "Con la media delle predizioni"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché la random forest considera solo m feature casuali a ogni nodo?",
+    "opzioni": [
+      "Per decorrelare gli alberi: una feature dominante li renderebbe tutti simili",
+      "Per ridurre il bias dei singoli alberi",
+      "Perché gli alberi devono essere poco profondi",
+      "Per poter addestrare gli alberi in sequenza",
+      "Per eliminare la necessità del bootstrap"
+    ],
+    "soluzioni": [
+      "Per decorrelare gli alberi: una feature dominante li renderebbe tutti simili"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Varianza della media di B alberi: Var = ρσ² + (1−ρ)σ²/B. Con ρ = 0.3, σ² = 1, B = 10, calcolare Var. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,37"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Varianza della media di B alberi: Var = ρσ² + (1−ρ)σ²/B. Con ρ = 0.5, σ² = 2, B = 100, calcolare Var. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "1,01"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Con alberi indipendenti (ρ = 0) e σ² = 1, quanto vale la varianza della media di B = 4 alberi? (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,25"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Nella formula Var = ρσ² + (1−ρ)σ²/B, cosa succede facendo crescere B all'infinito?",
+    "opzioni": [
+      "La varianza tende a ρσ², quindi servono alberi poco correlati",
+      "La varianza tende a zero qualunque sia ρ",
+      "La varianza tende a σ²",
+      "La varianza cresce linearmente con B",
+      "Il bias tende a zero"
+    ],
+    "soluzioni": [
+      "La varianza tende a ρσ², quindi servono alberi poco correlati"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Una RandomForestClassifier di scikit-learn è addestrata su un dataset con d = 64 feature e max_features di default. Quante feature candidate considera a ogni split? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "8"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Una RandomForestRegressor di scikit-learn è addestrata su un dataset con d = 20 feature e max_features di default. Quante feature candidate considera a ogni split? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "20"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Quale tra questi è un limite della random forest citato nelle slide?",
+    "opzioni": [
+      "Non estrapola al di fuori dell'intervallo dei dati di training",
+      "Richiede molto tuning per funzionare",
+      "Non è parallelizzabile",
+      "Non può stimare l'errore di generalizzazione",
+      "Funziona solo per la classificazione binaria"
+    ],
+    "soluzioni": [
+      "Non estrapola al di fuori dell'intervallo dei dati di training"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A cosa serve il parametro oob_score=True in una random forest?",
+    "opzioni": [
+      "A stimare la generalizzazione usando gli esempi out-of-bag di ciascun albero",
+      "A eseguire una cross-validation a 5 fold",
+      "A limitare la profondità degli alberi",
+      "A rendere l'addestramento sequenziale",
+      "A scegliere automaticamente il numero di alberi"
+    ],
+    "soluzioni": [
+      "A stimare la generalizzazione usando gli esempi out-of-bag di ciascun albero"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nel boosting, i weak learner sono tipicamente:",
+    "opzioni": [
+      "Alberi poco profondi (profondità 1–5): alto bias, bassa varianza",
+      "Alberi molto profondi: basso bias, alta varianza",
+      "Reti neurali profonde",
+      "Modelli k-NN con k = 1",
+      "Alberi addestrati in parallelo su campioni bootstrap"
+    ],
+    "soluzioni": [
+      "Alberi poco profondi (profondità 1–5): alto bias, bassa varianza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In AdaBoost, uno stump ha errore pesato ε = 0.2. Calcolare il peso del modello α = ½·ln((1 − ε)/ε). (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,69"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "In AdaBoost, uno stump ha errore pesato ε = 0.5 (come tirare a caso). Quanto vale il suo peso α = ½·ln((1 − ε)/ε)? (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "AdaBoost: 5 esempi con peso iniziale 1/5. Lo stump sbaglia 1 solo esempio (ε = 0.2, α = ½·ln 4). Dopo l'aggiornamento wᵢ ← wᵢ·e^(−α·yᵢ·h(xᵢ)) e la normalizzazione, quanto vale il peso dell'esempio sbagliato? (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,50"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "In AdaBoost, dopo un round, come cambiano i pesi degli esempi?",
+    "opzioni": [
+      "Aumentano per gli esempi classificati male e diminuiscono per quelli corretti",
+      "Aumentano per gli esempi corretti e diminuiscono per quelli sbagliati",
+      "Restano tutti uguali a 1/n",
+      "Vengono azzerati per gli esempi corretti",
+      "Vengono estratti con reinserimento"
+    ],
+    "soluzioni": [
+      "Aumentano per gli esempi classificati male e diminuiscono per quelli corretti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Gradient boosting: Fₘ(x) = Fₘ₋₁(x) + η·hₘ(x). Se Fₘ₋₁(x) = 10, il nuovo albero predice hₘ(x) = 4 e η = 0.1, quanto vale Fₘ(x)? (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "10,40"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Nel gradient boosting con loss MSE, cosa impara a predire ogni nuovo albero?",
+    "opzioni": [
+      "I residui (errori correnti), che coincidono con il gradiente negativo",
+      "Le etichette originali y",
+      "I pesi degli esempi sbagliati",
+      "La media delle predizioni precedenti",
+      "Il learning rate ottimale"
+    ],
+    "soluzioni": [
+      "I residui (errori correnti), che coincidono con il gradiente negativo"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nel gradient boosting, ridurre il learning_rate η in genere:",
+    "opzioni": [
+      "Rende il modello più regolare, ma servono più alberi (n_estimators più alto)",
+      "Riduce il numero di alberi necessari",
+      "Rende gli alberi più profondi",
+      "Rende l'addestramento parallelizzabile",
+      "Elimina la necessità dell'early stopping"
+    ],
+    "soluzioni": [
+      "Rende il modello più regolare, ma servono più alberi (n_estimators più alto)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale affermazione su random forest e boosting è corretta?",
+    "opzioni": [
+      "Il boosting è sensibile all'overfitting e beneficia dell'early stopping; la random forest è più robusta",
+      "La random forest richiede molto più tuning del boosting",
+      "Il boosting si addestra in parallelo",
+      "La random forest usa alberi poco profondi in sequenza",
+      "Il boosting riduce soprattutto la varianza"
+    ],
+    "soluzioni": [
+      "Il boosting è sensibile all'overfitting e beneficia dell'early stopping; la random forest è più robusta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che valore stampa il codice (gradient boosting semplificato)? (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "12,00"
+    ],
+    "tipologia": "aperta",
+    "img": "alf_003.png"
+  },
+  {
+    "domanda": "Perché k-NN è detto 'lazy learning'?",
+    "opzioni": [
+      "Non ha una fase di training: memorizza il dataset e calcola tutto al momento della predizione",
+      "Perché usa pochi vicini",
+      "Perché converge lentamente",
+      "Perché impara i pesi con la discesa del gradiente",
+      "Perché usa solo un sottoinsieme delle feature"
+    ],
+    "soluzioni": [
+      "Non ha una fase di training: memorizza il dataset e calcola tutto al momento della predizione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In k-NN, un valore di k piccolo (es. k = 1) porta a:",
+    "opzioni": [
+      "Basso bias e alta varianza",
+      "Alto bias e bassa varianza",
+      "Alto bias e alta varianza",
+      "Basso bias e bassa varianza",
+      "Nessun effetto su bias e varianza"
+    ],
+    "soluzioni": [
+      "Basso bias e alta varianza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché è importante scalare le feature (es. StandardScaler) prima di usare k-NN?",
+    "opzioni": [
+      "Le feature con scala maggiore dominerebbero il calcolo della distanza",
+      "Perché k-NN funziona solo con valori tra 0 e 1",
+      "Per ridurre il numero di vicini necessari",
+      "Per rendere il modello lineare",
+      "Perché altrimenti non si può usare la distanza euclidea"
+    ],
+    "soluzioni": [
+      "Le feature con scala maggiore dominerebbero il calcolo della distanza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Cosa si intende con 'maledizione della dimensionalità' per k-NN?",
+    "opzioni": [
+      "In alta dimensione le distanze tendono a essere tutte simili e i vicini perdono significato",
+      "Con molte feature il training diventa lento",
+      "In alta dimensione k deve essere pari",
+      "In alta dimensione la distanza euclidea diventa negativa",
+      "Le feature categoriche non possono essere usate"
+    ],
+    "soluzioni": [
+      "In alta dimensione le distanze tendono a essere tutte simili e i vicini perdono significato"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale distanza è più indicata per testi e vettori sparsi (NLP)?",
+    "opzioni": [
+      "Distanza coseno (1 − cos θ)",
+      "Distanza euclidea",
+      "Distanza di Manhattan",
+      "Distanza di Minkowski con p = 3",
+      "Distanza di Hamming tra etichette"
+    ],
+    "soluzioni": [
+      "Distanza coseno (1 − cos θ)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quanti sono i parametri appresi da un modello k-NN?",
+    "opzioni": [
+      "Nessuno: k e la distanza sono iperparametri, il 'modello' è il dataset memorizzato",
+      "k parametri, uno per vicino",
+      "Uno per ogni feature",
+      "Due: k e la distanza",
+      "n × d pesi"
+    ],
+    "soluzioni": [
+      "Nessuno: k e la distanza sono iperparametri, il 'modello' è il dataset memorizzato"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è il costo di una predizione k-NN con ricerca esatta (n esempi di training, d dimensioni)?",
+    "opzioni": [
+      "O(n·d)",
+      "O(1)",
+      "O(k)",
+      "O(d)",
+      "O(n²·d)"
+    ],
+    "soluzioni": [
+      "O(n·d)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché nel caso di classificazione binaria si consiglia un k dispari in k-NN?",
+    "opzioni": [
+      "Per evitare pareggi nel voto di maggioranza",
+      "Per ridurre il costo computazionale",
+      "Perché la distanza euclidea lo richiede",
+      "Per aumentare la varianza",
+      "Perché scikit-learn non accetta k pari"
+    ],
+    "soluzioni": [
+      "Per evitare pareggi nel voto di maggioranza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Cosa fa il parametro weights='distance' in KNeighborsClassifier?",
+    "opzioni": [
+      "Dà più peso ai vicini più vicini nel voto",
+      "Usa un raggio fisso invece di k vicini",
+      "Cambia la metrica in Manhattan",
+      "Normalizza le feature",
+      "Pesa le classi in base alla loro frequenza"
+    ],
+    "soluzioni": [
+      "Dà più peso ai vicini più vicini nel voto"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Calcolare la distanza euclidea tra i punti (1, 2) e (4, 6). (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "5,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Calcolare la distanza di Manhattan tra i punti (1, 2) e (4, 6). (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "7"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Calcolare la distanza coseno (1 − cos θ) tra i vettori (1, 0) e (0, 1). (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "1,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Calcolare la distanza coseno (1 − cos θ) tra i vettori (1, 1) e (3, 3). (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "k-NN per la regressione con k = 3, distanza euclidea e media semplice. Stimare y per x = 5 usando i punti in tabella. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "8,33"
+    ],
+    "tipologia": "aperta",
+    "img": "alf_004.png"
+  },
+  {
+    "domanda": "k-NN per la classificazione con k = 3 e distanza euclidea. Quale classe viene predetta per il punto (2, 2) usando i dati in tabella?",
+    "opzioni": [
+      "rosso",
+      "blu",
+      "pareggio, nessuna classe",
+      "non si può calcolare senza scalare le feature"
+    ],
+    "soluzioni": [
+      "rosso"
+    ],
+    "tipologia": "singola",
+    "img": "alf_005.png"
+  },
+  {
+    "domanda": "Cosa stampa il codice?",
+    "opzioni": [
+      "a",
+      "b",
+      "Un errore",
+      "['a', 'a', 'b']",
+      "1"
+    ],
+    "soluzioni": [
+      "a"
+    ],
+    "tipologia": "singola",
+    "img": "alf_006.png"
+  },
+  {
+    "domanda": "Nel codice, quale valore viene inserito al posto del NaN della terza riga (prima colonna)? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "175"
+    ],
+    "tipologia": "aperta",
+    "img": "alf_007.png"
+  },
+  {
+    "domanda": "Quante combinazioni di iperparametri vengono provate da GridSearchCV nel codice? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "24"
+    ],
+    "tipologia": "aperta",
+    "img": "alf_008.png"
+  },
+  {
+    "domanda": "Nel codice, quanti addestramenti vengono eseguiti per la cross-validation (escluso il refit finale)? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "120"
+    ],
+    "tipologia": "aperta",
+    "img": "alf_008.png"
+  },
+  {
+    "domanda": "Che cosa contiene la variabile s?",
+    "opzioni": [
+      "Un array di 5 valori di accuratezza, uno per fold",
+      "Un solo numero: l'accuratezza media",
+      "Il valore di k migliore",
+      "Le predizioni sul test set",
+      "Un modello addestrato"
+    ],
+    "soluzioni": [
+      "Un array di 5 valori di accuratezza, uno per fold"
+    ],
+    "tipologia": "singola",
+    "img": "alf_009.png"
+  },
+  {
+    "domanda": "Calcolare il centroide (1D) del cluster {2, 4, 9}. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "5,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Qual è il centroide dei punti (2, 4), (4, 0), (6, 2)?",
+    "opzioni": [
+      "(4, 2)",
+      "(4, 3)",
+      "(2, 4)",
+      "(6, 2)",
+      "(3, 2)"
+    ],
+    "soluzioni": [
+      "(4, 2)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In k-means, i punti (1D) 1, 3, 8, 10 sono divisi nei cluster {1, 3} e {8, 10}. Calcolare l'inertia. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "4,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "In k-means (2D), i cluster sono {(0,0), (2,0)} e {(5,5)}. Calcolare l'inertia. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "2,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "In k-means (1D), i punti 0, 2, 4, 10, 12 sono divisi nei cluster {0, 2, 4} e {10, 12}. Calcolare l'inertia. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "10,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Cosa minimizza l'algoritmo k-means?",
+    "opzioni": [
+      "L'inertia: la somma dei quadrati delle distanze dei punti dal centroide del proprio cluster",
+      "La distanza massima tra due cluster",
+      "Il numero di cluster",
+      "La silhouette media",
+      "La log-verosimiglianza di una mistura di gaussiane"
+    ],
+    "soluzioni": [
+      "L'inertia: la somma dei quadrati delle distanze dei punti dal centroide del proprio cluster"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale affermazione sulla convergenza di k-means è corretta?",
+    "opzioni": [
+      "Converge sempre, ma a un minimo locale che dipende dall'inizializzazione",
+      "Converge sempre al minimo globale",
+      "Può non convergere mai",
+      "L'inertia può aumentare tra due iterazioni",
+      "Converge solo se k = 2"
+    ],
+    "soluzioni": [
+      "Converge sempre, ma a un minimo locale che dipende dall'inizializzazione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come sceglie i centroidi iniziali k-means++?",
+    "opzioni": [
+      "Il primo a caso, i successivi con probabilità proporzionale a D(x)², la distanza al quadrato dal centroide più vicino",
+      "Tutti a caso con probabilità uniforme",
+      "I k punti più vicini all'origine",
+      "I k punti con la feature più alta",
+      "Il punto più vicino al centroide già scelto"
+    ],
+    "soluzioni": [
+      "Il primo a caso, i successivi con probabilità proporzionale a D(x)², la distanza al quadrato dal centroide più vicino"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A cosa serve il parametro n_init=10 in KMeans?",
+    "opzioni": [
+      "Ripete k-means 10 volte con inizializzazioni diverse e tiene il risultato con inertia minore",
+      "Imposta 10 iterazioni massime",
+      "Imposta 10 cluster",
+      "Usa 10 feature casuali",
+      "Fa una cross-validation a 10 fold"
+    ],
+    "soluzioni": [
+      "Ripete k-means 10 volte con inizializzazioni diverse e tiene il risultato con inertia minore"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Cos'è un medoide?",
+    "opzioni": [
+      "Il punto reale del cluster più centrale",
+      "La media coordinata per coordinata dei punti",
+      "Il punto più lontano dal centroide",
+      "Il centro della gaussiana",
+      "Il punto con silhouette minima"
+    ],
+    "soluzioni": [
+      "Il punto reale del cluster più centrale"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale ipotesi fa implicitamente k-means sui cluster?",
+    "opzioni": [
+      "Che siano approssimativamente sferici e di dimensione simile",
+      "Che abbiano forma arbitraria",
+      "Che siano ellittici con covarianza piena",
+      "Che contengano outlier",
+      "Che siano annidati gerarchicamente"
+    ],
+    "soluzioni": [
+      "Che siano approssimativamente sferici e di dimensione simile"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nel metodo del gomito (elbow), come si sceglie k?",
+    "opzioni": [
+      "Nel punto in cui l'inertia smette di scendere rapidamente",
+      "Nel punto in cui l'inertia è zero",
+      "Nel k con inertia massima",
+      "Sempre k = 2",
+      "Nel punto in cui la silhouette è negativa"
+    ],
+    "soluzioni": [
+      "Nel punto in cui l'inertia smette di scendere rapidamente"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Silhouette di un punto: s = (b − a)/max(a, b). Con a = 2 e b = 5, calcolare s. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,60"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Silhouette di un punto: s = (b − a)/max(a, b). Con a = 4 e b = 2, calcolare s. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "-0,50"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Punti 1D: cluster A = {1, 2}, cluster B = {6, 7}. Calcolare la silhouette del punto 1 (a = distanza media dal proprio cluster, b = distanza media dall'altro cluster). (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,82"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Un punto ha silhouette s < 0. Cosa significa?",
+    "opzioni": [
+      "Probabilmente è assegnato al cluster sbagliato",
+      "È ben assegnato",
+      "Si trova esattamente sul confine",
+      "Coincide con il centroide",
+      "Il clustering è ottimo"
+    ],
+    "soluzioni": [
+      "Probabilmente è assegnato al cluster sbagliato"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Usando la silhouette per scegliere il numero di cluster, quale k si sceglie?",
+    "opzioni": [
+      "Il k con silhouette media massima",
+      "Il k con silhouette minima",
+      "Il k con silhouette pari a 0",
+      "Il k con inertia massima",
+      "Il k più grande provato"
+    ],
+    "soluzioni": [
+      "Il k con silhouette media massima"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nel clustering gerarchico, quale linkage tende a creare 'catene' (chaining)?",
+    "opzioni": [
+      "single (distanza minima)",
+      "complete (distanza massima)",
+      "average (distanza media)",
+      "ward",
+      "nessuno"
+    ],
+    "soluzioni": [
+      "single (distanza minima)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale linkage è il default di AgglomerativeClustering e minimizza l'aumento di varianza intra-cluster?",
+    "opzioni": [
+      "ward",
+      "single",
+      "complete",
+      "average",
+      "centroid"
+    ],
+    "soluzioni": [
+      "ward"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Clustering gerarchico con linkage complete. Cluster {0, 1} e {5, 6} (punti 1D). A che altezza (distanza) si fondono? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "6"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Clustering gerarchico con linkage single. Cluster {0, 1} e {5, 6} (punti 1D). A che altezza (distanza) si fondono? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "4"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Clustering gerarchico con linkage average. Cluster {0, 1} e {5, 6} (punti 1D). A che altezza (distanza) si fondono? (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "5,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Punti 1D A=0, B=1, C=5, D=6, E=14, clustering agglomerativo con linkage single. Tagliando il dendrogramma ad altezza h = 6, quanti cluster si ottengono? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "2"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Qual è il costo in memoria del clustering gerarchico agglomerativo?",
+    "opzioni": [
+      "O(n²)",
+      "O(n)",
+      "O(log n)",
+      "O(k·n)",
+      "O(1)"
+    ],
+    "soluzioni": [
+      "O(n²)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che differenza c'è tra k-means e GMM nell'assegnazione dei punti?",
+    "opzioni": [
+      "k-means fa assegnazione hard (un cluster per punto), GMM soft (una probabilità per componente)",
+      "k-means è soft, GMM è hard",
+      "Entrambi sono soft",
+      "Entrambi sono hard",
+      "GMM non assegna i punti ai cluster"
+    ],
+    "soluzioni": [
+      "k-means fa assegnazione hard (un cluster per punto), GMM soft (una probabilità per componente)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nell'algoritmo EM per GMM, cosa si calcola nell'E-step?",
+    "opzioni": [
+      "Le responsabilità γ: la probabilità che ogni punto appartenga a ciascuna componente",
+      "Le nuove medie, pesi e covarianze",
+      "Il numero di componenti",
+      "Il BIC",
+      "I centroidi hard come in k-means"
+    ],
+    "soluzioni": [
+      "Le responsabilità γ: la probabilità che ogni punto appartenga a ciascuna componente"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Con il BIC, quale numero di componenti si sceglie per una GMM?",
+    "opzioni": [
+      "Quello con BIC minimo",
+      "Quello con BIC massimo",
+      "Quello con BIC pari a zero",
+      "Sempre il più piccolo",
+      "Quello con più parametri"
+    ],
+    "soluzioni": [
+      "Quello con BIC minimo"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Calcolare il BIC = −2 ln L + p·ln n con ln L = -1000, p = 10 parametri e n = 100 esempi. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "2046,05"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Quale covariance_type di GaussianMixture corrisponde a gaussiane 'rotonde' come quelle implicite in k-means?",
+    "opzioni": [
+      "spherical",
+      "full",
+      "diag",
+      "tied",
+      "linear"
+    ],
+    "soluzioni": [
+      "spherical"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale algoritmo è indicato per cluster di forma arbitraria e per isolare outlier?",
+    "opzioni": [
+      "DBSCAN",
+      "k-means",
+      "GMM con covarianza sferica",
+      "MiniBatchKMeans",
+      "k-NN"
+    ],
+    "soluzioni": [
+      "DBSCAN"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In scikit-learn, che significato ha l'etichetta −1 in db.labels_ dopo DBSCAN?",
+    "opzioni": [
+      "Il punto è considerato rumore (outlier)",
+      "Il punto appartiene all'ultimo cluster",
+      "Il punto non è stato ancora visitato",
+      "Errore di convergenza",
+      "Il punto è un centroide"
+    ],
+    "soluzioni": [
+      "Il punto è considerato rumore (outlier)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale tra queste è una metrica di valutazione ESTERNA del clustering (richiede etichette note)?",
+    "opzioni": [
+      "Adjusted Rand Index",
+      "Silhouette",
+      "Davies-Bouldin",
+      "Calinski-Harabasz",
+      "Inertia"
+    ],
+    "soluzioni": [
+      "Adjusted Rand Index"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Per l'indice di Davies-Bouldin:",
+    "opzioni": [
+      "Più basso è, migliore è il clustering",
+      "Più alto è, migliore è il clustering",
+      "Varia sempre tra −1 e 1",
+      "Richiede le etichette vere",
+      "Coincide con l'inertia"
+    ],
+    "soluzioni": [
+      "Più basso è, migliore è il clustering"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Per un dataset molto grande, quale variante di k-means è suggerita?",
+    "opzioni": [
+      "MiniBatchKMeans",
+      "AgglomerativeClustering",
+      "GaussianMixture con covarianza full",
+      "k-medoids",
+      "DBSCAN con eps piccolo"
+    ],
+    "soluzioni": [
+      "MiniBatchKMeans"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale affermazione su k-NN e k-means è corretta?",
+    "opzioni": [
+      "k-NN è supervisionato e k indica i vicini; k-means è non supervisionato e k indica i cluster",
+      "Entrambi sono non supervisionati",
+      "k-NN ha un training iterativo, k-means no",
+      "In entrambi k indica il numero di cluster",
+      "k-means richiede le etichette"
+    ],
+    "soluzioni": [
+      "k-NN è supervisionato e k indica i vicini; k-means è non supervisionato e k indica i cluster"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Cosa stampa km.predict(new)?",
+    "opzioni": [
+      "Per ciascun punto nuovo, l'indice del centroide più vicino (es. [2 0])",
+      "Le coordinate dei centroidi",
+      "La distanza da ciascun centroide",
+      "L'inertia dei due punti",
+      "La probabilità di ogni cluster"
+    ],
+    "soluzioni": [
+      "Per ciascun punto nuovo, l'indice del centroide più vicino (es. [2 0])"
+    ],
+    "tipologia": "singola",
+    "img": "alf_010.png"
+  },
+  {
+    "domanda": "Qual è la forma (shape) di D?",
+    "opzioni": [
+      "(2, 4)",
+      "(4, 2)",
+      "(2, 2)",
+      "(500, 4)",
+      "(4,)"
+    ],
+    "soluzioni": [
+      "(2, 4)"
+    ],
+    "tipologia": "singola",
+    "img": "alf_011.png"
+  },
+  {
+    "domanda": "Qual è la forma (shape) di labels?",
+    "opzioni": [
+      "(500,)",
+      "(4,)",
+      "(500, 4)",
+      "(500, 2)",
+      "(4, 2)"
+    ],
+    "soluzioni": [
+      "(500,)"
+    ],
+    "tipologia": "singola",
+    "img": "alf_012.png"
+  },
+  {
+    "domanda": "Qual è la forma (shape) di P e cosa contiene?",
+    "opzioni": [
+      "(3, 4): per ciascuno dei 3 punti la probabilità di ogni componente",
+      "(4, 3): le medie delle componenti",
+      "(3,): l'indice della componente più probabile",
+      "(3, 2): le coordinate dei 3 punti",
+      "(4, 2): i centroidi"
+    ],
+    "soluzioni": [
+      "(3, 4): per ciascuno dei 3 punti la probabilità di ogni componente"
+    ],
+    "tipologia": "singola",
+    "img": "alf_013.png"
+  },
+  {
+    "domanda": "Perché il ciclo parte da k = 2 e non da k = 1?",
+    "opzioni": [
+      "La silhouette non è definita con un solo cluster (serve un cluster 'più vicino' per calcolare b)",
+      "Perché KMeans non accetta n_clusters=1",
+      "Per risparmiare tempo",
+      "Perché con k = 1 l'inertia è zero",
+      "Perché range parte sempre da 2"
+    ],
+    "soluzioni": [
+      "La silhouette non è definita con un solo cluster (serve un cluster 'più vicino' per calcolare b)"
+    ],
+    "tipologia": "singola",
+    "img": "alf_014.png"
+  },
+  {
+    "domanda": "Calcolare σ(−2), dove σ(z) = 1/(1 + e⁻ᶻ). (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,12"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Calcolare σ(0), dove σ(z) = 1/(1 + e⁻ᶻ). (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,50"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Regressione logistica con w = (0.8, 0.5), b = −2. Per x = (1, 2) calcolare P(y = 1 | x). (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,45"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Regressione logistica con w = (2, −1, 0.5), b = 0.5. Per x = (1, 3, 2) calcolare il punteggio lineare z = wᵀx + b. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,50"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Regressione logistica con w = (2, −1, 0.5), b = 0.5 e x = (1, 3, 2). Quale classe viene predetta (soglia 0,5)?",
+    "opzioni": [
+      "Classe 1, perché z = 0,5 ≥ 0",
+      "Classe 0, perché z < 0",
+      "Classe 0, perché p < 0,5",
+      "Non si può decidere senza la log-loss"
+    ],
+    "soluzioni": [
+      "Classe 1, perché z = 0,5 ≥ 0"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Per un esempio con classe vera y = 0, il modello assegna p = P(y=1|x) = 0.9. Calcolare la log-loss. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "2,30"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Per un esempio con classe vera y = 1, il modello assegna p = 0.5. Calcolare la log-loss. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,69"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Calcolare il logit z = ln(p/(1 − p)) per p = 0.8. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "1,39"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "In una regressione logistica il peso della feature xᵢ è wᵢ = 0.7. Per quanto vengono moltiplicati gli odds quando xᵢ aumenta di 1 (e^wᵢ)? (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "2,01"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Dove si trova il confine di decisione della regressione logistica (soglia 0,5)?",
+    "opzioni": [
+      "Dove z = wᵀx + b = 0: è un confine lineare",
+      "Dove z = 0,5",
+      "Dove σ(z) = 0",
+      "Dove z = 1",
+      "È sempre una curva non lineare"
+    ],
+    "soluzioni": [
+      "Dove z = wᵀx + b = 0: è un confine lineare"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché per la regressione logistica non si usa la MSE come loss?",
+    "opzioni": [
+      "Con la sigmoide i gradienti della MSE diventano minuscoli quando il modello sbaglia con sicurezza, e l'apprendimento rallenta",
+      "Perché la MSE non è derivabile",
+      "Perché la MSE è sempre negativa",
+      "Perché la MSE richiede la softmax",
+      "Perché la MSE funziona solo con k-NN"
+    ],
+    "soluzioni": [
+      "Con la sigmoide i gradienti della MSE diventano minuscoli quando il modello sbaglia con sicurezza, e l'apprendimento rallenta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale proprietà di simmetria ha la sigmoide?",
+    "opzioni": [
+      "σ(−z) = 1 − σ(z)",
+      "σ(−z) = σ(z)",
+      "σ(−z) = −σ(z)",
+      "σ(−z) = 1/σ(z)",
+      "σ(−z) = σ(z) − 1"
+    ],
+    "soluzioni": [
+      "σ(−z) = 1 − σ(z)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Cosa stampa il codice?",
+    "opzioni": [
+      "(1, 30)",
+      "(30,)",
+      "(30, 1)",
+      "(398, 30)",
+      "(2, 30)"
+    ],
+    "soluzioni": [
+      "(1, 30)"
+    ],
+    "tipologia": "singola",
+    "img": "alf_015.png"
+  },
+  {
+    "domanda": "Qual è la forma di P e cosa contiene?",
+    "opzioni": [
+      "(3, 2): per ogni esempio [P(y=0), P(y=1)]",
+      "(3,): la classe predetta",
+      "(3, 1): solo P(y=1)",
+      "(2, 3): le probabilità per classe",
+      "(3, 30): i pesi"
+    ],
+    "soluzioni": [
+      "(3, 2): per ogni esempio [P(y=0), P(y=1)]"
+    ],
+    "tipologia": "singola",
+    "img": "alf_016.png"
+  },
+  {
+    "domanda": "Neurone con x = (2, −1, 3), w = (0.5, 1, −0.2), b = 1 e attivazione sigmoide. Calcolare l'uscita a = σ(z). (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,60"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Neurone con x = (1, 2), w = (0.5, −1), b = 0.5 e attivazione ReLU. Calcolare l'uscita. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Neurone con x = (1, 2), w = (0.5, −1), b = 0.5 e attivazione sigmoide. Calcolare l'uscita. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,27"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Calcolare tanh(0.5). (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,46"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Calcolare Leaky ReLU(z) = max(αz, z) per z = −3 e α = 0.01. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "-0,03"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Qual è l'intervallo di uscita della funzione tanh?",
+    "opzioni": [
+      "(−1, 1)",
+      "(0, 1)",
+      "[0, ∞)",
+      "ℝ",
+      "[−1, 0]"
+    ],
+    "soluzioni": [
+      "(−1, 1)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale problema può avere la ReLU, risolto dalla Leaky ReLU?",
+    "opzioni": [
+      "I neuroni 'morti' (uscita sempre 0 e gradiente nullo per z < 0)",
+      "La saturazione per z molto grandi",
+      "L'uscita non centrata in 0",
+      "Il costo computazionale elevato",
+      "L'uscita limitata a (0, 1)"
+    ],
+    "soluzioni": [
+      "I neuroni 'morti' (uscita sempre 0 e gradiente nullo per z < 0)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale funzione di attivazione è usata tipicamente nei transformer?",
+    "opzioni": [
+      "GELU",
+      "Sigmoide",
+      "Gradino (step)",
+      "tanh",
+      "Lineare"
+    ],
+    "soluzioni": [
+      "GELU"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Cosa si intende per 'saturazione' di sigmoide e tanh?",
+    "opzioni": [
+      "Ai lati la derivata è quasi nulla, quindi i gradienti svaniscono",
+      "L'uscita cresce senza limite",
+      "La funzione non è derivabile in 0",
+      "L'uscita è sempre 0",
+      "Il bias diventa inutile"
+    ],
+    "soluzioni": [
+      "Ai lati la derivata è quasi nulla, quindi i gradienti svaniscono"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è il limite del percettrone (singolo neurone) dimostrato nel 1969?",
+    "opzioni": [
+      "Può separare solo classi linearmente separabili (non risolve lo XOR)",
+      "Non può avere bias",
+      "Non può usare ingressi negativi",
+      "Richiede la softmax",
+      "Non può essere addestrato"
+    ],
+    "soluzioni": [
+      "Può separare solo classi linearmente separabili (non risolve lo XOR)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nel percettrone, qual è la regola di aggiornamento dei pesi?",
+    "opzioni": [
+      "w ← w + η (y − ŷ) x",
+      "w ← w − η x",
+      "w ← w · e^(−α y h(x))",
+      "w ← w + η ŷ",
+      "w ← (1 − η) w"
+    ],
+    "soluzioni": [
+      "w ← w + η (y − ŷ) x"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Rispetto al confine w·x + b = 0, il vettore dei pesi w è:",
+    "opzioni": [
+      "Perpendicolare al confine",
+      "Parallelo al confine",
+      "Sempre nullo",
+      "Uguale al bias",
+      "Indipendente dall'orientamento del confine"
+    ],
+    "soluzioni": [
+      "Perpendicolare al confine"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quanti parametri (pesi + bias) ha un MLP completamente connesso con architettura 4-5-3? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "43"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Quanti parametri (pesi + bias) ha un MLP completamente connesso con architettura 20-16-8-2? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "490"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Quanti parametri (pesi + bias) ha un MLP completamente connesso con architettura 100-50-1? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "5101"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Quanti parametri (pesi + bias) ha un MLP completamente connesso con architettura 784-256-128-10? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "235146"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Quanti parametri (pesi + bias) ha un MLP completamente connesso con architettura 784-128-10? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "101770"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Quanti PESI (escludendo i bias) ha un MLP completamente connesso 3-4-2? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "20"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Senza funzioni di attivazione, due layer lineari W₂(W₁x) equivalgono a:",
+    "opzioni": [
+      "Un solo layer lineare W′x con W′ = W₂W₁",
+      "Un layer con ReLU",
+      "Una rete più espressiva",
+      "Una regressione logistica con softmax",
+      "Un albero di decisione"
+    ],
+    "soluzioni": [
+      "Un solo layer lineare W′x con W′ = W₂W₁"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nel forward pass h = f(W¹x + b¹), con d feature in ingresso e h neuroni nascosti, qual è la forma di W¹?",
+    "opzioni": [
+      "h × d",
+      "d × h",
+      "h × h",
+      "d × d",
+      "1 × h"
+    ],
+    "soluzioni": [
+      "h × d"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In PyTorch, che forma hanno i pesi di nn.Linear(784, 128)?",
+    "opzioni": [
+      "(128, 784), cioè (n_out, n_in)",
+      "(784, 128)",
+      "(128,)",
+      "(784,)",
+      "(128, 128)"
+    ],
+    "soluzioni": [
+      "(128, 784), cioè (n_out, n_in)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Batch di 64 immagini appiattite (64 × 784) in un layer nascosto da 128 neuroni: qual è la forma di H = f(XW¹ᵀ + b¹)?",
+    "opzioni": [
+      "64 × 128",
+      "784 × 128",
+      "128 × 64",
+      "64 × 784",
+      "64 × 10"
+    ],
+    "soluzioni": [
+      "64 × 128"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Cosa afferma il teorema di approssimazione universale?",
+    "opzioni": [
+      "Un MLP con un layer nascosto abbastanza largo può approssimare ogni funzione continua, ma non dice come trovarne i pesi",
+      "Ogni rete profonda converge al minimo globale",
+      "Un singolo neurone approssima ogni funzione",
+      "Le reti profonde sono sempre meno efficienti di quelle larghe",
+      "Serve sempre la softmax in uscita"
+    ],
+    "soluzioni": [
+      "Un MLP con un layer nascosto abbastanza largo può approssimare ogni funzione continua, ma non dice come trovarne i pesi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché si preferiscono reti profonde a reti molto larghe con un solo layer?",
+    "opzioni": [
+      "Ogni layer riusa le feature del precedente: la profondità rende la rete più efficiente (meno neuroni)",
+      "Perché le reti larghe non sono derivabili",
+      "Perché le reti profonde non hanno bias",
+      "Perché il teorema di approssimazione universale vale solo per reti profonde",
+      "Perché le reti profonde non richiedono attivazioni"
+    ],
+    "soluzioni": [
+      "Ogni layer riusa le feature del precedente: la profondità rende la rete più efficiente (meno neuroni)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che valore stampa il codice? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "-1"
+    ],
+    "tipologia": "aperta",
+    "img": "alf_017.png"
+  },
+  {
+    "domanda": "Che valore stampa il codice? (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "25450"
+    ],
+    "tipologia": "aperta",
+    "img": "alf_018.png"
+  },
+  {
+    "domanda": "Cosa stampa l'ultima riga?",
+    "opzioni": [
+      "[(2, 4), (4, 1)]",
+      "[(4, 2), (1, 4)]",
+      "[(2, 4), (4, 2)]",
+      "[(4,), (1,)]",
+      "[(2, 1)]"
+    ],
+    "soluzioni": [
+      "[(2, 4), (4, 1)]"
+    ],
+    "tipologia": "singola",
+    "img": "alf_019.png"
+  },
+  {
+    "domanda": "Cosa stampa la print?",
+    "opzioni": [
+      "torch.Size([64, 1, 28, 28]) torch.Size([64, 10])",
+      "torch.Size([64, 784]) torch.Size([10])",
+      "torch.Size([1, 28, 28]) torch.Size([10])",
+      "torch.Size([64, 1, 28, 28]) torch.Size([64, 128])",
+      "torch.Size([28, 28]) torch.Size([64])"
+    ],
+    "soluzioni": [
+      "torch.Size([64, 1, 28, 28]) torch.Size([64, 10])"
+    ],
+    "tipologia": "singola",
+    "img": "alf_020.png"
+  },
+  {
+    "domanda": "Nel modello PyTorch delle slide il forward restituisce i logit senza softmax. Perché?",
+    "opzioni": [
+      "Perché nn.CrossEntropyLoss applica internamente la softmax ai logit",
+      "Perché la softmax non è derivabile",
+      "Perché la classificazione non richiede probabilità",
+      "Perché la softmax si applica solo in regressione",
+      "È un errore del codice"
+    ],
+    "soluzioni": [
+      "Perché nn.CrossEntropyLoss applica internamente la softmax ai logit"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Logit (1, 1, 1) per le classi A, B, C. Calcolare p_A con la softmax. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,33"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Logit (3, 1, 0) per le classi A, B, C. Calcolare p_A con la softmax. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,84"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Logit (2, 1, 0.1) per le classi A, B, C e classe vera B. Calcolare la cross-entropy L = −ln p_B. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "1,42"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "La rete assegna probabilità 0.2 alla classe corretta. Calcolare la cross-entropy. (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "1,61"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Con 10 classi e pesi casuali (probabilità uniformi), che loss iniziale ci si aspetta con la cross-entropy (ln 10)? (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "2,30"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Con 5 classi e probabilità uniformi, quanto vale la cross-entropy iniziale? (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "1,61"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Che valore stampa il codice? (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "0,42"
+    ],
+    "tipologia": "aperta",
+    "img": "alf_021.png"
+  },
+  {
+    "domanda": "Per un problema multi-etichetta (più classi vere contemporaneamente), quale uscita si usa?",
+    "opzioni": [
+      "Una sigmoide per ciascuna classe con binary cross-entropy",
+      "Softmax con cross-entropy",
+      "Uscita lineare con MSE",
+      "Una sola sigmoide",
+      "ReLU con MSE"
+    ],
+    "soluzioni": [
+      "Una sigmoide per ciascuna classe con binary cross-entropy"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Per un problema di regressione, quale combinazione di uscita e loss si usa?",
+    "opzioni": [
+      "Uscita lineare (nessuna attivazione) e MSE",
+      "Softmax e cross-entropy",
+      "Sigmoide e binary cross-entropy",
+      "ReLU e log-loss",
+      "tanh e cross-entropy"
+    ],
+    "soluzioni": [
+      "Uscita lineare (nessuna attivazione) e MSE"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella cross-entropy L = −Σₖ yₖ ln pₖ, cos'è yₖ?",
+    "opzioni": [
+      "L'etichetta vera in formato one-hot (1 per la classe corretta, 0 altrove)",
+      "La probabilità predetta dalla rete",
+      "Il logit della classe k",
+      "Il peso della classe k",
+      "Il numero di esempi della classe k"
+    ],
+    "soluzioni": [
+      "L'etichetta vera in formato one-hot (1 per la classe corretta, 0 altrove)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Negli LLM, a cosa corrisponde yₖ nella cross-entropy?",
+    "opzioni": [
+      "Al token successivo corretto; k scorre il vocabolario",
+      "Alla lunghezza della frase",
+      "Al numero di layer",
+      "Alla temperatura di campionamento",
+      "All'embedding del token"
+    ],
+    "soluzioni": [
+      "Al token successivo corretto; k scorre il vocabolario"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Gradient descent su L(w) = (w − 2)² + 0.5 con η = 0.25, partendo da w = 4. Quanto vale w dopo un passo (w ← w − η·L′(w))? (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "3,00"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Gradient descent su L(w) = (w − 2)² + 0.5 con η = 0.1, partendo da w = 5. Quanto vale w dopo DUE passi? (2 decimali, usa la virgola)",
+    "opzioni": [],
+    "soluzioni": [
+      "3,92"
+    ],
+    "tipologia": "aperta"
+  },
+  {
+    "domanda": "Nel gradient descent w ← w − η·∇L, perché si sottrae il gradiente?",
+    "opzioni": [
+      "Perché il gradiente indica la direzione di massima crescita della loss: ci si muove nella direzione opposta",
+      "Per aumentare la loss",
+      "Perché il gradiente è sempre positivo",
+      "Per normalizzare i pesi",
+      "Per rendere la rete lineare"
+    ],
+    "soluzioni": [
+      "Perché il gradiente indica la direzione di massima crescita della loss: ci si muove nella direzione opposta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "MLP per XOR delle slide: h = ReLU(x₁ + x₂ + b) con b = (0, −1), y = h₁ − 2·h₂. Calcolare y per l'ingresso (1, 1). (numero intero)",
+    "opzioni": [],
+    "soluzioni": [
+      "0"
+    ],
+    "tipologia": "aperta"
+  }
+]
