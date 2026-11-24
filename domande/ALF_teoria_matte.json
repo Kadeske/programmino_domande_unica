@@ -1,0 +1,4502 @@
+[
+  {
+    "domanda": "Come definisce la distanza tra due cluster il single linkage?",
+    "opzioni": [
+      "Usa la media di tutte le distanze tra coppie dei due cluster",
+      "Usa la minima distanza tra una coppia di punti appartenenti ai due cluster",
+      "Usa esclusivamente la distanza tra centroidi",
+      "Usa la massima distanza tra una coppia di punti appartenenti ai due cluster",
+      "Usa la differenza fra le dimensioni dei cluster",
+      "Usa l'aumento della somma dei quadrati intra-cluster dovuto alla fusione"
+    ],
+    "soluzioni": [
+      "Usa la minima distanza tra una coppia di punti appartenenti ai due cluster"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché una singola suddivisione training-validation può dare una stima instabile?",
+    "opzioni": [
+      "La validazione elimina necessariamente gli esempi difficili",
+      "I modelli non possono essere addestrati su sottoinsiemi dei dati",
+      "Il risultato può dipendere molto dagli esempi che finiscono nella validazione",
+      "La suddivisione rende tutte le feature indipendenti",
+      "La validazione modifica automaticamente le etichette vere",
+      "L'errore di validazione è per definizione identico all'errore di training"
+    ],
+    "soluzioni": [
+      "Il risultato può dipendere molto dagli esempi che finiscono nella validazione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa controlla min_samples_leaf?",
+    "opzioni": [
+      "Il numero minimo di feature candidate in una Random Forest",
+      "Il numero di centroidi da inizializzare",
+      "La profondità minima della radice",
+      "Il numero minimo di campioni del test set",
+      "Il numero minimo di campioni che una foglia deve contenere",
+      "Il numero minimo di foglie che un albero deve creare"
+    ],
+    "soluzioni": [
+      "Il numero minimo di campioni che una foglia deve contenere"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché AdaBoost normalizza i pesi degli esempi dopo il loro aggiornamento?",
+    "opzioni": [
+      "Per convertire l'errore pesato in una distanza euclidea",
+      "Per garantire che tutti gli stump abbiano peso uguale",
+      "Per rendere tutti gli esempi nuovamente equiprobabili",
+      "Per rendere tutte le feature a media zero",
+      "Per eliminare i campioni classificati correttamente",
+      "Per mantenere la somma dei pesi uguale a uno"
+    ],
+    "soluzioni": [
+      "Per mantenere la somma dei pesi uguale a uno"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la distinzione tra loss e metrica di valutazione in un MLP classificatore?",
+    "opzioni": [
+      "La metrica di valutazione determina automaticamente il numero di neuroni nascosti",
+      "La loss misura sempre soltanto la percentuale di classi corrette e l'accuracy fornisce i gradienti",
+      "La loss guida l'ottimizzazione dei parametri; una metrica come accuracy può valutare la qualità delle classi predette",
+      "La loss è sempre calcolata senza usare le etichette anche nel training supervisionato",
+      "L'accuracy viene usata soltanto per scegliere i pesi di miscela di un GMM",
+      "Entrambe devono essere necessariamente la stessa funzione differenziabile"
+    ],
+    "soluzioni": [
+      "La loss guida l'ottimizzazione dei parametri; una metrica come accuracy può valutare la qualità delle classi predette"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale conseguenza può avere una feature ridondante duplicata molte volte in un modello basato sulla distanza euclidea?",
+    "opzioni": [
+      "Rende automaticamente la distanza euclidea una distanza coseno",
+      "Aumenta il numero dei target senza modificare le feature",
+      "Rende obbligatoria una scelta di k uguale a uno",
+      "Può aumentare artificialmente l'importanza di quella informazione nel calcolo delle distanze",
+      "Riduce necessariamente la dimensionalità effettiva utilizzata dalla distanza",
+      "Non può modificare le distanze relative perché i valori sono identici"
+    ],
+    "soluzioni": [
+      "Può aumentare artificialmente l'importanza di quella informazione nel calcolo delle distanze"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta k in k-NN?",
+    "opzioni": [
+      "Il numero di feature estratte casualmente",
+      "Il numero di fold da utilizzare obbligatoriamente",
+      "Il numero di classi che devono essere presenti",
+      "Il numero di centroidi da stimare",
+      "Il numero di iterazioni del gradient descent",
+      "Il numero di vicini da considerare nella predizione"
+    ],
+    "soluzioni": [
+      "Il numero di vicini da considerare nella predizione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta k in K-means?",
+    "opzioni": [
+      "Il numero di feature per ogni punto",
+      "Il numero di punti rumorosi da eliminare",
+      "Il numero di fold della cross-validation",
+      "Il numero di vicini che votano una classe",
+      "Il numero di cluster e dei relativi centroidi",
+      "Il numero di iterazioni obbligatorie dell'algoritmo"
+    ],
+    "soluzioni": [
+      "Il numero di cluster e dei relativi centroidi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa distingue una Random Forest standard dal semplice bagging di alberi?",
+    "opzioni": [
+      "L'assenza di qualunque criterio di impurità",
+      "La sostituzione del voto con la silhouette",
+      "La selezione casuale di un sottoinsieme di feature candidate a ogni split",
+      "Il campionamento senza reinserimento obbligatorio",
+      "L'addestramento sequenziale per correggere i residui",
+      "L'utilizzo di un solo albero per la previsione finale"
+    ],
+    "soluzioni": [
+      "La selezione casuale di un sottoinsieme di feature candidate a ogni split"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché aumentare continuamente n_estimators in una foresta può offrire rendimenti decrescenti?",
+    "opzioni": [
+      "Ogni nuovo albero aumenta necessariamente il bias",
+      "Ogni albero nuovo riduce il numero di esempi di training disponibili",
+      "La foresta diventa gradualmente un singolo modello lineare",
+      "La dimensione delle foglie cresce automaticamente con il numero di alberi",
+      "La parte di varianza dovuta alla correlazione non scompare aumentando soltanto il numero di alberi",
+      "Il rumore irriducibile aumenta a ogni nuova estrazione"
+    ],
+    "soluzioni": [
+      "La parte di varianza dovuta alla correlazione non scompare aumentando soltanto il numero di alberi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale coppia di obiettivi descrive il confronto tra bagging e boosting nelle slide?",
+    "opzioni": [
+      "Bagging: riduzione soprattutto della varianza; boosting: riduzione soprattutto del bias",
+      "Bagging: riduzione soprattutto del bias; boosting: riduzione soprattutto della varianza",
+      "Bagging: selezione delle classi; boosting: riduzione della dimensionalità",
+      "Entrambi mirano esclusivamente a ridurre il numero di parametri",
+      "Entrambi eliminano il rumore irriducibile",
+      "Bagging: aumento del bias; boosting: aumento della varianza come obiettivo"
+    ],
+    "soluzioni": [
+      "Bagging: riduzione soprattutto della varianza; boosting: riduzione soprattutto del bias"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale sequenza descrive un normale passo di addestramento di una rete neurale con gradient descent?",
+    "opzioni": [
+      "Forward pass, aggiornamento casuale dei target, validazione, scelta dei neuroni morti",
+      "Aggiornamento dei parametri, calcolo della silhouette, clustering, forward pass",
+      "Forward pass, calcolo della loss, calcolo dei gradienti, aggiornamento dei parametri",
+      "Backpropagation, scelta casuale delle classi vere, bootstrap, loss",
+      "Calcolo dei gradienti senza loss, scelta dei centroidi, voto, forward pass",
+      "Calcolo della loss senza predizioni, modifica del numero di feature, aggiornamento del test"
+    ],
+    "soluzioni": [
+      "Forward pass, calcolo della loss, calcolo dei gradienti, aggiornamento dei parametri"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In k-NN quale coppia è composta da iperparametri, anziché da pesi stimati tramite training parametrico?",
+    "opzioni": [
+      "Pesi sinaptici e bias del neurone",
+      "Numero di vicini e metrica di distanza",
+      "Responsabilità posteriori di un GMM",
+      "Coefficienti di regressione e intercetta appresi",
+      "Media e covarianza di una gaussiana appresa",
+      "Coordinate dei centroidi finali di K-means"
+    ],
+    "soluzioni": [
+      "Numero di vicini e metrica di distanza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché nel clustering non esiste necessariamente un'unica partizione corretta?",
+    "opzioni": [
+      "La partizione viene scelta esclusivamente dal target supervisionato",
+      "Ogni punto deve necessariamente appartenere a tutti i cluster",
+      "Non è possibile valutare la compattezza dei gruppi",
+      "Tutti gli algoritmi producono sempre partizioni identiche",
+      "I dati non contengono mai strutture geometriche",
+      "La nozione di gruppo dipende dalla rappresentazione, dalla distanza e dall'obiettivo applicativo"
+    ],
+    "soluzioni": [
+      "La nozione di gruppo dipende dalla rappresentazione, dalla distanza e dall'obiettivo applicativo"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa accade tipicamente abbassando la soglia per predire la classe positiva, a modello logistico già fissato?",
+    "opzioni": [
+      "La probabilità di ogni esempio aumenta automaticamente",
+      "Il modello produce una funzione di probabilità diversa per ogni soglia",
+      "Il confine diventa necessariamente curvo",
+      "I pesi del modello vengono automaticamente riaddestrati",
+      "Un maggior numero di esempi può essere assegnato alla classe positiva",
+      "Un maggior numero di esempi deve essere assegnato alla classe negativa"
+    ],
+    "soluzioni": [
+      "Un maggior numero di esempi può essere assegnato alla classe positiva"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cos'è il centroide di un cluster in K-means?",
+    "opzioni": [
+      "Il punto di training più vicino al centroide globale, indipendentemente dal cluster",
+      "La matrice di covarianza del cluster",
+      "Il punto del dataset più lontano da tutti gli altri",
+      "Il punto con la silhouette minima",
+      "Il vettore delle mediane delle coordinate in ogni caso",
+      "Il vettore delle medie delle coordinate dei punti del cluster"
+    ],
+    "soluzioni": [
+      "Il vettore delle medie delle coordinate dei punti del cluster"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nel Gradient Boosting con loss quadratica, quale informazione apprende il nuovo albero?",
+    "opzioni": [
+      "La media dei valori di tutte le feature",
+      "Le distanze fra tutti i centroidi",
+      "I residui tra target veri e previsioni correnti",
+      "I valori della silhouette dei campioni",
+      "Le etichette OOB degli alberi precedenti",
+      "La profondità degli alberi precedenti"
+    ],
+    "soluzioni": [
+      "I residui tra target veri e previsioni correnti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa misura l'information gain di uno split basato sull'entropia?",
+    "opzioni": [
+      "L'entropia del nodo padre sommata a quella dei figli",
+      "La riduzione dell'entropia rispetto al nodo padre",
+      "Il numero di alberi utilizzati per classificare",
+      "Il numero di esempi OOB del nodo",
+      "La distanza media tra feature numeriche",
+      "La varianza del rumore irriducibile"
+    ],
+    "soluzioni": [
+      "La riduzione dell'entropia rispetto al nodo padre"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale informazione richiedono ARI e NMI per una valutazione esterna del clustering?",
+    "opzioni": [
+      "La profondità massima di una Random Forest",
+      "La funzione di attivazione del modello",
+      "I centroidi iniziali di K-means per forza",
+      "I pesi delle feature nel modello logistico",
+      "La percentuale di esempi OOB",
+      "Una partizione o etichette di riferimento da confrontare con i gruppi ottenuti"
+    ],
+    "soluzioni": [
+      "Una partizione o etichette di riferimento da confrontare con i gruppi ottenuti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nell'AdaBoost binario standard, come cambia α quando l'errore pesato ε diminuisce nell'intervallo tra 0 e 0,5?",
+    "opzioni": [
+      "Diminuisce, penalizzando il classificatore più accurato",
+      "Diventa uguale al numero degli esempi",
+      "Coincide sempre con ε",
+      "Diventa necessariamente negativo",
+      "Aumenta, attribuendo più importanza al classificatore",
+      "Rimane costante indipendentemente dall'errore"
+    ],
+    "soluzioni": [
+      "Aumenta, attribuendo più importanza al classificatore"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale relazione di simmetria vale per la sigmoide?",
+    "opzioni": [
+      "σ(−z) = σ(z)",
+      "σ(−z) = σ(z)²",
+      "σ(−z) = 1 + σ(z)",
+      "σ(−z) = −σ(z)",
+      "σ(−z) = 1 / σ(z)",
+      "σ(−z) = 1 − σ(z)"
+    ],
+    "soluzioni": [
+      "σ(−z) = 1 − σ(z)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale relazione esprime la decomposizione bias-varianza dell'errore quadratico atteso nelle ipotesi discusse a lezione?",
+    "opzioni": [
+      "Bias² + Varianza − σ²",
+      "Bias² − Varianza + σ²",
+      "Bias × Varianza + σ²",
+      "Bias + Varianza² + σ²",
+      "Bias² + Varianza + σ²",
+      "Bias² + σ"
+    ],
+    "soluzioni": [
+      "Bias² + Varianza + σ²"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa implica la convergenza di K-means?",
+    "opzioni": [
+      "Tutti i centroidi sono obbligatoriamente punti osservati",
+      "L'algoritmo ha raggiunto una soluzione stabile secondo il criterio di arresto, non necessariamente ottima globalmente",
+      "Il numero di cluster coincide con il numero delle classi vere",
+      "L'algoritmo ha dimostrato che il k scelto è ottimale",
+      "Ogni punto ha silhouette esattamente pari a uno",
+      "L'algoritmo ha individuato certamente il minimo globale dell'inertia"
+    ],
+    "soluzioni": [
+      "L'algoritmo ha raggiunto una soluzione stabile secondo il criterio di arresto, non necessariamente ottima globalmente"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché una buona silhouette non garantisce che il clustering sia utile per l'applicazione?",
+    "opzioni": [
+      "La silhouette è indipendente dalle distanze tra punti",
+      "La silhouette misura esclusivamente il numero di etichette vere",
+      "Una silhouette alta indica sempre che i cluster sono sovrapposti",
+      "Una silhouette alta impedisce di interpretare i centroidi",
+      "La silhouette può essere calcolata soltanto sui dati di test etichettati",
+      "La separazione geometrica dei gruppi non assicura che abbiano un significato rilevante nel dominio"
+    ],
+    "soluzioni": [
+      "La separazione geometrica dei gruppi non assicura che abbiano un significato rilevante nel dominio"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è l'obiettivo principale del clustering non supervisionato?",
+    "opzioni": [
+      "Selezionare automaticamente il modello con migliore test accuracy",
+      "Calcolare i pesi di una rete usando target one-hot",
+      "Stimare il target numerico con una retta",
+      "Scoprire gruppi o strutture nei dati senza etichette target assegnate",
+      "Minimizzare la log-loss di un classificatore binario",
+      "Prevedere una classe già nota utilizzando esempi etichettati"
+    ],
+    "soluzioni": [
+      "Scoprire gruppi o strutture nei dati senza etichette target assegnate"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa sono gli esempi out-of-bag (OOB) di un albero?",
+    "opzioni": [
+      "Gli esempi originali non estratti nel suo campione bootstrap",
+      "Gli esempi assegnati a una foglia impura",
+      "Le righe con almeno un valore mancante",
+      "Le copie ripetute degli esempi presenti nel suo campione bootstrap",
+      "Gli esempi sui quali l'albero commette un errore",
+      "Gli esempi che appartengono al test set finale"
+    ],
+    "soluzioni": [
+      "Gli esempi originali non estratti nel suo campione bootstrap"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In un MLP con uno strato nascosto, che cosa rappresenta il vettore h = f(W₁x+b₁)?",
+    "opzioni": [
+      "L'insieme dei centroidi iniziali",
+      "Il vettore delle etichette vere",
+      "La probabilità OOB di ciascun campione",
+      "Il vettore dei bias non ancora applicati",
+      "La rappresentazione prodotta dallo strato nascosto dopo l'attivazione",
+      "Il gradiente della loss rispetto al layer di uscita"
+    ],
+    "soluzioni": [
+      "La rappresentazione prodotta dallo strato nascosto dopo l'attivazione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale affermazione descrive correttamente l'andamento dell'inertia durante le iterazioni standard di K-means?",
+    "opzioni": [
+      "È indipendente dai centroidi correnti",
+      "Si annulla sempre dopo la prima iterazione",
+      "Aumenta obbligatoriamente dopo ogni aggiornamento",
+      "Non aumenta nei passaggi di assegnazione e aggiornamento",
+      "Aumenta quando i punti vengono assegnati al centroide più vicino",
+      "Oscilla necessariamente tra due valori opposti"
+    ],
+    "soluzioni": [
+      "Non aumenta nei passaggi di assegnazione e aggiornamento"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale direzione indica generalmente un risultato migliore per Calinski–Harabasz, confrontando partizioni dello stesso dataset?",
+    "opzioni": [
+      "Valori necessariamente compresi tra −1 e 1",
+      "Valori uguali al BIC",
+      "Valori uguali al numero di feature",
+      "Valori sempre prossimi a zero",
+      "Valori più alti",
+      "Valori più bassi"
+    ],
+    "soluzioni": [
+      "Valori più alti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella silhouette di un punto, che cosa rappresenta a?",
+    "opzioni": [
+      "La distanza media dal cluster alternativo più vicino",
+      "La distanza media dagli altri punti del proprio cluster",
+      "La distanza dal proprio centroide al quadrato",
+      "La distanza minima da un singolo punto di un altro cluster",
+      "La probabilità di appartenenza al proprio cluster",
+      "La distanza fra il centroide del proprio cluster e quello globale"
+    ],
+    "soluzioni": [
+      "La distanza media dagli altri punti del proprio cluster"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è l'obiettivo di k-means++?",
+    "opzioni": [
+      "Calcolare la silhouette invece dell'inertia durante ogni aggiornamento",
+      "Sostituire la distanza euclidea con la distanza coseno in tutte le iterazioni",
+      "Assegnare probabilità soft tramite gaussiane",
+      "Eliminare tutti i punti lontani dai centroidi iniziali",
+      "Aumentare automaticamente k fino al numero di campioni",
+      "Distribuire meglio i centroidi iniziali per ridurre il rischio di inizializzazioni sfavorevoli"
+    ],
+    "soluzioni": [
+      "Distribuire meglio i centroidi iniziali per ridurre il rischio di inizializzazioni sfavorevoli"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella fase di aggiornamento standard di K-means, come si modifica un centroide con punti assegnati?",
+    "opzioni": [
+      "Viene sempre sostituito da un punto scelto a caso",
+      "Diventa il punto del cluster più distante dal centro precedente",
+      "Rimane invariato per tutta la durata del training",
+      "Diventa la media delle coordinate dei punti assegnati al suo cluster",
+      "Viene spostato nella direzione opposta ai punti del gruppo",
+      "Diventa la media dei centroidi di tutti gli altri cluster"
+    ],
+    "soluzioni": [
+      "Diventa la media delle coordinate dei punti assegnati al suo cluster"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale limite ha un singolo percettrone con decisione lineare?",
+    "opzioni": [
+      "Produce sempre una distribuzione softmax multiclasse",
+      "Non può separare neppure due gruppi separabili da una retta",
+      "Non può separare perfettamente classi non linearmente separabili come XOR",
+      "Richiede necessariamente più strati nascosti per qualunque problema",
+      "Non può utilizzare ingressi numerici",
+      "Può risolvere ogni possibile classificazione binaria senza errori"
+    ],
+    "soluzioni": [
+      "Non può separare perfettamente classi non linearmente separabili come XOR"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa può succedere se si cambia la metrica di distanza mantenendo lo stesso k?",
+    "opzioni": [
+      "Le previsioni sono necessariamente identiche",
+      "Il training set viene suddiviso in k cluster",
+      "Il numero di feature diminuisce automaticamente",
+      "Il numero di classi del dataset cambia automaticamente",
+      "Possono cambiare i vicini selezionati e quindi le previsioni",
+      "Il modello impara nuovi pesi mediante gradient descent"
+    ],
+    "soluzioni": [
+      "Possono cambiare i vicini selezionati e quindi le previsioni"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Un insieme di classificatori ha bassa varianza individuale ma commette lo stesso errore sistematico. Perché una semplice media può essere insufficiente?",
+    "opzioni": [
+      "La media richiede sempre una distribuzione gaussiana delle classi",
+      "La media elimina esclusivamente gli errori sistematici e non quelli casuali",
+      "La media aumenta necessariamente il bias di ogni classificatore",
+      "L'aggregazione è possibile soltanto se la varianza individuale è alta",
+      "La media riduce soltanto il rumore del test set",
+      "L'errore sistematico comune non viene eliminato dal solo averaging"
+    ],
+    "soluzioni": [
+      "L'errore sistematico comune non viene eliminato dal solo averaging"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A che cosa serve calcolare la media dei punteggi dei fold nella cross-validation?",
+    "opzioni": [
+      "A calcolare i pesi finali della rete come media delle accuracy",
+      "A ottenere una stima aggregata delle prestazioni della configurazione",
+      "A ricostruire le etichette vere del test",
+      "A garantire che ogni fold abbia ottenuto lo stesso risultato",
+      "A sostituire la scelta della metrica con il numero di fold",
+      "A calcolare i centroidi finali di tutti i cluster"
+    ],
+    "soluzioni": [
+      "A ottenere una stima aggregata delle prestazioni della configurazione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché un campione bootstrap può contenere righe duplicate?",
+    "opzioni": [
+      "Perché un esempio estratto torna disponibile per le estrazioni successive",
+      "Perché vengono duplicati soltanto gli esempi OOB",
+      "Perché il target viene usato come indice di riga",
+      "Perché ogni albero deve contenere almeno due copie di ogni esempio",
+      "Perché le feature sono selezionate casualmente a ogni nodo",
+      "Perché il campionamento è effettuato senza reinserimento"
+    ],
+    "soluzioni": [
+      "Perché un esempio estratto torna disponibile per le estrazioni successive"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale configurazione è adatta a un problema multi-etichetta nel quale più etichette possono essere vere contemporaneamente?",
+    "opzioni": [
+      "Un centroide per ciascun esempio",
+      "Una sigmoide per ogni etichetta e binary cross-entropy per etichetta",
+      "Una softmax unica che impone una somma di probabilità pari a uno",
+      "Un'unica probabilità da interpretare come identificatore numerico della classe",
+      "Una sola uscita lineare con MSE indipendentemente dal numero di etichette",
+      "Un unico neurone a soglia che sceglie obbligatoriamente una classe"
+    ],
+    "soluzioni": [
+      "Una sigmoide per ogni etichetta e binary cross-entropy per etichetta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché una funzione di attivazione non lineare tra i layer di un MLP è fondamentale?",
+    "opzioni": [
+      "Rende superfluo l'addestramento",
+      "Garantisce che ogni uscita sia sempre una probabilità",
+      "Permette alla composizione degli strati di rappresentare funzioni non affini e frontiere complesse",
+      "Elimina la necessità di avere bias nei layer",
+      "Trasforma qualsiasi loss in una funzione convessa",
+      "Riduce automaticamente il numero di pesi a zero"
+    ],
+    "soluzioni": [
+      "Permette alla composizione degli strati di rappresentare funzioni non affini e frontiere complesse"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché riaddestrare il modello con la configurazione selezionata sull'intero training set dopo la cross-validation?",
+    "opzioni": [
+      "Per rendere l'errore di test necessariamente nullo",
+      "Per trasformare il modello in un ensemble di fold",
+      "Per usare anche il test set nella selezione degli iperparametri",
+      "Per garantire che tutti i parametri siano identici a quelli di ciascun fold",
+      "Per sfruttare tutti gli esempi di training disponibili prima della valutazione finale",
+      "Per evitare di misurare la generalizzazione"
+    ],
+    "soluzioni": [
+      "Per sfruttare tutti gli esempi di training disponibili prima della valutazione finale"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché l'MSE attribuisce maggiore importanza agli errori di ampiezza elevata?",
+    "opzioni": [
+      "Perché gli errori vengono elevati al quadrato prima di essere mediati",
+      "Perché usa una soglia che rende tutti gli errori equivalenti",
+      "Perché gli errori vengono trasformati in etichette di classe",
+      "Perché normalizza automaticamente i residui nell'intervallo [0,1]",
+      "Perché considera soltanto il segno del residuo",
+      "Perché gli errori grandi vengono sempre esclusi"
+    ],
+    "soluzioni": [
+      "Perché gli errori vengono elevati al quadrato prima di essere mediati"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale algoritmo è suggerito quando si vuole un clustering scalabile su un dataset molto grande e gruppi adatti a K-means?",
+    "opzioni": [
+      "AdaBoost",
+      "MiniBatchKMeans",
+      "KNeighborsClassifier",
+      "Clustering gerarchico agglomerativo completo su tutte le distanze",
+      "Regressione logistica",
+      "GradientBoostingClassifier"
+    ],
+    "soluzioni": [
+      "MiniBatchKMeans"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale coppia uscita-loss è tipica per un MLP multiclasse con una sola classe vera per esempio?",
+    "opzioni": [
+      "Uscita lineare scalare e silhouette",
+      "Sigmoidi indipendenti e inertia",
+      "Softmax e cross-entropy categorica",
+      "ReLU per ogni classe e BIC",
+      "Softmax e criterio Ward",
+      "Tanh scalare e impurità Gini"
+    ],
+    "soluzioni": [
+      "Softmax e cross-entropy categorica"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale comportamento è tipico di k-NN con k molto piccolo?",
+    "opzioni": [
+      "Stima di un unico centroide per classe",
+      "Basso bias, alta varianza e maggiore sensibilità al rumore locale",
+      "Alto bias e predizione indipendente dai vicini",
+      "Basso bias e varianza sempre nulla",
+      "Alto bias, bassa varianza e frontiera molto regolare",
+      "Varianza nulla anche cambiando il training set"
+    ],
+    "soluzioni": [
+      "Basso bias, alta varianza e maggiore sensibilità al rumore locale"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa distingue RandomizedSearchCV da GridSearchCV?",
+    "opzioni": [
+      "RandomizedSearchCV non usa mai cross-validation",
+      "RandomizedSearchCV seleziona sempre la soluzione ottimale globale",
+      "RandomizedSearchCV valuta un numero prestabilito di configurazioni campionate anziché necessariamente tutte le combinazioni",
+      "GridSearchCV non permette di usare più iperparametri",
+      "RandomizedSearchCV modifica casualmente i target del training",
+      "GridSearchCV sceglie i parametri senza addestrare modelli"
+    ],
+    "soluzioni": [
+      "RandomizedSearchCV valuta un numero prestabilito di configurazioni campionate anziché necessariamente tutte le combinazioni"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale caratteristica è tipica di K-medoids rispetto a K-means?",
+    "opzioni": [
+      "Assegna probabilità indipendenti a tutti i gruppi",
+      "È sempre più veloce e più sensibile ai valori estremi",
+      "Non ha rappresentanti per i cluster",
+      "Usa necessariamente distribuzioni gaussiane",
+      "Richiede le classi vere per scegliere ogni medoide",
+      "È generalmente più robusto agli outlier, ma può essere più costoso"
+    ],
+    "soluzioni": [
+      "È generalmente più robusto agli outlier, ma può essere più costoso"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Un modello apprende una standardizzazione, poi un classificatore. Quale procedura di valutazione è corretta?",
+    "opzioni": [
+      "Apprendere lo scaler su tutto il dataset prima della divisione per ottenere statistiche più complete",
+      "Apprendere entrambe le fasi sul training di ogni fold e applicarle senza riadattamento al relativo fold di validazione",
+      "Apprendere la standardizzazione sul fold di validazione e il classificatore sul training del fold",
+      "Calcolare tutte le trasformazioni usando le etichette vere del test finale",
+      "Apprendere separatamente una standardizzazione sul test finale e usare quella al posto dello scaler appreso",
+      "Riaddestrare il classificatore sul fold di validazione prima di misurarne lo score"
+    ],
+    "soluzioni": [
+      "Apprendere entrambe le fasi sul training di ogni fold e applicarle senza riadattamento al relativo fold di validazione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella famiglia delle distanze di Minkowski, che cosa si ottiene con p = 1?",
+    "opzioni": [
+      "La silhouette",
+      "La distanza euclidea",
+      "La distanza coseno",
+      "La distanza quadratica senza radice",
+      "La distanza Manhattan",
+      "La distanza fra centroidi ponderata per le classi"
+    ],
+    "soluzioni": [
+      "La distanza Manhattan"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale proprietà distingue CART da ID3 e C4.5 nella tabella delle slide sugli alberi?",
+    "opzioni": [
+      "CART usa split binari e supporta anche la regressione",
+      "CART richiede un centroide per classe",
+      "CART usa esclusivamente split multiway e non supporta regressione",
+      "CART si basa su una sequenza di weak learner che correggono i residui",
+      "CART non può lavorare con feature numeriche",
+      "CART usa sempre softmax come criterio di split"
+    ],
+    "soluzioni": [
+      "CART usa split binari e supporta anche la regressione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale coppia uscita-loss è tipica per una regressione a target scalare non vincolato con MLP?",
+    "opzioni": [
+      "Uscita sigmoide e cross-entropy multiclasse",
+      "Uscita softmax e MSE sui centroidi",
+      "Uscita sigmoide indipendente per ogni etichetta e BIC",
+      "Uscita lineare e MSE",
+      "Uscita ReLU obbligatoria e silhouette",
+      "Uscita one-hot e impurità Gini"
+    ],
+    "soluzioni": [
+      "Uscita lineare e MSE"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale espressione definisce la distanza euclidea?",
+    "opzioni": [
+      "Uno meno il coseno dell'angolo fra i vettori",
+      "Somma dei quadrati senza radice",
+      "Massimo degli scarti tra coordinate senza valore assoluto",
+      "Media dei prodotti delle coordinate",
+      "Radice quadrata della somma dei quadrati degli scarti tra coordinate",
+      "Somma dei valori assoluti degli scarti tra coordinate"
+    ],
+    "soluzioni": [
+      "Radice quadrata della somma dei quadrati degli scarti tra coordinate"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come opera GridSearchCV rispetto a una griglia di iperparametri specificata?",
+    "opzioni": [
+      "Valuta con cross-validation tutte le combinazioni previste dalla griglia",
+      "Valuta una sola combinazione scelta casualmente",
+      "Usa il test finale per ogni combinazione",
+      "Sceglie ogni parametro separatamente senza valutare combinazioni",
+      "Fonde i fold in un dendrogramma",
+      "Aggiorna gli iperparametri esclusivamente con il gradiente della loss"
+    ],
+    "soluzioni": [
+      "Valuta con cross-validation tutte le combinazioni previste dalla griglia"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale split viene preferito secondo il criterio Gini a parità di nodo padre?",
+    "opzioni": [
+      "Quello con massima distanza dal centroide del padre",
+      "Quello con massimo numero di classi miste in ogni figlio",
+      "Quello che produce sempre due figli di identica dimensione",
+      "Quello con il nome di feature alfabeticamente precedente",
+      "Quello con impurità ponderata dei figli maggiore",
+      "Quello con impurità ponderata dei figli minore"
+    ],
+    "soluzioni": [
+      "Quello con impurità ponderata dei figli minore"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la funzione principale del training set?",
+    "opzioni": [
+      "Contenere soltanto gli esempi classificati male",
+      "Definire le metriche di valutazione senza usare osservazioni",
+      "Scegliere le classi senza addestrare alcun modello",
+      "Fornire i dati sui quali viene appreso il modello",
+      "Sostituire il test set nella valutazione finale indipendente",
+      "Misurare esclusivamente la qualità finale su dati mai usati"
+    ],
+    "soluzioni": [
+      "Fornire i dati sui quali viene appreso il modello"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Si vuole prevedere la specie di un animale scegliendo esattamente una fra più specie possibili. Quale uscita probabilistica è coerente?",
+    "opzioni": [
+      "Una ReLU per specie senza normalizzazione interpretata direttamente come probabilità",
+      "Un singolo valore lineare non limitato interpretato direttamente come probabilità di tutte le specie",
+      "Una serie di probabilità obbligatoriamente uguali tra loro",
+      "Una sigmoide unica che rappresenti tutte le specie tramite lo stesso valore",
+      "Un vettore di centroidi privo di probabilità",
+      "Una softmax con una componente per specie"
+    ],
+    "soluzioni": [
+      "Una softmax con una componente per specie"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale approccio è generalmente più delicato da regolare per learning rate, profondità e numero di round?",
+    "opzioni": [
+      "Gradient Boosting",
+      "Bagging con alberi indipendenti",
+      "Random Forest standard",
+      "Un singolo stump senza parametri aggiuntivi",
+      "K-means con un solo centroide",
+      "Un classificatore che predice sempre la classe maggioritaria"
+    ],
+    "soluzioni": [
+      "Gradient Boosting"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta α nel voto finale dell'AdaBoost binario?",
+    "opzioni": [
+      "La probabilità di estrarre un esempio nel bootstrap",
+      "Il numero di esempi sbagliati in valore assoluto",
+      "Il raggio utilizzato per cercare i vicini",
+      "Il peso identico assegnato a tutte le feature",
+      "Il peso assegnato al weak learner in base al suo errore pesato",
+      "La profondità massima dello stump"
+    ],
+    "soluzioni": [
+      "Il peso assegnato al weak learner in base al suo errore pesato"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale limite del clustering gerarchico agglomerativo è richiamato nel confronto delle slide per grandi dataset?",
+    "opzioni": [
+      "I punti non possono appartenere a cluster di dimensioni diverse",
+      "Il numero di feature deve essere sempre uguale a due",
+      "È impossibile costruire un dendrogramma senza conoscere il target",
+      "Ogni fusione richiede un modello logistico supervisionato",
+      "Il numero di cluster va necessariamente fissato prima della costruzione della gerarchia",
+      "Il costo in memoria può essere quadratico nel numero di punti"
+    ],
+    "soluzioni": [
+      "Il costo in memoria può essere quadratico nel numero di punti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale formula descrive il numero totale di parametri di un singolo layer denso con bias, con d ingressi e h uscite?",
+    "opzioni": [
+      "d+h",
+      "h·(d+h)",
+      "d²+h²",
+      "d·h",
+      "d·h + h",
+      "d·h + d"
+    ],
+    "soluzioni": [
+      "d·h + h"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale effetto può avere un eps troppo piccolo in DBSCAN?",
+    "opzioni": [
+      "L'algoritmo crea automaticamente k centroidi",
+      "Molti punti possono essere classificati come rumore o i gruppi possono frammentarsi",
+      "I punti vengono assegnati in base alle etichette vere",
+      "La densità minima richiesta si annulla sempre",
+      "Tutti i gruppi si fondono necessariamente in un unico cluster",
+      "La covarianza dei cluster viene fissata a una matrice identità"
+    ],
+    "soluzioni": [
+      "Molti punti possono essere classificati come rumore o i gruppi possono frammentarsi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale scelta predefinita di max_features per RandomForestRegressor è indicata nelle slide?",
+    "opzioni": [
+      "Circa la radice quadrata del numero di feature",
+      "Una sola feature indipendentemente dal dataset",
+      "Il numero di campioni OOB",
+      "Il numero di target distinti",
+      "Tutte le feature disponibili",
+      "Una feature per foglia"
+    ],
+    "soluzioni": [
+      "Tutte le feature disponibili"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché nei problemi binari con voto uniforme può essere utile scegliere k dispari?",
+    "opzioni": [
+      "Per evitare la necessità di scalare le feature",
+      "Per permettere la regressione su target continui",
+      "Per evitare qualsiasi parità nelle distanze",
+      "Per garantire che il modello non faccia overfitting",
+      "Per rendere uguale il numero di esempi nelle due classi",
+      "Per evitare un pareggio nel conteggio dei voti tra le due classi, dato un insieme fissato di k vicini"
+    ],
+    "soluzioni": [
+      "Per evitare un pareggio nel conteggio dei voti tra le due classi, dato un insieme fissato di k vicini"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché elaborare gli esempi di una rete in batch può essere efficiente su GPU?",
+    "opzioni": [
+      "Elimina la loss e usa soltanto l'accuracy",
+      "Consente di eseguire molte operazioni con moltiplicazioni di matrici parallele",
+      "Costringe tutti i campioni a produrre lo stesso output",
+      "Evita ogni necessità di calcolare i gradienti",
+      "Trasforma le connessioni dense in un dendrogramma",
+      "Riduce automaticamente a uno il numero di neuroni nascosti"
+    ],
+    "soluzioni": [
+      "Consente di eseguire molte operazioni con moltiplicazioni di matrici parallele"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come produce una classe k-NN con voto uniforme?",
+    "opzioni": [
+      "Assegna la classe del centroide globale più vicino",
+      "Aggiorna una funzione sigmoide con gli errori dei vicini",
+      "Seleziona i k esempi di training più vicini e sceglie la classe più frequente tra loro",
+      "Sceglie il vicino con distanza maggiore tra tutti i punti",
+      "Seleziona la classe più frequente nell'intero training indipendentemente da k",
+      "Calcola la media delle feature dei vicini e la usa come etichetta"
+    ],
+    "soluzioni": [
+      "Seleziona i k esempi di training più vicini e sceglie la classe più frequente tra loro"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In una Random Forest, quando viene estratto il sottoinsieme casuale di feature candidate?",
+    "opzioni": [
+      "A ogni nodo in cui si cerca uno split",
+      "Soltanto dopo l'addestramento della foresta",
+      "Una sola volta per l'intero dataset e per tutti gli alberi",
+      "Dopo aver aggregato le predizioni",
+      "Soltanto durante la previsione del test set",
+      "Esclusivamente quando si calcola l'errore OOB"
+    ],
+    "soluzioni": [
+      "A ogni nodo in cui si cerca uno split"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come funziona il clustering gerarchico agglomerativo?",
+    "opzioni": [
+      "Crea un campione bootstrap per ogni classe vera",
+      "Parte da un cluster per punto e fonde progressivamente i cluster",
+      "Parte da un unico cluster e lo divide sempre in due parti uguali",
+      "Inizializza k centroidi e li aggiorna mediante la media",
+      "Assegna pesi agli esempi sbagliati in successione",
+      "Calcola probabilità gaussiane mediante EM"
+    ],
+    "soluzioni": [
+      "Parte da un cluster per punto e fonde progressivamente i cluster"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale intervallo può assumere il coefficiente silhouette?",
+    "opzioni": [
+      "Da −1 a +1",
+      "Da −infinito a +infinito",
+      "Da −k a k",
+      "Da 0 a +1 soltanto",
+      "Da 1 a k",
+      "Da 0 a infinito"
+    ],
+    "soluzioni": [
+      "Da −1 a +1"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale vantaggio ha impostare random_state in una procedura di split casuale?",
+    "opzioni": [
+      "Rimuove automaticamente il data leakage",
+      "Favorisce la riproducibilità della suddivisione a parità di condizioni",
+      "Garantisce che ogni split abbia accuracy perfetta",
+      "Aumenta il numero di esempi a ogni esecuzione",
+      "Elimina ogni differenza tra train e test",
+      "Imposta il learning rate della rete"
+    ],
+    "soluzioni": [
+      "Favorisce la riproducibilità della suddivisione a parità di condizioni"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quando un punto è core in DBSCAN?",
+    "opzioni": [
+      "Quando è necessariamente isolato da tutti gli altri punti",
+      "Quando coincide con un centroide stimato da K-means",
+      "Quando il suo vicinato di raggio eps contiene almeno min_samples punti, includendo se stesso",
+      "Quando è il punto con valore target maggiore",
+      "Quando non raggiunge min_samples ma è nel vicinato di un core",
+      "Quando ha silhouette esattamente pari a uno"
+    ],
+    "soluzioni": [
+      "Quando il suo vicinato di raggio eps contiene almeno min_samples punti, includendo se stesso"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la differenza tra hard e soft clustering?",
+    "opzioni": [
+      "L'hard clustering usa sempre gaussiane; il soft clustering usa soltanto centroidi",
+      "L'hard clustering usa sempre etichette vere; il soft clustering non usa dati",
+      "L'hard clustering usa solo dati numerici; il soft clustering soltanto dati categorici",
+      "L'hard clustering restituisce probabilità; il soft clustering non produce appartenenze",
+      "L'hard clustering richiede una GPU; il soft clustering no",
+      "L'hard clustering assegna un gruppo per punto; il soft clustering può esprimere appartenenze probabilistiche"
+    ],
+    "soluzioni": [
+      "L'hard clustering assegna un gruppo per punto; il soft clustering può esprimere appartenenze probabilistiche"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale caratteristica cerca il metodo elbow nella curva dell'inertia rispetto a k?",
+    "opzioni": [
+      "Il punto in cui l'inertia coincide con la silhouette",
+      "Il valore di k che massimizza il numero di punti rumorosi",
+      "Il punto in cui la curva di training accuracy raggiunge uno",
+      "Il valore di k con inertia massima",
+      "Il punto oltre il quale aggiungere cluster produce miglioramenti marginali sensibilmente minori",
+      "Il primo valore di k per cui ogni cluster ha la stessa dimensione"
+    ],
+    "soluzioni": [
+      "Il punto oltre il quale aggiungere cluster produce miglioramenti marginali sensibilmente minori"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella formula della varianza della media di B alberi, che cosa rappresenta ρ?",
+    "opzioni": [
+      "La correlazione fra le previsioni dei singoli alberi",
+      "Il peso del singolo esempio nel boosting",
+      "La percentuale di esempi OOB",
+      "Il numero di nodi della foresta",
+      "Il rapporto tra training e validation set",
+      "La probabilità di scegliere una feature"
+    ],
+    "soluzioni": [
+      "La correlazione fra le previsioni dei singoli alberi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Un Gradient Boosting ha molti round e continua a migliorare sul training mentre peggiora in validazione. Quale intervento affronta direttamente il problema?",
+    "opzioni": [
+      "Aumentare la profondità di tutti gli alberi senza ulteriori controlli",
+      "Usare il valore massimo possibile di learning rate",
+      "Aumentare il numero di round senza limiti",
+      "Usare early stopping monitorando la validazione",
+      "Scegliere il numero di round sul test finale e presentare lo stesso score come indipendente",
+      "Rimuovere tutti i weak learner precedenti e mantenere sempre l'ultimo"
+    ],
+    "soluzioni": [
+      "Usare early stopping monitorando la validazione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale criterio guida la fusione con il metodo Ward?",
+    "opzioni": [
+      "Massimizzare la distanza tra i due centroidi che si fondono",
+      "Minimizzare l'aumento della somma dei quadrati intra-cluster dovuto alla fusione",
+      "Massimizzare l'aumento della varianza interna",
+      "Minimizzare il numero di punti che appartengono alle classi rare",
+      "Minimizzare la distanza della coppia di punti più vicini indipendentemente dalla compattezza",
+      "Minimizzare la massima distanza tra due punti di cluster distinti"
+    ],
+    "soluzioni": [
+      "Minimizzare l'aumento della somma dei quadrati intra-cluster dovuto alla fusione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come cambia generalmente la frontiera decisionale di k-NN aumentando k?",
+    "opzioni": [
+      "Diventa sempre più irregolare senza eccezioni",
+      "Smette di dipendere dalle etichette di training",
+      "Diventa necessariamente una retta per qualsiasi dataset",
+      "Tende a diventare più regolare, trascurando alcune variazioni locali",
+      "Tende a seguire sempre di più ogni singolo esempio rumoroso",
+      "Diventa uguale alla frontiera di una Random Forest"
+    ],
+    "soluzioni": [
+      "Tende a diventare più regolare, trascurando alcune variazioni locali"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si valuta uno split con Gini?",
+    "opzioni": [
+      "Scegliendo lo split con il maggior numero di feature coinvolte",
+      "Prendendo soltanto l'impurità del figlio più grande",
+      "Calcolando la media delle impurità dei nodi figli pesata per le loro dimensioni",
+      "Calcolando la silhouette dei nodi figli",
+      "Prendendo soltanto l'impurità della radice",
+      "Sommando le impurità dei figli senza considerare le loro dimensioni"
+    ],
+    "soluzioni": [
+      "Calcolando la media delle impurità dei nodi figli pesata per le loro dimensioni"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale attivazione viene descritta nelle slide come liscia e utilizzata anche nei transformer?",
+    "opzioni": [
+      "Funzione gradino del percettrone",
+      "Funzione identità",
+      "ReLU standard",
+      "Distanza coseno",
+      "GELU",
+      "Softmax come attivazione scalare nascosta"
+    ],
+    "soluzioni": [
+      "GELU"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale coppia contiene soltanto metriche interne di valutazione del clustering?",
+    "opzioni": [
+      "Silhouette e Davies–Bouldin",
+      "Log-loss e accuracy",
+      "MSE di regressione e recall di classe",
+      "Adjusted Rand Index e silhouette",
+      "Accuracy e F1-score supervisionati",
+      "Adjusted Rand Index e Normalized Mutual Information"
+    ],
+    "soluzioni": [
+      "Silhouette e Davies–Bouldin"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa accade al numero di cluster ottenuti tagliando un dendrogramma a un'altezza maggiore?",
+    "opzioni": [
+      "Diventa necessariamente pari al numero di osservazioni",
+      "Corrisponde al numero di centroidi iniziali di K-means",
+      "Diventa sempre uguale al numero di feature",
+      "Diminuisce o resta invariato, perché si includono più fusioni",
+      "Aumenta necessariamente a ogni incremento dell'altezza",
+      "Non può cambiare perché la gerarchia è fissa"
+    ],
+    "soluzioni": [
+      "Diminuisce o resta invariato, perché si includono più fusioni"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa cambia usando weights='distance' invece di weights='uniform' in k-NN?",
+    "opzioni": [
+      "I vicini più prossimi esercitano maggiore influenza sulla previsione",
+      "Il modello diventa un algoritmo non supervisionato",
+      "Le feature sono standardizzate automaticamente",
+      "Il numero di vicini diventa sempre uguale a uno",
+      "La distanza euclidea viene sempre sostituita dal coseno",
+      "I vicini più lontani esercitano maggiore influenza sulla previsione"
+    ],
+    "soluzioni": [
+      "I vicini più prossimi esercitano maggiore influenza sulla previsione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nel neurone artificiale, quale distinzione c'è tra z e a?",
+    "opzioni": [
+      "z è il peso del neurone; a è il suo bias",
+      "z è l'uscita normalizzata; a è sempre il punteggio prima dell'attivazione",
+      "z è il punteggio prima dell'attivazione; a è il risultato dell'attivazione applicata a z",
+      "z è la classe vera; a è il numero di feature",
+      "z è un centroide; a è la silhouette",
+      "z è la loss; a è il gradiente della loss"
+    ],
+    "soluzioni": [
+      "z è il punteggio prima dell'attivazione; a è il risultato dell'attivazione applicata a z"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale effetto ha aumentare B se tutti gli stimatori hanno uguale varianza e correlazione nulla?",
+    "opzioni": [
+      "La varianza della media si riduce in proporzione a 1/B",
+      "Il rumore irriducibile si riduce in proporzione a 1/B",
+      "Le predizioni diventano necessariamente tutte uguali",
+      "La varianza della media cresce linearmente con B",
+      "Il bias si annulla necessariamente",
+      "La varianza della media rimane identica a quella di un solo stimatore"
+    ],
+    "soluzioni": [
+      "La varianza della media si riduce in proporzione a 1/B"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale criterio di split è coerente con un albero di regressione che minimizza l'errore quadratico?",
+    "opzioni": [
+      "Massimizzare la distanza del nodo dalla radice",
+      "Usare esclusivamente l'accuracy delle classi",
+      "Minimizzare la log-loss di una softmax multiclasse",
+      "Minimizzare il numero di classi del target continuo",
+      "Minimizzare l'MSE ponderato dei nodi figli",
+      "Massimizzare l'MSE ponderato dei nodi figli"
+    ],
+    "soluzioni": [
+      "Minimizzare l'MSE ponderato dei nodi figli"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale algoritmo è particolarmente indicato per cluster di forma irregolare e punti isolati da identificare come rumore?",
+    "opzioni": [
+      "Regressione logistica",
+      "K-means standard",
+      "RandomForestRegressor",
+      "DBSCAN",
+      "AdaBoost",
+      "KNeighborsRegressor"
+    ],
+    "soluzioni": [
+      "DBSCAN"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché gli alberi di regressione standard non estrapolano un trend lineare oltre il range delle feature osservato?",
+    "opzioni": [
+      "Restituiscono valori costanti nelle regioni definite dalle foglie",
+      "Applicano una funzione lineare diversa da ogni punto in ingresso",
+      "Ricalcolano la retta dei minimi quadrati a ogni predizione",
+      "Adattano automaticamente i loro pesi a ogni dato di test",
+      "Utilizzano una funzione di attivazione crescente senza limite",
+      "Conoscono sempre le etichette vere dei punti futuri"
+    ],
+    "soluzioni": [
+      "Restituiscono valori costanti nelle regioni definite dalle foglie"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa distingue una ricerca radius_neighbors dalla selezione dei k vicini più prossimi?",
+    "opzioni": [
+      "Usa sempre esattamente k vicini indipendentemente dal raggio",
+      "Usa un raggio fissato e il numero di vicini può variare",
+      "Considera soltanto i punti con target identico al punto nuovo",
+      "Usa il numero di classi come distanza",
+      "Non usa alcuna misura di distanza",
+      "Stima un centroide per ogni possibile raggio"
+    ],
+    "soluzioni": [
+      "Usa un raggio fissato e il numero di vicini può variare"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si può scegliere un valore appropriato di ccp_alpha senza usare il test finale?",
+    "opzioni": [
+      "Confrontando le prestazioni di alberi potati mediante cross-validation sul training",
+      "Usando il numero di feature come unico criterio",
+      "Usando esclusivamente l'errore del nodo radice",
+      "Impostando sempre il valore più grande possibile",
+      "Scegliendo il valore che produce il maggior numero di foglie in ogni caso",
+      "Scegliendo il valore che minimizza ripetutamente l'errore del test finale"
+    ],
+    "soluzioni": [
+      "Confrontando le prestazioni di alberi potati mediante cross-validation sul training"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come sono inizializzati i pesi degli esempi nell'AdaBoost binario standard presentato?",
+    "opzioni": [
+      "Gli esempi della classe positiva ricevono peso nullo",
+      "Tutti gli esempi ricevono lo stesso peso iniziale",
+      "Ogni esempio riceve un peso proporzionale alla profondità dell'albero",
+      "I pesi sono le probabilità prodotte da un GMM",
+      "Gli esempi OOB ricevono peso massimo",
+      "I pesi sono uguali ai valori del target"
+    ],
+    "soluzioni": [
+      "Tutti gli esempi ricevono lo stesso peso iniziale"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa si intende per weak learner nel boosting con alberi?",
+    "opzioni": [
+      "Un modello semplice, spesso un albero poco profondo, che contribuisce a un modello più forte",
+      "Un classificatore che non utilizza alcun dato di training",
+      "Un albero che non partecipa alla previsione finale",
+      "Un modello addestrato esclusivamente sui dati di test",
+      "Un modello che produce esclusivamente probabilità uniformi",
+      "Un albero che deve avere sempre accuratezza perfetta"
+    ],
+    "soluzioni": [
+      "Un modello semplice, spesso un albero poco profondo, che contribuisce a un modello più forte"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché calcolare la scalatura usando anche il test set è scorretto in una valutazione indipendente?",
+    "opzioni": [
+      "Trasformerebbe il problema in apprendimento non supervisionato",
+      "Renderebbe tutte le predizioni necessariamente errate",
+      "Le statistiche del test influenzerebbero la preparazione dei dati di training, introducendo leakage",
+      "Renderebbe matematicamente impossibile calcolare la distanza euclidea",
+      "Impedirebbe a k-NN di utilizzare un valore dispari di k",
+      "Aumenterebbe automaticamente il numero di feature"
+    ],
+    "soluzioni": [
+      "Le statistiche del test influenzerebbero la preparazione dei dati di training, introducendo leakage"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella famiglia delle distanze di Minkowski, che cosa si ottiene con p = 2?",
+    "opzioni": [
+      "La distanza coseno",
+      "L'inertia di un cluster",
+      "La distanza basata sulla correlazione dei target",
+      "La distanza euclidea",
+      "La distanza Manhattan",
+      "La distanza media fra tutti i punti"
+    ],
+    "soluzioni": [
+      "La distanza euclidea"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché l'addestramento del bagging è adatto alla parallelizzazione?",
+    "opzioni": [
+      "Tutti gli stimatori condividono gli stessi pesi aggiornati in sequenza",
+      "Il bootstrap elimina tutti gli esempi duplicati",
+      "La costruzione degli alberi non richiede dati",
+      "Il bagging calcola soltanto un singolo gradiente globale",
+      "Ogni stimatore richiede la previsione del precedente",
+      "Ogni stimatore può essere addestrato senza attendere gli errori degli altri"
+    ],
+    "soluzioni": [
+      "Ogni stimatore può essere addestrato senza attendere gli errori degli altri"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale aggregazione si usa tipicamente nel bagging per la regressione?",
+    "opzioni": [
+      "Il voto di maggioranza sui valori distinti del target",
+      "La media delle previsioni numeriche",
+      "La previsione dell'albero addestrato per ultimo",
+      "La mediana dei valori delle feature di input",
+      "Il minimo delle previsioni",
+      "La somma non normalizzata delle predizioni"
+    ],
+    "soluzioni": [
+      "La media delle previsioni numeriche"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale principio segue la selezione di un GMM mediante BIC?",
+    "opzioni": [
+      "Seleziona il modello con il maggior numero di covarianze libere",
+      "Minimizza esclusivamente il numero di osservazioni",
+      "Bilancia la bontà dell'adattamento ai dati con una penalizzazione della complessità",
+      "Massimizza soltanto l'inertia dei cluster",
+      "Seleziona sempre il modello con più componenti",
+      "Seleziona il modello con la likelihood più bassa senza considerare i parametri"
+    ],
+    "soluzioni": [
+      "Bilancia la bontà dell'adattamento ai dati con una penalizzazione della complessità"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa può accadere al centroide di un cluster non convesso?",
+    "opzioni": [
+      "Deve coincidere con uno dei punti di training",
+      "Può trovarsi in una regione senza punti osservati",
+      "Non può essere calcolato mediante la media",
+      "Deve trovarsi su ogni punto del cluster contemporaneamente",
+      "Deve coincidere con il medoide",
+      "È sempre esterno all'inviluppo convesso dei punti"
+    ],
+    "soluzioni": [
+      "Può trovarsi in una regione senza punti osservati"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa controlla min_samples_split?",
+    "opzioni": [
+      "Il numero minimo di campioni richiesti in ogni foglia dopo lo split",
+      "Il numero minimo di alberi in una foresta",
+      "Il numero minimo di campioni necessari in un nodo per poter tentare uno split",
+      "Il numero minimo di feature da eliminare",
+      "Il numero massimo di classi all'interno di un nodo",
+      "Il numero minimo di fold utilizzati per la validazione"
+    ],
+    "soluzioni": [
+      "Il numero minimo di campioni necessari in un nodo per poter tentare uno split"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Se gli alberi di un ensemble sono perfettamente correlati e hanno uguale varianza, quale limite ha la media delle loro previsioni?",
+    "opzioni": [
+      "Riduce la varianza a zero per qualunque numero di alberi",
+      "Elimina il rumore irriducibile",
+      "Garantisce una migliore accuratezza di test",
+      "Riduce la varianza esattamente come nel caso di correlazione nulla",
+      "Non riduce la varianza rispetto al singolo albero",
+      "Elimina il bias sistematico"
+    ],
+    "soluzioni": [
+      "Non riduce la varianza rispetto al singolo albero"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché k-NN standard non ha bisogno di ipotizzare una forma lineare della relazione tra feature e target?",
+    "opzioni": [
+      "L'algoritmo apprende necessariamente una regressione lineare",
+      "La distanza euclidea impone una funzione lineare globale del target",
+      "I vicini vengono selezionati senza usare le feature",
+      "Tutti i dati vengono sostituiti da un'unica retta",
+      "Il modello calcola sempre un logit lineare",
+      "La previsione dipende localmente dagli esempi simili"
+    ],
+    "soluzioni": [
+      "La previsione dipende localmente dagli esempi simili"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Si vuole attribuire a ogni punto probabilità di appartenenza a componenti ellittiche eventualmente ruotate. Quale approccio risponde direttamente al requisito?",
+    "opzioni": [
+      "GMM con covariance_type='full'",
+      "k-NN con voto uniforme e senza target",
+      "GMM con covariance_type='spherical'",
+      "K-means con k-means++",
+      "Clustering gerarchico con single linkage",
+      "DBSCAN con min_samples elevato"
+    ],
+    "soluzioni": [
+      "GMM con covariance_type='full'"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché la scalatura può essere importante anche per K-means?",
+    "opzioni": [
+      "La scalatura rende l'inertia identica per tutti i k",
+      "Le feature con scala numerica maggiore possono dominare l'assegnazione basata sulle distanze",
+      "La scalatura trasforma i centroidi in medoidi",
+      "K-means accetta esclusivamente feature nell'intervallo [0,1]",
+      "La scalatura fornisce automaticamente le etichette vere",
+      "La scalatura garantisce la convergenza al minimo globale"
+    ],
+    "soluzioni": [
+      "Le feature con scala numerica maggiore possono dominare l'assegnazione basata sulle distanze"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché la log-loss è utile quando si vogliono valutare anche le probabilità prodotte da un classificatore?",
+    "opzioni": [
+      "Ignora completamente il target vero",
+      "Dipende soltanto dalla soglia di classificazione e non dalla probabilità",
+      "Assume valore zero per ogni predizione che assegna la classe sbagliata con sicurezza",
+      "È identica all'accuracy per tutti i classificatori probabilistici",
+      "Distingue predizioni che hanno la stessa classe finale ma livelli di sicurezza differenti",
+      "Premia allo stesso modo tutte le predizioni che superano la soglia corretta"
+    ],
+    "soluzioni": [
+      "Distingue predizioni che hanno la stessa classe finale ma livelli di sicurezza differenti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come può essere usato K-means nella compressione dei colori di un'immagine RGB?",
+    "opzioni": [
+      "Applicando la sigmoide a ogni pixel per stimare una probabilità di classe",
+      "Addestrando un albero differente per ogni possibile colore",
+      "Raggruppando i pixel nello spazio RGB e sostituendone i colori con quelli dei centroidi",
+      "Eliminando necessariamente tutte le coordinate spaziali e tutti i colori originali senza rappresentanti",
+      "Sostituendo tutti i pixel con il valore della silhouette",
+      "Attribuendo una classe supervisionata a ogni oggetto dell'immagine"
+    ],
+    "soluzioni": [
+      "Raggruppando i pixel nello spazio RGB e sostituendone i colori con quelli dei centroidi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quali parametri caratterizzano le componenti di un GMM?",
+    "opzioni": [
+      "Etichette vere, accuracy e numero di fold",
+      "Learning rate, pesi sinaptici e bias del neurone",
+      "Soltanto il numero di punti e la silhouette media",
+      "Pesi di miscela, vettori delle medie e matrici di covarianza",
+      "Soltanto i medoidi osservati e le distanze Manhattan",
+      "Soglie degli alberi, impurità dei nodi e numero di foglie"
+    ],
+    "soluzioni": [
+      "Pesi di miscela, vettori delle medie e matrici di covarianza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale modifica può aumentare il potere espressivo di un modello affine per affrontare XOR?",
+    "opzioni": [
+      "Introdurre uno strato nascosto con attivazione non lineare e capacità adeguata",
+      "Sostituire la loss con MSE mantenendo lo stesso singolo confine affine",
+      "Aggiungere più bias allo stesso punteggio affine senza cambiare la rappresentazione",
+      "Aggiungere molti layer affini senza alcuna non linearità",
+      "Addestrare più a lungo lo stesso singolo percettrone lineare",
+      "Cambiare soltanto il learning rate mantenendo un unico confine affine"
+    ],
+    "soluzioni": [
+      "Introdurre uno strato nascosto con attivazione non lineare e capacità adeguata"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quali informazioni sono necessarie per il k-NN supervisionato standard?",
+    "opzioni": [
+      "Soltanto i target, senza feature",
+      "Etichette vere di tutti i punti del test",
+      "Centroidi e covarianze già stimati",
+      "Feature e target degli esempi di training",
+      "Soltanto le feature, senza target",
+      "Un dendrogramma costruito sul training set"
+    ],
+    "soluzioni": [
+      "Feature e target degli esempi di training"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A che cosa serve n_estimators in una Random Forest?",
+    "opzioni": [
+      "A fissare il numero di feature candidate a ogni split",
+      "A determinare la frazione del test set",
+      "A definire il numero minimo di esempi per foglia",
+      "A impostare il numero di fold della cross-validation",
+      "A stabilire il numero di alberi della foresta",
+      "A scegliere il numero di classi del problema"
+    ],
+    "soluzioni": [
+      "A stabilire il numero di alberi della foresta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale proprietà ha la sigmoide per valori reali finiti del suo ingresso?",
+    "opzioni": [
+      "Ha uscita compresa tra −1 e 1 ed è decrescente",
+      "Ha uscita strettamente compresa tra zero e uno ed è crescente",
+      "Ha uscita esattamente zero per tutti gli ingressi negativi",
+      "Ha uscita uguale all'ingresso per tutti i valori positivi",
+      "Ha uscita binaria discreta, senza valori intermedi",
+      "Ha uscita non negativa ma illimitata superiormente"
+    ],
+    "soluzioni": [
+      "Ha uscita strettamente compresa tra zero e uno ed è crescente"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In una classificazione multiclasse, un k dispari garantisce sempre l'assenza di pareggi nel voto?",
+    "opzioni": [
+      "No, perché k-NN non può classificare più di due classi",
+      "Sì, purché tutte le feature siano scalate",
+      "Sì, purché la distanza sia euclidea",
+      "Sì, perché k dispari rende impossibile ogni pareggio tra classi",
+      "No, più classi possono ricevere lo stesso numero massimo di voti",
+      "No, perché il voto non dipende dai target dei vicini"
+    ],
+    "soluzioni": [
+      "No, più classi possono ricevere lo stesso numero massimo di voti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è un vantaggio del clustering gerarchico rispetto a K-means?",
+    "opzioni": [
+      "Elimina automaticamente qualsiasi outlier",
+      "Non dipende dalla scelta della distanza o del linkage",
+      "Produce necessariamente cluster sferici di dimensioni uguali",
+      "Garantisce sempre una complessità temporale inferiore su dataset molto grandi",
+      "Garantisce un minimo globale dell'inertia di K-means per ogni taglio",
+      "Permette di esplorare diversi livelli di raggruppamento attraverso una gerarchia"
+    ],
+    "soluzioni": [
+      "Permette di esplorare diversi livelli di raggruppamento attraverso una gerarchia"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa si intende per saturazione di sigmoide e tanh?",
+    "opzioni": [
+      "I pesi vengono azzerati dopo ogni forward pass",
+      "L'uscita cresce senza limiti per valori positivi",
+      "Per ingressi molto grandi in modulo la derivata diventa molto piccola",
+      "Il numero di neuroni aumenta durante il training",
+      "La loss viene sostituita dalla silhouette",
+      "Per tutti gli ingressi la derivata diventa esattamente uno"
+    ],
+    "soluzioni": [
+      "Per ingressi molto grandi in modulo la derivata diventa molto piccola"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A che cosa serve il one-hot encoding delle feature categoriche?",
+    "opzioni": [
+      "Sostituire le feature con il target di regressione",
+      "Ridurre obbligatoriamente tutte le categorie a una sola classe",
+      "Normalizzare tutte le feature con media e deviazione standard",
+      "Calcolare il numero di cluster mediante BIC",
+      "Rappresentare categorie mediante indicatori numerici senza imporre un ordine arbitrario",
+      "Trasformare ogni categoria in una distanza euclidea già calcolata"
+    ],
+    "soluzioni": [
+      "Rappresentare categorie mediante indicatori numerici senza imporre un ordine arbitrario"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa contiene una foglia di un albero di classificazione?",
+    "opzioni": [
+      "Il learning rate del modello successivo",
+      "Una previsione di classe derivata dai campioni che raggiungono la foglia",
+      "Un nuovo split obbligatorio anche se il nodo è terminale",
+      "Il valore della distanza dal centroide globale",
+      "La loss di ciascuna iterazione della backpropagation",
+      "La matrice di covarianza delle classi"
+    ],
+    "soluzioni": [
+      "Una previsione di classe derivata dai campioni che raggiungono la foglia"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa significa bagging?",
+    "opzioni": [
+      "Binary averaging grouping",
+      "Bagged gain optimization",
+      "Balanced gradient generation",
+      "Bayesian Gaussian grouping",
+      "Batch gradient boosting",
+      "Bootstrap aggregating"
+    ],
+    "soluzioni": [
+      "Bootstrap aggregating"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Un modello produce ottimi risultati sul training ma risultati instabili cambiando campione di addestramento. Quale insieme di concetti descrive meglio il problema?",
+    "opzioni": [
+      "Clustering soft e necessità di stimare una covarianza piena",
+      "Rumore irriducibile nullo e generalizzazione garantita",
+      "Assenza di parametri e impossibilità di stimare il target",
+      "Bassa varianza e accuratezza di test necessariamente perfetta",
+      "Alta varianza e possibile overfitting; la validazione è necessaria per controllarne la generalizzazione",
+      "Alto bias e underfitting dimostrato dalla perfetta stabilità tra training set"
+    ],
+    "soluzioni": [
+      "Alta varianza e possibile overfitting; la validazione è necessaria per controllarne la generalizzazione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa accade agli esempi classificati male dopo un round di AdaBoost con un weak learner migliore del caso?",
+    "opzioni": [
+      "Diventano automaticamente punti OOB",
+      "Ricevono un peso nullo",
+      "Vengono eliminati definitivamente dal training set",
+      "Vengono spostati nel test set",
+      "Vengono sostituiti dai centroidi delle classi",
+      "La loro importanza relativa aumenta per l'addestramento successivo"
+    ],
+    "soluzioni": [
+      "La loro importanza relativa aumenta per l'addestramento successivo"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la differenza tra pre-pruning e post-pruning?",
+    "opzioni": [
+      "Il pre-pruning aumenta la profondità; il post-pruning aumenta il numero di alberi",
+      "Il pre-pruning usa esclusivamente softmax; il post-pruning esclusivamente sigmoide",
+      "Il pre-pruning avviene dopo il test; il post-pruning avviene prima di leggere i dati",
+      "Il pre-pruning limita la crescita in anticipo; il post-pruning rimuove parti di un albero già cresciuto",
+      "Il pre-pruning si applica soltanto al clustering; il post-pruning soltanto agli MLP",
+      "Entrambi richiedono di eliminare tutte le foglie pure"
+    ],
+    "soluzioni": [
+      "Il pre-pruning limita la crescita in anticipo; il post-pruning rimuove parti di un albero già cresciuto"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché la regressione logistica standard con due feature ha una frontiera decisionale lineare nonostante la sigmoide sia non lineare?",
+    "opzioni": [
+      "La sigmoide approssima sempre una retta per ogni ingresso",
+      "La frontiera viene definita da un dendrogramma",
+      "La soglia sulla sigmoide corrisponde a una soglia sul punteggio affine",
+      "La probabilità restituita è sempre una funzione affine delle feature",
+      "Le feature vengono necessariamente sostituite dai centroidi",
+      "La sigmoide elimina il bias del modello"
+    ],
+    "soluzioni": [
+      "La soglia sulla sigmoide corrisponde a una soglia sul punteggio affine"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quali passaggi si alternano nell'algoritmo standard K-means?",
+    "opzioni": [
+      "Assegnazione al centroide più vicino e ricalcolo dei centroidi",
+      "Calcolo della log-loss e backpropagation",
+      "Calcolo delle responsabilità gaussiane e aggiornamento delle covarianze",
+      "Ripesatura degli esempi e addestramento di uno stump",
+      "Selezione di feature casuali e voto degli alberi",
+      "Fusione dei due cluster più vicini e taglio del dendrogramma"
+    ],
+    "soluzioni": [
+      "Assegnazione al centroide più vicino e ricalcolo dei centroidi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quante volte un esempio partecipa alla validazione in una singola k-fold cross-validation standard?",
+    "opzioni": [
+      "Mai",
+      "Una volta",
+      "Due volte indipendentemente da k",
+      "Una volta per ciascuna feature",
+      "Soltanto quando è classificato male",
+      "k volte"
+    ],
+    "soluzioni": [
+      "Una volta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quando è particolarmente utile una ricerca randomizzata degli iperparametri?",
+    "opzioni": [
+      "Quando il test set è l'unico insieme di dati consentito per il tuning",
+      "Quando non sono disponibili dati di training",
+      "Quando si vuole evitare qualsiasi valutazione del modello",
+      "Quando lo spazio delle configurazioni è molto ampio e il costo di valutare tutte le combinazioni è elevato",
+      "Quando si vuole garantire di valutare tutte le combinazioni di una griglia finita",
+      "Quando si vuole sostituire l'apprendimento supervisionato con clustering"
+    ],
+    "soluzioni": [
+      "Quando lo spazio delle configurazioni è molto ampio e il costo di valutare tutte le combinazioni è elevato"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale espressione definisce ReLU?",
+    "opzioni": [
+      "max(0,z)",
+      "ln(1+e^(−z))",
+      "1−cos(z)",
+      "1/(1+e^(−z))",
+      "z²",
+      "min(0,z)"
+    ],
+    "soluzioni": [
+      "max(0,z)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale modello è penalizzato maggiormente dalla cross-entropy a parità di classe vera?",
+    "opzioni": [
+      "Quello con più feature in ingresso, a parità di probabilità",
+      "Quello che assegna probabilità maggiore alla classe corretta",
+      "Quello che assegna probabilità minore alla classe corretta",
+      "Quello con più neuroni nel layer nascosto, indipendentemente dalle probabilità",
+      "Quello che usa meno epoche di training, a prescindere dalle probabilità",
+      "Quello che ha il batch size minore"
+    ],
+    "soluzioni": [
+      "Quello che assegna probabilità minore alla classe corretta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Per quale tipo di rappresentazione è particolarmente usata la distanza coseno nelle slide?",
+    "opzioni": [
+      "Profondità degli alberi decisionali",
+      "Etichette binarie considerate come classi nominali",
+      "Altezze di fusione di un dendrogramma",
+      "Probabilità OOB di una Random Forest",
+      "Numeri di iterazioni del Gradient Boosting",
+      "Vettori sparsi che rappresentano testi"
+    ],
+    "soluzioni": [
+      "Vettori sparsi che rappresentano testi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale espressione definisce la distanza Manhattan?",
+    "opzioni": [
+      "Somma algebrica degli scarti senza valore assoluto",
+      "Prodotto delle differenze tra le coordinate",
+      "Media dei quadrati delle coordinate",
+      "Somma dei valori assoluti degli scarti tra coordinate",
+      "Uno meno il coseno dell'angolo tra vettori",
+      "Radice della somma dei quadrati degli scarti"
+    ],
+    "soluzioni": [
+      "Somma dei valori assoluti degli scarti tra coordinate"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale proprietà geometrica ha il vettore dei pesi w di un percettrone con confine wᵀx+b=0?",
+    "opzioni": [
+      "È indipendente dall'orientamento della frontiera",
+      "Rappresenta il centroide della classe positiva",
+      "È perpendicolare al confine e ne determina l'orientamento",
+      "È sempre uguale al vettore nullo",
+      "È sempre parallelo al confine",
+      "Determina soltanto il numero di esempi classificati"
+    ],
+    "soluzioni": [
+      "È perpendicolare al confine e ne determina l'orientamento"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa significa covariance_type='tied' in un GMM?",
+    "opzioni": [
+      "Tutte le componenti condividono la stessa matrice di covarianza",
+      "Ogni componente ha obbligatoriamente una covarianza diversa",
+      "Tutti i pesi di miscela sono fissati a valori identici",
+      "Tutte le componenti devono avere la stessa media",
+      "Le medie vengono fissate ai punti del dataset più vicini",
+      "Le responsabilità sono uguali per ogni punto"
+    ],
+    "soluzioni": [
+      "Tutte le componenti condividono la stessa matrice di covarianza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa fa l'M-step nell'algoritmo EM per GMM?",
+    "opzioni": [
+      "Converte le responsabilità in etichette vere obbligatoriamente",
+      "Seleziona i k punti più lontani tra loro",
+      "Aggiorna i pesi di AdaBoost",
+      "Aggiorna pesi, medie e covarianze usando le responsabilità correnti",
+      "Taglia un dendrogramma a una nuova altezza",
+      "Calcola soltanto le probabilità di appartenenza senza modificare i parametri"
+    ],
+    "soluzioni": [
+      "Aggiorna pesi, medie e covarianze usando le responsabilità correnti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale meccanismo di aggregazione è tipico del bagging per classificazione?",
+    "opzioni": [
+      "Somma degli errori residui di tutti gli alberi",
+      "Scelta della classe meno frequente tra gli alberi",
+      "Media dei codici numerici delle classi arrotondata",
+      "Selezione del solo albero con maggiore profondità",
+      "Voto di maggioranza o media delle probabilità di classe",
+      "Calcolo del centroide delle feature di input"
+    ],
+    "soluzioni": [
+      "Voto di maggioranza o media delle probabilità di classe"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché un albero con split su singole feature può avere difficoltà a rappresentare un confine obliquo?",
+    "opzioni": [
+      "L'albero rappresenta soltanto cluster gaussiani sferici",
+      "Un confine obliquo richiede necessariamente una softmax a dieci uscite",
+      "Ogni suo split può rappresentare qualunque retta obliqua con un unico test",
+      "Gli split non dipendono dalle feature",
+      "Gli alberi non possono mai usare feature numeriche",
+      "Può richiedere molti split ortogonali che approssimano il confine con una struttura a gradini"
+    ],
+    "soluzioni": [
+      "Può richiedere molti split ortogonali che approssimano il confine con una struttura a gradini"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale limite dell'information gain viene affrontato dal gain ratio di C4.5?",
+    "opzioni": [
+      "La necessità di conoscere sempre i target del test",
+      "L'incapacità di usare qualsiasi feature categorica",
+      "L'impossibilità di distinguere nodi puri da nodi impuri",
+      "Il fatto che l'entropia sia sempre negativa",
+      "La tendenza a favorire feature con molti valori distinti",
+      "L'obbligo di costruire una Random Forest"
+    ],
+    "soluzioni": [
+      "La tendenza a favorire feature con molti valori distinti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è l'intervallo dei valori di uscita della tangente iperbolica (tanh) per ingressi reali finiti?",
+    "opzioni": [
+      "Da −infinito a +infinito senza limiti",
+      "Da −1 a 1, estremi esclusi",
+      "Soltanto −1 oppure 1",
+      "Da 0 a 1, estremi esclusi",
+      "Soltanto zero oppure uno",
+      "Da zero a infinito"
+    ],
+    "soluzioni": [
+      "Da −1 a 1, estremi esclusi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa significa MLP?",
+    "opzioni": [
+      "Multiple Linear Probability",
+      "Multiclass Linkage Procedure",
+      "Maximum Likelihood Partition",
+      "Mean Loss Prediction",
+      "Multilayer Perceptron",
+      "Matrix Learning Parameter"
+    ],
+    "soluzioni": [
+      "Multilayer Perceptron"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale limite ha il metodo del gomito?",
+    "opzioni": [
+      "Non permette di confrontare partizioni ottenute sullo stesso dataset",
+      "Il gomito può essere poco evidente e la scelta di k può risultare ambigua",
+      "Non funziona quando l'inertia diminuisce al crescere di k",
+      "Restituisce necessariamente un k uguale al numero di feature",
+      "Può essere utilizzato soltanto con un unico centroide",
+      "Richiede sempre etichette vere di riferimento"
+    ],
+    "soluzioni": [
+      "Il gomito può essere poco evidente e la scelta di k può risultare ambigua"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa indica la generalizzazione di un modello?",
+    "opzioni": [
+      "La capacità di produrre previsioni efficaci su dati nuovi",
+      "L'uso della stessa funzione di loss in tutti i problemi",
+      "La possibilità di ottenere un'inertia nulla sul training",
+      "La capacità di memorizzare perfettamente ogni campione di training",
+      "Il numero di iterazioni richieste per addestrarlo",
+      "Il numero di feature presenti nel dataset"
+    ],
+    "soluzioni": [
+      "La capacità di produrre previsioni efficaci su dati nuovi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come influisce la responsabilità di un punto sulla stima della media di una componente GMM?",
+    "opzioni": [
+      "La responsabilità sostituisce la coordinata del punto",
+      "Una responsabilità più alta riduce necessariamente il peso del punto nella media",
+      "La media dipende esclusivamente dal numero di componenti",
+      "Una responsabilità più alta conferisce al punto maggiore peso nell'aggiornamento della media",
+      "Soltanto i punti con responsabilità esattamente uno possono contribuire",
+      "La responsabilità non influisce perché tutte le medie sono semplici"
+    ],
+    "soluzioni": [
+      "Una responsabilità più alta conferisce al punto maggiore peso nell'aggiornamento della media"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa sono gli odds di un evento con probabilità p compresa tra 0 e 1?",
+    "opzioni": [
+      "Il logaritmo naturale di p",
+      "La differenza p−(1−p)",
+      "Il rapporto p/(1−p)",
+      "La probabilità p elevata al quadrato",
+      "Il rapporto (1−p)/p",
+      "La media delle probabilità di evento e non evento"
+    ],
+    "soluzioni": [
+      "Il rapporto p/(1−p)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale confronto tra learning rate in Gradient Boosting e in gradient descent è corretto?",
+    "opzioni": [
+      "In entrambi regola l'entità degli aggiornamenti, ma nel boosting scala il contributo del nuovo modello e nel gradient descent il passo sui parametri",
+      "In entrambi rappresenta il numero di esempi nel training set",
+      "Nel boosting è un peso appreso per ciascuna feature e nel gradient descent una metrica di distanza",
+      "In entrambi determina il numero esatto di iterazioni necessarie alla convergenza",
+      "Nel boosting è la profondità di un albero e nel gradient descent il numero di layer",
+      "Nel boosting rappresenta la frazione OOB e nel gradient descent il numero di neuroni"
+    ],
+    "soluzioni": [
+      "In entrambi regola l'entità degli aggiornamenti, ma nel boosting scala il contributo del nuovo modello e nel gradient descent il passo sui parametri"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è il ruolo del bias b nel punteggio di un neurone?",
+    "opzioni": [
+      "Determinare il numero di esempi di training",
+      "Scalare tutte le feature mediante la deviazione standard",
+      "Aggiungere un termine indipendente dagli ingressi, permettendo di traslare la risposta",
+      "Sostituire tutti i pesi delle connessioni",
+      "Misurare la varianza del rumore irriducibile",
+      "Imporre che l'uscita sia sempre zero quando tutti gli ingressi sono nulli"
+    ],
+    "soluzioni": [
+      "Aggiungere un termine indipendente dagli ingressi, permettendo di traslare la risposta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché l'MSE deve essere interpretato tenendo conto dell'unità di misura del target?",
+    "opzioni": [
+      "Cambiare unità di misura modifica necessariamente la qualità reale della predizione",
+      "L'MSE è una probabilità indipendente dalle unità",
+      "L'MSE dipende soltanto dal numero di classi",
+      "L'MSE è sempre compreso tra zero e uno",
+      "Cambiando la scala del target e delle predizioni cambia la scala quadratica dell'MSE",
+      "L'MSE coincide con la percentuale di previsioni sbagliate"
+    ],
+    "soluzioni": [
+      "Cambiando la scala del target e delle predizioni cambia la scala quadratica dell'MSE"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è il principio alla base di un ensemble di modelli?",
+    "opzioni": [
+      "Combinare le previsioni di più modelli per ottenere uno stimatore complessivo più efficace",
+      "Selezionare sempre il modello con l'errore di training minore",
+      "Applicare una trasformazione lineare alle predizioni di un singolo modello",
+      "Sostituire tutte le feature con un'unica media",
+      "Addestrare un solo modello su tutti i possibili target",
+      "Suddividere il test set in gruppi senza etichette"
+    ],
+    "soluzioni": [
+      "Combinare le previsioni di più modelli per ottenere uno stimatore complessivo più efficace"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa significa feed-forward nel contesto di un MLP?",
+    "opzioni": [
+      "Ogni strato viene addestrato con un algoritmo di clustering indipendente",
+      "Ogni layer invia il proprio output contemporaneamente a tutti i layer precedenti e successivi",
+      "L'uscita viene sempre riutilizzata come ingresso dello stesso neurone",
+      "Durante la predizione i gradienti vengono propagati prima dell'ingresso",
+      "La rete non contiene parametri apprendibili",
+      "Nel calcolo della previsione l'informazione procede dall'ingresso verso l'uscita senza cicli"
+    ],
+    "soluzioni": [
+      "Nel calcolo della previsione l'informazione procede dall'ingresso verso l'uscita senza cicli"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale modello descrive i dati come una miscela di distribuzioni gaussiane?",
+    "opzioni": [
+      "K-means standard",
+      "Gaussian Mixture Model",
+      "Random Forest",
+      "AdaBoost",
+      "KNeighborsClassifier",
+      "Clustering agglomerativo con single linkage"
+    ],
+    "soluzioni": [
+      "Gaussian Mixture Model"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché due esecuzioni di K-means con lo stesso k possono produrre partizioni diverse?",
+    "opzioni": [
+      "Possono partire da centroidi differenti e raggiungere minimi locali diversi",
+      "K-means modifica necessariamente il numero di feature a ogni esecuzione",
+      "Il modello sceglie sempre i centroidi finali esclusivamente in base ai target",
+      "K-means usa sempre nuove etichette supervisionate casuali",
+      "Il numero di cluster cambia automaticamente in ogni esecuzione",
+      "L'inertia non dipende dalla posizione dei centroidi"
+    ],
+    "soluzioni": [
+      "Possono partire da centroidi differenti e raggiungere minimi locali diversi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In quale situazione la media di più stimatori è particolarmente vantaggiosa?",
+    "opzioni": [
+      "Quando si utilizzano esclusivamente modelli con varianza nulla",
+      "Quando gli stimatori commettono errori poco correlati",
+      "Quando gli stimatori sono copie esatte dello stesso modello",
+      "Quando gli stimatori producono sempre le stesse previsioni",
+      "Quando le previsioni sono ottenute tutte da un unico albero",
+      "Quando tutti gli stimatori hanno lo stesso errore sistematico elevato"
+    ],
+    "soluzioni": [
+      "Quando gli stimatori commettono errori poco correlati"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché una Random Forest limita le feature candidate a ogni nodo?",
+    "opzioni": [
+      "Per minimizzare direttamente la log-loss del modello precedente",
+      "Per impedire agli alberi di utilizzare feature differenti",
+      "Per trasformare gli alberi in classificatori lineari",
+      "Per ridurre la correlazione fra gli alberi e favorire la diversità",
+      "Per garantire che tutti gli alberi abbiano la stessa radice",
+      "Per usare soltanto feature con varianza nulla"
+    ],
+    "soluzioni": [
+      "Per ridurre la correlazione fra gli alberi e favorire la diversità"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale affermazione confronta correttamente k-NN e K-means?",
+    "opzioni": [
+      "Entrambi conservano soltanto k centroidi per fare predizioni",
+      "K-means usa il voto dei vicini etichettati, k-NN minimizza l'inertia",
+      "k-NN è non supervisionato e K-means supervisionato",
+      "Entrambi richiedono le etichette di classe per ogni esempio",
+      "In entrambi k rappresenta necessariamente il numero di classi",
+      "k-NN usa target noti per predire; K-means cerca gruppi e apprende centroidi senza target"
+    ],
+    "soluzioni": [
+      "k-NN usa target noti per predire; K-means cerca gruppi e apprende centroidi senza target"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale proprietà cerca di mantenere StratifiedKFold per la classificazione?",
+    "opzioni": [
+      "Distanze euclidee uguali tra tutti gli esempi",
+      "Centroidi coincidenti tra tutti i fold",
+      "Valori identici per tutte le feature",
+      "Proporzioni delle classi simili nei diversi fold",
+      "Numero identico di feature e di campioni",
+      "Stessa accuracy per ogni singolo fold"
+    ],
+    "soluzioni": [
+      "Proporzioni delle classi simili nei diversi fold"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché Leaky ReLU può limitare il problema dei neuroni morti?",
+    "opzioni": [
+      "Mantiene una piccola pendenza anche nella regione negativa",
+      "Rimuove automaticamente i neuroni inattivi dalla rete",
+      "Elimina tutte le attivazioni negative ponendole a zero",
+      "Normalizza le uscite affinché sommino a uno",
+      "Sostituisce ogni peso negativo con la sua media",
+      "Imposta la derivata a zero per qualunque ingresso"
+    ],
+    "soluzioni": [
+      "Mantiene una piccola pendenza anche nella regione negativa"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cos'è un border point in DBSCAN?",
+    "opzioni": [
+      "Il centroide geometrico di un cluster",
+      "Un punto che deve essere escluso dal dataset prima del training",
+      "Un punto non core che appartiene al vicinato di almeno un punto core",
+      "Un punto che appartiene necessariamente a tutti i cluster",
+      "Un punto che soddisfa da solo la densità minima per essere core",
+      "Un punto privo di qualsiasi collegamento con regioni dense"
+    ],
+    "soluzioni": [
+      "Un punto non core che appartiene al vicinato di almeno un punto core"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché un'accuracy di training prossima al 100% e una di validazione molto inferiore possono indicare overfitting?",
+    "opzioni": [
+      "Il modello ha eliminato ogni forma di rumore",
+      "Il modello ha raggiunto certamente il miglior errore di generalizzazione possibile",
+      "La validazione viene necessariamente eseguita con una metrica diversa",
+      "Il modello è certamente troppo semplice per apprendere persino il training",
+      "Le feature sono necessariamente tutte costanti",
+      "Il modello può aver memorizzato dettagli del training che non si ripetono su dati nuovi"
+    ],
+    "soluzioni": [
+      "Il modello può aver memorizzato dettagli del training che non si ripetono su dati nuovi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale effetto può avere un eps troppo grande in DBSCAN?",
+    "opzioni": [
+      "Regioni che dovrebbero restare separate possono essere unite",
+      "Il numero di feature viene ridotto automaticamente",
+      "Aumenta sempre il numero di punti classificati come rumore",
+      "L'algoritmo si trasforma in K-medoids",
+      "Viene garantita una silhouette pari a uno",
+      "Ogni punto diventa necessariamente un cluster isolato"
+    ],
+    "soluzioni": [
+      "Regioni che dovrebbero restare separate possono essere unite"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale problema è tipicamente associato al single linkage?",
+    "opzioni": [
+      "Overfitting dovuto al learning rate di ogni fusione",
+      "Saturazione del gradiente della sigmoide",
+      "Neuroni morti dopo la fusione",
+      "Duplicazione obbligatoria dei punti per effetto del bootstrap",
+      "Necessità di stimare la probabilità di ogni classe vera",
+      "Chaining: punti intermedi possono collegare gruppi in una lunga catena"
+    ],
+    "soluzioni": [
+      "Chaining: punti intermedi possono collegare gruppi in una lunga catena"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa controlla subsample nel Gradient Boosting?",
+    "opzioni": [
+      "Il numero di cluster da trovare",
+      "Il rapporto tra il numero di alberi e il numero di feature",
+      "Il rapporto tra bias e varianza del modello",
+      "La frazione di classi incluse nella predizione finale",
+      "La frazione di esempi utilizzata per addestrare ciascun nuovo albero",
+      "La frazione di neuroni attivi in un MLP"
+    ],
+    "soluzioni": [
+      "La frazione di esempi utilizzata per addestrare ciascun nuovo albero"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché non è sufficiente scegliere il k che minimizza in assoluto l'inertia?",
+    "opzioni": [
+      "L'inertia è definita esclusivamente per classificazione supervisionata",
+      "Aumentare k fino a un centroide per punto può annullare l'inertia senza produrre un raggruppamento utile",
+      "Un'inertia piccola indica sempre gruppi molto sovrapposti",
+      "L'inertia misura soltanto il rumore irriducibile",
+      "Un numero maggiore di cluster aumenta sempre l'inertia",
+      "L'inertia non si può confrontare neanche a parità di dataset"
+    ],
+    "soluzioni": [
+      "Aumentare k fino a un centroide per punto può annullare l'inertia senza produrre un raggruppamento utile"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa controlla max_depth in un albero decisionale?",
+    "opzioni": [
+      "Il valore massimo della funzione Gini",
+      "Il numero massimo di classi possibili",
+      "Il numero minimo di esempi nel test set",
+      "La profondità massima consentita dalla radice alle foglie",
+      "Il numero esatto di feature del dataset",
+      "Il numero di alberi di un ensemble"
+    ],
+    "soluzioni": [
+      "La profondità massima consentita dalla radice alle foglie"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è il significato di un'impurità Gini nulla in un nodo non vuoto?",
+    "opzioni": [
+      "L'albero ha certamente accuracy di test perfetta",
+      "Il nodo è necessariamente la radice",
+      "Tutti gli esempi del nodo appartengono alla stessa classe",
+      "Il nodo contiene necessariamente un solo campione",
+      "Tutte le classi possibili sono rappresentate in uguale proporzione",
+      "Il nodo ha raggiunto il massimo valore di impurità"
+    ],
+    "soluzioni": [
+      "Tutti gli esempi del nodo appartengono alla stessa classe"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa controlla max_features in una Random Forest?",
+    "opzioni": [
+      "Il numero di alberi che partecipano al voto",
+      "La dimensione massima di ogni foglia in termini di campioni",
+      "Il numero massimo di esempi duplicati nel bootstrap",
+      "Il numero o la frazione di feature considerate come candidate per uno split",
+      "Il numero massimo di classi del target",
+      "Il numero massimo di campioni di test"
+    ],
+    "soluzioni": [
+      "Il numero o la frazione di feature considerate come candidate per uno split"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa si intende per rumore irriducibile nella relazione y = f(x) + ε?",
+    "opzioni": [
+      "La differenza tra training accuracy e test accuracy",
+      "Una componente casuale che non è prevedibile conoscendo soltanto le feature considerate",
+      "La correlazione residua fra alberi della stessa foresta",
+      "Il contributo del bias quadratico della funzione stimata",
+      "La variabilità dovuta alla scelta degli iperparametri",
+      "L'errore causato esclusivamente dalla profondità insufficiente dell'albero"
+    ],
+    "soluzioni": [
+      "Una componente casuale che non è prevedibile conoscendo soltanto le feature considerate"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale caratteristica differenzia un punto lontano dal proprio centroide in K-means da un punto isolato per DBSCAN?",
+    "opzioni": [
+      "Entrambi gli algoritmi devono assegnargli etichetta −1",
+      "Entrambi richiedono la sua etichetta vera per decidere",
+      "K-means gli assegna probabilità gaussiane; DBSCAN una covarianza piena",
+      "K-means lo assegna comunque a un cluster; DBSCAN può lasciarlo come rumore",
+      "Entrambi gli algoritmi lo eliminano prima di apprendere il modello",
+      "K-means lo identifica sempre come rumore; DBSCAN lo assegna sempre a un cluster"
+    ],
+    "soluzioni": [
+      "K-means lo assegna comunque a un cluster; DBSCAN può lasciarlo come rumore"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Con soglia di classificazione 0,5, quale equazione individua la frontiera di una regressione logistica standard con pesi non nulli?",
+    "opzioni": [
+      "σ(wᵀx + b) = 1",
+      "wᵀx + b = 0,5",
+      "wᵀx + b = −1",
+      "wᵀx + b = 1",
+      "wᵀx + b = 0",
+      "σ(wᵀx + b) = 0"
+    ],
+    "soluzioni": [
+      "wᵀx + b = 0"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale intervento può attenuare la maledizione della dimensionalità?",
+    "opzioni": [
+      "Aumentare il numero di etichette senza cambiare le feature",
+      "Usare sempre il test set per scegliere i vicini",
+      "Sostituire le distanze con la loss sul training senza modificare la rappresentazione",
+      "Selezionare feature informative o ridurre la dimensionalità con PCA",
+      "Aggiungere molte feature casuali non informative",
+      "Duplicare ogni feature in più colonne identiche"
+    ],
+    "soluzioni": [
+      "Selezionare feature informative o ridurre la dimensionalità con PCA"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come cambia generalmente la struttura di un albero aumentando ccp_alpha, mantenendo fissi dati e altre impostazioni?",
+    "opzioni": [
+      "Il criterio di split viene sostituito dalla silhouette",
+      "Le foglie diventano meno costose e l'albero cresce senza limiti",
+      "L'albero diventa automaticamente una Random Forest",
+      "Il numero di foglie deve aumentare a ogni incremento di alpha",
+      "Il modello passa necessariamente da classificazione a regressione",
+      "La penalità per le foglie aumenta, favorendo alberi più semplici"
+    ],
+    "soluzioni": [
+      "La penalità per le foglie aumenta, favorendo alberi più semplici"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale tipo di punto DBSCAN può etichettare con −1 in scikit-learn?",
+    "opzioni": [
+      "Il punto con probabilità di appartenenza massima",
+      "Il cluster con indice zero",
+      "Ogni punto core",
+      "Ogni border point assegnato a un gruppo",
+      "Un punto considerato rumore",
+      "Il centroide di un cluster molto denso"
+    ],
+    "soluzioni": [
+      "Un punto considerato rumore"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Si devono riconoscere oggetti differenti che possono comparire contemporaneamente nella stessa immagine. Quale scelta del layer di uscita è più adatta?",
+    "opzioni": [
+      "Un unico valore scalare lineare per il codice numerico dell'oggetto",
+      "Una softmax che imponga una sola classe tra tutte le categorie",
+      "Una probabilità sigmoide per ogni etichetta",
+      "Un unico centroide per immagine",
+      "Un solo neurone ReLU indipendentemente dal numero di etichette",
+      "Una tangente iperbolica condivisa senza una probabilità per etichetta"
+    ],
+    "soluzioni": [
+      "Una probabilità sigmoide per ogni etichetta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale sequenza descrive il funzionamento di un neurone artificiale?",
+    "opzioni": [
+      "Calcolo del centroide, somma delle distanze, fusione dei cluster",
+      "Somma non pesata delle classi, pruning, attivazione",
+      "Funzione di attivazione sui target, bootstrap, voto finale",
+      "Ricezione degli ingressi, somma pesata con bias, funzione di attivazione",
+      "Calcolo del gradiente prima di ricevere gli ingressi, scelta dei centroidi, normalizzazione",
+      "Calcolo della silhouette, scelta dei pesi, campionamento del test"
+    ],
+    "soluzioni": [
+      "Ricezione degli ingressi, somma pesata con bias, funzione di attivazione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché k-NN viene definito lazy learning?",
+    "opzioni": [
+      "Aggiorna i centroidi fino alla convergenza durante il training",
+      "Non richiede di conservare alcuna informazione sul training set",
+      "Addestra molti alberi e poi ne aggrega le predizioni",
+      "Ottimizza i pesi di una rete mediante backpropagation",
+      "Conserva gli esempi di training e rimanda gran parte del lavoro alla predizione",
+      "Apprende i coefficienti di una funzione lineare prima di ogni predizione"
+    ],
+    "soluzioni": [
+      "Conserva gli esempi di training e rimanda gran parte del lavoro alla predizione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa caratterizza covariance_type='diag' in un GMM?",
+    "opzioni": [
+      "Ogni componente è un singolo punto osservato",
+      "Le componenti condividono sempre un'unica matrice di covarianza piena",
+      "Non viene stimata alcuna varianza",
+      "Ogni componente ha necessariamente assi principali ruotati rispetto alle coordinate",
+      "Ogni componente ha necessariamente varianza identica in tutte le direzioni",
+      "Ogni componente può avere varianze diverse lungo gli assi, senza covarianze incrociate"
+    ],
+    "soluzioni": [
+      "Ogni componente può avere varianze diverse lungo gli assi, senza covarianze incrociate"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è il ruolo del test set in una procedura corretta di selezione dei modelli?",
+    "opzioni": [
+      "Valutare il modello selezionato su dati non utilizzati per addestramento o tuning",
+      "Addestrare il modello migliore prima di calcolarne la prestazione finale sullo stesso test",
+      "Scegliere ripetutamente gli iperparametri fino a massimizzare il suo score",
+      "Sostituire i fold di training in ogni iterazione",
+      "Identificare i campioni bootstrap duplicati",
+      "Calcolare le statistiche di normalizzazione prima del training"
+    ],
+    "soluzioni": [
+      "Valutare il modello selezionato su dati non utilizzati per addestramento o tuning"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Se cambia soltanto il numero di esempi del dataset ma l'architettura di un MLP rimane identica, che cosa succede al numero di parametri?",
+    "opzioni": [
+      "Dipende esclusivamente dall'accuracy finale",
+      "Diventa uguale al numero di esempi",
+      "Cresce necessariamente in proporzione agli esempi",
+      "Rimane invariato",
+      "Diminuisce necessariamente all'aumentare degli esempi",
+      "Diventa uguale alla dimensione del batch"
+    ],
+    "soluzioni": [
+      "Rimane invariato"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la funzione principale del validation set?",
+    "opzioni": [
+      "Fornire sempre la valutazione finale indipendente anche dopo numerosi tentativi di tuning",
+      "Addestrare direttamente i parametri del modello in ogni singola configurazione durante la sua valutazione",
+      "Sostituire le feature in ingresso con la loro media",
+      "Fissare i valori target di esempi sconosciuti",
+      "Contenere soltanto le osservazioni duplicate",
+      "Confrontare configurazioni e scegliere modello o iperparametri senza usare il test finale"
+    ],
+    "soluzioni": [
+      "Confrontare configurazioni e scegliere modello o iperparametri senza usare il test finale"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella decomposizione dell'errore quadratico atteso, quale termine rappresenta il rumore irriducibile?",
+    "opzioni": [
+      "σ²",
+      "Correlazione ρ tra stimatori",
+      "Learning rate η",
+      "Varianza dello stimatore",
+      "Bias²",
+      "Numero di modelli B"
+    ],
+    "soluzioni": [
+      "σ²"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale coppia uscita-loss è tipica per la classificazione binaria con un singolo neurone di uscita?",
+    "opzioni": [
+      "Uscita lineare e indice di Gini come loss standard",
+      "ReLU e silhouette",
+      "Uscita lineare non trasformata e BIC",
+      "Sigmoide e binary cross-entropy",
+      "Tanh e complete linkage",
+      "Softmax su un solo logit e inertia"
+    ],
+    "soluzioni": [
+      "Sigmoide e binary cross-entropy"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale vantaggio ha tanh rispetto alla sigmoide standard riguardo al centro del suo intervallo di uscita?",
+    "opzioni": [
+      "Non satura mai per ingressi molto grandi in modulo",
+      "È sempre non negativa",
+      "Restituisce direttamente una distribuzione multiclasse",
+      "Ha necessariamente derivata costante per tutti gli ingressi",
+      "Ha sempre uscita uguale all'ingresso",
+      "È centrata attorno a zero e può produrre valori negativi"
+    ],
+    "soluzioni": [
+      "È centrata attorno a zero e può produrre valori negativi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa indica tipicamente una silhouette prossima a +1?",
+    "opzioni": [
+      "Il centroide del cluster coincide con il punto",
+      "Il punto è molto più vicino, in media, al proprio cluster che ai cluster alternativi",
+      "Il punto è equidistante in media dal proprio cluster e dall'alternativo più vicino",
+      "Il cluster del punto è necessariamente composto da un unico elemento",
+      "Il punto è in media più vicino a un altro cluster",
+      "Il numero di cluster è sicuramente ottimale"
+    ],
+    "soluzioni": [
+      "Il punto è molto più vicino, in media, al proprio cluster che ai cluster alternativi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la differenza fondamentale tra classificazione multiclasse e multi-etichetta?",
+    "opzioni": [
+      "Nel multiclasse si predicono numeri continui; nel multi-etichetta si predicono classi",
+      "Nel multiclasse si usa sempre K-means; nel multi-etichetta sempre k-NN",
+      "Nel multiclasse si predicono tutte le classi come vere contemporaneamente; nel multi-etichetta esattamente una",
+      "Nel multiclasse sono ammesse soltanto due classi; nel multi-etichetta soltanto tre",
+      "Nel multiclasse non esistono target; nel multi-etichetta esistono target",
+      "Nel multiclasse le classi sono alternative esclusive; nel multi-etichetta più etichette possono essere presenti"
+    ],
+    "soluzioni": [
+      "Nel multiclasse le classi sono alternative esclusive; nel multi-etichetta più etichette possono essere presenti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché una partizione con inertia inferiore può comunque avere una silhouette media inferiore?",
+    "opzioni": [
+      "La silhouette misura esclusivamente le distanze quadratiche dai centroidi",
+      "L'inertia misura la separazione fra classi vere e non la compattezza",
+      "Una silhouette inferiore implica sempre un'inertia maggiore",
+      "L'inertia valuta la compattezza attorno ai centroidi, la silhouette considera anche la separazione tra cluster",
+      "La silhouette dipende soltanto dal numero di feature",
+      "Le due metriche sono matematicamente identiche ma hanno unità diverse"
+    ],
+    "soluzioni": [
+      "L'inertia valuta la compattezza attorno ai centroidi, la silhouette considera anche la separazione tra cluster"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale esempio rappresenta un parametro appreso anziché un iperparametro?",
+    "opzioni": [
+      "Il peso di una connessione in una rete neurale addestrata",
+      "Il numero di alberi scelto per una Random Forest",
+      "Il learning rate impostato prima del training",
+      "La profondità massima consentita a un albero",
+      "Il numero di cluster richiesto a K-means",
+      "Il numero di vicini scelto per k-NN"
+    ],
+    "soluzioni": [
+      "Il peso di una connessione in una rete neurale addestrata"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa si intende per maledizione della dimensionalità nei metodi basati sulla distanza?",
+    "opzioni": [
+      "Il numero di classi diventa uguale al numero di feature",
+      "Le distanze euclidee diventano matematicamente non definibili",
+      "Ogni feature aggiunta garantisce una migliore predizione",
+      "Il modello non può più conservare i target di training",
+      "Con molte dimensioni le distanze tendono a diventare simili, rendendo meno informativa la vicinanza",
+      "Le distanze diventano sempre nulle al crescere delle dimensioni"
+    ],
+    "soluzioni": [
+      "Con molte dimensioni le distanze tendono a diventare simili, rendendo meno informativa la vicinanza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si interpreta il coefficiente wᵢ della regressione logistica in termini di odds, tenendo fisse le altre feature?",
+    "opzioni": [
+      "Il coefficiente coincide con la probabilità della classe positiva",
+      "Il coefficiente rappresenta esclusivamente il learning rate",
+      "Un incremento unitario della feature moltiplica gli odds per e^(wᵢ)",
+      "Il coefficiente determina il numero di campioni usati nella validazione",
+      "Un incremento unitario della feature aggiunge sempre wᵢ alla probabilità",
+      "Un incremento unitario della feature moltiplica la probabilità direttamente per wᵢ"
+    ],
+    "soluzioni": [
+      "Un incremento unitario della feature moltiplica gli odds per e^(wᵢ)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale tipo di covarianza GMM permette a ciascuna componente di avere una propria ellisse anche ruotata?",
+    "opzioni": [
+      "Nessuno, perché GMM usa soltanto centroidi puntuali",
+      "tied con matrice necessariamente identità",
+      "diag",
+      "Unicamente una covarianza scalare comune",
+      "spherical",
+      "full"
+    ],
+    "soluzioni": [
+      "full"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa misura l'inertia di K-means?",
+    "opzioni": [
+      "Il numero di punti classificati correttamente rispetto alle etichette vere",
+      "La somma delle distanze tra coppie di centroidi",
+      "La media delle distanze non quadratiche tra tutti i punti del dataset",
+      "La somma delle distanze euclidee al quadrato tra ciascun punto e il centroide assegnato",
+      "Il prodotto delle probabilità delle componenti gaussiane",
+      "La distanza minima fra due cluster nel single linkage"
+    ],
+    "soluzioni": [
+      "La somma delle distanze euclidee al quadrato tra ciascun punto e il centroide assegnato"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale comportamento è tipico di un modello con alta varianza e basso bias?",
+    "opzioni": [
+      "Produce la stessa funzione stimata su ogni possibile training set",
+      "Ha necessariamente prestazioni identiche su training e test",
+      "È indipendente dalla scelta degli esempi di training",
+      "Elimina il rumore irriducibile dal target",
+      "È troppo semplice e non rappresenta nemmeno la struttura del training set",
+      "È flessibile, ma può adattarsi al rumore del training set"
+    ],
+    "soluzioni": [
+      "È flessibile, ma può adattarsi al rumore del training set"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Un modello classificatore è valutato durante il tuning mediante cross-validation. Perché il suo miglior score medio non è una stima finale completamente indipendente?",
+    "opzioni": [
+      "È ottenuto esclusivamente sui campioni OOB duplicati",
+      "È stato usato per selezionare la configurazione tra molte alternative",
+      "Coincide sempre con il punteggio di training dell'intero modello",
+      "È calcolato necessariamente con una funzione di loss negativa",
+      "Dipende necessariamente dalla silhouette dei cluster",
+      "È stato calcolato soltanto sui target senza usare le predizioni"
+    ],
+    "soluzioni": [
+      "È stato usato per selezionare la configurazione tra molte alternative"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa si intende per neurone morto nel contesto ReLU?",
+    "opzioni": [
+      "Un neurone che rimane nella regione di uscita e gradiente nulli per gli esempi rilevanti",
+      "Un neurone che aggiorna i pesi soltanto in test",
+      "Un neurone che non ha alcun peso in ingresso per definizione",
+      "Un neurone che applica softmax a tutte le classi",
+      "Un neurone con un bias necessariamente positivo",
+      "Un neurone che produce sempre una probabilità uguale a uno"
+    ],
+    "soluzioni": [
+      "Un neurone che rimane nella regione di uscita e gradiente nulli per gli esempi rilevanti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale situazione rappresenta un problema di clustering?",
+    "opzioni": [
+      "Prevedere la specie di un animale da esempi con specie nota",
+      "Stimare il prezzo di una casa da precedenti vendite con prezzo noto",
+      "Stimare la profondità migliore di un albero tramite accuracy",
+      "Prevedere se una mail è spam da email già etichettate",
+      "Raggruppare clienti per caratteristiche di acquisto senza categorie definite in anticipo",
+      "Calcolare la probabilità di una classe con regressione logistica"
+    ],
+    "soluzioni": [
+      "Raggruppare clienti per caratteristiche di acquisto senza categorie definite in anticipo"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è il ruolo principale dei layer nascosti di una rete neurale?",
+    "opzioni": [
+      "Fissare il numero di fold da utilizzare",
+      "Memorizzare le etichette vere dei campioni di test",
+      "Garantire che i neuroni abbiano tutti lo stesso peso",
+      "Sostituire le feature con il loro numero totale",
+      "Calcolare esclusivamente la metrica di accuracy finale",
+      "Apprendere rappresentazioni intermedie utili per la previsione"
+    ],
+    "soluzioni": [
+      "Apprendere rappresentazioni intermedie utili per la previsione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché non conviene necessariamente aumentare senza limiti la complessità di un modello?",
+    "opzioni": [
+      "I modelli complessi hanno sempre bias maggiore",
+      "La complessità riduce sempre la varianza ma aumenta il rumore irriducibile",
+      "L'errore di training deve necessariamente crescere",
+      "La riduzione del bias può essere accompagnata da un aumento della varianza",
+      "La complessità rende impossibile utilizzare il test set",
+      "Ogni parametro aggiunto aumenta necessariamente il bias e riduce la varianza"
+    ],
+    "soluzioni": [
+      "La riduzione del bias può essere accompagnata da un aumento della varianza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale baseline semplice è appropriata per valutare una regressione con MSE?",
+    "opzioni": [
+      "Predire sempre la media dei target del training",
+      "Predire il cluster con la silhouette maggiore",
+      "Predire il valore vero del target come feature",
+      "Predire sempre la media dei target veri del test",
+      "Predire sempre il numero di fold",
+      "Predire sempre il numero di feature"
+    ],
+    "soluzioni": [
+      "Predire sempre la media dei target del training"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è il compito della backpropagation in una rete neurale?",
+    "opzioni": [
+      "Sostituire le funzioni di attivazione con funzioni lineari",
+      "Scegliere direttamente il numero ottimale di cluster",
+      "Calcolare efficientemente i gradienti della loss rispetto ai parametri propagando le derivate all'indietro",
+      "Effettuare il campionamento bootstrap dei neuroni",
+      "Generare previsioni sui dati di test senza calcolare derivate",
+      "Calcolare esclusivamente la percentuale di classificazioni corrette"
+    ],
+    "soluzioni": [
+      "Calcolare efficientemente i gradienti della loss rispetto ai parametri propagando le derivate all'indietro"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nel Gradient Boosting che ruolo ha il learning rate η?",
+    "opzioni": [
+      "Determina il criterio di linkage fra gruppi",
+      "Sostituisce la loss con una misura di accuratezza",
+      "Controlla esclusivamente il numero di classi",
+      "Definisce il numero di feature in ingresso",
+      "Determina la percentuale di campioni OOB",
+      "Scala il contributo del nuovo weak learner alla previsione corrente"
+    ],
+    "soluzioni": [
+      "Scala il contributo del nuovo weak learner alla previsione corrente"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella binary cross-entropy, p è la probabilità della classe positiva. Quale espressione della loss vale quando y = 0?",
+    "opzioni": [
+      "p²",
+      "−ln(p/(1−p))",
+      "ln(1−p)",
+      "−ln(p)",
+      "−ln(1−p)",
+      "1−p"
+    ],
+    "soluzioni": [
+      "−ln(1−p)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale rischio comporta un learning rate troppo grande nel gradient descent?",
+    "opzioni": [
+      "Elimina la necessità del forward pass",
+      "Cambia il numero di parametri a ogni passo",
+      "Può causare oscillazioni o mancata convergenza, superando regioni di minimo",
+      "Garantisce la convergenza in un singolo aggiornamento",
+      "Riduce sempre la loss più rapidamente senza inconvenienti",
+      "Rende automaticamente nullo il gradiente per ogni parametro"
+    ],
+    "soluzioni": [
+      "Può causare oscillazioni o mancata convergenza, superando regioni di minimo"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché l'uscita di una regressione lineare non è direttamente adatta a rappresentare una probabilità binaria?",
+    "opzioni": [
+      "È sempre uguale a zero oppure a uno",
+      "Può assumere valori minori di zero o maggiori di uno",
+      "È sempre costante anche quando cambiano le feature",
+      "Dipende soltanto dal numero di classi",
+      "È necessariamente compresa tra −1 e 1",
+      "È un vettore di probabilità normalizzate"
+    ],
+    "soluzioni": [
+      "Può assumere valori minori di zero o maggiori di uno"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa afferma, nelle ipotesi appropriate, il teorema di approssimazione universale richiamato nelle slide?",
+    "opzioni": [
+      "Il numero di neuroni necessario è sempre uguale al numero di classi",
+      "Una rete lineare priva di attivazioni può approssimare ogni funzione continua",
+      "Una rete profonda generalizza perfettamente per qualunque dataset",
+      "Una rete con uno strato nascosto sufficientemente ampio e attivazione adatta può approssimare funzioni continue su un dominio compatto",
+      "Ogni rete sufficientemente larga raggiunge sempre il minimo globale durante il training",
+      "Qualunque rete con un neurone approssima esattamente ogni funzione"
+    ],
+    "soluzioni": [
+      "Una rete con uno strato nascosto sufficientemente ampio e attivazione adatta può approssimare funzioni continue su un dominio compatto"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In k-NN per regressione, che cosa viene mediato con pesi uniformi?",
+    "opzioni": [
+      "Le distanze dei k esempi dal punto nuovo",
+      "I valori target dell'intero test set",
+      "I centroidi dei k cluster più vicini",
+      "Le probabilità prodotte da un modello logistico",
+      "I valori target dei k esempi più vicini",
+      "Le coordinate delle feature dei vicini"
+    ],
+    "soluzioni": [
+      "I valori target dei k esempi più vicini"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa succede alla distribuzione softmax se si aggiunge la stessa costante a tutti i logit?",
+    "opzioni": [
+      "Diventa necessariamente uniforme",
+      "La somma delle probabilità non è più uno",
+      "Rimane invariata",
+      "Tutte le probabilità diminuiscono della costante",
+      "La classe con logit massimo cambia",
+      "Tutte le probabilità aumentano della costante"
+    ],
+    "soluzioni": [
+      "Rimane invariata"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta un dendrogramma agglomerativo?",
+    "opzioni": [
+      "La struttura dei neuroni di un MLP",
+      "Il valore medio della loss a ogni epoca",
+      "La variazione dell'accuracy rispetto al numero di alberi",
+      "La gerarchia delle fusioni tra cluster e le relative altezze di fusione",
+      "La distribuzione delle probabilità di classe prodotte dalla softmax",
+      "La curva dell'inertia per i diversi valori di k"
+    ],
+    "soluzioni": [
+      "La gerarchia delle fusioni tra cluster e le relative altezze di fusione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa confronta principalmente la distanza coseno tra due vettori non nulli?",
+    "opzioni": [
+      "Il loro orientamento, attraverso l'angolo fra i vettori",
+      "Il valore dei target associati ai due vettori",
+      "Soltanto la differenza tra le loro lunghezze",
+      "Il numero di componenti non nulle del primo vettore",
+      "La distanza dei vettori dal centroide globale",
+      "La somma dei valori assoluti delle coordinate"
+    ],
+    "soluzioni": [
+      "Il loro orientamento, attraverso l'angolo fra i vettori"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa caratterizza covariance_type='spherical' in un GMM?",
+    "opzioni": [
+      "Ogni componente ha una matrice diagonale con varianze necessariamente diverse",
+      "Ogni componente ha una covarianza piena arbitraria",
+      "Ogni componente ha una varianza scalare uguale in tutte le direzioni",
+      "Le componenti devono essere tutte equidistanti",
+      "Tutte le componenti devono avere la stessa media",
+      "I punti vengono assegnati necessariamente con voto dei vicini"
+    ],
+    "soluzioni": [
+      "Ogni componente ha una varianza scalare uguale in tutte le direzioni"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Due classificatori binari hanno la stessa accuracy sullo stesso dataset. Che cosa si può dire delle loro log-loss?",
+    "opzioni": [
+      "Possono essere diverse, perché la log-loss considera anche le probabilità assegnate",
+      "Devono essere entrambe nulle",
+      "Sono necessariamente negative",
+      "Devono coincidere con uno meno l'accuracy",
+      "Devono essere identiche, perché la log-loss considera soltanto le classi predette",
+      "Non sono definibili se l'accuracy è diversa da uno"
+    ],
+    "soluzioni": [
+      "Possono essere diverse, perché la log-loss considera anche le probabilità assegnate"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come funziona la k-fold cross-validation standard?",
+    "opzioni": [
+      "Si usa sempre lo stesso fold per validare e si scartano gli altri",
+      "Si suddividono i dati in k fold e si usa a turno ciascun fold per validare un modello allenato sui rimanenti",
+      "Si addestra una sola volta su tutti i fold e si valida sugli stessi dati",
+      "Si usa il test finale per ogni scelta degli iperparametri",
+      "Si assegnano k centroidi ai dati senza usare target",
+      "Si estraggono k campioni bootstrap e si fa il voto di maggioranza"
+    ],
+    "soluzioni": [
+      "Si suddividono i dati in k fold e si usa a turno ciascun fold per validare un modello allenato sui rimanenti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale funzione trasforma il punteggio lineare in probabilità nella regressione logistica binaria?",
+    "opzioni": [
+      "La ReLU",
+      "La distanza Manhattan",
+      "La tangente iperbolica senza trasformazioni ulteriori",
+      "La funzione identità",
+      "L'entropia di Shannon",
+      "La sigmoide"
+    ],
+    "soluzioni": [
+      "La sigmoide"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Si vuole ottenere una previsione di classe spiegabile attraverso una breve sequenza di condizioni sulle feature. Quale modello è il più direttamente adatto?",
+    "opzioni": [
+      "Un GMM con matrici di covarianza piene",
+      "Un MLP con molti layer nascosti",
+      "Una Random Forest con centinaia di alberi profondi",
+      "Un piccolo albero decisionale",
+      "Un k-NN con moltissimi vicini e molte feature",
+      "Un Gradient Boosting con centinaia di weak learner"
+    ],
+    "soluzioni": [
+      "Un piccolo albero decisionale"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A che cosa serve n_init in K-means?",
+    "opzioni": [
+      "A ripetere l'addestramento con diverse inizializzazioni e conservare la soluzione con inertia minore",
+      "A scegliere il numero di fold per una classificazione supervisionata",
+      "A determinare il numero massimo di esempi in un cluster",
+      "A fissare il numero di feature selezionate per ogni punto",
+      "A ripetere soltanto la predizione sui punti di test",
+      "A stabilire il numero di cluster da trovare"
+    ],
+    "soluzioni": [
+      "A ripetere l'addestramento con diverse inizializzazioni e conservare la soluzione con inertia minore"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché è spesso importante scalare le feature prima di applicare k-NN?",
+    "opzioni": [
+      "La scalatura elimina la necessità di conservare i dati di training",
+      "La scalatura elimina sempre tutti gli outlier",
+      "k-NN richiede che tutte le feature siano probabilità",
+      "Una feature con valori numericamente molto grandi può dominare la distanza",
+      "La scalatura garantisce che ogni classe abbia lo stesso numero di campioni",
+      "La distanza euclidea è definita soltanto per valori tra zero e uno"
+    ],
+    "soluzioni": [
+      "Una feature con valori numericamente molto grandi può dominare la distanza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quali elementi costituiscono i parametri apprendibili di un neurone artificiale standard?",
+    "opzioni": [
+      "Soltanto i valori delle feature in ingresso",
+      "Funzione di attivazione e numero di fold",
+      "Learning rate e numero di epoche",
+      "Accuracy e loss finali",
+      "Pesi delle connessioni e bias",
+      "Numero di classi e numero di esempi del test"
+    ],
+    "soluzioni": [
+      "Pesi delle connessioni e bias"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si ottiene una previsione OOB per un particolare esempio di training in una Random Forest?",
+    "opzioni": [
+      "Facendo la media delle feature dell'esempio",
+      "Aggregando soltanto gli alberi che hanno estratto quell'esempio più volte",
+      "Aggregando soltanto gli alberi il cui bootstrap non contiene quell'esempio",
+      "Applicando un nuovo split al test set",
+      "Usando tutti gli alberi che lo classificano correttamente",
+      "Usando l'albero che ha la profondità maggiore"
+    ],
+    "soluzioni": [
+      "Aggregando soltanto gli alberi il cui bootstrap non contiene quell'esempio"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A che cosa serve KNNImputer?",
+    "opzioni": [
+      "A eliminare automaticamente tutte le feature numeriche",
+      "A sostituire il target con una codifica one-hot",
+      "A trovare il numero ottimale di cluster con BIC",
+      "A stimare valori mancanti usando informazioni di esempi simili",
+      "A selezionare i pesi di un MLP tramite backpropagation",
+      "A classificare gli esempi OOB di una foresta"
+    ],
+    "soluzioni": [
+      "A stimare valori mancanti usando informazioni di esempi simili"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale obiettivo ha tipicamente MinMaxScaler?",
+    "opzioni": [
+      "Rendere identico il numero di esempi delle classi",
+      "Sostituire ogni punto con il proprio centroide",
+      "Trasformare le feature in un intervallo scelto, comunemente tra 0 e 1 sul training",
+      "Trasformare i target numerici in cluster",
+      "Eliminare tutte le feature correlate",
+      "Assegnare automaticamente media zero e deviazione standard uno"
+    ],
+    "soluzioni": [
+      "Trasformare le feature in un intervallo scelto, comunemente tra 0 e 1 sul training"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si definisce il logit di una probabilità p nell'intervallo aperto (0,1)?",
+    "opzioni": [
+      "p−0,5",
+      "−ln(p)",
+      "p/(1−p)",
+      "ln(1−p)",
+      "1/(1+e^(−p))",
+      "ln(p/(1−p))"
+    ],
+    "soluzioni": [
+      "ln(p/(1−p))"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A che cosa serve la matrice di covarianza di una componente in un GMM?",
+    "opzioni": [
+      "A fissare il numero di cluster senza considerare i dati",
+      "A descrivere dispersione, forma e orientamento della distribuzione",
+      "A calcolare il numero di iterazioni eseguite",
+      "A definire l'accuracy della classificazione supervisionata",
+      "A imporre che tutti i punti abbiano la stessa probabilità",
+      "A memorizzare le etichette target di training"
+    ],
+    "soluzioni": [
+      "A descrivere dispersione, forma e orientamento della distribuzione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "In un bootstrap standard, quale quota approssimativa degli esempi originali appare almeno una volta per n grande?",
+    "opzioni": [
+      "36,8%",
+      "90%",
+      "100%",
+      "63,2%",
+      "25%",
+      "50%"
+    ],
+    "soluzioni": [
+      "63,2%"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa indica una deviazione standard elevata dei punteggi di cross-validation?",
+    "opzioni": [
+      "Le prestazioni variano sensibilmente tra i fold",
+      "I punteggi sono stati tutti calcolati sul test finale",
+      "Il modello ha necessariamente ottenuto un'accuracy media alta",
+      "Il numero di classi è cambiato in ogni fold",
+      "La media dei punteggi è necessariamente zero",
+      "Tutti i fold hanno ottenuto necessariamente un punteggio identico"
+    ],
+    "soluzioni": [
+      "Le prestazioni variano sensibilmente tra i fold"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nel compromesso bias-varianza, che cosa misura il bias di uno stimatore?",
+    "opzioni": [
+      "La varianza del rumore irriducibile nelle osservazioni",
+      "La variazione della loss durante un singolo aggiornamento",
+      "Lo scostamento tra la previsione media su diversi training set e la funzione vera",
+      "La differenza fra le dimensioni di training e test set",
+      "La dispersione delle previsioni attorno alla loro media su diversi training set",
+      "Il numero di parametri che il modello deve imparare"
+    ],
+    "soluzioni": [
+      "Lo scostamento tra la previsione media su diversi training set e la funzione vera"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché un GMM con più componenti non è necessariamente preferibile anche se descrive meglio i dati di training?",
+    "opzioni": [
+      "La maggiore complessità può essere penalizzata da criteri come BIC",
+      "Il GMM con meno componenti ha necessariamente più parametri",
+      "Il numero di componenti deve essere uguale al numero di feature",
+      "Il BIC ignora completamente il numero di parametri",
+      "La likelihood deve sempre diminuire aggiungendo componenti",
+      "Il GMM con più componenti non può produrre soft assignment"
+    ],
+    "soluzioni": [
+      "La maggiore complessità può essere penalizzata da criteri come BIC"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Due modelli k-NN usano le stesse feature e la stessa metrica, ma uno ha k piccolo e l'altro k grande. Quale interpretazione è più plausibile?",
+    "opzioni": [
+      "Il primo usa automaticamente la distanza coseno, il secondo la distanza euclidea",
+      "Il primo ha sempre maggiore bias, il secondo sempre maggiore varianza",
+      "Il primo necessariamente sottostima ogni target, il secondo necessariamente lo sovrastima",
+      "Il primo apprende più pesi tramite gradient descent, il secondo meno",
+      "Il primo è generalmente più sensibile ai dettagli locali, il secondo tende a smussarli",
+      "Il primo non può usare il voto, il secondo non può usare la media"
+    ],
+    "soluzioni": [
+      "Il primo è generalmente più sensibile ai dettagli locali, il secondo tende a smussarli"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si scelgono tipicamente le soglie candidate per una feature numerica di un albero?",
+    "opzioni": [
+      "Considerando valori intermedi tra valori ordinati consecutivi rilevanti per lo split",
+      "Usando il numero di alberi della Random Forest",
+      "Scegliendo sempre la media di tutte le feature insieme",
+      "Fissando necessariamente tutte le soglie a zero",
+      "Usando le classi vere del test per definire ogni soglia",
+      "Usando soltanto il valore massimo osservato"
+    ],
+    "soluzioni": [
+      "Considerando valori intermedi tra valori ordinati consecutivi rilevanti per lo split"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché XOR non è linearmente separabile nello spazio dei due ingressi binari originali?",
+    "opzioni": [
+      "Manca una delle due feature in ogni esempio",
+      "Gli esempi hanno tutti le stesse coordinate ma target diversi",
+      "Le due classi occupano coppie di vertici opposti del quadrato e nessuna retta le separa",
+      "Tutti i quattro esempi appartengono alla stessa classe",
+      "Il target è un numero reale non limitato",
+      "La distanza euclidea non è definita per ingressi binari"
+    ],
+    "soluzioni": [
+      "Le due classi occupano coppie di vertici opposti del quadrato e nessuna retta le separa"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa indica il linkage nel clustering gerarchico?",
+    "opzioni": [
+      "La regola per misurare la dissimilarità tra cluster o il costo della loro fusione",
+      "La proporzione di esempi tenuta per il test",
+      "Il peso della classe predetta nel voto finale",
+      "Il raggio fisso imposto da K-means",
+      "Il numero di feature scelto casualmente a ogni fusione",
+      "La funzione di attivazione dei nodi del dendrogramma"
+    ],
+    "soluzioni": [
+      "La regola per misurare la dissimilarità tra cluster o il costo della loro fusione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella binary cross-entropy, p è la probabilità della classe positiva. Quale espressione della loss vale quando y = 1?",
+    "opzioni": [
+      "p",
+      "ln(p)",
+      "1−p²",
+      "−ln(p/(1−p))",
+      "−ln(1−p)",
+      "−ln(p)"
+    ],
+    "soluzioni": [
+      "−ln(p)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa descrive la varianza di un modello nel contesto bias-varianza?",
+    "opzioni": [
+      "La sensibilità della funzione stimata al cambiamento del training set",
+      "La profondità massima consentita per ogni modello",
+      "La differenza tra classi vere e predette in un solo esempio",
+      "Il numero di feature presenti nel dataset",
+      "La sola variabilità del rumore irriducibile",
+      "Lo scostamento sistematico della previsione media dalla funzione vera"
+    ],
+    "soluzioni": [
+      "La sensibilità della funzione stimata al cambiamento del training set"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Con target one-hot, quale termine determina la cross-entropy di un singolo esempio multiclasse?",
+    "opzioni": [
+      "La distanza euclidea tra i centroidi delle classi",
+      "La somma dei logit non normalizzati",
+      "La media dei logaritmi delle probabilità di tutte le classi con pesi uguali",
+      "Il negativo del logaritmo della probabilità massima anche quando è assegnata alla classe sbagliata",
+      "Il negativo del logaritmo della probabilità assegnata alla classe vera",
+      "La differenza tra i due logit più elevati"
+    ],
+    "soluzioni": [
+      "Il negativo del logaritmo della probabilità assegnata alla classe vera"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si costruisce un campione bootstrap standard di dimensione n a partire da n esempi?",
+    "opzioni": [
+      "Si selezionano n feature anziché n righe",
+      "Si dividono gli esempi in n fold disgiunti",
+      "Si scelgono n esempi distinti senza reinserimento",
+      "Si generano n esempi interpolando i centroidi",
+      "Si prendono esclusivamente gli esempi classificati male",
+      "Si effettuano n estrazioni casuali con reinserimento"
+    ],
+    "soluzioni": [
+      "Si effettuano n estrazioni casuali con reinserimento"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta una codifica one-hot della classe vera in un problema multiclasse?",
+    "opzioni": [
+      "Un vettore con uno nella posizione della classe vera e zero nelle altre",
+      "Un singolo valore reale compreso tra −1 e 1",
+      "Un vettore con uno nella posizione di tutte le classi",
+      "Una matrice di covarianza delle classi",
+      "Un vettore delle probabilità predette dalla rete",
+      "Il vettore dei pesi del layer di uscita"
+    ],
+    "soluzioni": [
+      "Un vettore con uno nella posizione della classe vera e zero nelle altre"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella fase di assegnazione di K-means, quale regola viene applicata a ogni punto?",
+    "opzioni": [
+      "Viene assegnato al punto con silhouette massima",
+      "Viene assegnato al cluster più grande indipendentemente dalla distanza",
+      "Viene assegnato al centroide più lontano",
+      "Viene assegnato al gruppo indicato dalla classe target vera",
+      "Viene assegnato al centroide con distanza euclidea minima",
+      "Viene assegnato a tutti i cluster con probabilità uguali"
+    ],
+    "soluzioni": [
+      "Viene assegnato al centroide con distanza euclidea minima"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale conseguenza può avere la saturazione delle attivazioni durante il training?",
+    "opzioni": [
+      "La rete perde automaticamente tutti i parametri di bias",
+      "Gradienti molto piccoli possono rallentare l'apprendimento dei layer precedenti",
+      "Ogni aggiornamento dei pesi diventa necessariamente enorme",
+      "Ogni neurone viene trasformato in un centroide",
+      "La funzione di loss diventa sempre zero",
+      "Il modello diventa una Random Forest"
+    ],
+    "soluzioni": [
+      "Gradienti molto piccoli possono rallentare l'apprendimento dei layer precedenti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta z = wᵀx + b nella regressione logistica?",
+    "opzioni": [
+      "Il target vero binario",
+      "La derivata della loss rispetto a tutti i pesi",
+      "Il logit, cioè il punteggio lineare prima della sigmoide",
+      "La probabilità normalizzata dopo la sigmoide",
+      "La classe predetta dopo la soglia",
+      "L'errore quadratico medio"
+    ],
+    "soluzioni": [
+      "Il logit, cioè il punteggio lineare prima della sigmoide"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale funzione svolge il bias nella frontiera di un percettrone lineare, mantenendo fissi i pesi?",
+    "opzioni": [
+      "Elimina la necessità di usare pesi",
+      "Permette di traslare il confine senza cambiarne l'orientamento",
+      "Cambia il numero di dimensioni dello spazio",
+      "Rende necessariamente il confine non lineare",
+      "Garantisce che il confine passi sempre per l'origine",
+      "Ruota necessariamente il confine senza traslarlo"
+    ],
+    "soluzioni": [
+      "Permette di traslare il confine senza cambiarne l'orientamento"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa suggerisce una silhouette prossima a zero per un punto in un cluster non singleton?",
+    "opzioni": [
+      "Il punto si trova vicino al confine tra gruppi, con distanze medie simili",
+      "L'inertia complessiva è necessariamente nulla",
+      "Tutti i cluster sono vuoti",
+      "Il punto è perfettamente separato dagli altri gruppi",
+      "Il punto deve coincidere con il centroide globale",
+      "Il punto è sicuramente assegnato al gruppo sbagliato"
+    ],
+    "soluzioni": [
+      "Il punto si trova vicino al confine tra gruppi, con distanze medie simili"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta la composizione di più layer affini senza attivazioni non lineari?",
+    "opzioni": [
+      "Una miscela gaussiana con una componente per layer",
+      "Una trasformazione necessariamente quadratica",
+      "Un'unica trasformazione affine equivalente",
+      "Un classificatore k-NN",
+      "Una funzione capace di risolvere ogni XOR con soglia lineare",
+      "Una funzione necessariamente discontinua"
+    ],
+    "soluzioni": [
+      "Un'unica trasformazione affine equivalente"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si interpreta una silhouette negativa?",
+    "opzioni": [
+      "Il punto è ben separato dagli altri cluster",
+      "Il suo cluster ha sicuramente un solo punto",
+      "Il numero di cluster è certamente troppo piccolo",
+      "Il punto è mediamente più vicino a un cluster alternativo che al proprio",
+      "Il punto non possiede alcuna feature",
+      "La partizione ha necessariamente un'inertia negativa"
+    ],
+    "soluzioni": [
+      "Il punto è mediamente più vicino a un cluster alternativo che al proprio"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa misura l'MSE nella regressione?",
+    "opzioni": [
+      "La media delle differenze senza elevamento al quadrato",
+      "Il numero di campioni con residuo negativo",
+      "La percentuale di esempi assegnati alla classe corretta",
+      "La somma delle probabilità della classe vera",
+      "La media dei quadrati delle differenze tra target veri e predizioni",
+      "La distanza media tra i centroidi"
+    ],
+    "soluzioni": [
+      "La media dei quadrati delle differenze tra target veri e predizioni"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché si dice che le classi competono tra loro quando si utilizza la softmax?",
+    "opzioni": [
+      "Ogni classe usa un dataset di training completamente diverso",
+      "Ogni classe ha una sigmoide indipendente senza alcun vincolo",
+      "La softmax assegna sempre probabilità identiche a tutte le classi",
+      "Il numero di neuroni di uscita aumenta durante la predizione",
+      "La softmax scambia casualmente le etichette vere",
+      "Il denominatore comune collega le probabilità: aumentare un logit, a parità degli altri, riduce le altre probabilità"
+    ],
+    "soluzioni": [
+      "Il denominatore comune collega le probabilità: aumentare un logit, a parità degli altri, riduce le altre probabilità"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale trasformazione applica StandardScaler a una feature non costante?",
+    "opzioni": [
+      "Divide per il valore massimo senza centrare",
+      "Ordina i valori e li sostituisce con le classi",
+      "Sottrae la mediana e divide per il numero di esempi",
+      "Sottrae la media appresa e divide per la deviazione standard appresa",
+      "Sottrae il minimo e divide per la differenza massimo-minimo",
+      "Sostituisce tutti i valori con la media"
+    ],
+    "soluzioni": [
+      "Sottrae la media appresa e divide per la deviazione standard appresa"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si comporta tipicamente un singolo albero molto profondo rispetto a uno poco profondo?",
+    "opzioni": [
+      "Ha sia bias sia varianza necessariamente nulli",
+      "Ha la stessa varianza perché usa le stesse feature",
+      "Ha bias più basso e varianza più alta",
+      "Ha sempre errore di test inferiore",
+      "Ha bias più alto e varianza più bassa",
+      "Ha rumore irriducibile più basso"
+    ],
+    "soluzioni": [
+      "Ha bias più basso e varianza più alta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la scelta predefinita di max_features per RandomForestClassifier riportata nelle slide?",
+    "opzioni": [
+      "Una feature per classe",
+      "Il numero di esempi OOB",
+      "La metà del numero di alberi",
+      "Tutte le feature in ogni nodo",
+      "Circa la radice quadrata del numero di feature",
+      "Il numero di fold di validazione"
+    ],
+    "soluzioni": [
+      "Circa la radice quadrata del numero di feature"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta ε nella formula del peso α di AdaBoost?",
+    "opzioni": [
+      "Il learning rate del Gradient Boosting",
+      "L'errore di classificazione pesato del weak learner",
+      "Il numero di alberi già addestrati",
+      "La percentuale di feature candidate a uno split",
+      "La varianza del rumore irriducibile",
+      "La soglia usata per dividere una feature"
+    ],
+    "soluzioni": [
+      "L'errore di classificazione pesato del weak learner"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è lo scopo del gradient descent?",
+    "opzioni": [
+      "Selezionare soltanto le feature con varianza massima",
+      "Fondere cluster in ordine di distanza",
+      "Calcolare la previsione finale mediante voto",
+      "Aggiornare i parametri in direzione opposta al gradiente per cercare di ridurre la loss",
+      "Aumentare la loss per evitare che il modello impari",
+      "Sostituire tutti i pesi con i target veri"
+    ],
+    "soluzioni": [
+      "Aggiornare i parametri in direzione opposta al gradiente per cercare di ridurre la loss"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché reti più profonde possono essere utili rispetto a una rete con un unico strato nascosto molto largo?",
+    "opzioni": [
+      "Impediscono l'apprendimento di rappresentazioni gerarchiche",
+      "Garantiscono che ogni problema richieda un numero minore di parametri",
+      "Possono riutilizzare rappresentazioni intermedie e rappresentare alcune funzioni in modo più efficiente",
+      "Rendono tutti i problemi linearmente separabili già nello spazio di input",
+      "Eliminano necessariamente l'overfitting",
+      "Non richiedono più attivazioni non lineari"
+    ],
+    "soluzioni": [
+      "Possono riutilizzare rappresentazioni intermedie e rappresentare alcune funzioni in modo più efficiente"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale effetto ha tipicamente una feature molto dominante nel bagging di alberi senza selezione casuale delle feature?",
+    "opzioni": [
+      "Rende necessario il boosting sequenziale",
+      "Annulla il bias di qualsiasi albero",
+      "Garantisce che gli alberi siano perfettamente indipendenti nelle previsioni",
+      "Trasforma l'aggregazione in una regressione logistica",
+      "Può rendere gli alberi simili e quindi aumentarne la correlazione",
+      "Impedisce la formazione di nodi puri"
+    ],
+    "soluzioni": [
+      "Può rendere gli alberi simili e quindi aumentarne la correlazione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Si dispone di dati senza etichette e si vuole valutare se i gruppi sono separati e compatti. Quale scelta è coerente?",
+    "opzioni": [
+      "Usare una metrica interna come la silhouette",
+      "Usare direttamente l'accuracy rispetto alle classi vere",
+      "Usare la recall rispetto alle classi vere",
+      "Usare ARI senza alcuna partizione di riferimento",
+      "Usare la cross-entropy categorica con le classi vere",
+      "Usare NMI senza alcuna seconda partizione"
+    ],
+    "soluzioni": [
+      "Usare una metrica interna come la silhouette"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quanti termini di bias sono associati in generale a un layer fully connected standard con bias abilitato?",
+    "opzioni": [
+      "Uno per ogni esempio del training set",
+      "Uno per ogni neurone del layer di arrivo",
+      "Uno per ogni neurone di ingresso, indipendentemente dalle uscite",
+      "Uno per ogni epoca di training",
+      "Un unico bias per tutta la rete indipendentemente dall'architettura",
+      "Uno per ogni connessione tra neuroni"
+    ],
+    "soluzioni": [
+      "Uno per ogni neurone del layer di arrivo"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa distingue AdaBoost dal Gradient Boosting nella presentazione del corso?",
+    "opzioni": [
+      "AdaBoost ripesa gli esempi; Gradient Boosting costruisce correzioni tramite il gradiente della loss",
+      "AdaBoost non usa il target; Gradient Boosting usa soltanto le feature",
+      "AdaBoost usa alberi indipendenti; Gradient Boosting usa bootstrap indipendenti",
+      "AdaBoost stima centroidi; Gradient Boosting stima medoidi",
+      "AdaBoost è non supervisionato; Gradient Boosting è supervisionato",
+      "AdaBoost minimizza l'inertia; Gradient Boosting usa il voto OOB"
+    ],
+    "soluzioni": [
+      "AdaBoost ripesa gli esempi; Gradient Boosting costruisce correzioni tramite il gradiente della loss"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come definisce la distanza tra due cluster il complete linkage?",
+    "opzioni": [
+      "Usa la silhouette media del cluster più piccolo",
+      "Usa la media di tutte le distanze tra coppie dei due cluster",
+      "Usa la minima distanza tra una coppia di punti appartenenti ai due cluster",
+      "Usa il numero di punti rumorosi in ogni gruppo",
+      "Usa la massima distanza tra una coppia di punti appartenenti ai due cluster",
+      "Usa la distanza tra le medie senza considerare gli altri punti"
+    ],
+    "soluzioni": [
+      "Usa la massima distanza tra una coppia di punti appartenenti ai due cluster"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta un nodo interno di un tipico albero decisionale CART?",
+    "opzioni": [
+      "Il gradiente della loss di una rete neurale",
+      "Una probabilità softmax calcolata su tutti i neuroni",
+      "Un cluster gaussiano con covarianza piena",
+      "Un test su una feature che determina quale ramo seguire",
+      "La predizione definitiva senza ulteriori decisioni",
+      "Una riga del test scelta casualmente"
+    ],
+    "soluzioni": [
+      "Un test su una feature che determina quale ramo seguire"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale criterio fondamentale distingue DBSCAN da K-means?",
+    "opzioni": [
+      "DBSCAN minimizza la log-loss di un classificatore",
+      "DBSCAN usa target supervisionati per formare i cluster",
+      "DBSCAN assegna sempre ciascun punto a uno di k centroidi",
+      "DBSCAN aggiorna gaussiane tramite E-step e M-step",
+      "DBSCAN identifica regioni dense con vicinati, anziché assegnare punti a centroidi",
+      "DBSCAN richiede il numero di cluster prima di iniziare, K-means no"
+    ],
+    "soluzioni": [
+      "DBSCAN identifica regioni dense con vicinati, anziché assegnare punti a centroidi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa distingue un medoide da un centroide?",
+    "opzioni": [
+      "Il medoide rappresenta la covarianza e non una posizione",
+      "Il medoide è sempre la media aritmetica delle coordinate",
+      "Il medoide è scelto tra i punti effettivamente osservati",
+      "Il medoide è un parametro di validazione supervisionata",
+      "Il medoide non può appartenere al cluster",
+      "Il medoide è la probabilità che il punto appartenga al gruppo"
+    ],
+    "soluzioni": [
+      "Il medoide è scelto tra i punti effettivamente osservati"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si confrontano diversi GMM addestrati sugli stessi dati mediante BIC?",
+    "opzioni": [
+      "Si preferisce il modello con BIC maggiore",
+      "Si preferisce il modello con BIC minore",
+      "Si preferisce il BIC più vicino a uno indipendentemente dagli altri valori",
+      "Si cerca il BIC uguale alla silhouette media",
+      "Si seleziona sempre quello con meno componenti ignorando il BIC",
+      "Si seleziona sempre il modello con più parametri"
+    ],
+    "soluzioni": [
+      "Si preferisce il modello con BIC minore"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché k-NN può richiedere molta memoria?",
+    "opzioni": [
+      "Perché conserva tutte le matrici dei gradienti di ogni epoca",
+      "Perché memorizza un albero per ogni feature",
+      "Perché calcola una matrice di covarianza per ogni vicino",
+      "Perché conserva gli esempi di training per confrontarli con i nuovi casi",
+      "Perché salva un dendrogramma per ogni previsione",
+      "Perché deve memorizzare tutte le possibili etichette del test"
+    ],
+    "soluzioni": [
+      "Perché conserva gli esempi di training per confrontarli con i nuovi casi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale direzione indica tipicamente un risultato migliore per l'indice Davies–Bouldin?",
+    "opzioni": [
+      "Valori più bassi",
+      "Valori esattamente uguali a uno",
+      "Valori negativi il più possibile",
+      "Valori più alti",
+      "Valori uguali alla log-loss",
+      "Valori uguali al numero di cluster"
+    ],
+    "soluzioni": [
+      "Valori più bassi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la funzione del nuovo weak learner nel Gradient Boosting?",
+    "opzioni": [
+      "Raggruppare i campioni senza conoscere il target",
+      "Sostituire tutti gli alberi già addestrati",
+      "Apprendere una correzione nella direzione che riduce la loss del modello corrente",
+      "Calcolare il voto di maggioranza degli alberi precedenti",
+      "Minimizzare soltanto la correlazione tra campioni bootstrap",
+      "Stimare nuovamente il target senza considerare il modello corrente"
+    ],
+    "soluzioni": [
+      "Apprendere una correzione nella direzione che riduce la loss del modello corrente"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa distingue la regressione logistica da una regressione lineare usata direttamente sul target numerico?",
+    "opzioni": [
+      "La logistica non può essere addestrata su esempi con target noto",
+      "La logistica usa esclusivamente distanze da esempi vicini",
+      "La logistica produce necessariamente previsioni fuori da [0,1]",
+      "La logistica non ha pesi né intercetta",
+      "La logistica apprende centroidi mediante EM",
+      "La logistica usa una trasformazione probabilistica ed è tipicamente ottimizzata con log-loss"
+    ],
+    "soluzioni": [
+      "La logistica usa una trasformazione probabilistica ed è tipicamente ottimizzata con log-loss"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la principale differenza nell'addestramento di bagging e boosting?",
+    "opzioni": [
+      "Entrambi richiedono che ogni albero corregga quello precedente",
+      "Il boosting è un metodo non supervisionato, il bagging supervisionato",
+      "Il bagging non usa un training set, il boosting sì",
+      "Il bagging addestra modelli separatamente, il boosting costruisce modelli in successione",
+      "Il bagging è sequenziale, il boosting addestra tutti i modelli indipendentemente",
+      "Entrambi usano necessariamente alberi della stessa profondità"
+    ],
+    "soluzioni": [
+      "Il bagging addestra modelli separatamente, il boosting costruisce modelli in successione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale configurazione geometrica è più favorevole a K-means?",
+    "opzioni": [
+      "Gruppi di densità estremamente diverse con molti outlier",
+      "Gruppi compatti, approssimativamente sferici e di dimensioni simili",
+      "Gruppi a forma di anelli concentrici",
+      "Gruppi a mezzaluna intrecciati",
+      "Gruppi definiti soltanto da relazioni non geometriche non presenti nelle feature",
+      "Gruppi molto allungati che si sovrappongono lungo gli assi"
+    ],
+    "soluzioni": [
+      "Gruppi compatti, approssimativamente sferici e di dimensioni simili"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché K-means è sensibile agli outlier?",
+    "opzioni": [
+      "L'algoritmo utilizza soltanto medoidi realmente osservati",
+      "Gli outlier vengono sempre rimossi durante l'inizializzazione",
+      "Gli outlier vengono sempre classificati come rumore con etichetta −1",
+      "L'algoritmo usa una loss indipendente dalle distanze",
+      "I centroidi sono fissati prima del training e non cambiano",
+      "Le medie dei punti possono essere spostate da valori estremi"
+    ],
+    "soluzioni": [
+      "Le medie dei punti possono essere spostate da valori estremi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa caratterizza un decision stump?",
+    "opzioni": [
+      "Un albero con profondità illimitata",
+      "Un albero con una sola foglia e nessuna decisione",
+      "Un albero con un solo nodo decisionale e le relative foglie",
+      "Un classificatore basato sul vicino più prossimo",
+      "Un neurone dotato di funzione softmax",
+      "Una foresta contenente un unico cluster"
+    ],
+    "soluzioni": [
+      "Un albero con un solo nodo decisionale e le relative foglie"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Perché gli alberi decisionali standard sono meno sensibili alla necessità di scalatura rispetto a k-NN?",
+    "opzioni": [
+      "Usano confronti con soglie su singole feature anziché distanze congiunte tra feature",
+      "Calcolano necessariamente le stesse distanze euclidee di k-NN",
+      "Scalano automaticamente tutti i target nell'intervallo [0,1]",
+      "Non dipendono dall'ordinamento dei valori delle feature",
+      "Utilizzano soltanto valori di feature già standardizzati",
+      "Ignorano completamente le feature numeriche"
+    ],
+    "soluzioni": [
+      "Usano confronti con soglie su singole feature anziché distanze congiunte tra feature"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale affermazione è corretta sull'inertia minima teoricamente ottenibile al crescere di k?",
+    "opzioni": [
+      "Deve aumentare per ogni nuovo centroide",
+      "È indipendente da k",
+      "Coincide sempre con la silhouette media",
+      "Non può aumentare, perché più centroidi consentono almeno la stessa flessibilità",
+      "Rimane costante per qualunque dataset",
+      "È massima quando ogni punto dispone del proprio centroide"
+    ],
+    "soluzioni": [
+      "Non può aumentare, perché più centroidi consentono almeno la stessa flessibilità"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è lo scopo dell'early stopping nel Gradient Boosting?",
+    "opzioni": [
+      "Sostituire la validazione con l'errore sul training",
+      "Imporre sempre il numero minimo possibile di alberi",
+      "Eliminare gli alberi che sono stati addestrati in parallelo",
+      "Fermare il modello al primo errore di training",
+      "Terminare il training non appena ogni foglia contiene più classi",
+      "Fermare l'aggiunta di modelli quando il miglioramento in validazione si arresta"
+    ],
+    "soluzioni": [
+      "Fermare l'aggiunta di modelli quando il miglioramento in validazione si arresta"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Dopo la scelta del primo centroide, quale criterio usa k-means++ standard per scegliere i successivi?",
+    "opzioni": [
+      "Scelta deterministica del punto con target più alto",
+      "Scelta esclusivamente tra i punti del cluster più numeroso già definitivo",
+      "Probabilità proporzionale al quadrato della distanza dal centroide già scelto più vicino",
+      "Probabilità proporzionale all'inverso del quadrato della distanza dal centroide più vicino",
+      "Probabilità uguale per ogni punto indipendentemente dai centri scelti",
+      "Scelta del punto con distanza minima da qualsiasi centroide"
+    ],
+    "soluzioni": [
+      "Probabilità proporzionale al quadrato della distanza dal centroide già scelto più vicino"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta il peso di miscela π di una componente gaussiana?",
+    "opzioni": [
+      "Il raggio massimo consentito per tutti i punti del cluster",
+      "La distanza tra la media e il centroide globale",
+      "La silhouette media di tutti gli altri cluster",
+      "La probabilità di estrarre una feature casualmente",
+      "Il numero obbligatorio di feature della componente",
+      "La proporzione probabilistica della componente nella miscela"
+    ],
+    "soluzioni": [
+      "La proporzione probabilistica della componente nella miscela"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Da che cosa dipende il numero di pesi di un layer fully connected standard?",
+    "opzioni": [
+      "Dal numero di epoche di training",
+      "Dal prodotto tra il numero di unità in ingresso e il numero di unità in uscita",
+      "Dal numero di esempi nel test set",
+      "Dalla dimensione del batch moltiplicata per la loss",
+      "Soltanto dal numero di unità in ingresso",
+      "Soltanto dal numero di unità in uscita"
+    ],
+    "soluzioni": [
+      "Dal prodotto tra il numero di unità in ingresso e il numero di unità in uscita"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Due vettori non nulli hanno la stessa direzione e uno è un multiplo positivo dell'altro. Che cosa vale per la distanza coseno?",
+    "opzioni": [
+      "È massima perché i vettori sono paralleli",
+      "Dipende esclusivamente dal numero di classi",
+      "È nulla anche se i vettori hanno lunghezze diverse",
+      "È uguale alla somma delle norme dei vettori",
+      "Coincide sempre con la distanza Manhattan",
+      "È necessariamente positiva perché le norme differiscono"
+    ],
+    "soluzioni": [
+      "È nulla anche se i vettori hanno lunghezze diverse"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale risultato descrive il migliore punteggio medio di una ricerca con cross-validation?",
+    "opzioni": [
+      "Una stima di validazione della configurazione selezionata, non il punteggio sul test finale",
+      "Il valore minimo ottenuto su un singolo fold indipendentemente dalla media",
+      "La loss irriducibile del problema",
+      "Una misura necessariamente calcolata sul test finale indipendente",
+      "Il numero di combinazioni di iperparametri",
+      "Il punteggio del modello prima di qualsiasi training"
+    ],
+    "soluzioni": [
+      "Una stima di validazione della configurazione selezionata, non il punteggio sul test finale"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Nella silhouette di un punto, che cosa rappresenta b?",
+    "opzioni": [
+      "La distanza massima da un singolo punto del dataset",
+      "La minima fra le distanze medie del punto verso ciascuno degli altri cluster",
+      "La distanza media dagli altri punti del proprio cluster",
+      "La distanza dal centroide del proprio cluster",
+      "La media delle distanze da tutti i punti del dataset indistintamente",
+      "La distanza minima fra i centroidi di due cluster qualsiasi"
+    ],
+    "soluzioni": [
+      "La minima fra le distanze medie del punto verso ciascuno degli altri cluster"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Si vuole prevedere un target continuo da dati tabellari e ridurre l'instabilità di un singolo albero profondo. Quale approccio è direttamente coerente con questo obiettivo?",
+    "opzioni": [
+      "GMM con covarianza piena",
+      "K-means con un centroide per classe",
+      "Gradient Boosting per classificazione binaria",
+      "Regressione logistica binaria",
+      "Clustering gerarchico con complete linkage",
+      "Random Forest per regressione"
+    ],
+    "soluzioni": [
+      "Random Forest per regressione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa significa fully connected per un layer di un MLP standard?",
+    "opzioni": [
+      "Ogni neurone riceve esclusivamente il target vero",
+      "Ogni neurone è collegato soltanto agli altri neuroni del proprio layer",
+      "Ogni neurone riceve un campione bootstrap diverso",
+      "Ogni neurone è collegato soltanto a un singolo neurone precedente",
+      "Ogni neurone del layer riceve un collegamento da ciascuna unità del layer precedente",
+      "Ogni neurone corrisponde a un cluster di K-means"
+    ],
+    "soluzioni": [
+      "Ogni neurone del layer riceve un collegamento da ciascuna unità del layer precedente"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa NON garantisce il teorema di approssimazione universale?",
+    "opzioni": [
+      "Che un particolare algoritmo di training trovi i pesi richiesti in modo efficiente",
+      "La possibilità teorica di approssimare funzioni continue sotto opportune ipotesi",
+      "La possibilità di ottenere un errore di approssimazione arbitrariamente piccolo nelle ipotesi del teorema",
+      "L'esistenza di approssimazioni mediante una rete sufficientemente ampia con attivazione adeguata",
+      "La rappresentabilità approssimata di funzioni non lineari continue nelle ipotesi del teorema",
+      "La capacità espressiva teorica di una rete con uno strato nascosto adatto"
+    ],
+    "soluzioni": [
+      "Che un particolare algoritmo di training trovi i pesi richiesti in modo efficiente"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale differenza è evidenziata nelle slide tra feature engineering classico e deep learning?",
+    "opzioni": [
+      "Il machine learning classico non utilizza mai feature numeriche",
+      "Il deep learning richiede che tutte le feature intermedie siano definite a mano",
+      "Il machine learning classico usa sempre dati non etichettati",
+      "Il deep learning non usa parametri apprendibili",
+      "Il deep learning non richiede alcuna funzione di loss",
+      "Nel deep learning la rete può apprendere rappresentazioni direttamente dai dati grezzi"
+    ],
+    "soluzioni": [
+      "Nel deep learning la rete può apprendere rappresentazioni direttamente dai dati grezzi"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa calcola l'E-step nell'algoritmo EM per GMM?",
+    "opzioni": [
+      "La distanza massima tra due centroidi",
+      "L'inertia minima globale di K-means",
+      "Le responsabilità di appartenenza dei punti alle componenti, dati i parametri correnti",
+      "Le etichette target supervisionate mancanti",
+      "Le nuove medie e covarianze senza usare responsabilità",
+      "Il numero di componenti che minimizza direttamente la silhouette"
+    ],
+    "soluzioni": [
+      "Le responsabilità di appartenenza dei punti alle componenti, dati i parametri correnti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta il gradiente della loss rispetto ai parametri di una rete?",
+    "opzioni": [
+      "Il vettore dei centroidi stimati",
+      "Il vettore delle etichette vere dei dati",
+      "Il numero di neuroni per layer",
+      "L'insieme delle probabilità di classe dopo softmax",
+      "Il vettore delle derivate parziali che indica come varia localmente la loss",
+      "La distanza media tra i campioni di training"
+    ],
+    "soluzioni": [
+      "Il vettore delle derivate parziali che indica come varia localmente la loss"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta eps in DBSCAN?",
+    "opzioni": [
+      "La profondità massima del dendrogramma",
+      "Il learning rate usato per aggiornare i centroidi",
+      "La percentuale di esempi del test set",
+      "Il raggio del vicinato utilizzato per valutare la densità",
+      "Il numero desiderato di cluster",
+      "Il numero minimo di punti del vicinato"
+    ],
+    "soluzioni": [
+      "Il raggio del vicinato utilizzato per valutare la densità"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come si comporta la log-loss binaria quando il modello assegna probabilità molto piccola alla classe effettivamente corretta?",
+    "opzioni": [
+      "Diventa negativa",
+      "Rimane identica alla loss di una predizione molto sicura e corretta",
+      "Dipende soltanto dal numero di feature",
+      "Coincide necessariamente con l'accuracy",
+      "Tende a zero indipendentemente dalla classe vera",
+      "Diventa molto grande, penalizzando l'errore commesso con sicurezza"
+    ],
+    "soluzioni": [
+      "Diventa molto grande, penalizzando l'errore commesso con sicurezza"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la differenza tra parametri e iperparametri di un modello?",
+    "opzioni": [
+      "I parametri sono le feature del dataset; gli iperparametri sono le etichette",
+      "I parametri sono appresi dai dati; gli iperparametri sono configurazioni scelte per governare il modello o il training",
+      "Gli iperparametri sono sempre appresi direttamente con gradient descent; i parametri sono fissati prima del training",
+      "Entrambi sono necessariamente i valori delle feature del test",
+      "I parametri sono le predizioni; gli iperparametri sono le loss",
+      "Gli iperparametri esistono soltanto nei problemi non supervisionati"
+    ],
+    "soluzioni": [
+      "I parametri sono appresi dai dati; gli iperparametri sono configurazioni scelte per governare il modello o il training"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale svantaggio ha una Random Forest rispetto a un piccolo albero singolo?",
+    "opzioni": [
+      "Richiede sempre la standardizzazione delle feature",
+      "Non può ridurre la varianza tramite aggregazione",
+      "Non può sfruttare l'addestramento parallelo",
+      "Non può gestire target categorici",
+      "Non permette di limitare la profondità degli alberi",
+      "La previsione è in genere meno facilmente interpretabile come un unico percorso di regole"
+    ],
+    "soluzioni": [
+      "La previsione è in genere meno facilmente interpretabile come un unico percorso di regole"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A che cosa servono KD-tree e Ball-tree nel contesto k-NN?",
+    "opzioni": [
+      "Ad accelerare la ricerca dei vicini, soprattutto in bassa dimensionalità",
+      "A trasformare i target in probabilità con softmax",
+      "A generare campioni bootstrap",
+      "A scegliere automaticamente il numero di classi",
+      "A stimare i pesi dei weak learner",
+      "A ridurre l'impurità Gini delle classi"
+    ],
+    "soluzioni": [
+      "Ad accelerare la ricerca dei vicini, soprattutto in bassa dimensionalità"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale compromesso è tipico tra learning rate e numero di round nel Gradient Boosting?",
+    "opzioni": [
+      "Un learning rate più piccolo impone sempre un solo round",
+      "Il learning rate determina direttamente il numero di feature",
+      "Un learning rate più piccolo elimina il bisogno di validazione",
+      "Un learning rate più piccolo richiede spesso più round",
+      "Il numero di round non ha alcuna relazione con il learning rate",
+      "Un learning rate più grande rende tutti gli alberi indipendenti"
+    ],
+    "soluzioni": [
+      "Un learning rate più piccolo richiede spesso più round"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è il vantaggio di inserire StandardScaler e k-NN nella stessa pipeline durante la cross-validation?",
+    "opzioni": [
+      "La pipeline garantisce sempre accuratezza perfetta",
+      "La pipeline rende superflua la scelta di k",
+      "In ciascun fold la scalatura viene appresa solo sulla sua parte di training",
+      "La pipeline sostituisce la metrica di distanza con il Gini",
+      "Lo scaler viene appreso una sola volta su tutti i fold, inclusa la validazione",
+      "La pipeline evita qualsiasi necessità di usare dati di training"
+    ],
+    "soluzioni": [
+      "In ciascun fold la scalatura viene appresa solo sulla sua parte di training"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Come definisce la distanza tra due cluster l'average linkage standard?",
+    "opzioni": [
+      "Usa esclusivamente la distanza tra i due medoidi",
+      "Usa la media delle distanze tra tutte le coppie di punti appartenenti ai due cluster",
+      "Usa la distanza tra la sola coppia più lontana",
+      "Usa la differenza fra le cardinalità dei cluster",
+      "Usa il prodotto delle distanze da un centroide globale",
+      "Usa la distanza tra la sola coppia più vicina"
+    ],
+    "soluzioni": [
+      "Usa la media delle distanze tra tutte le coppie di punti appartenenti ai due cluster"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa predice tipicamente una foglia di un albero di regressione con criterio squared_error?",
+    "opzioni": [
+      "La mediana dei target per qualsiasi criterio",
+      "La classe più frequente dei target, trattati sempre come categorie",
+      "La media dei target dei campioni che raggiungono la foglia",
+      "Il valore target massimo dell'intero training set",
+      "Il centroide del test set",
+      "La media delle feature anziché dei target"
+    ],
+    "soluzioni": [
+      "La media dei target dei campioni che raggiungono la foglia"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale proprietà preserva la softmax rispetto all'ordinamento dei logit?",
+    "opzioni": [
+      "Il logit massimo riceve sempre probabilità esattamente uno",
+      "Un logit maggiore corrisponde a una probabilità maggiore",
+      "Logit distinti producono sempre probabilità identiche",
+      "L'ordinamento cambia casualmente a ogni applicazione",
+      "L'ordinamento delle probabilità dipende esclusivamente dal target vero",
+      "Il logit maggiore corrisponde alla probabilità minore"
+    ],
+    "soluzioni": [
+      "Un logit maggiore corrisponde a una probabilità maggiore"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa fa la softmax rispetto a un vettore di logit finiti?",
+    "opzioni": [
+      "Converte ogni logit negativo in zero e lascia invariati i positivi",
+      "Restituisce valori indipendenti la cui somma può essere qualsiasi numero",
+      "Li trasforma in probabilità positive che sommano a uno",
+      "Applica una soglia separata ottenendo soltanto valori zero o uno",
+      "Restituisce soltanto il logit massimo senza normalizzazione",
+      "Sottrae la media e divide per la deviazione standard"
+    ],
+    "soluzioni": [
+      "Li trasforma in probabilità positive che sommano a uno"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta min_samples in DBSCAN di scikit-learn?",
+    "opzioni": [
+      "Il numero di centroidi da inizializzare",
+      "Il numero di iterazioni di EM",
+      "Il numero minimo di feature che ogni punto deve avere",
+      "Il numero minimo di cluster da generare",
+      "Il numero minimo di punti nel vicinato, incluso il punto stesso, per essere core",
+      "Il numero massimo di punti che possono appartenere a un cluster"
+    ],
+    "soluzioni": [
+      "Il numero minimo di punti nel vicinato, incluso il punto stesso, per essere core"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale combinazione è tipicamente associata all'underfitting?",
+    "opzioni": [
+      "Bias nullo e varianza alta",
+      "Bias alto e varianza bassa",
+      "Varianza alta e accuratezza di training perfetta",
+      "Bias basso e rumore nullo",
+      "Bias basso e varianza alta",
+      "Bias nullo e accuratezza di validazione perfetta"
+    ],
+    "soluzioni": [
+      "Bias alto e varianza bassa"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale confronto tra k-NN regressore e regressione lineare è corretto per i modelli standard descritti?",
+    "opzioni": [
+      "Entrambi richiedono una sigmoide per ogni predizione numerica",
+      "Entrambi predicono necessariamente una costante uguale alla media globale",
+      "k-NN usa una perdita logaritmica binaria; la regressione lineare usa il voto",
+      "Entrambi apprendono centroidi mediante aggiornamenti iterativi",
+      "k-NN apprende una retta globale; la regressione lineare conserva soltanto i vicini",
+      "k-NN usa medie locali dei target; la regressione lineare apprende coefficienti globali"
+    ],
+    "soluzioni": [
+      "k-NN usa medie locali dei target; la regressione lineare apprende coefficienti globali"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale metodo è appropriato per scegliere k evitando di adattarsi al test finale?",
+    "opzioni": [
+      "Usare sempre il valore massimo consentito dal dataset",
+      "Scegliere k uguale al numero di classi in ogni problema",
+      "Usare sempre k uguale al numero di feature",
+      "Minimizzare l'inertia ottenuta dal test set",
+      "Confrontare diversi valori di k con cross-validation sul training set",
+      "Selezionare k che massimizza l'accuracy sul test e riportare la stessa accuracy come indipendente"
+    ],
+    "soluzioni": [
+      "Confrontare diversi valori di k con cross-validation sul training set"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale situazione favorisce tipicamente l'impiego di k-NN come baseline?",
+    "opzioni": [
+      "Un problema in cui la similarità fra esempi non ha alcun significato",
+      "Un problema privo di qualsiasi target in cui si vogliono scoprire gruppi",
+      "Un problema che richiede necessariamente una formula lineare esplicita",
+      "Un dataset di dimensioni contenute con feature informative e scale confrontabili",
+      "Un problema in cui non è consentito conservare dati di training",
+      "Un dataset enorme ad alta dimensionalità con molte feature inutili e predizioni a latenza critica"
+    ],
+    "soluzioni": [
+      "Un dataset di dimensioni contenute con feature informative e scale confrontabili"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è il ruolo dei pesi w di un neurone artificiale?",
+    "opzioni": [
+      "Memorizzare le classi corrette del test set",
+      "Imporre che ogni ingresso abbia la stessa importanza",
+      "Determinare il contributo dei diversi ingressi al punteggio pre-attivazione",
+      "Stabilire il numero di fold di validazione",
+      "Determinare esclusivamente il numero di neuroni del layer",
+      "Sostituire la funzione di attivazione"
+    ],
+    "soluzioni": [
+      "Determinare il contributo dei diversi ingressi al punteggio pre-attivazione"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è l'ordine concettuale dei passaggi di una predizione k-NN?",
+    "opzioni": [
+      "Aggregare i target, misurare le distanze, scegliere i vicini",
+      "Selezionare i k target più alti, calcolare le distanze, fare bootstrap",
+      "Scegliere k centroidi, aggiornare i centroidi, calcolare la loss",
+      "Calcolare la loss, aggiornare i pesi, ordinare i target",
+      "Misurare le distanze, selezionare i k più vicini, aggregare i loro target",
+      "Selezionare k feature, effettuare uno split, calcolare l'impurità"
+    ],
+    "soluzioni": [
+      "Misurare le distanze, selezionare i k più vicini, aggregare i loro target"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale espressione definisce la silhouette di un punto quando il denominatore è positivo e il cluster non è singleton?",
+    "opzioni": [
+      "s = a / (a + b)",
+      "s = (b + a) / max(a,b)",
+      "s = (b − a) / min(a,b)",
+      "s = (b − a) / max(a,b)",
+      "s = (a − b) / max(a,b)",
+      "s = (a − b)²"
+    ],
+    "soluzioni": [
+      "s = (b − a) / max(a,b)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è la funzione del learning rate nell'aggiornamento tramite gradient descent?",
+    "opzioni": [
+      "Regolare l'ampiezza del passo nella direzione opposta al gradiente",
+      "Scegliere il numero di classi del dataset",
+      "Determinare la percentuale di dati di test",
+      "Definire la dimensione del layer di ingresso",
+      "Imporre che ogni peso sia una probabilità",
+      "Sostituire il calcolo del gradiente"
+    ],
+    "soluzioni": [
+      "Regolare l'ampiezza del passo nella direzione opposta al gradiente"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Che cosa rappresenta il forward pass di una rete neurale?",
+    "opzioni": [
+      "La determinazione del numero di parametri dopo ogni esempio",
+      "La costruzione di campioni bootstrap",
+      "La propagazione all'indietro delle derivate",
+      "Il calcolo delle attivazioni e dell'uscita a partire dagli ingressi e dai parametri correnti",
+      "La scelta dei fold di validazione",
+      "La modifica dei pesi mediante il gradiente della loss"
+    ],
+    "soluzioni": [
+      "Il calcolo delle attivazioni e dell'uscita a partire dagli ingressi e dai parametri correnti"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale compromesso esprime il cost-complexity pruning?",
+    "opzioni": [
+      "Massimizzare contemporaneamente profondità e numero di foglie",
+      "Bilanciare l'errore o impurità dell'albero con una penalità proporzionale al numero di foglie",
+      "Bilanciare il numero di feature con la dimensione del test set",
+      "Minimizzare la distanza tra tutti i centroidi",
+      "Minimizzare esclusivamente l'errore di training senza penalità",
+      "Massimizzare il numero di campioni duplicati nel bootstrap"
+    ],
+    "soluzioni": [
+      "Bilanciare l'errore o impurità dell'albero con una penalità proporzionale al numero di foglie"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale situazione costituisce data leakage nella preparazione di una regressione?",
+    "opzioni": [
+      "Selezionare gli iperparametri con cross-validation sul training",
+      "Rimuovere il target dalle feature prima del training",
+      "Applicare al test la trasformazione già appresa dal training",
+      "Usare il valore vero del target da prevedere come una delle feature in ingresso",
+      "Separare training e test prima di addestrare",
+      "Stimare la scalatura esclusivamente dai dati di training"
+    ],
+    "soluzioni": [
+      "Usare il valore vero del target da prevedere come una delle feature in ingresso"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Qual è un importante limite computazionale della ricerca esatta ingenua di k-NN?",
+    "opzioni": [
+      "Deve calcolare tutti i dendrogrammi possibili",
+      "Per ogni nuovo esempio deve confrontare molte righe di training, con costo delle distanze circa O(n·d)",
+      "Deve necessariamente risolvere un sistema lineare denso per ogni fold",
+      "Deve stimare la matrice di covarianza di ogni classe con EM",
+      "Deve addestrare n alberi profondi a ogni iterazione di boosting",
+      "Deve usare sempre una GPU anche su piccoli dataset"
+    ],
+    "soluzioni": [
+      "Per ogni nuovo esempio deve confrontare molte righe di training, con costo delle distanze circa O(n·d)"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale loss è tipicamente associata alla regressione logistica binaria?",
+    "opzioni": [
+      "Inertia di K-means",
+      "Distanza di complete linkage",
+      "Indice di Gini usato per gli split",
+      "Binary cross-entropy, o log-loss binaria",
+      "BIC di una miscela gaussiana",
+      "Silhouette media"
+    ],
+    "soluzioni": [
+      "Binary cross-entropy, o log-loss binaria"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale strumento è suggerito per orientare la scelta di eps in DBSCAN?",
+    "opzioni": [
+      "Il numero di parametri di un MLP",
+      "Il BIC dei modelli di regressione logistica",
+      "Il grafico ordinato delle distanze dal k-esimo vicino, cercandone il gomito",
+      "La curva della log-loss delle classi vere",
+      "La probabilità OOB delle foreste",
+      "Il grafico dell'accuracy di training rispetto a max_depth"
+    ],
+    "soluzioni": [
+      "Il grafico ordinato delle distanze dal k-esimo vicino, cercandone il gomito"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale proprietà geometrica ha il centroide di un insieme non vuoto di punti?",
+    "opzioni": [
+      "Coincide necessariamente con un punto osservato",
+      "Minimizza la somma delle distanze euclidee al quadrato dai punti dell'insieme",
+      "È necessariamente il punto con la distanza massima dal bordo del gruppo",
+      "Massimizza l'inertia del gruppo",
+      "Massimizza la distanza media dai punti",
+      "Minimizza necessariamente la somma delle distanze euclidee non elevate al quadrato"
+    ],
+    "soluzioni": [
+      "Minimizza la somma delle distanze euclidee al quadrato dai punti dell'insieme"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "Quale rischio presenta scegliere k eccessivamente grande?",
+    "opzioni": [
+      "Eliminazione del bias sistematico",
+      "Impossibilità di aggregare i target dei vicini",
+      "Overfitting causato dal peso esclusivo di un singolo vicino",
+      "Aumento automatico del numero di classi",
+      "Trasformazione del modello in un GMM",
+      "Underfitting, perché si perdono strutture locali"
+    ],
+    "soluzioni": [
+      "Underfitting, perché si perdono strutture locali"
+    ],
+    "tipologia": "singola"
+  },
+  {
+    "domanda": "A che cosa serve min_impurity_decrease?",
+    "opzioni": [
+      "A imporre un'impurità minima sotto la quale i nodi puri non sono ammessi",
+      "A richiedere un miglioramento minimo dell'impurità perché lo split sia effettuato",
+      "A impostare il numero di alberi di un ensemble",
+      "A modificare la distanza utilizzata per scegliere i vicini",
+      "A fissare il numero massimo di campioni nel nodo radice",
+      "A calcolare la probabilità di appartenenza a un cluster"
+    ],
+    "soluzioni": [
+      "A richiedere un miglioramento minimo dell'impurità perché lo split sia effettuato"
+    ],
+    "tipologia": "singola"
+  }
+]
