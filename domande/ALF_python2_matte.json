@@ -1,0 +1,1514 @@
+[
+    {
+        "domanda": "Quanto vale mse_gruppo per una serie contenente [2, 4, 6]? Arrotonda a due decimali.\n\nCODICE PYTHON:\nmse_gruppo(pd.Series([2, 4, 6]))",
+        "opzioni": [
+            "4.00",
+            "2.67",
+            "8.00",
+            "0.00"
+        ],
+        "soluzioni": [
+            "2.67"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Split di un albero di regressione. La media è 4; MSE = ((2−4)²+(4−4)²+(6−4)²)/3 = 8/3 ≈ 2.67 (due decimali). (Esercitazione 2, sezione 2.9.)"
+    },
+    {
+        "domanda": "Che cosa misura la colonna mean_test_score di cv_results_?\n\nCODICE PYTHON:\nrisultati[\"mean_test_score\"]",
+        "opzioni": [
+            "La media dei punteggi sui fold di validazione",
+            "Il numero medio di foglie",
+            "La media dei punteggi sui fold di training",
+            "L'accuracy sul test set finale"
+        ],
+        "soluzioni": [
+            "La media dei punteggi sui fold di validazione"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Risultati della ricerca. Il termine test si riferisce ai fold di validazione della cross-validation, non al test tenuto separato. (Esercitazione 2, sezione 4.3.)"
+    },
+    {
+        "domanda": "Quante colonne indicatrici vengono create per specie, che ha tre categorie, in questo frammento?\n\nCODICE PYTHON:\npd.get_dummies(df[[\"specie\"]], drop_first=True, dtype=int)",
+        "opzioni": [
+            "1",
+            "4",
+            "2",
+            "3"
+        ],
+        "soluzioni": [
+            "2"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione multivariata e one-hot encoding. Formula: numero di indicatori = categorie − 1 = 3 − 1 = 2. (Esercitazione 2, sezione 2.6.)"
+    },
+    {
+        "domanda": "Quante combinazioni contiene combinazioni nel codice del notebook?\n\nCODICE PYTHON:\ngriglia_parametri = {\"max_depth\": list(range(1, 11)), \"min_samples_leaf\": [1, 2, 5, 10, 20]}\ncombinazioni = list(ParameterGrid(griglia_parametri))",
+        "opzioni": [
+            "45",
+            "15",
+            "250",
+            "50"
+        ],
+        "soluzioni": [
+            "50"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Griglia degli iperparametri. Formula: prodotto delle cardinalità = 10×5 = 50 combinazioni. (Esercitazione 2, sezione 4.1.)"
+    },
+    {
+        "domanda": "Se il ramo sinistro restituisce (0.04, 2) e il destro (0.06, 3), quale coppia ritorna la funzione ramo?\n\nCODICE PYTHON:\nreturn R_sx + R_dx, foglie_sx + foglie_dx",
+        "opzioni": [
+            "(0.02, 1)",
+            "(0.05, 5)",
+            "(0.10, 2)",
+            "(0.10, 5)"
+        ],
+        "soluzioni": [
+            "(0.10, 5)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Pruning e cost-complexity. L'errore delle foglie e il loro numero si sommano tra i due rami: 0.04+0.06 e 2+3. (Esercitazione 2, sezione 3.3.)"
+    },
+    {
+        "domanda": "Che cosa restituisce il seguente codice, subito dopo il caricamento?\n\nCODICE PYTHON:\npinguini.head()",
+        "opzioni": [
+            "Le ultime cinque righe",
+            "Le prime cinque righe",
+            "Le prime cinque colonne",
+            "Tutte le righe senza NaN"
+        ],
+        "soluzioni": [
+            "Le prime cinque righe"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Dati e pulizia. head() mostra le prime cinque righe per impostazione predefinita. (Esercitazione 2, sezione 1.)"
+    },
+    {
+        "domanda": "Che cosa calcola la seguente espressione?\n\nCODICE PYTHON:\ndue_specie.groupby(\"specie\")[misure].mean().round(2)",
+        "opzioni": [
+            "Il numero di pinguini di ciascuna specie",
+            "La media di ogni misura per ciascuna specie",
+            "L'accuracy della classificazione",
+            "La media globale senza gruppi"
+        ],
+        "soluzioni": [
+            "La media di ogni misura per ciascuna specie"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione lineare per classificare. groupby separa le righe per specie e mean aggrega ciascuna colonna selezionata. (Esercitazione 2, sezione 2.10.)"
+    },
+    {
+        "domanda": "Quale riga costruisce correttamente una X bidimensionale contenente soltanto la pinna?",
+        "opzioni": [
+            "X_peso = df[[\"peso\"]]",
+            "X_peso = df[\"peso\"]",
+            "X_peso = df[[\"pinna\"]]",
+            "X_peso = df[\"pinna\"]"
+        ],
+        "soluzioni": [
+            "X_peso = df[[\"pinna\"]]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Feature, target e train/test split. Le doppie parentesi selezionano un DataFrame con una colonna, il formato tabellare richiesto per X. (Esercitazione 2, sezione 2.1.)"
+    },
+    {
+        "domanda": "Che cosa fa drop_first=True nel seguente codice?\n\nCODICE PYTHON:\npd.get_dummies(df, columns=[\"specie\"], drop_first=True, dtype=int)",
+        "opzioni": [
+            "Elimina la prima riga del dataset",
+            "Trasforma ogni specie in un unico numero ordinato",
+            "Omette una categoria di riferimento tra le colonne indicatrici",
+            "Elimina tutti i pinguini Adelie"
+        ],
+        "soluzioni": [
+            "Omette una categoria di riferimento tra le colonne indicatrici"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione multivariata e one-hot encoding. Con tre specie si usano due indicatori; la categoria omessa è rappresentata da entrambi a zero. (Esercitazione 2, sezione 2.6.)"
+    },
+    {
+        "domanda": "Se curve contiene 6 liste da 12 accuracy, che cosa produce il codice?\n\nCODICE PYTHON:\nmedia = np.mean(curve, axis=0)",
+        "opzioni": [
+            "12 medie, una per profondità",
+            "72 medie",
+            "Una sola media globale",
+            "6 medie, una per divisione"
+        ],
+        "soluzioni": [
+            "12 medie, una per profondità"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Validation set. axis=0 aggrega lungo le sei divisioni e conserva le dodici colonne delle profondità. (Esercitazione 2, sezione 3.4.)"
+    },
+    {
+        "domanda": "Quanto vale l'MSE pesato con 3 elementi a sinistra, MSE 4, e 1 a destra, MSE 12?\n\nCODICE PYTHON:\nmse = 3 / 4 * 4 + 1 / 4 * 12",
+        "opzioni": [
+            "6.0",
+            "4.0",
+            "16.0",
+            "8.0"
+        ],
+        "soluzioni": [
+            "6.0"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Split di un albero di regressione. Formula: MSE_pesato = n_s/n·MSE_s + n_d/n·MSE_d = 3+3 = 6. (Esercitazione 2, sezione 2.9.)"
+    },
+    {
+        "domanda": "Qual è il contenuto di sempre_media se i valori di training sono [3000, 4000, 5000] e il test contiene due elementi?\n\nCODICE PYTHON:\nmedia_train = y_peso_train.mean()\nsempre_media = np.full(len(y_peso_test), media_train)",
+        "opzioni": [
+            "[4000]",
+            "[3000, 5000]",
+            "[4000, 4000]",
+            "[4000, 4000, 4000]"
+        ],
+        "soluzioni": [
+            "[4000, 4000]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: LinearRegression e baseline. Media del training = (3000+4000+5000)/3 = 4000; np.full la ripete due volte. (Esercitazione 2, sezione 2.4.)"
+    },
+    {
+        "domanda": "A che cosa corrisponde risultati[\"test_score\"] dopo questa chiamata?\n\nCODICE PYTHON:\nrisultati = cross_validate(DecisionTreeClassifier(), X_train, y_train, cv=cv, return_train_score=True)",
+        "opzioni": [
+            "Alle predizioni del modello sul training",
+            "Ai punteggi dei fold di training",
+            "Ai punteggi sul test set finale",
+            "Ai punteggi dei fold di validazione interni al training"
+        ],
+        "soluzioni": [
+            "Ai punteggi dei fold di validazione interni al training"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Cross-validation. Il nome test_score indica il fold lasciato fuori nel singolo giro, non il test originale. (Esercitazione 2, sezione 3.5.)"
+    },
+    {
+        "domanda": "In ciascun giro della seguente cross-validation, quanti fold sono usati per addestrare?\n\nCODICE PYTHON:\ncv = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)",
+        "opzioni": [
+            "0",
+            "4",
+            "1",
+            "5"
+        ],
+        "soluzioni": [
+            "4"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Cross-validation. Formula: fold di training = k−1 = 5−1 = 4; il rimanente è di validazione. (Esercitazione 2, sezione 3.5.)"
+    },
+    {
+        "domanda": "Quanti addestramenti totali esegue la griglia del notebook includendo il refit finale predefinito?\n\nCODICE PYTHON:\nricerca = GridSearchCV(DecisionTreeClassifier(), griglia_parametri, cv=5)\nricerca.fit(X_train, y_train)",
+        "opzioni": [
+            "251",
+            "255",
+            "50",
+            "250"
+        ],
+        "soluzioni": [
+            "251"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV e refit. La griglia originale ha 50 combinazioni: 50×5 = 250 fit in CV, più un fit sul training completo. (Esercitazione 2, sezione 4.2.)"
+    },
+    {
+        "domanda": "Quale condizione identifica una foglia nella funzione ricorsiva ramo?",
+        "opzioni": [
+            "struttura.impurity[i] > 0",
+            "struttura.n_node_samples[i] == n",
+            "struttura.children_left[i] == 0",
+            "struttura.children_left[i] == -1"
+        ],
+        "soluzioni": [
+            "struttura.children_left[i] == -1"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Pruning e cost-complexity. Nella rappresentazione interna utilizzata, l'indice del figlio sinistro vale −1 per una foglia. (Esercitazione 2, sezione 3.3.)"
+    },
+    {
+        "domanda": "Quale funzione permette di ottenere sia i punteggi di training sia quelli di validazione per ogni giro?",
+        "opzioni": [
+            "cross_val_score(DecisionTreeClassifier(), X_train, y_train, cv=cv)",
+            "train_test_split(X_train, y_train, test_size=0.25)",
+            "cross_validate(DecisionTreeClassifier(), X_train, y_train, cv=cv, return_train_score=True)",
+            "accuracy_score(y_train, y_train)"
+        ],
+        "soluzioni": [
+            "cross_validate(DecisionTreeClassifier(), X_train, y_train, cv=cv, return_train_score=True)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Cross-validation. cross_validate restituisce un dizionario con le misure per fold; return_train_score=True include il training. (Esercitazione 2, sezione 3.5.)"
+    },
+    {
+        "domanda": "Perché viene eseguito df.drop(columns=[\"peso\"]) prima del one-hot encoding?\n\nCODICE PYTHON:\nX_tutte = pd.get_dummies(df.drop(columns=[\"peso\"]), columns=[\"specie\", \"isola\", \"sesso\"], drop_first=True, dtype=int)",
+        "opzioni": [
+            "Per eliminare tutte le righe con peso mancante",
+            "Per escludere il target dalle feature",
+            "Per convertire il peso in una categoria",
+            "Per eliminare tutte le colonne numeriche"
+        ],
+        "soluzioni": [
+            "Per escludere il target dalle feature"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione multivariata e one-hot encoding. Il peso è ciò che il modello deve prevedere e non deve essere fornito come input. (Esercitazione 2, sezione 2.6.)"
+    },
+    {
+        "domanda": "Che cosa seleziona idxmax() nel seguente frammento?\n\nCODICE PYTHON:\nmigliore_cv = tabella_cv.loc[tabella_cv[\"accuracy CV media\"].idxmax()]",
+        "opzioni": [
+            "La riga con la minima deviazione standard",
+            "La riga con la massima profondità",
+            "L'ultima riga della tabella",
+            "La riga con la massima accuracy media di cross-validation"
+        ],
+        "soluzioni": [
+            "La riga con la massima accuracy media di cross-validation"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Cross-validation. idxmax() trova l'etichetta dell'indice del massimo; .loc recupera la riga corrispondente. (Esercitazione 2, sezione 3.5.)"
+    },
+    {
+        "domanda": "Quale attributo contiene il dizionario degli iperparametri migliori dopo il fit?",
+        "opzioni": [
+            "ricerca.best_estimator_",
+            "ricerca.cv_results_",
+            "ricerca.best_params_",
+            "ricerca.best_score_"
+        ],
+        "soluzioni": [
+            "ricerca.best_params_"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV e refit. best_params_ contiene la combinazione con il miglior punteggio medio in CV. (Esercitazione 2, sezione 4.2.)"
+    },
+    {
+        "domanda": "Nel notebook la radice ha samples = 233 e value = 4232.3. Che cosa indica value?",
+        "opzioni": [
+            "Il numero di predizioni corrette",
+            "La soglia della pinna",
+            "L'MSE del nodo",
+            "La media dei pesi delle 233 osservazioni"
+        ],
+        "soluzioni": [
+            "La media dei pesi delle 233 osservazioni"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Split di un albero di regressione. Nel tree plot di regressione value è la media dei target del nodo. (Esercitazione 2, sezione 2.9.)"
+    },
+    {
+        "domanda": "Che cosa fa il seguente codice dopo una ricerca riuscita?\n\nCODICE PYTHON:\na_mano = DecisionTreeClassifier(random_state=0, **ricerca.best_params_).fit(X_train, y_train)",
+        "opzioni": [
+            "Ripete la ricerca su tutti i fold",
+            "Valuta l'albero sul test",
+            "Addestra un albero con tutti gli iperparametri contemporaneamente",
+            "Addestra un albero con gli iperparametri migliori sul training completo"
+        ],
+        "soluzioni": [
+            "Addestra un albero con gli iperparametri migliori sul training completo"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV e refit. Il dizionario viene espanso con **; il fit riproduce il modello selezionato dalla ricerca. (Esercitazione 2, sezione 4.2.)"
+    },
+    {
+        "domanda": "Che cosa contiene w_appreso?\n\nCODICE PYTHON:\nw_appreso = regressione.coef_[0]",
+        "opzioni": [
+            "Il coefficiente appreso della pinna",
+            "L'intercetta appresa",
+            "La prima predizione del test set",
+            "Il primo peso reale del training set"
+        ],
+        "soluzioni": [
+            "Il coefficiente appreso della pinna"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: LinearRegression e baseline. coef_ contiene un peso per feature; l'indice 0 seleziona il primo. (Esercitazione 2, sezione 2.4.)"
+    },
+    {
+        "domanda": "Con queste distribuzioni, quante combinazioni vengono valutate e quanti fit di CV vengono eseguiti (senza refit)?\n\nCODICE PYTHON:\ndistribuzioni = {\"max_depth\": randint(1, 21), \"min_samples_leaf\": randint(1, 31)}\nricerca_casuale = RandomizedSearchCV(DecisionTreeClassifier(), distribuzioni, n_iter=20, cv=5)",
+        "opzioni": [
+            "100 combinazioni, 500 fit",
+            "20 combinazioni, 100 fit",
+            "20 combinazioni, 20 fit",
+            "600 combinazioni, 3000 fit"
+        ],
+        "soluzioni": [
+            "20 combinazioni, 100 fit"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: RandomizedSearchCV. n_iter limita il numero di configurazioni campionate; formula: 20×5 = 100 fit di CV. (Esercitazione 2, sezione 4.4.)"
+    },
+    {
+        "domanda": "Se i residui sono espressi in kg invece che in grammi, come cambia l'MSE calcolato dal seguente codice rispetto all'MSE in g²?\n\nCODICE PYTHON:\nmean_squared_error(y_g / 1000, pred_g / 1000)",
+        "opzioni": [
+            "Si divide per 1000000",
+            "Si divide per 1000",
+            "Si moltiplica per 1000",
+            "Resta identico"
+        ],
+        "soluzioni": [
+            "Si divide per 1000000"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: LinearRegression e baseline. Formula: MSE_kg = MSE_g / 1000², perché i residui sono elevati al quadrato. (Esercitazione 2, sezione 2.4.)"
+    },
+    {
+        "domanda": "Quale istruzione seleziona esclusivamente le due specie del problema binario?",
+        "opzioni": [
+            "due_specie = df.groupby(\"sesso\")",
+            "due_specie = df[[\"Adelie\", \"Chinstrap\"]]",
+            "due_specie = df[df[\"specie\"].isin([\"Adelie\", \"Chinstrap\"])]",
+            "due_specie = df.dropna()"
+        ],
+        "soluzioni": [
+            "due_specie = df[df[\"specie\"].isin([\"Adelie\", \"Chinstrap\"])]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione lineare per classificare. isin costruisce una maschera vera per le righe che appartengono a una delle due specie indicate. (Esercitazione 2, sezione 2.10.)"
+    },
+    {
+        "domanda": "Quale significato ha il valore letto da slider_w.value?\n\nCODICE PYTHON:\nmio_w = slider_w.value",
+        "opzioni": [
+            "L'MSE del test set",
+            "Il peso medio dei pinguini",
+            "La pendenza della retta scelta tramite lo slider",
+            "L'intercetta della retta"
+        ],
+        "soluzioni": [
+            "La pendenza della retta scelta tramite lo slider"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Retta di regressione e slider. Nella funzione prova_retta(w, b), w è il coefficiente moltiplicativo della pinna. (Esercitazione 2, sezione 2.3.)"
+    },
+    {
+        "domanda": "Quale parametro richiede una diminuzione minima dell'impurità per autorizzare uno split?",
+        "opzioni": [
+            "max_depth=1",
+            "min_impurity_decrease=0.01",
+            "ccp_alpha=0.01",
+            "min_samples_leaf=1"
+        ],
+        "soluzioni": [
+            "min_impurity_decrease=0.01"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Iperparametri degli alberi. min_impurity_decrease impone una soglia sul miglioramento dell'impurità; è un freno alla crescita. (Esercitazione 2, sezione 3.2.)"
+    },
+    {
+        "domanda": "Quale oggetto implementa la divisione stratificata a cinque fold?",
+        "opzioni": [
+            "DecisionTreeClassifier(max_depth=5)",
+            "LinearRegression()",
+            "StratifiedKFold(n_splits=5, shuffle=True, random_state=0)",
+            "StratifiedKFold(n_splits=4, shuffle=True, random_state=0)"
+        ],
+        "soluzioni": [
+            "StratifiedKFold(n_splits=5, shuffle=True, random_state=0)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Cross-validation. n_splits=5 definisce cinque fold stratificati; shuffle=True mescola prima della divisione. (Esercitazione 2, sezione 3.5.)"
+    },
+    {
+        "domanda": "Quale attributo contiene il punteggio medio in CV della combinazione vincitrice?",
+        "opzioni": [
+            "ricerca.best_estimator_",
+            "ricerca.best_score_",
+            "ricerca.cv_results_",
+            "ricerca.best_params_"
+        ],
+        "soluzioni": [
+            "ricerca.best_score_"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV e refit. best_score_ è la migliore media dei punteggi sui fold di validazione. (Esercitazione 2, sezione 4.2.)"
+    },
+    {
+        "domanda": "Se regressione_specie.predict(X) restituisce 1.3 per una riga, quale classe assegna classificatore_lineare?\n\nCODICE PYTHON:\nreturn np.where(regressione_specie.predict(X) >= 0, \"Chinstrap\", \"Adelie\")",
+        "opzioni": [
+            "Adelie",
+            "Gentoo",
+            "Nessuna, perché 1.3 è maggiore di 1",
+            "Chinstrap"
+        ],
+        "soluzioni": [
+            "Chinstrap"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione lineare per classificare. L'uscita della regressione è continua, non una probabilità; essendo ≥0 produce Chinstrap. (Esercitazione 2, sezione 2.10.)"
+    },
+    {
+        "domanda": "Quanti interi diversi può estrarre questa distribuzione?\n\nCODICE PYTHON:\nfrom scipy.stats import randint\nrandint(1, 21)",
+        "opzioni": [
+            "19",
+            "22",
+            "20",
+            "21"
+        ],
+        "soluzioni": [
+            "20"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: RandomizedSearchCV. randint include il limite inferiore ed esclude quello superiore: interi da 1 a 20. (Esercitazione 2, sezione 4.4.)"
+    },
+    {
+        "domanda": "Quale istruzione carica il dataset nel DataFrame pinguini?",
+        "opzioni": [
+            "pinguini = np.unique(\"pinguini.csv\")",
+            "pinguini = pd.DataFrame(\"pinguini.csv\")",
+            "pinguini = pd.get_dummies(\"pinguini.csv\")",
+            "pinguini = pd.read_csv(\"pinguini.csv\")"
+        ],
+        "soluzioni": [
+            "pinguini = pd.read_csv(\"pinguini.csv\")"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Dati e pulizia. pd.read_csv legge il CSV e costruisce un DataFrame. (Esercitazione 2, sezione 1.)"
+    },
+    {
+        "domanda": "Quanti punteggi restituisce cross_val_score in questo frammento?\n\nCODICE PYTHON:\ncv = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)\npunteggi = cross_val_score(DecisionTreeClassifier(max_depth=3), X_train, y_train, cv=cv)",
+        "opzioni": [
+            "233",
+            "1",
+            "4",
+            "5"
+        ],
+        "soluzioni": [
+            "5"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Cross-validation. Un punteggio di validazione per fold, quindi cinque addestramenti e cinque punteggi. (Esercitazione 2, sezione 3.5.)"
+    },
+    {
+        "domanda": "Perché viene escluso l'ultimo elemento di percorso.ccp_alphas?\n\nCODICE PYTHON:\nvalori_alpha = percorso.ccp_alphas[:-1]",
+        "opzioni": [
+            "Per escludere il valore che riduce l'albero alla sola radice",
+            "Per eliminare il valore zero, che è il primo",
+            "Per eliminare il test set",
+            "Per selezionare soltanto il valore massimo"
+        ],
+        "soluzioni": [
+            "Per escludere il valore che riduce l'albero alla sola radice"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Pruning e cost-complexity. Lo slicing [:-1] mantiene tutti gli elementi tranne l'ultimo, che nel notebook corrisponde alla potatura totale. (Esercitazione 2, sezione 3.3.)"
+    },
+    {
+        "domanda": "Per stimare il peso dalla pinna, quale istruzione definisce il target come nel notebook?",
+        "opzioni": [
+            "y_peso = df[\"specie\"]",
+            "y_peso = df[\"pinna\"]",
+            "y_peso = df[\"peso\"]",
+            "y_peso = df[\"sesso\"]"
+        ],
+        "soluzioni": [
+            "y_peso = df[\"peso\"]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Feature, target e train/test split. Il target è il peso numerico in grammi, mentre la pinna è la feature. (Esercitazione 2, sezione 2.1.)"
+    },
+    {
+        "domanda": "Che cosa garantisce random_state=0 nella divisione dei dati?\n\nCODICE PYTHON:\ntrain_test_split(X_peso, y_peso, test_size=0.3, random_state=0)",
+        "opzioni": [
+            "La ripetibilità della divisione con gli stessi dati e impostazioni",
+            "Che il modello abbia MSE nullo",
+            "Che non ci siano valori mancanti",
+            "L'assenza di esempi nel test"
+        ],
+        "soluzioni": [
+            "La ripetibilità della divisione con gli stessi dati e impostazioni"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Feature, target e train/test split. Il seme fissa la componente casuale della divisione, non la qualità del modello. (Esercitazione 2, sezione 2.1.)"
+    },
+    {
+        "domanda": "Quale attributo consente di leggere la soglia della radice?",
+        "opzioni": [
+            "albero_radice.tree_.impurity[0]",
+            "albero_radice.tree_.threshold[0]",
+            "albero_radice.tree_.n_node_samples[0]",
+            "albero_radice.get_n_leaves()"
+        ],
+        "soluzioni": [
+            "albero_radice.tree_.threshold[0]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Split di un albero di regressione. tree_.threshold contiene le soglie dei nodi; la posizione 0 corrisponde alla radice. (Esercitazione 2, sezione 2.9.)"
+    },
+    {
+        "domanda": "Quale riga valuta il modello scelto sul test set originale alla fine della ricerca?",
+        "opzioni": [
+            "accuracy_score(y_test, albero_scelto.predict(X_test))",
+            "ricerca.best_score_",
+            "accuracy_score(y_train, albero_scelto.predict(X_train))",
+            "albero_scelto.fit(X_test, y_test)"
+        ],
+        "soluzioni": [
+            "accuracy_score(y_test, albero_scelto.predict(X_test))"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Valutazione finale. Dopo il tuning, il test finale confronta le predizioni sulle feature di test con le etichette vere di test. (Esercitazione 2, sezione 4.5.)"
+    },
+    {
+        "domanda": "Quale variabile rappresenta i valori sull'asse verticale del grafico?\n\nCODICE PYTHON:\nplt.scatter(X_peso_train[\"pinna\"], y_peso_train)",
+        "opzioni": [
+            "y_peso_test",
+            "y_peso_train",
+            "X_peso_test",
+            "X_peso_train[\"pinna\"]"
+        ],
+        "soluzioni": [
+            "y_peso_train"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Feature, target e train/test split. scatter(x, y) usa il primo argomento sull'asse orizzontale e il secondo su quello verticale. (Esercitazione 2, sezione 2.1.)"
+    },
+    {
+        "domanda": "Quale target viene passato a fit per usare la regressione lineare come classificatore binario?",
+        "opzioni": [
+            "regressione_specie = LinearRegression().fit(X_due_train, y_numerico)",
+            "regressione_specie = LinearRegression().fit(X_due_train, y_due_train)",
+            "regressione_specie = LinearRegression().fit(X_due_test, y_due_test)",
+            "regressione_specie = LinearRegression().fit(X_due_train, y_peso_train)"
+        ],
+        "soluzioni": [
+            "regressione_specie = LinearRegression().fit(X_due_train, y_numerico)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione lineare per classificare. Il target di specie viene convertito in numeri +1/−1 prima di addestrare la regressione. (Esercitazione 2, sezione 2.10.)"
+    },
+    {
+        "domanda": "Quale codice calcola l'accuracy del classificatore lineare nel notebook?",
+        "opzioni": [
+            "accuracy_score(y_due_test, regressione_specie.predict(X_due_test))",
+            "accuracy_score(y_due_test, y_due_test)",
+            "accuracy_score(y_due_test, classificatore_lineare(X_due_test))",
+            "mean_squared_error(y_due_test, classificatore_lineare(X_due_test))"
+        ],
+        "soluzioni": [
+            "accuracy_score(y_due_test, classificatore_lineare(X_due_test))"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione lineare per classificare. Il classificatore con soglia restituisce etichette; si confrontano con le etichette vere del test. (Esercitazione 2, sezione 2.10.)"
+    },
+    {
+        "domanda": "Quale impostazione serve per ottenere mean_train_score nei risultati della ricerca?",
+        "opzioni": [
+            "shuffle=True",
+            "return_train_score=True",
+            "scoring=\"accuracy\"",
+            "refit=False"
+        ],
+        "soluzioni": [
+            "return_train_score=True"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Risultati della ricerca. return_train_score=True chiede alla ricerca di salvare anche i punteggi sui fold di training. (Esercitazione 2, sezione 4.3.)"
+    },
+    {
+        "domanda": "Qual è l'output di questo frammento?\n\nCODICE PYTHON:\ny = [10, 20, 30]\ny_pred = [12, 18, 30]\nprint(f\"{mean_squared_error(y, y_pred):.2f}\")",
+        "opzioni": [
+            "8.00",
+            "0.00",
+            "2.67",
+            "1.33"
+        ],
+        "soluzioni": [
+            "2.67"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Mean Squared Error. MSE = (4+4+0)/3 = 2.67; i residui di segno opposto non si annullano dopo il quadrato. (Esercitazione 2, sezione 2.2.)"
+    },
+    {
+        "domanda": "Quale istruzione produce le predizioni del modello sul test set?",
+        "opzioni": [
+            "regressione.predict(y_peso_test)",
+            "regressione.predict(X_peso_test)",
+            "regressione.coef_[0]",
+            "regressione.fit(X_peso_test, y_peso_test)"
+        ],
+        "soluzioni": [
+            "regressione.predict(X_peso_test)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: LinearRegression e baseline. predict riceve le feature di test e restituisce i pesi stimati senza riaddestrare il modello. (Esercitazione 2, sezione 2.4.)"
+    },
+    {
+        "domanda": "Quale istruzione trova i coefficienti della retta dei minimi quadrati nella sezione di approfondimento?",
+        "opzioni": [
+            "w_ottimo, b_ottimo = np.unique(x_es)",
+            "w_ottimo, b_ottimo = np.argmin(x_es)",
+            "w_ottimo, b_ottimo = np.polyfit(x_es, y_es, 1)",
+            "w_ottimo, b_ottimo = np.mean(y_es)"
+        ],
+        "soluzioni": [
+            "w_ottimo, b_ottimo = np.polyfit(x_es, y_es, 1)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Minimi quadrati. np.polyfit(..., 1) trova i coefficienti del polinomio di grado 1. (Esercitazione 2, sezione 2.5.)"
+    },
+    {
+        "domanda": "Quale predizione fa l'albero a profondità 1 del notebook per una pinna di 207.5 mm?\n\nCODICE PYTHON:\nalbero_radice.predict(pd.DataFrame({\"pinna\": [207.5]}))",
+        "opzioni": [
+            "207.5 g",
+            "Circa 4232.3 g",
+            "Circa 3728.62 g",
+            "Circa 5062.22 g"
+        ],
+        "soluzioni": [
+            "Circa 3728.62 g"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Split di un albero di regressione. La soglia 207.5 è inclusa nel ramo sinistro, che predice la media 3728.62 g. (Esercitazione 2, sezione 2.9.)"
+    },
+    {
+        "domanda": "Con 233 osservazioni nel training originale, quante finiscono nella validazione di questa divisione?\n\nCODICE PYTHON:\ntrain_test_split(X_train, y_train, test_size=0.25, random_state=0, stratify=y_train)",
+        "opzioni": [
+            "175",
+            "59",
+            "58",
+            "174"
+        ],
+        "soluzioni": [
+            "59"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Validation set. Formula: n_val = ceil(233×0.25) = 59; restano 174 osservazioni per addestrare. (Esercitazione 2, sezione 3.4.)"
+    },
+    {
+        "domanda": "Quale espressione calcola manualmente l'MSE per due array NumPy y e pred?",
+        "opzioni": [
+            "np.mean(y + pred)",
+            "np.mean((y - pred) ** 2)",
+            "np.mean(y - pred) ** 2",
+            "np.mean(y - pred)"
+        ],
+        "soluzioni": [
+            "np.mean((y - pred) ** 2)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Mean Squared Error. Formula: MSE = media dei quadrati dei residui, non quadrato della loro media. (Esercitazione 2, sezione 2.2.)"
+    },
+    {
+        "domanda": "Quale riga legge il candidato di potatura con il più piccolo alpha effettivo, dopo l'ordinamento crescente?",
+        "opzioni": [
+            "tabella_alpha['alpha_eff'].std()",
+            "tabella_alpha['alpha_eff'].mean()",
+            "tabella_alpha['alpha_eff'].iloc[0]",
+            "tabella_alpha['alpha_eff'].iloc[-1]"
+        ],
+        "soluzioni": [
+            "tabella_alpha['alpha_eff'].iloc[0]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Pruning e cost-complexity. Dopo sort_values(\"alpha_eff\"), la prima posizione contiene il minimo. (Esercitazione 2, sezione 3.3.)"
+    },
+    {
+        "domanda": "Con R_nodo(i)=0.12, R_ramo=0.04 e foglie_ramo=5, quanto vale alpha_eff?\n\nCODICE PYTHON:\nalpha_eff = (R_nodo(i) - R_ramo) / (foglie_ramo - 1)",
+        "opzioni": [
+            "0.016",
+            "0.02",
+            "0.08",
+            "0.04"
+        ],
+        "soluzioni": [
+            "0.02"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Pruning e cost-complexity. Formula: α_eff = (R(t)−R(T_t))/(foglie−1) = (0.12−0.04)/4 = 0.02. (Esercitazione 2, sezione 3.3.)"
+    },
+    {
+        "domanda": "Che cosa limita questo codice?\n\nCODICE PYTHON:\nalbero = DecisionTreeRegressor(max_depth=3, random_state=0)",
+        "opzioni": [
+            "La profondità massima a 3",
+            "Il numero totale di foglie a 3",
+            "Il numero di pinguini per foglia a 3",
+            "Il numero di feature a 3"
+        ],
+        "soluzioni": [
+            "La profondità massima a 3"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Alberi di regressione. max_depth controlla la profondità, non direttamente il numero di foglie o campioni. (Esercitazione 2, sezione 2.7.)"
+    },
+    {
+        "domanda": "Quale valore restituisce la funzione del notebook quando il gruppo è vuoto?\n\nCODICE PYTHON:\ndef mse_gruppo(y_gruppo):\n    if len(y_gruppo) == 0:\n        return 0.0\n    return mean_squared_error(y_gruppo, np.full(len(y_gruppo), y_gruppo.mean()))",
+        "opzioni": [
+            "NaN",
+            "1.0",
+            "0.0",
+            "−1.0"
+        ],
+        "soluzioni": [
+            "0.0"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Split di un albero di regressione. Il caso base ritorna esplicitamente zero, perché un gruppo vuoto non contribuisce all'errore pesato. (Esercitazione 2, sezione 2.9.)"
+    },
+    {
+        "domanda": "Quale divisione rispetta la regola del notebook per creare il validation set?",
+        "opzioni": [
+            "X_tr, X_val, y_tr, y_val = train_test_split(X_train, y_test, test_size=0.25)",
+            "X_tr, X_val, y_tr, y_val = train_test_split(X_test, y_test, test_size=0.25)",
+            "X_tr, X_val, y_tr, y_val = train_test_split(X_train, y_train, test_size=0.25, stratify=y_train)",
+            "X_tr, X_val, y_tr, y_val = train_test_split(X, y, test_size=0.25)"
+        ],
+        "soluzioni": [
+            "X_tr, X_val, y_tr, y_val = train_test_split(X_train, y_train, test_size=0.25, stratify=y_train)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Validation set. Il validation set è ricavato dal training già separato; il test originale resta chiuso. (Esercitazione 2, sezione 3.4.)"
+    },
+    {
+        "domanda": "Qual è il peso stimato (g) con coefficienti [50, 4], intercetta −6000 e feature [200, 40]?\n\nCODICE PYTHON:\npred = 50 * 200 + 4 * 40 - 6000",
+        "opzioni": [
+            "4160",
+            "4200",
+            "10160",
+            "4000"
+        ],
+        "soluzioni": [
+            "4160"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione multivariata e one-hot encoding. Formula: ŷ = w₁x₁ + w₂x₂ + b = 10000 + 160 − 6000 = 4160. (Esercitazione 2, sezione 2.6.)"
+    },
+    {
+        "domanda": "Perché questo albero può avere MSE di training positivo anche senza limiti di profondità?\n\nCODICE PYTHON:\nDecisionTreeRegressor().fit(X_peso_train, y_peso_train)",
+        "opzioni": [
+            "Pinguini con pinna identica possono avere pesi diversi",
+            "Il modello usa sempre il peso come feature",
+            "L'MSE misura solo le classi sbagliate",
+            "Ogni foglia deve necessariamente contenere un solo pinguino"
+        ],
+        "soluzioni": [
+            "Pinguini con pinna identica possono avere pesi diversi"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Errore irriducibile. Usando esclusivamente la pinna, osservazioni indistinguibili nelle feature ricevono la stessa predizione. (Esercitazione 2, sezione 2.8.)"
+    },
+    {
+        "domanda": "Quale valore predice una foglia di regressione che contiene i pesi 3000, 3600 e 4200 g?\n\nCODICE PYTHON:\nnp.mean([3000, 3600, 4200])",
+        "opzioni": [
+            "10800",
+            "4200",
+            "3000",
+            "3600"
+        ],
+        "soluzioni": [
+            "3600"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Alberi di regressione. Formula: predizione = media dei target nella foglia = 10800/3 = 3600 g. (Esercitazione 2, sezione 2.7.)"
+    },
+    {
+        "domanda": "Quale argomento imposta il criterio di confronto tra configurazioni?\n\nCODICE PYTHON:\nGridSearchCV(DecisionTreeClassifier(), griglia_parametri, cv=cv, scoring=\"accuracy\")",
+        "opzioni": [
+            "cv=cv",
+            "estimator",
+            "param_grid",
+            "scoring=\"accuracy\""
+        ],
+        "soluzioni": [
+            "scoring=\"accuracy\""
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV e refit. scoring indica la metrica da massimizzare, in questo caso l'accuracy di validazione. (Esercitazione 2, sezione 4.2.)"
+    },
+    {
+        "domanda": "Quale valore indica la frazione riservata al test?\n\nCODICE PYTHON:\nX_tr, X_te, y_tr, y_te = train_test_split(X_peso, y_peso, test_size=0.3, random_state=0)",
+        "opzioni": [
+            "0.3",
+            "0.7",
+            "0",
+            "1"
+        ],
+        "soluzioni": [
+            "0.3"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Feature, target e train/test split. test_size=0.3 riserva circa il 30% dei dati al test. (Esercitazione 2, sezione 2.1.)"
+    },
+    {
+        "domanda": "Quale coppia X, y viene usata per classificare il sesso dei pinguini?",
+        "opzioni": [
+            "X = df[[\"sesso\"]]\ny = df[\"peso\"]",
+            "X = df[[\"pinna\"]]\ny = df[\"peso\"]",
+            "X = df[[\"becco_lunghezza\", \"becco_profondita\"]]\ny = df[\"sesso\"]",
+            "X = df[[\"becco_lunghezza\", \"becco_profondita\"]]\ny = df[\"specie\"]"
+        ],
+        "soluzioni": [
+            "X = df[[\"becco_lunghezza\", \"becco_profondita\"]]\ny = df[\"sesso\"]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Classificazione del sesso. Nella Parte 3 il target è il sesso e le feature sono le due misure del becco. (Esercitazione 2, sezione 3.1.)"
+    },
+    {
+        "domanda": "Che cosa restituisce configurazioni.items() nel ciclo del notebook?\n\nCODICE PYTHON:\nfor nome, parametri in configurazioni.items():\n    modello = DecisionTreeClassifier(random_state=0, **parametri)",
+        "opzioni": [
+            "Soltanto i nomi delle configurazioni",
+            "Le coppie X e y",
+            "Soltanto le accuracy",
+            "Le coppie nome e dizionario di iperparametri"
+        ],
+        "soluzioni": [
+            "Le coppie nome e dizionario di iperparametri"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Iperparametri degli alberi. Il metodo .items() consente di iterare contemporaneamente sulle chiavi e sui valori. (Esercitazione 2, sezione 3.2.)"
+    },
+    {
+        "domanda": "Quale profondità viene selezionata dal codice?\n\nCODICE PYTHON:\nprofondita = [1, 2, 3, 4]\nacc_val = [0.65, 0.78, 0.83, 0.80]\nmigliore = profondita[int(np.argmax(acc_val))]",
+        "opzioni": [
+            "2",
+            "4",
+            "3",
+            "0.83"
+        ],
+        "soluzioni": [
+            "3"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Validation set. np.argmax restituisce l'indice 2 della massima accuracy; la profondità in posizione 2 è 3. (Esercitazione 2, sezione 3.4.)"
+    },
+    {
+        "domanda": "Quale soglia viene selezionata da questo codice?\n\nCODICE PYTHON:\nsoglie = np.array([185, 200, 215])\nerrori = [12, 5, 8]\nmigliore = soglie[np.argmin(errori)]",
+        "opzioni": [
+            "215",
+            "5",
+            "200",
+            "185"
+        ],
+        "soluzioni": [
+            "200"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Split di un albero di regressione. np.argmin restituisce l'indice del minimo (1); soglie[1] vale 200. (Esercitazione 2, sezione 2.9.)"
+    },
+    {
+        "domanda": "Quali etichette numeriche produce il codice?\n\nCODICE PYTHON:\ny_due_train = np.array([\"Adelie\", \"Chinstrap\", \"Adelie\"])\ny_numerico = np.where(y_due_train == \"Chinstrap\", 1, -1)",
+        "opzioni": [
+            "[1, -1, 1]",
+            "[1, 1, 1]",
+            "[0, 1, 0]",
+            "[-1, 1, -1]"
+        ],
+        "soluzioni": [
+            "[-1, 1, -1]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione lineare per classificare. np.where sceglie +1 se la condizione è vera e −1 altrimenti, elemento per elemento. (Esercitazione 2, sezione 2.10.)"
+    },
+    {
+        "domanda": "Che cosa contiene risultati?\n\nCODICE PYTHON:\nrisultati = pd.DataFrame(ricerca.cv_results_)",
+        "opzioni": [
+            "Una tabella dei risultati di tutte le combinazioni provate",
+            "Una tabella dei pesi dei pinguini",
+            "Una tabella delle sole predizioni di test",
+            "Una tabella con una riga per foglia"
+        ],
+        "soluzioni": [
+            "Una tabella dei risultati di tutte le combinazioni provate"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Risultati della ricerca. cv_results_ raccoglie i risultati di ricerca per combinazione; pandas li rende tabellari. (Esercitazione 2, sezione 4.3.)"
+    },
+    {
+        "domanda": "Quanti modelli vengono addestrati in questo ciclo, uno per ogni coppia seme e profondità?\n\nCODICE PYTHON:\nfor seme in range(6):\n    for d in range(1, 13):\n        modello = DecisionTreeClassifier(max_depth=d).fit(X_tr, y_tr)",
+        "opzioni": [
+            "72",
+            "66",
+            "78",
+            "18"
+        ],
+        "soluzioni": [
+            "72"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Validation set. Formula: 6 divisioni × 12 profondità = 72 addestramenti. (Esercitazione 2, sezione 3.4.)"
+    },
+    {
+        "domanda": "Che cosa contiene pred dopo questo codice?\n\nCODICE PYTHON:\nx = np.array([180, 200, 220])\nw, b = 40, -4000\npred = w * x + b",
+        "opzioni": [
+            "[−3820, −3800, −3780]",
+            "[3200, 4000, 4800]",
+            "[7200, 8000, 8800]",
+            "[180, 200, 220]"
+        ],
+        "soluzioni": [
+            "[3200, 4000, 4800]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Retta di regressione e slider. Formula: ŷ = w·x + b; NumPy applica l'espressione a ogni elemento dell'array. (Esercitazione 2, sezione 2.3.)"
+    },
+    {
+        "domanda": "Quale espressione misura l'MSE di training dell'albero già addestrato?",
+        "opzioni": [
+            "mean_squared_error(y_peso_test, albero.predict(X_peso_test))",
+            "mean_squared_error(y_peso_train, albero.predict(X_peso_train))",
+            "mean_squared_error(y_peso_train, y_peso_train)",
+            "accuracy_score(y_peso_train, albero.predict(X_peso_train))"
+        ],
+        "soluzioni": [
+            "mean_squared_error(y_peso_train, albero.predict(X_peso_train))"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Alberi di regressione. Si confrontano target veri e predizioni sulle stesse righe di training. (Esercitazione 2, sezione 2.7.)"
+    },
+    {
+        "domanda": "Qual è la media stampata dal codice?\n\nCODICE PYTHON:\npunteggi = np.array([0.80, 0.70, 0.90, 0.80, 0.80])\nprint(f\"{punteggi.mean():.2f}\")",
+        "opzioni": [
+            "4.00",
+            "0.80",
+            "0.70",
+            "0.90"
+        ],
+        "soluzioni": [
+            "0.80"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Cross-validation. Formula: media = (0.80+0.70+0.90+0.80+0.80)/5 = 0.80. (Esercitazione 2, sezione 3.5.)"
+    },
+    {
+        "domanda": "Se si aumenta max_depth, quale comportamento dell'MSE di training viene mostrato dal notebook?\n\nCODICE PYTHON:\nDecisionTreeRegressor(max_depth=profondita).fit(X_peso_train, y_peso_train)",
+        "opzioni": [
+            "Diventa sempre zero alla profondità 2",
+            "Aumenta necessariamente",
+            "Diventa l'accuracy",
+            "Tende a diminuire o restare uguale"
+        ],
+        "soluzioni": [
+            "Tende a diminuire o restare uguale"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Alberi di regressione. Un albero più profondo può adattarsi maggiormente ai dati di training; non è garantito che migliori sul test. (Esercitazione 2, sezione 2.7.)"
+    },
+    {
+        "domanda": "Che cosa restituisce la chiamata ricorsiva quando i è una foglia?\n\nCODICE PYTHON:\nif struttura.children_left[i] == -1:\n    return R_nodo(i), 1",
+        "opzioni": [
+            "Il numero di campioni e la soglia",
+            "Il suo errore pesato e il numero 1",
+            "La sua soglia e la profondità",
+            "Il suo errore pesato e il numero 0"
+        ],
+        "soluzioni": [
+            "Il suo errore pesato e il numero 1"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Pruning e cost-complexity. Una foglia è già un ramo terminale: contribuisce con il suo errore e una foglia. (Esercitazione 2, sezione 3.3.)"
+    },
+    {
+        "domanda": "Quale configurazione impone almeno 10 campioni in ciascuna foglia?",
+        "opzioni": [
+            "DecisionTreeClassifier(ccp_alpha=10)",
+            "DecisionTreeClassifier(max_depth=10)",
+            "DecisionTreeClassifier(min_samples_leaf=10)",
+            "DecisionTreeClassifier(max_leaf_nodes=10)"
+        ],
+        "soluzioni": [
+            "DecisionTreeClassifier(min_samples_leaf=10)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Iperparametri degli alberi. min_samples_leaf impone il numero minimo di osservazioni per nodo terminale. (Esercitazione 2, sezione 3.2.)"
+    },
+    {
+        "domanda": "Quante feature contiene X_tutte se il dataset ha tre specie, tre isole, due sessi e le tre misure numeriche pinna e becco?\n\nCODICE PYTHON:\nX_tutte = pd.get_dummies(df.drop(columns=[\"peso\"]), columns=[\"specie\", \"isola\", \"sesso\"], drop_first=True, dtype=int)",
+        "opzioni": [
+            "11",
+            "8",
+            "9",
+            "5"
+        ],
+        "soluzioni": [
+            "8"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione multivariata e one-hot encoding. Formula: 3 misure + (3−1) specie + (3−1) isole + (2−1) sessi = 8 feature. (Esercitazione 2, sezione 2.6.)"
+    },
+    {
+        "domanda": "Che cosa stampa il codice (due decimali)?\n\nCODICE PYTHON:\ny = [3, 5, 7]\ny_pred = [2, 5, 9]\nprint(f\"{mean_squared_error(y, y_pred):.2f}\")",
+        "opzioni": [
+            "1.67",
+            "5.00",
+            "1.00",
+            "0.33"
+        ],
+        "soluzioni": [
+            "1.67"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Mean Squared Error. Formula: MSE = ((3−2)² + (5−5)² + (7−9)²)/3 = 5/3 ≈ 1.67. (Esercitazione 2, sezione 2.2.)"
+    },
+    {
+        "domanda": "Quanti addestramenti di cross-validation sono richiesti con questa griglia e cinque fold, senza contare il refit?\n\nCODICE PYTHON:\ngriglia = {\"max_depth\": [2, 3, 4], \"min_samples_leaf\": [1, 5, 10, 20]}\ncv = StratifiedKFold(n_splits=5)",
+        "opzioni": [
+            "35",
+            "61",
+            "60",
+            "12"
+        ],
+        "soluzioni": [
+            "60"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Griglia degli iperparametri. Formula: 3×4 combinazioni × 5 fold = 60 addestramenti. (Esercitazione 2, sezione 4.1.)"
+    },
+    {
+        "domanda": "Che cosa permette di leggere il seguente codice?\n\nCODICE PYTHON:\npd.Series(modello_completo.coef_, index=X_tutte.columns).round(2)",
+        "opzioni": [
+            "I coefficienti associati ai nomi delle feature, arrotondati a due decimali",
+            "Le medie del test per feature",
+            "Le predizioni associate alle specie",
+            "I residui associati ai pinguini"
+        ],
+        "soluzioni": [
+            "I coefficienti associati ai nomi delle feature, arrotondati a due decimali"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione multivariata e one-hot encoding. L'indice usa i nomi delle colonne nello stesso ordine dei coefficienti appresi. (Esercitazione 2, sezione 2.6.)"
+    },
+    {
+        "domanda": "Quale codice calcola l'MSE della baseline sul test senza usare il target di test per costruire le predizioni?",
+        "opzioni": [
+            "mean_squared_error(y_peso_test, y_peso_test)",
+            "mean_squared_error(y_peso_test, np.full(len(y_peso_test), y_peso_train.mean()))",
+            "mean_squared_error(y_peso_train, y_peso_train)",
+            "mean_squared_error(y_peso_test, np.full(len(y_peso_test), y_peso_test.mean()))"
+        ],
+        "soluzioni": [
+            "mean_squared_error(y_peso_test, np.full(len(y_peso_test), y_peso_train.mean()))"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: LinearRegression e baseline. La baseline impara la media dal training, poi la confronta con i valori veri del test. (Esercitazione 2, sezione 2.4.)"
+    },
+    {
+        "domanda": "Quale effetto ha dtype=int nel one-hot encoding?\n\nCODICE PYTHON:\npd.get_dummies(df, columns=[\"sesso\"], drop_first=True, dtype=int)",
+        "opzioni": [
+            "Converte ogni categoria in una media",
+            "Elimina le feature numeriche",
+            "Trasforma gli indicatori in probabilità",
+            "Produce indicatori interi 0 e 1"
+        ],
+        "soluzioni": [
+            "Produce indicatori interi 0 e 1"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione multivariata e one-hot encoding. Il tipo intero rende espliciti gli indicatori binari 0/1. (Esercitazione 2, sezione 2.6.)"
+    },
+    {
+        "domanda": "Quale selezione recupera soltanto le righe con pinna esattamente pari a 190 mm?",
+        "opzioni": [
+            "df[[\"pinna\"]]",
+            "df[df[\"pinna\"] <= 190]",
+            "df[df[\"pinna\"] == 190]",
+            "df[df[\"peso\"] == 190]"
+        ],
+        "soluzioni": [
+            "df[df[\"pinna\"] == 190]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Errore irriducibile. La maschera booleana mantiene le righe per cui il confronto di uguaglianza è vero. (Esercitazione 2, sezione 2.8.)"
+    },
+    {
+        "domanda": "Che cosa restituisce l'ordinamento seguente?\n\nCODICE PYTHON:\nrisultati[colonne_utili].sort_values(\"rank_test_score\").head(8)",
+        "opzioni": [
+            "Le otto configurazioni con la profondità maggiore",
+            "Otto fold di validazione",
+            "Fino a otto configurazioni con il rango migliore",
+            "Gli otto pinguini con il peso più basso"
+        ],
+        "soluzioni": [
+            "Fino a otto configurazioni con il rango migliore"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Risultati della ricerca. Il rango 1 è il migliore; l'ordinamento crescente seguito da head(8) mostra le prime otto righe. (Esercitazione 2, sezione 4.3.)"
+    },
+    {
+        "domanda": "Quale costruzione è equivalente al codice mostrato?\n\nCODICE PYTHON:\nparametri = {\"max_depth\": 3}\nmodello = DecisionTreeClassifier(random_state=0, **parametri)",
+        "opzioni": [
+            "DecisionTreeClassifier(random_state=0, max_leaf_nodes=3)",
+            "DecisionTreeClassifier(random_state=0, max_depth=3)",
+            "DecisionTreeClassifier(random_state=3)",
+            "DecisionTreeClassifier(random_state=0, min_samples_leaf=3)"
+        ],
+        "soluzioni": [
+            "DecisionTreeClassifier(random_state=0, max_depth=3)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Iperparametri degli alberi. **parametri espande le coppie del dizionario in argomenti nominati. (Esercitazione 2, sezione 3.2.)"
+    },
+    {
+        "domanda": "Nel confronto tra insiemi di feature, quale criterio permette un confronto coerente dei loro MSE?\n\nCODICE PYTHON:\ntrain_test_split(X_tutte[colonne], y_peso, test_size=0.3, random_state=0)",
+        "opzioni": [
+            "Usare la stessa divisione delle osservazioni per ogni insieme",
+            "Cambiare seme a ogni modello",
+            "Riaddestrare sul test ogni modello",
+            "Valutare uno sul training e l'altro sul test"
+        ],
+        "soluzioni": [
+            "Usare la stessa divisione delle osservazioni per ogni insieme"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione multivariata e one-hot encoding. Con lo stesso ordine delle righe e lo stesso seme, il notebook confronta i modelli sulle medesime osservazioni di test. (Esercitazione 2, sezione 2.6.)"
+    },
+    {
+        "domanda": "Quale chiamata esegue la ricerca senza usare il test set?",
+        "opzioni": [
+            "ricerca.fit(X_train, y_train)",
+            "ricerca.fit(X_train, y_test)",
+            "ricerca.predict(X_train)",
+            "ricerca.fit(X_test, y_test)"
+        ],
+        "soluzioni": [
+            "ricerca.fit(X_train, y_train)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV e refit. Il tuning e il refit usano soltanto il training set originario. (Esercitazione 2, sezione 4.2.)"
+    },
+    {
+        "domanda": "A che cosa serve stratify=y?\n\nCODICE PYTHON:\ntrain_test_split(X, y, test_size=0.3, random_state=0, stratify=y)",
+        "opzioni": [
+            "A ordinare le righe per peso",
+            "A scegliere la profondità dell'albero",
+            "A mantenere proporzioni simili delle classi nelle due parti",
+            "A trasformare y in una variabile continua"
+        ],
+        "soluzioni": [
+            "A mantenere proporzioni simili delle classi nelle due parti"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Classificazione del sesso. La stratificazione preserva approssimativamente le proporzioni delle classi del target. (Esercitazione 2, sezione 3.1.)"
+    },
+    {
+        "domanda": "Quale classe viene usata per addestrare un albero che stima il peso numerico?",
+        "opzioni": [
+            "DecisionTreeClassifier",
+            "StratifiedKFold",
+            "GridSearchCV",
+            "DecisionTreeRegressor"
+        ],
+        "soluzioni": [
+            "DecisionTreeRegressor"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Alberi di regressione. Il target è continuo: il notebook usa DecisionTreeRegressor per la regressione. (Esercitazione 2, sezione 2.7.)"
+    },
+    {
+        "domanda": "Quale metodo restituisce la profondità effettiva dell'albero?",
+        "opzioni": [
+            "albero_libero.get_depth()",
+            "albero_libero.predict(X_train)",
+            "albero_libero.get_n_leaves()",
+            "albero_libero.tree_.impurity[0]"
+        ],
+        "soluzioni": [
+            "albero_libero.get_depth()"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Classificazione del sesso. get_depth() restituisce la profondità massima raggiunta dall'albero addestrato. (Esercitazione 2, sezione 3.1.)"
+    },
+    {
+        "domanda": "Quale frammento addestra la regressione sui dati corretti?",
+        "opzioni": [
+            "regressione = LinearRegression()\nregressione.fit(X_peso_test, y_peso_test)",
+            "regressione = LinearRegression()\nregressione.fit(y_peso_train, X_peso_train)",
+            "regressione = LinearRegression()\nregressione.predict(X_peso_train)",
+            "regressione = LinearRegression()\nregressione.fit(X_peso_train, y_peso_train)"
+        ],
+        "soluzioni": [
+            "regressione = LinearRegression()\nregressione.fit(X_peso_train, y_peso_train)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: LinearRegression e baseline. fit(X, y) apprende i parametri dalle feature e dal target del training set. (Esercitazione 2, sezione 2.4.)"
+    },
+    {
+        "domanda": "Quale parametro limita a sei il numero massimo di foglie?",
+        "opzioni": [
+            "max_leaf_nodes=6",
+            "min_samples_leaf=6",
+            "max_depth=6",
+            "min_impurity_decrease=6"
+        ],
+        "soluzioni": [
+            "max_leaf_nodes=6"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Iperparametri degli alberi. max_leaf_nodes controlla direttamente il numero massimo di nodi terminali. (Esercitazione 2, sezione 3.2.)"
+    },
+    {
+        "domanda": "Che cosa restituisce np.unique in questo caso?\n\nCODICE PYTHON:\nnp.unique([200, 190, 200, 180])",
+        "opzioni": [
+            "[190, 180]",
+            "[200, 190, 180]",
+            "[180, 190, 200, 200]",
+            "[180, 190, 200]"
+        ],
+        "soluzioni": [
+            "[180, 190, 200]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Split di un albero di regressione. np.unique restituisce i valori distinti ordinati. (Esercitazione 2, sezione 2.9.)"
+    },
+    {
+        "domanda": "Che cosa restituisce questo codice se il nodo 0 contiene 200 campioni e il nodo i ne contiene 50 con impurità 0.4?\n\nCODICE PYTHON:\nreturn struttura.n_node_samples[i] / n * struttura.impurity[i]",
+        "opzioni": [
+            "20.00",
+            "0.10",
+            "0.40",
+            "0.20"
+        ],
+        "soluzioni": [
+            "0.10"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Pruning e cost-complexity. Formula: R(t) = n_t/n × impurità(t) = 50/200 × 0.4 = 0.10. (Esercitazione 2, sezione 3.3.)"
+    },
+    {
+        "domanda": "Se x_medio=4, y_medio=5 e w=0.5, quanto vale b?\n\nCODICE PYTHON:\nb = y_medio - w * x_medio",
+        "opzioni": [
+            "4.5",
+            "3.0",
+            "2.0",
+            "7.0"
+        ],
+        "soluzioni": [
+            "3.0"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Minimi quadrati. Formula: b = ȳ − w·x̄ = 5 − 0.5×4 = 3; la retta passa per il punto medio. (Esercitazione 2, sezione 2.5.)"
+    },
+    {
+        "domanda": "Supponendo che df abbia 333 righe, qual è la forma di X dopo il codice?\n\nCODICE PYTHON:\nX_peso = df[[\"pinna\"]]",
+        "opzioni": [
+            "(333,)",
+            "(333, 1)",
+            "(333, 2)",
+            "(1, 333)"
+        ],
+        "soluzioni": [
+            "(333, 1)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Feature, target e train/test split. La selezione mantiene una tabella con 333 osservazioni e una feature. (Esercitazione 2, sezione 2.1.)"
+    },
+    {
+        "domanda": "Quanti elementi contiene assi.ravel() se il grafico ha due righe e tre colonne?\n\nCODICE PYTHON:\nfig, assi = plt.subplots(2, 3)\nassi.ravel()",
+        "opzioni": [
+            "3",
+            "2",
+            "5",
+            "6"
+        ],
+        "soluzioni": [
+            "6"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Iperparametri degli alberi. ravel() appiattisce la matrice di assi 2×3 in un array di 6 elementi. (Esercitazione 2, sezione 3.2.)"
+    },
+    {
+        "domanda": "Quali sono le soglie candidate ottenute dal codice?\n\nCODICE PYTHON:\nvalori = np.array([180, 190, 210, 230])\nsoglie = (valori[:-1] + valori[1:]) / 2",
+        "opzioni": [
+            "[185, 200, 220]",
+            "[180, 190, 210]",
+            "[190, 210, 230]",
+            "[370, 400, 440]"
+        ],
+        "soluzioni": [
+            "[185, 200, 220]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Split di un albero di regressione. Formula: ogni soglia è il punto medio tra due valori distinti consecutivi. (Esercitazione 2, sezione 2.9.)"
+    },
+    {
+        "domanda": "Che cosa stampa il codice se il classificatore azzecca 210 osservazioni su 233? Arrotonda a due decimali.\n\nCODICE PYTHON:\nprint(f\"{accuracy_score(y_train, albero_libero.predict(X_train)):.2f}\")",
+        "opzioni": [
+            "0.90",
+            "0.10",
+            "0.91",
+            "210.00"
+        ],
+        "soluzioni": [
+            "0.90"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Classificazione del sesso. Formula: accuracy = predizioni corrette / totale = 210/233 ≈ 0.90. (Esercitazione 2, sezione 3.1.)"
+    },
+    {
+        "domanda": "Quale coppia di valori suggerisce overfitting nei risultati della cross-validation del notebook?",
+        "opzioni": [
+            "train_score medio = 0.80; test_score medio = 0.80",
+            "train_score medio = 0.82; test_score medio = 0.81",
+            "train_score medio = 0.78; test_score medio = 0.79",
+            "train_score medio = 1.00; test_score medio = 0.76"
+        ],
+        "soluzioni": [
+            "train_score medio = 1.00; test_score medio = 0.76"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Cross-validation. Accuracy perfetta sul training ma sensibilmente più bassa in validazione indica scarsa generalizzazione. (Esercitazione 2, sezione 3.5.)"
+    },
+    {
+        "domanda": "Qual è il numero di coefficienti in regressione2.coef_ dopo il training?\n\nCODICE PYTHON:\nX2 = df[[\"pinna\", \"becco_lunghezza\"]]\nregressione2 = LinearRegression().fit(X2, y_peso)",
+        "opzioni": [
+            "2",
+            "3",
+            "333",
+            "1"
+        ],
+        "soluzioni": [
+            "2"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione multivariata e one-hot encoding. Un modello lineare apprende un coefficiente per ciascuna delle due feature; l'intercetta è separata. (Esercitazione 2, sezione 2.6.)"
+    },
+    {
+        "domanda": "Quali classi restituisce la soglia del notebook?\n\nCODICE PYTHON:\nuscite = np.array([-0.4, 0, 0.7])\nnp.where(uscite >= 0, \"Chinstrap\", \"Adelie\")",
+        "opzioni": [
+            "[Chinstrap, Adelie, Adelie]",
+            "[Chinstrap, Chinstrap, Adelie]",
+            "[Adelie, Adelie, Chinstrap]",
+            "[Adelie, Chinstrap, Chinstrap]"
+        ],
+        "soluzioni": [
+            "[Adelie, Chinstrap, Chinstrap]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Regressione lineare per classificare. La soglia classifica come Chinstrap anche l'uscita esattamente uguale a zero. (Esercitazione 2, sezione 2.10.)"
+    },
+    {
+        "domanda": "Che cosa restituisce il seguente metodo su un albero addestrato?\n\nCODICE PYTHON:\nalbero.get_n_leaves()",
+        "opzioni": [
+            "La profondità massima consentita",
+            "Il numero di righe di training",
+            "Il numero di feature",
+            "Il numero di foglie effettive"
+        ],
+        "soluzioni": [
+            "Il numero di foglie effettive"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Alberi di regressione. get_n_leaves() conta i nodi terminali dell'albero. (Esercitazione 2, sezione 2.7.)"
+    },
+    {
+        "domanda": "Che cosa rappresenta punteggi.std() nella cross-validation?",
+        "opzioni": [
+            "Il miglior punteggio",
+            "Il numero di fold",
+            "Il punteggio sul test originale",
+            "La deviazione standard dei punteggi tra i fold"
+        ],
+        "soluzioni": [
+            "La deviazione standard dei punteggi tra i fold"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Cross-validation. La deviazione standard misura quanto variano le accuracy di validazione tra i diversi fold. (Esercitazione 2, sezione 3.5.)"
+    },
+    {
+        "domanda": "Quale attributo restituisce l'intercetta della regressione già addestrata?",
+        "opzioni": [
+            "regressione.intercept_",
+            "regressione.fit",
+            "regressione.predict",
+            "regressione.coef_[0]"
+        ],
+        "soluzioni": [
+            "regressione.intercept_"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: LinearRegression e baseline. L'intercetta b è il termine costante della retta ŷ = w·x + b. (Esercitazione 2, sezione 2.4.)"
+    },
+    {
+        "domanda": "Qual è l'effetto della seguente istruzione?\n\nCODICE PYTHON:\ndf = pinguini.dropna()",
+        "opzioni": [
+            "Elimina soltanto le righe interamente vuote",
+            "Crea un DataFrame senza righe contenenti almeno un valore mancante",
+            "Elimina tutte le colonne che contengono NaN",
+            "Sostituisce i valori mancanti con zero"
+        ],
+        "soluzioni": [
+            "Crea un DataFrame senza righe contenenti almeno un valore mancante"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Dati e pulizia. dropna() senza argomenti elimina le righe con almeno un NaN; il risultato viene assegnato a df. (Esercitazione 2, sezione 1.)"
+    },
+    {
+        "domanda": "Con 333 righe pulite, quante osservazioni contiene X_peso_test nel notebook?\n\nCODICE PYTHON:\nX_peso_train, X_peso_test, y_peso_train, y_peso_test = train_test_split(X_peso, y_peso, test_size=0.3, random_state=0)",
+        "opzioni": [
+            "99",
+            "233",
+            "234",
+            "100"
+        ],
+        "soluzioni": [
+            "100"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Feature, target e train/test split. Formula: n_test = ceil(333 × 0.3) = 100; il training contiene le restanti 233 righe. (Esercitazione 2, sezione 2.1.)"
+    },
+    {
+        "domanda": "Quale istruzione realizza il post-pruning secondo il notebook?",
+        "opzioni": [
+            "DecisionTreeClassifier(min_samples_leaf=10)",
+            "DecisionTreeClassifier(ccp_alpha=0.01)",
+            "DecisionTreeClassifier(max_leaf_nodes=6)",
+            "DecisionTreeClassifier(max_depth=3)"
+        ],
+        "soluzioni": [
+            "DecisionTreeClassifier(ccp_alpha=0.01)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Pruning e cost-complexity. ccp_alpha regola la potatura cost-complexity; gli altri parametri fermano la crescita in anticipo. (Esercitazione 2, sezione 3.3.)"
+    },
+    {
+        "domanda": "Quale attributo contiene il modello finale già riaddestrato sul training completo con refit=True?",
+        "opzioni": [
+            "ricerca.best_estimator_",
+            "ricerca.best_score_",
+            "ricerca.cv_results_",
+            "ricerca.best_params_"
+        ],
+        "soluzioni": [
+            "ricerca.best_estimator_"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV e refit. best_estimator_ è l'estimatore configurato con i migliori iperparametri e già addestrato di nuovo. (Esercitazione 2, sezione 4.2.)"
+    },
+    {
+        "domanda": "Il notebook carica 344 pinguini e dopo la pulizia ne conserva 333. Che cosa stampa questo codice?\n\nCODICE PYTHON:\nprint(len(pinguini) - len(df))",
+        "opzioni": [
+            "344",
+            "333",
+            "11",
+            "677"
+        ],
+        "soluzioni": [
+            "11"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Dati e pulizia. Formula: righe eliminate = righe iniziali − righe finali = 344 − 333 = 11. (Esercitazione 2, sezione 1.)"
+    },
+    {
+        "domanda": "Nel codice, quale ramo include una pinna esattamente uguale alla soglia?\n\nCODICE PYTHON:\nsinistra = y_peso_train[pinna_train <= soglia]\ndestra = y_peso_train[pinna_train > soglia]",
+        "opzioni": [
+            "Nessuno",
+            "Entrambi",
+            "Destra",
+            "Sinistra"
+        ],
+        "soluzioni": [
+            "Sinistra"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Split di un albero di regressione. Il confronto <= include l'uguaglianza; > la esclude. (Esercitazione 2, sezione 2.9.)"
+    },
+    {
+        "domanda": "Quante soglie candidate produce il codice se valori contiene 12 valori distinti?\n\nCODICE PYTHON:\nsoglie = (valori[:-1] + valori[1:]) / 2",
+        "opzioni": [
+            "24",
+            "12",
+            "10",
+            "11"
+        ],
+        "soluzioni": [
+            "11"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Split di un albero di regressione. Con m valori ordinati esistono m−1 coppie consecutive. (Esercitazione 2, sezione 2.9.)"
+    }
+]

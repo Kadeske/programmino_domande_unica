@@ -1,0 +1,1486 @@
+[
+    {
+        "domanda": "Quale stato della lista contiene i centroidi dopo il primo aggiornamento?\n\nCODICE PYTHON:\nstati = passi_kmeans(Z, centroidi_iniziali)\nattesi = stati[2][\"centroidi\"]",
+        "opzioni": [
+            "stati[-1] sempre",
+            "stati[0]",
+            "stati[1]",
+            "stati[2]"
+        ],
+        "soluzioni": [
+            "stati[2]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: K-means: assegnazione e aggiornamento. Lo stato 0 è l'inizio; 1 è la prima assegnazione, 2 il primo aggiornamento. (Esercitazione 3, sezione 3.1–3.3.)"
+    },
+    {
+        "domanda": "Quanto vale la quota attribuita al peso, se le differenze al quadrato sono [3, 4, 9, 84]?\n\nCODICE PYTHON:\nq = np.array([3, 4, 9, 84])\nquota = q / q.sum()\nprint(quota[-1])",
+        "opzioni": [
+            "0.16",
+            "84",
+            "0.84",
+            "0.92"
+        ],
+        "soluzioni": [
+            "0.84"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scalatura e pipeline. La quota è il contributo diviso la somma: 84/(3+4+9+84) = 0.84. (Esercitazione 3, sezione 2.3.)"
+    },
+    {
+        "domanda": "Quale attributo indica il numero effettivo di stadi addestrati dopo early stopping?\n\nCODICE PYTHON:\nboosting_es.fit(X_train, y_train)\n# quale attributo?",
+        "opzioni": [
+            "boosting_es.n_iter_no_change",
+            "boosting_es.validation_fraction",
+            "boosting_es.n_estimators",
+            "boosting_es.n_estimators_"
+        ],
+        "soluzioni": [
+            "boosting_es.n_estimators_"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Gradient Boosting e ricerca degli iperparametri. n_estimators_ è il numero appreso; n_estimators è il massimo impostato (1000). (Esercitazione 3, sezione 1.5.)"
+    },
+    {
+        "domanda": "Che cosa significa n_init=10?\n\nCODICE PYTHON:\nKMeans(n_clusters=3, n_init=10, random_state=0)",
+        "opzioni": [
+            "Dieci aggiornamenti obbligatori dei centroidi",
+            "Dieci cluster a ogni inizializzazione",
+            "Dieci inizializzazioni e conservazione della soluzione con inertia minore",
+            "Dieci fold di cross-validation"
+        ],
+        "soluzioni": [
+            "Dieci inizializzazioni e conservazione della soluzione con inertia minore"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KMeans in scikit-learn. n_init è il numero di partenze diverse; non è il numero di cluster o iterazioni. (Esercitazione 3, sezione 3.4.)"
+    },
+    {
+        "domanda": "Quanto vale il tempo medio di fit espresso in millisecondi?\n\nCODICE PYTHON:\nrisultati = {\"fit_time\": np.array([0.02, 0.03, 0.01, 0.04, 0.05])}\nprint(risultati[\"fit_time\"].mean() * 1000)",
+        "opzioni": [
+            "0.03",
+            "150",
+            "30",
+            "300"
+        ],
+        "soluzioni": [
+            "30"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Benchmark e valutazione finale. Media = 0.15/5 = 0.03 s; moltiplicando per 1000 si ottengono 30 ms. (Esercitazione 3, sezione 2.5.)"
+    },
+    {
+        "domanda": "Che tipo di oggetto restituisce questo scaler, con configurazione predefinita?\n\nCODICE PYTHON:\nZ = StandardScaler().fit_transform(X)",
+        "opzioni": [
+            "Un dizionario con le specie",
+            "Un array NumPy numerico",
+            "Un DataFrame con una colonna cluster",
+            "Una lista di classificatori"
+        ],
+        "soluzioni": [
+            "Un array NumPy numerico"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: K-means: assegnazione e aggiornamento. fit_transform applica la scalatura e restituisce un array di valori numerici. (Esercitazione 3, sezione 3.1–3.3.)"
+    },
+    {
+        "domanda": "Quali righe seleziona questa istruzione?\n\nCODICE PYTHON:\nX4_train = df.loc[X_train.index, misure]",
+        "opzioni": [
+            "Un nuovo campione casuale di quattro pinguini",
+            "Tutti i pinguini del test set",
+            "I primi quattro pinguini del dataset",
+            "Gli stessi pinguini del training con le quattro misure"
+        ],
+        "soluzioni": [
+            "Gli stessi pinguini del training con le quattro misure"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scalatura e pipeline. loc seleziona per etichetta di indice e per nomi di colonne; conserva la divisione precedente. (Esercitazione 3, sezione 2.3.)"
+    },
+    {
+        "domanda": "Quando viene stimata la media dello scaler durante la cross-validation?\n\nCODICE PYTHON:\nknn_scalato = make_pipeline(StandardScaler(), KNeighborsClassifier(n_neighbors=5))\ncross_val_score(knn_scalato, X4_train, y_train, cv=cv)",
+        "opzioni": [
+            "Sul test finale prima di ogni fold",
+            "Separatamente sui dati di training di ogni fold",
+            "Una sola volta su tutti i 333 pinguini",
+            "Solo sul fold di validazione"
+        ],
+        "soluzioni": [
+            "Separatamente sui dati di training di ogni fold"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scalatura e pipeline. La pipeline evita il data leakage stimando lo scaler esclusivamente sul training di ogni fold. (Esercitazione 3, sezione 2.3.)"
+    },
+    {
+        "domanda": "Quale media e deviazione usa lo scaler quando si chiama predict sui dati nuovi?\n\nCODICE PYTHON:\nknn_scalato.fit(X4_train, y_train)\nknn_scalato.predict(X4_test)",
+        "opzioni": [
+            "Quelle di y_train",
+            "Sempre 0 e 1 come statistiche dei dati originali",
+            "Quelle apprese da X4_train",
+            "Quelle ricalcolate su X4_test"
+        ],
+        "soluzioni": [
+            "Quelle apprese da X4_train"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scalatura e pipeline. La trasformazione dei nuovi esempi riusa le statistiche apprese nel fit, senza adattarsi al test. (Esercitazione 3, sezione 2.3.)"
+    },
+    {
+        "domanda": "Qual è la dimensione di df dopo la pulizia descritta nel notebook?\n\nCODICE PYTHON:\ndf = pinguini.dropna()\nprint(len(df))",
+        "opzioni": [
+            "344",
+            "233",
+            "100",
+            "333"
+        ],
+        "soluzioni": [
+            "333"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Preparazione dati e cross-validation. dropna() elimina le righe con valori mancanti; da 344 si passa a 333 pinguini. (Esercitazione 3, sezione 1, 1.1.)"
+    },
+    {
+        "domanda": "Quale funzione restituisce sia i punteggi sia i tempi per ogni fold?\n\nCODICE PYTHON:\n# risultati = ...",
+        "opzioni": [
+            "cross_val_score(modello, X4_train, y_train, cv=cv)",
+            "cross_validate(modello, X4_train, y_train, cv=cv)",
+            "accuracy_score(y_train, y_train)",
+            "modello.predict(X4_train)"
+        ],
+        "soluzioni": [
+            "cross_validate(modello, X4_train, y_train, cv=cv)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Benchmark e valutazione finale. cross_validate restituisce un dizionario che contiene test_score e fit_time. (Esercitazione 3, sezione 2.5.)"
+    },
+    {
+        "domanda": "Quale configurazione fa pesare di più i vicini più prossimi?\n\nCODICE PYTHON:\nKNeighborsClassifier(n_neighbors=7, weights=\"distance\")",
+        "opzioni": [
+            "weights=\"distance\"",
+            "metric=\"manhattan\"",
+            "weights=\"uniform\"",
+            "n_neighbors=7"
+        ],
+        "soluzioni": [
+            "weights=\"distance\""
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV per KNN. distance attribuisce maggiore peso ai vicini più prossimi, uniform li tratta allo stesso modo. (Esercitazione 3, sezione 2.4.)"
+    },
+    {
+        "domanda": "Quale vettore di assegnazioni produce argmin?\n\nCODICE PYTHON:\ndistanze = np.array([[3, 1, 2], [1, 4, 2], [5, 3, 1]])\nnp.argmin(distanze, axis=1)",
+        "opzioni": [
+            "[0, 1, 2]",
+            "[1, 1, 1]",
+            "[2, 0, 2]",
+            "[1, 0, 2]"
+        ],
+        "soluzioni": [
+            "[1, 0, 2]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: K-means: assegnazione e aggiornamento. Per ogni riga si restituisce l'indice della colonna minima: 1, 0, 2. (Esercitazione 3, sezione 3.1–3.3.)"
+    },
+    {
+        "domanda": "Quante valutazioni sui fold sono necessarie per confrontare i quattro modelli?\n\nCODICE PYTHON:\nfor nome, modello in modelli.items():\n    risultati = cross_validate(modello, X4_train, y_train, cv=cv)",
+        "opzioni": [
+            "20",
+            "4",
+            "25",
+            "5"
+        ],
+        "soluzioni": [
+            "20"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Benchmark e valutazione finale. Quattro modelli completi × cinque fold = 20 valutazioni, escludendo il fit finale. (Esercitazione 3, sezione 2.5.)"
+    },
+    {
+        "domanda": "Che cosa controlla max_features nella random forest?\n\nCODICE PYTHON:\nforesta = RandomForestClassifier(n_estimators=200, max_features=1)",
+        "opzioni": [
+            "Il numero di feature che rimarranno nel dataset finale",
+            "Il numero di feature candidate a ogni split",
+            "Il numero massimo di righe per albero",
+            "Il numero di alberi che possono votare"
+        ],
+        "soluzioni": [
+            "Il numero di feature candidate a ogni split"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Bootstrap e Random Forest. max_features limita le feature candidate per ogni nodo, favorendo alberi differenti. (Esercitazione 3, sezione 1.2–1.4.)"
+    },
+    {
+        "domanda": "Quale espressione completa la distanza dal centroide 1 = (-1.8, 0.5)?\n\nCODICE PYTHON:\n# passo contiene lunghezza e profondita scalate\npasso[\"d1\"] = ...",
+        "opzioni": [
+            "((passo[\"lunghezza\"] + 1.8)**2 + (passo[\"profondita\"] - 0.5)**2)**0.5",
+            "((passo[\"lunghezza\"] - 1.8)**2 + (passo[\"profondita\"] - 0.5)**2)**0.5",
+            "(passo[\"lunghezza\"] + 1.8) + (passo[\"profondita\"] - 0.5)",
+            "((passo[\"lunghezza\"] + 1.8)**2 + (passo[\"profondita\"] + 0.5)**2)**0.5"
+        ],
+        "soluzioni": [
+            "((passo[\"lunghezza\"] + 1.8)**2 + (passo[\"profondita\"] - 0.5)**2)**0.5"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: K-means: assegnazione e aggiornamento. Distanza euclidea: si sottrae ciascuna coordinata del centroide, quindi x−(−1.8)=x+1.8. (Esercitazione 3, sezione 3.1–3.3.)"
+    },
+    {
+        "domanda": "Che cosa sono le chiavi del dizionario restituito?\n\nCODICE PYTHON:\nvalori_k = [2, 3, 4]\nsilhouette = [0.47, 0.52, 0.44]\ndict(zip(valori_k, np.round(silhouette, 2).tolist()))",
+        "opzioni": [
+            "2, 3, 4",
+            "0, 1, 2",
+            "Tre centroidi",
+            "0.47, 0.52, 0.44"
+        ],
+        "soluzioni": [
+            "2, 3, 4"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scelta di k, silhouette e ARI. zip accoppia ogni k con la silhouette corrispondente; il primo valore della coppia è la chiave. (Esercitazione 3, sezione 3.5–3.7.)"
+    },
+    {
+        "domanda": "Quale peso aumenta prima della normalizzazione se alpha è positivo?\n\nCODICE PYTHON:\npesi = pesi * np.exp(-alpha * y_num * h)",
+        "opzioni": [
+            "Solo il peso dell'ultimo esempio",
+            "Il peso di ogni esempio corretto",
+            "Tutti i pesi nello stesso rapporto",
+            "Il peso di un esempio con y_num diverso da h"
+        ],
+        "soluzioni": [
+            "Il peso di un esempio con y_num diverso da h"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: AdaBoost. Se y·h = −1, il fattore è exp(α) > 1; se y·h = +1 è exp(−α). (Esercitazione 3, sezione 1.6.)"
+    },
+    {
+        "domanda": "Quanti valori distinti può assumere lo slider seguente?\n\nCODICE PYTHON:\nslider_k = IntSlider(min=1, max=51, step=2, value=1)",
+        "opzioni": [
+            "25",
+            "51",
+            "50",
+            "26"
+        ],
+        "soluzioni": [
+            "26"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN a mano e classificazione. I valori sono 1, 3, ..., 51: (51−1)/2+1 = 26. (Esercitazione 3, sezione 2.1–2.2.)"
+    },
+    {
+        "domanda": "Quale riga viene selezionata?\n\nCODICE PYTHON:\nbenchmark = pd.DataFrame({\"modello\": [\"albero\", \"foresta\", \"knn\"], \"accuracy media\": [0.89, 0.90, 0.91]})\nmigliore = benchmark.loc[benchmark[\"accuracy media\"].idxmax()]",
+        "opzioni": [
+            "La riga della foresta",
+            "La riga dell'albero",
+            "Tutte e tre le righe",
+            "La riga del knn"
+        ],
+        "soluzioni": [
+            "La riga del knn"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Benchmark e valutazione finale. idxmax restituisce l'indice del valore massimo, 0.91, e loc seleziona la riga corrispondente. (Esercitazione 3, sezione 2.5.)"
+    },
+    {
+        "domanda": "Quanti fit di CV vengono eseguiti, escludendo il refit finale?\n\nCODICE PYTHON:\nricerca_boosting = GridSearchCV(GradientBoostingClassifier(random_state=0), griglia_boosting, cv=cv)\nricerca_boosting.fit(X_train, y_train)",
+        "opzioni": [
+            "60",
+            "20",
+            "12",
+            "61"
+        ],
+        "soluzioni": [
+            "60"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Gradient Boosting e ricerca degli iperparametri. La griglia originale ha 12 configurazioni e cv ha 5 fold: 12 × 5 = 60. (Esercitazione 3, sezione 1.5.)"
+    },
+    {
+        "domanda": "Quanti pinguini distinti ci si aspetta approssimativamente in un bootstrap da 233 esempi, usando il 63% indicato nel notebook?\n\nCODICE PYTHON:\nn = 233\nstima = 0.63 * n",
+        "opzioni": [
+            "86",
+            "147",
+            "233",
+            "63"
+        ],
+        "soluzioni": [
+            "147"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Bootstrap e Random Forest. 233 × 0.63 = 146.79, circa 147; è un valore atteso, non una garanzia. (Esercitazione 3, sezione 1.2–1.4.)"
+    },
+    {
+        "domanda": "Quale istruzione restituisce l'etichetta del nuovo pinguino?\n\nCODICE PYTHON:\nknn = KNeighborsClassifier(n_neighbors=5)\nknn.fit(X_train, y_train)",
+        "opzioni": [
+            "knn.predict(nuovo)",
+            "knn.n_neighbors",
+            "knn.predict(y_train)",
+            "knn.fit(nuovo, y_train)"
+        ],
+        "soluzioni": [
+            "knn.predict(nuovo)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN a mano e classificazione. predict usa le feature del nuovo esempio per ricercare i vicini e assegnare la classe. (Esercitazione 3, sezione 2.1–2.2.)"
+    },
+    {
+        "domanda": "Quante fusioni servono per arrivare da 40 cluster singoli a un unico cluster?\n\nCODICE PYTHON:\ncampione = df.sample(40, random_state=0)\nunioni = linkage(Z_campione, method=\"ward\")",
+        "opzioni": [
+            "20",
+            "39",
+            "41",
+            "40"
+        ],
+        "soluzioni": [
+            "39"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Clustering gerarchico. Ogni fusione riduce il numero di cluster di uno; 40−1=39 fusioni. (Esercitazione 3, sezione 3.8.)"
+    },
+    {
+        "domanda": "Quale attributo contiene la stima OOB dopo fit?\n\nCODICE PYTHON:\nforesta = RandomForestClassifier(n_estimators=200, oob_score=True, random_state=0)\nforesta.fit(X_train, y_train)",
+        "opzioni": [
+            "foresta.best_score_",
+            "foresta.inertia_",
+            "foresta.oob_score_",
+            "foresta.oob_score"
+        ],
+        "soluzioni": [
+            "foresta.oob_score_"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Bootstrap e Random Forest. oob_score è l'opzione booleana, oob_score_ è il punteggio calcolato dopo l'addestramento. (Esercitazione 3, sezione 1.2–1.4.)"
+    },
+    {
+        "domanda": "Quale riga crea un campione bootstrap di dimensione n?\n\nCODICE PYTHON:\nrng = np.random.default_rng(0)\nn = len(X_train)\n# indici = ...",
+        "opzioni": [
+            "rng.choice(n, size=1, replace=True)",
+            "rng.choice(n, size=n, replace=True)",
+            "rng.choice(n, size=n, replace=False)",
+            "np.unique(np.arange(n))"
+        ],
+        "soluzioni": [
+            "rng.choice(n, size=n, replace=True)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Bootstrap e Random Forest. Il bootstrap estrae n indici tra 0 e n−1 con reinserimento. (Esercitazione 3, sezione 1.2–1.4.)"
+    },
+    {
+        "domanda": "Quale significato ha learning_rate=0.1?\n\nCODICE PYTHON:\nGradientBoostingClassifier(n_estimators=100, learning_rate=0.1)",
+        "opzioni": [
+            "Riserva il 10% dei dati al test set",
+            "Addestra il 10% dei 100 alberi",
+            "Usa il 10% delle feature a ogni nodo",
+            "Scala il contributo di ogni nuovo albero"
+        ],
+        "soluzioni": [
+            "Scala il contributo di ogni nuovo albero"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Gradient Boosting e ricerca degli iperparametri. learning_rate riduce l'entità della correzione aggiunta a ogni round. (Esercitazione 3, sezione 1.5.)"
+    },
+    {
+        "domanda": "Nel notebook con quattro misure, quali accuracy in CV sono riportate per KNN senza e con scalatura, rispettivamente?\n\nCODICE PYTHON:\ncross_val_score(knn_grezzo, X4_train, y_train, cv=cv).mean()\ncross_val_score(knn_scalato, X4_train, y_train, cv=cv).mean()",
+        "opzioni": [
+            "0.77 e 0.91",
+            "0.77 e 1.00",
+            "0.82 e 0.82",
+            "0.91 e 0.77"
+        ],
+        "soluzioni": [
+            "0.77 e 0.91"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scalatura e pipeline. Nel risultato riportato in 2.3 la scalatura porta un netto miglioramento perché evita il predominio del peso. (Esercitazione 3, sezione 2.3.)"
+    },
+    {
+        "domanda": "Se media=40 e deviazione standard=5, quale coordinata originale corrisponde a un centroide scalato z=2?\n\nCODICE PYTHON:\nx = 40 + 2 * 5",
+        "opzioni": [
+            "42",
+            "50",
+            "30",
+            "10"
+        ],
+        "soluzioni": [
+            "50"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KMeans in scikit-learn. Trasformazione inversa: x = μ + zσ = 40+2×5 = 50. (Esercitazione 3, sezione 3.4.)"
+    },
+    {
+        "domanda": "Qual è il target del problema di regressione?\n\nCODICE PYTHON:\nX_peso = df[[\"pinna\"]]\ny_peso = df[\"peso\"]",
+        "opzioni": [
+            "Il sesso",
+            "La pinna",
+            "Il peso",
+            "La specie"
+        ],
+        "soluzioni": [
+            "Il peso"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN per regressione. Il peso in grammi è il valore numerico da prevedere dalla lunghezza della pinna. (Esercitazione 3, sezione 2.6.)"
+    },
+    {
+        "domanda": "Quale k massimizza la silhouette tra questi valori?\n\nCODICE PYTHON:\nvalori_k = [2, 3, 4]\nsilhouette = [0.47, 0.52, 0.44]\nvalori_k[np.argmax(silhouette)]",
+        "opzioni": [
+            "3",
+            "2",
+            "1",
+            "4"
+        ],
+        "soluzioni": [
+            "3"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scelta di k, silhouette e ARI. np.argmax trova l'indice del massimo 0.52, cioè 1; valori_k[1]=3. (Esercitazione 3, sezione 3.5–3.7.)"
+    },
+    {
+        "domanda": "Quanto vale alpha (due decimali)?\n\nCODICE PYTHON:\nerrore = 0.25\nalpha = 0.5 * np.log((1 - errore) / errore)",
+        "opzioni": [
+            "0.55",
+            "1.10",
+            "0.69",
+            "0.25"
+        ],
+        "soluzioni": [
+            "0.55"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: AdaBoost. α = ½ ln((1−ε)/ε) = ½ ln(3) ≈ 0.55. (Esercitazione 3, sezione 1.6.)"
+    },
+    {
+        "domanda": "Qual è il ruolo delle specie in questo codice?\n\nCODICE PYTHON:\ndendrogram(unioni, labels=campione[\"specie\"].tolist(), leaf_rotation=90)",
+        "opzioni": [
+            "Valori da cui calcolare la distanza",
+            "Target supervisionato per addestrare Ward",
+            "Etichette grafiche delle foglie, non input del clustering",
+            "Centroidi iniziali del clustering"
+        ],
+        "soluzioni": [
+            "Etichette grafiche delle foglie, non input del clustering"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Clustering gerarchico. Le unioni sono già calcolate da Z_campione; labels serve soltanto a etichettare le foglie nel grafico. (Esercitazione 3, sezione 3.8.)"
+    },
+    {
+        "domanda": "Quante valutazioni sui fold vengono effettuate dal ciclo (senza altri fit)?\n\nCODICE PYTHON:\nfor b in [1, 2, 5, 10, 20, 50, 100, 200]:\n    cross_val_score(RandomForestClassifier(n_estimators=b), X_train, y_train, cv=cv)",
+        "opzioni": [
+            "388",
+            "40",
+            "5",
+            "8"
+        ],
+        "soluzioni": [
+            "40"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Bootstrap e Random Forest. 8 configurazioni × 5 fold = 40 valutazioni e addestramenti di foreste. (Esercitazione 3, sezione 1.2–1.4.)"
+    },
+    {
+        "domanda": "Qual è il valore iniziale dei pesi?\n\nCODICE PYTHON:\nn = 4\npesi = np.full(n, 1 / n)",
+        "opzioni": [
+            "[1, 1, 1, 1]",
+            "[0, 0, 0, 0]",
+            "[0.25, 0.25, 0.25, 0.25]",
+            "[0.25, 0.5, 0.75, 1]"
+        ],
+        "soluzioni": [
+            "[0.25, 0.25, 0.25, 0.25]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: AdaBoost. np.full crea quattro valori uguali a 1/4; la somma è 1. (Esercitazione 3, sezione 1.6.)"
+    },
+    {
+        "domanda": "Quanto vale il valore standardizzato di x=210 se la media di training è 200 e la deviazione standard è 5?\n\nCODICE PYTHON:\nz = (210 - 200) / 5",
+        "opzioni": [
+            "0.5",
+            "10",
+            "2",
+            "42"
+        ],
+        "soluzioni": [
+            "2"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scalatura e pipeline. Formula StandardScaler: z = (x−μ)/σ = 10/5 = 2. (Esercitazione 3, sezione 2.3.)"
+    },
+    {
+        "domanda": "Quale chiave della griglia è corretta per scegliere k dentro make_pipeline?\n\nCODICE PYTHON:\npipe = make_pipeline(StandardScaler(), KNeighborsClassifier())\n# griglia_knn = ...",
+        "opzioni": [
+            "\"kneighborsclassifier__n_neighbors\"",
+            "\"kneighborsclassifier_n_neighbors\"",
+            "\"n_neighbors\"",
+            "\"standardscaler__n_neighbors\""
+        ],
+        "soluzioni": [
+            "\"kneighborsclassifier__n_neighbors\""
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV per KNN. Il nome automatico del passo è kneighborsclassifier; due underscore separano passo e iperparametro. (Esercitazione 3, sezione 2.4.)"
+    },
+    {
+        "domanda": "Quanto vale l'inertia per punti (1, 0) e (3, 0) assegnati al centroide (2, 0)?\n\nCODICE PYTHON:\nZ = np.array([[1, 0], [3, 0]])\ncentroidi = np.array([[2, 0]])\netichette = np.array([0, 0])\n((Z - centroidi[etichette]) ** 2).sum()",
+        "opzioni": [
+            "4",
+            "1",
+            "0",
+            "2"
+        ],
+        "soluzioni": [
+            "2"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: K-means: assegnazione e aggiornamento. Inertia = somma delle distanze al quadrato: (1−2)²+(3−2)²=2. (Esercitazione 3, sezione 3.1–3.3.)"
+    },
+    {
+        "domanda": "Quante combinazioni contiene questa griglia?\n\nCODICE PYTHON:\ngriglia_boosting = {\"learning_rate\": [0.01, 0.1, 0.5],\n                   \"n_estimators\": [50, 100, 200, 500]}",
+        "opzioni": [
+            "4",
+            "12",
+            "7",
+            "60"
+        ],
+        "soluzioni": [
+            "12"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Gradient Boosting e ricerca degli iperparametri. Prodotto cartesiano delle scelte: 3 × 4 = 12. (Esercitazione 3, sezione 1.5.)"
+    },
+    {
+        "domanda": "Quale riga seleziona i cinque pinguini più vicini?\n\nCODICE PYTHON:\nk = 5\n# vicini contiene la colonna distanza",
+        "opzioni": [
+            "vicini.sort_values(\"distanza\").head(1)",
+            "vicini.sort_values(\"distanza\").head(k)",
+            "vicini.head(k)",
+            "vicini.sort_values(\"distanza\", ascending=False).head(k)"
+        ],
+        "soluzioni": [
+            "vicini.sort_values(\"distanza\").head(k)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN a mano e classificazione. sort_values ordina per distanza crescente, head(k) conserva le prime k righe. (Esercitazione 3, sezione 2.1–2.2.)"
+    },
+    {
+        "domanda": "Quale valore viene stampato? Arrotonda a due decimali.\n\nCODICE PYTHON:\nindici = np.array([0, 0, 2, 4, 4])\nprint(len(np.unique(indici)) / 5)",
+        "opzioni": [
+            "0.60",
+            "0.40",
+            "1.00",
+            "0.20"
+        ],
+        "soluzioni": [
+            "0.60"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Bootstrap e Random Forest. np.unique restituisce 3 indici distinti; la frazione è 3/5 = 0.60. (Esercitazione 3, sezione 1.2–1.4.)"
+    },
+    {
+        "domanda": "Quale valore di k usa questo classificatore?\n\nCODICE PYTHON:\nknn = KNeighborsClassifier(n_neighbors=7)",
+        "opzioni": [
+            "1",
+            "51",
+            "7",
+            "5"
+        ],
+        "soluzioni": [
+            "7"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN a mano e classificazione. n_neighbors indica il numero di vicini da consultare. (Esercitazione 3, sezione 2.1–2.2.)"
+    },
+    {
+        "domanda": "Quale parametro riserva una parte del training per l'early stopping?\n\nCODICE PYTHON:\nboosting_es = GradientBoostingClassifier(n_estimators=1000, learning_rate=0.1, validation_fraction=0.2, n_iter_no_change=10)",
+        "opzioni": [
+            "n_estimators",
+            "validation_fraction",
+            "learning_rate",
+            "n_iter_no_change"
+        ],
+        "soluzioni": [
+            "validation_fraction"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Gradient Boosting e ricerca degli iperparametri. validation_fraction=0.2 riserva il 20% del training per la validazione interna dell'early stopping. (Esercitazione 3, sezione 1.5.)"
+    },
+    {
+        "domanda": "Quanto vale l'MSE in questo esempio?\n\nCODICE PYTHON:\ny_peso_test = [3000, 4000]\npred = [3100, 3800]\nmean_squared_error(y_peso_test, pred)",
+        "opzioni": [
+            "25000",
+            "150",
+            "50000",
+            "100"
+        ],
+        "soluzioni": [
+            "25000"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN per regressione. MSE = ((3000−3100)²+(4000−3800)²)/2 = (10000+40000)/2 = 25000. (Esercitazione 3, sezione 2.6.)"
+    },
+    {
+        "domanda": "Quanto vale l'accuracy media di questa configurazione?\n\nCODICE PYTHON:\nrisultati = {\"test_score\": np.array([0.8, 0.9, 0.9, 1.0, 0.9])}\nprint(risultati[\"test_score\"].mean())",
+        "opzioni": [
+            "4.50",
+            "0.92",
+            "0.89",
+            "0.90"
+        ],
+        "soluzioni": [
+            "0.90"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Benchmark e valutazione finale. Media = (0.8+0.9+0.9+1.0+0.9)/5 = 4.5/5 = 0.90. (Esercitazione 3, sezione 2.5.)"
+    },
+    {
+        "domanda": "Che cosa mostra il secondo valore stampato?\n\nCODICE PYTHON:\nprint(f\"{punteggi_scelto.mean():.2f} ± {punteggi_scelto.std():.2f}\")",
+        "opzioni": [
+            "L'errore medio quadratico",
+            "Il numero di fold corretti",
+            "L'accuracy finale sul test set",
+            "La deviazione standard delle accuracy dei fold"
+        ],
+        "soluzioni": [
+            "La deviazione standard delle accuracy dei fold"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Preparazione dati e cross-validation. std() misura la dispersione dei punteggi di validazione; non è una misura sul test finale. (Esercitazione 3, sezione 1, 1.1.)"
+    },
+    {
+        "domanda": "Quale forma ha Z4 nel notebook?\n\nCODICE PYTHON:\nZ4 = StandardScaler().fit_transform(df[misure])",
+        "opzioni": [
+            "(4, 333)",
+            "(333, 2)",
+            "(333, 4)",
+            "(233, 4)"
+        ],
+        "soluzioni": [
+            "(333, 4)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scelta di k, silhouette e ARI. Sono tutte le quattro misure di tutti i 333 pinguini puliti. (Esercitazione 3, sezione 3.5–3.7.)"
+    },
+    {
+        "domanda": "Quale valore di k preferisce la silhouette nelle quattro misure, secondo i risultati riportati nel notebook?\n\nCODICE PYTHON:\nfor k in range(2, 8):\n    modello = KMeans(n_clusters=k, n_init=10, random_state=0).fit(Z4)\n    print(k, silhouette_score(Z4, modello.labels_))",
+        "opzioni": [
+            "4",
+            "7",
+            "3",
+            "2"
+        ],
+        "soluzioni": [
+            "2"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scelta di k, silhouette e ARI. La sezione 3.7 riporta silhouette 0.53 per k=2 e 0.45 per k=3; preferisce due gruppi, mentre ARI preferisce tre. (Esercitazione 3, sezione 3.5–3.7.)"
+    },
+    {
+        "domanda": "Quanti singoli alberi vengono addestrati complessivamente in questi tre esperimenti di CV?\n\nCODICE PYTHON:\nfor b in [2, 5, 10]:\n    cross_val_score(RandomForestClassifier(n_estimators=b), X_train, y_train, cv=cv)",
+        "opzioni": [
+            "85",
+            "50",
+            "15",
+            "17"
+        ],
+        "soluzioni": [
+            "85"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Bootstrap e Random Forest. Ogni configurazione addestra b alberi per ciascuno dei 5 fold: (2+5+10) × 5 = 85. (Esercitazione 3, sezione 1.2–1.4.)"
+    },
+    {
+        "domanda": "Che cosa rappresenta ciascuna cella della tabella?\n\nCODICE PYTHON:\npd.crosstab(cluster, df[\"specie\"], rownames=[\"cluster\"])",
+        "opzioni": [
+            "La distanza tra due centroidi",
+            "La probabilità softmax di ogni specie",
+            "La media della lunghezza del becco per specie",
+            "Il numero di pinguini di una certa specie in un certo cluster"
+        ],
+        "soluzioni": [
+            "Il numero di pinguini di una certa specie in un certo cluster"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scelta di k, silhouette e ARI. crosstab conta le coppie di valori: cluster sulle righe e specie sulle colonne. (Esercitazione 3, sezione 3.5–3.7.)"
+    },
+    {
+        "domanda": "Quale istruzione calcola l'accuracy finale senza addestrare sul test?\n\nCODICE PYTHON:\n# modello_scelto è già addestrato",
+        "opzioni": [
+            "accuracy_score(y_test, modello_scelto.predict(X4_test))",
+            "modello_scelto.fit(X4_test, y_test)",
+            "accuracy_score(y_train, modello_scelto.predict(X4_train))",
+            "accuracy_score(y_test, modello_scelto.predict(X4_train))"
+        ],
+        "soluzioni": [
+            "accuracy_score(y_test, modello_scelto.predict(X4_test))"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Benchmark e valutazione finale. Si confrontano le etichette vere del test con le predizioni sulle feature corrispondenti. (Esercitazione 3, sezione 2.5.)"
+    },
+    {
+        "domanda": "Quanti pinguini vengono estratti per il dendrogramma?\n\nCODICE PYTHON:\ncampione = df.sample(40, random_state=0)",
+        "opzioni": [
+            "4",
+            "333",
+            "40",
+            "39"
+        ],
+        "soluzioni": [
+            "40"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Clustering gerarchico. sample(40) seleziona 40 righe; il notebook usa un sottoinsieme per rendere leggibile il grafico. (Esercitazione 3, sezione 3.8.)"
+    },
+    {
+        "domanda": "Che cosa restituisce kmeans[0] nella pipeline del notebook?\n\nCODICE PYTHON:\nkmeans = make_pipeline(StandardScaler(), KMeans(n_clusters=3, n_init=10, random_state=0))",
+        "opzioni": [
+            "Lo StandardScaler",
+            "Il modello KMeans",
+            "Il primo centroide",
+            "L'etichetta del primo pinguino"
+        ],
+        "soluzioni": [
+            "Lo StandardScaler"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KMeans in scikit-learn. L'indice 0 indica il primo passo della pipeline, lo scaler; l'indice 1 indica KMeans. (Esercitazione 3, sezione 3.4.)"
+    },
+    {
+        "domanda": "Quale istruzione restituisce i cluster senza fornire il target?\n\nCODICE PYTHON:\nkmeans = make_pipeline(StandardScaler(), KMeans(n_clusters=3, n_init=10, random_state=0))",
+        "opzioni": [
+            "kmeans.fit_predict(X, y_train) con target obbligatorio",
+            "kmeans.predict(X) prima di fit",
+            "kmeans.fit_predict(y_train)",
+            "kmeans.fit_predict(X)"
+        ],
+        "soluzioni": [
+            "kmeans.fit_predict(X)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KMeans in scikit-learn. fit_predict addestra il clustering sui dati e restituisce le assegnazioni; il target non serve. (Esercitazione 3, sezione 3.4.)"
+    },
+    {
+        "domanda": "Quanti valori di k vengono valutati nel ciclo del notebook?\n\nCODICE PYTHON:\nvalori_k = list(range(2, 8))\nfor k in valori_k:\n    modello = KMeans(n_clusters=k, n_init=10, random_state=0).fit(Z)",
+        "opzioni": [
+            "5",
+            "6",
+            "8",
+            "7"
+        ],
+        "soluzioni": [
+            "6"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scelta di k, silhouette e ARI. range(2,8) include 2,3,4,5,6,7: sei valori. (Esercitazione 3, sezione 3.5–3.7.)"
+    },
+    {
+        "domanda": "Quale chiamata calcola la silhouette media in modo coerente con il notebook?\n\nCODICE PYTHON:\nmodello.fit(Z)",
+        "opzioni": [
+            "silhouette_score(Z, modello.labels_)",
+            "accuracy_score(Z, modello.labels_)",
+            "silhouette_score(Z, modello.cluster_centers_)",
+            "silhouette_score(modello.labels_, Z)"
+        ],
+        "soluzioni": [
+            "silhouette_score(Z, modello.labels_)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scelta di k, silhouette e ARI. La silhouette usa i dati nello spazio in cui si è eseguito il clustering e le assegnazioni. (Esercitazione 3, sezione 3.5–3.7.)"
+    },
+    {
+        "domanda": "Che cosa rappresenta il valore calcolato in frazioni?\n\nCODICE PYTHON:\nfrazioni = [len(np.unique(rng.choice(n, size=n, replace=True))) / n for _ in range(1000)]",
+        "opzioni": [
+            "1000 frazioni di esempi duplicati esattamente due volte",
+            "1000 frazioni di esempi distinti nei bootstrap",
+            "1000 accuracy di alberi",
+            "Un solo campione con 1000 pinguini"
+        ],
+        "soluzioni": [
+            "1000 frazioni di esempi distinti nei bootstrap"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Bootstrap e Random Forest. La comprensione ripete l'estrazione 1000 volte e registra ogni volta la quota di indici distinti. (Esercitazione 3, sezione 1.2–1.4.)"
+    },
+    {
+        "domanda": "Quanto vale la silhouette di questo punto (due decimali)?\n\nCODICE PYTHON:\na = 6\nb = 4\ns = (b - a) / max(a, b)",
+        "opzioni": [
+            "0.50",
+            "0.33",
+            "-0.33",
+            "-0.50"
+        ],
+        "soluzioni": [
+            "-0.33"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scelta di k, silhouette e ARI. s = (4−6)/6 = −1/3 ≈ −0.33; il punto è mediamente più vicino al cluster alternativo. (Esercitazione 3, sezione 3.5–3.7.)"
+    },
+    {
+        "domanda": "Che cosa significa n_iter_no_change=10?\n\nCODICE PYTHON:\nGradientBoostingClassifier(n_estimators=1000, validation_fraction=0.2, n_iter_no_change=10)",
+        "opzioni": [
+            "Uso di 10 fold esterni",
+            "Arresto dopo 10 iterazioni senza miglioramenti sufficienti",
+            "Arresto obbligatorio dopo i primi 10 alberi",
+            "Arresto quando restano esattamente 10 esempi"
+        ],
+        "soluzioni": [
+            "Arresto dopo 10 iterazioni senza miglioramenti sufficienti"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Gradient Boosting e ricerca degli iperparametri. È la pazienza dell'early stopping; non è il numero totale di alberi. (Esercitazione 3, sezione 1.5.)"
+    },
+    {
+        "domanda": "Quale effetto ha la riga seguente sul training set originale?\n\nCODICE PYTHON:\nX_boot = X_train.iloc[indici]",
+        "opzioni": [
+            "Modifica X_train in modo permanente",
+            "Seleziona le colonne indicate da indici",
+            "Seleziona per posizione anche eventuali righe ripetute",
+            "Elimina automaticamente gli indici duplicati"
+        ],
+        "soluzioni": [
+            "Seleziona per posizione anche eventuali righe ripetute"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Bootstrap e Random Forest. iloc seleziona righe per posizione; gli indici ripetuti riproducono righe ripetute. (Esercitazione 3, sezione 1.2–1.4.)"
+    },
+    {
+        "domanda": "Quanto vale volte?\n\nCODICE PYTHON:\nindici = np.array([0, 2, 2, 4, 4])\nvolte = np.bincount(indici, minlength=5)",
+        "opzioni": [
+            "[1, 2, 2, 0, 0]",
+            "[1, 0, 2, 0, 2]",
+            "[0, 2, 4]",
+            "[1, 1, 1, 1, 1]"
+        ],
+        "soluzioni": [
+            "[1, 0, 2, 0, 2]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Bootstrap e Random Forest. bincount conta le occorrenze per indice: 0 una volta, 2 e 4 due volte, 1 e 3 mai. (Esercitazione 3, sezione 1.2–1.4.)"
+    },
+    {
+        "domanda": "Quale array produce questa codifica del sesso?\n\nCODICE PYTHON:\ny = np.array([\"femmina\", \"maschio\", \"maschio\", \"femmina\"])\ny_num = np.where(y == \"maschio\", 1, -1)",
+        "opzioni": [
+            "[1, 1, 1, 1]",
+            "[1, -1, -1, 1]",
+            "[-1, 1, 1, -1]",
+            "[0, 1, 1, 0]"
+        ],
+        "soluzioni": [
+            "[-1, 1, 1, -1]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: AdaBoost. where assegna +1 se la condizione è vera e −1 altrimenti. (Esercitazione 3, sezione 1.6.)"
+    },
+    {
+        "domanda": "Quale dato del notebook segnala overfitting per k=1?\n\nCODICE PYTHON:\nknn_k = KNeighborsClassifier(n_neighbors=1).fit(X_train, y_train)",
+        "opzioni": [
+            "Accuracy CV 0.91 con quattro feature scalate",
+            "Accuracy training 1.00, accuracy CV 0.76",
+            "Accuracy training 0.76, accuracy CV 1.00",
+            "Accuracy training 0.78, accuracy CV 0.77"
+        ],
+        "soluzioni": [
+            "Accuracy training 1.00, accuracy CV 0.76"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN a mano e classificazione. Il modello con un vicino memorizza i casi di training ma generalizza peggio; questi sono i risultati descritti nella sezione 2.2. (Esercitazione 3, sezione 2.1–2.2.)"
+    },
+    {
+        "domanda": "Quanto vale la silhouette del singolo punto in questo esempio?\n\nCODICE PYTHON:\na = 2\nb = 5\ns = (b - a) / max(a, b)",
+        "opzioni": [
+            "1.50",
+            "0.60",
+            "0.40",
+            "-0.60"
+        ],
+        "soluzioni": [
+            "0.60"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scelta di k, silhouette e ARI. s = (b−a)/max(a,b) = (5−2)/5 = 0.60. (Esercitazione 3, sezione 3.5–3.7.)"
+    },
+    {
+        "domanda": "Quale valore di k e punteggio sono riportati nel notebook per la griglia base (solo n_neighbors)?\n\nCODICE PYTHON:\nprint(ricerca_knn.best_params_, ricerca_knn.best_score_)",
+        "opzioni": [
+            "k=5, accuracy CV circa 0.77",
+            "k=7, accuracy CV circa 0.91",
+            "k=31, accuracy CV circa 1.00",
+            "k=9, accuracy CV circa 0.92"
+        ],
+        "soluzioni": [
+            "k=7, accuracy CV circa 0.91"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV per KNN. La soluzione della griglia base riporta k=7 e 0.91; k=9 e 0.92 sono della griglia estesa. (Esercitazione 3, sezione 2.4.)"
+    },
+    {
+        "domanda": "Quale metrica richiede le etichette vere della specie?\n\nCODICE PYTHON:\nadjusted_rand_score(df[\"specie\"], cluster)",
+        "opzioni": [
+            "Adjusted Rand Index",
+            "Distanza euclidea",
+            "Silhouette",
+            "Inertia"
+        ],
+        "soluzioni": [
+            "Adjusted Rand Index"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scelta di k, silhouette e ARI. ARI confronta due partizioni, qui specie vere e cluster; le altre metriche non richiedono specie note. (Esercitazione 3, sezione 3.5–3.7.)"
+    },
+    {
+        "domanda": "Quante combinazioni sono presenti nella griglia estesa del notebook?\n\nCODICE PYTHON:\ngriglia_knn = {\"kneighborsclassifier__n_neighbors\": list(range(1, 32, 2)),\n               \"kneighborsclassifier__weights\": [\"uniform\", \"distance\"],\n               \"kneighborsclassifier__metric\": [\"euclidean\", \"manhattan\"]}",
+        "opzioni": [
+            "32",
+            "20",
+            "64",
+            "16"
+        ],
+        "soluzioni": [
+            "64"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV per KNN. Formula: 16 × 2 × 2 = 64 combinazioni. (Esercitazione 3, sezione 2.4.)"
+    },
+    {
+        "domanda": "Che cosa predice il regressore con k=3 e pesi uniformi se i tre vicini hanno target 3200, 3500 e 3800?\n\nCODICE PYTHON:\nknn_reg = KNeighborsRegressor(n_neighbors=3)",
+        "opzioni": [
+            "3500",
+            "3800",
+            "10500",
+            "3200"
+        ],
+        "soluzioni": [
+            "3500"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN per regressione. Formula: media dei target dei vicini = (3200+3500+3800)/3 = 3500 g. (Esercitazione 3, sezione 2.6.)"
+    },
+    {
+        "domanda": "Quante righe ha X_train nel notebook dopo questa divisione dei 333 pinguini?\n\nCODICE PYTHON:\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0, stratify=y)",
+        "opzioni": [
+            "233",
+            "100",
+            "99",
+            "234"
+        ],
+        "soluzioni": [
+            "233"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Preparazione dati e cross-validation. Il 30% del totale viene arrotondato per eccesso: ceil(333 × 0.3) = 100 esempi di test; 333 − 100 = 233 di training. (Esercitazione 3, sezione 1, 1.1.)"
+    },
+    {
+        "domanda": "Quale forma ha Z nel caso delle due misure del becco dei 333 pinguini?\n\nCODICE PYTHON:\nZ = StandardScaler().fit_transform(X)",
+        "opzioni": [
+            "(333, 3)",
+            "(233, 4)",
+            "(2, 333)",
+            "(333, 2)"
+        ],
+        "soluzioni": [
+            "(333, 2)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: K-means: assegnazione e aggiornamento. La scalatura non cambia il numero di righe o di feature: 333 esempi, 2 colonne. (Esercitazione 3, sezione 3.1–3.3.)"
+    },
+    {
+        "domanda": "Quanto vale il secondo peso dopo la normalizzazione?\n\nCODICE PYTHON:\npesi = np.array([0.2, 0.6, 0.4])\npesi = pesi / pesi.sum()",
+        "opzioni": [
+            "0.60",
+            "0.33",
+            "0.20",
+            "0.50"
+        ],
+        "soluzioni": [
+            "0.50"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: AdaBoost. La somma è 1.2; il secondo peso diventa 0.6/1.2 = 0.50. (Esercitazione 3, sezione 1.6.)"
+    },
+    {
+        "domanda": "Quale forma hanno i centroidi nello spazio scalato?\n\nCODICE PYTHON:\nkmeans = make_pipeline(StandardScaler(), KMeans(n_clusters=3, n_init=10, random_state=0))\nkmeans.fit_predict(X)\nkmeans[1].cluster_centers_.shape",
+        "opzioni": [
+            "(333, 3)",
+            "(3, 2)",
+            "(2, 3)",
+            "(333, 2)"
+        ],
+        "soluzioni": [
+            "(3, 2)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KMeans in scikit-learn. Tre cluster e due feature: una riga per centroide, una colonna per feature. (Esercitazione 3, sezione 3.4.)"
+    },
+    {
+        "domanda": "Quale istruzione prende il primo pinguino per posizione?\n\nCODICE PYTHON:\n# X4_train è un DataFrame",
+        "opzioni": [
+            "X4_train.iloc[0]",
+            "X4_train.loc[:, 0]",
+            "X4_train.columns[0]",
+            "X4_train.index[0]"
+        ],
+        "soluzioni": [
+            "X4_train.iloc[0]"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scalatura e pipeline. iloc[0] seleziona la prima riga per posizione, indipendentemente dalla sua etichetta. (Esercitazione 3, sezione 2.3.)"
+    },
+    {
+        "domanda": "Quale effetto ha axis=1 in questo frammento?\n\nCODICE PYTHON:\nnp.argmin(passo[[\"d0\", \"d1\", \"d2\"]].to_numpy(), axis=1)",
+        "opzioni": [
+            "Trova il pinguino più vicino per ogni centroide",
+            "Calcola la media di ogni colonna",
+            "Trova il centroide più vicino per ogni pinguino",
+            "Ordina tutti i centroidi globalmente"
+        ],
+        "soluzioni": [
+            "Trova il centroide più vicino per ogni pinguino"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: K-means: assegnazione e aggiornamento. L'operazione agisce lungo le colonne di ciascuna riga e restituisce un indice per pinguino. (Esercitazione 3, sezione 3.1–3.3.)"
+    },
+    {
+        "domanda": "Quale forma ha nuovo?\n\nCODICE PYTHON:\nnuovo = pd.DataFrame({\"becco_lunghezza\": [45.0], \"becco_profondita\": [17.0]})",
+        "opzioni": [
+            "(2, 2)",
+            "(1, 1)",
+            "(2, 1)",
+            "(1, 2)"
+        ],
+        "soluzioni": [
+            "(1, 2)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN a mano e classificazione. Le due colonne contengono una misura ciascuna per un solo pinguino. (Esercitazione 3, sezione 2.1–2.2.)"
+    },
+    {
+        "domanda": "Quanti valori di k vengono provati?\n\nCODICE PYTHON:\ngriglia_knn = {\"kneighborsclassifier__n_neighbors\": list(range(1, 32, 2))}",
+        "opzioni": [
+            "15",
+            "32",
+            "31",
+            "16"
+        ],
+        "soluzioni": [
+            "16"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV per KNN. range(1,32,2) produce gli interi dispari da 1 a 31: 16 valori. (Esercitazione 3, sezione 2.4.)"
+    },
+    {
+        "domanda": "Quale classe numerica vince il voto pesato per questo esempio?\n\nCODICE PYTHON:\nvoto = 0\nvoto = voto + 0.8 * 1\nvoto = voto + 0.3 * (-1)\nvoto = voto + 0.2 * (-1)\nnp.sign(voto)",
+        "opzioni": [
+            "+2",
+            "+1",
+            "0",
+            "-1"
+        ],
+        "soluzioni": [
+            "+1"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: AdaBoost. Voto = 0.8−0.3−0.2 = 0.3; il segno è +1, anche se due stump votano −1. (Esercitazione 3, sezione 1.6.)"
+    },
+    {
+        "domanda": "Quale parametro permette allo stump di tenere conto dei pesi?\n\nCODICE PYTHON:\nstump = DecisionTreeClassifier(max_depth=1, random_state=0)\nstump.fit(X_train, y_train, sample_weight=pesi)",
+        "opzioni": [
+            "sample_weight",
+            "max_depth",
+            "random_state",
+            "n_estimators"
+        ],
+        "soluzioni": [
+            "sample_weight"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: AdaBoost. sample_weight attribuisce un peso diverso ai campioni durante fit. (Esercitazione 3, sezione 1.6.)"
+    },
+    {
+        "domanda": "Quali esempi sono out-of-bag in questo campione?\n\nCODICE PYTHON:\nindici = np.array([0, 2, 2, 4, 4])\nn = 5",
+        "opzioni": [
+            "2 e 4",
+            "0 e 2",
+            "0, 2 e 4",
+            "1 e 3"
+        ],
+        "soluzioni": [
+            "1 e 3"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Bootstrap e Random Forest. Gli OOB sono gli indici originali assenti dal campione, non quelli duplicati. (Esercitazione 3, sezione 1.2–1.4.)"
+    },
+    {
+        "domanda": "Quale condizione fa interrompere il ciclo della funzione passi_kmeans?\n\nCODICE PYTHON:\nif etichette is not None and (nuove == etichette).all():\n    break",
+        "opzioni": [
+            "Nessuna assegnazione cambia rispetto al giro precedente",
+            "Almeno un punto cambia cluster",
+            "La distanza di ogni punto è esattamente zero",
+            "Tutti i punti appartengono al cluster 0"
+        ],
+        "soluzioni": [
+            "Nessuna assegnazione cambia rispetto al giro precedente"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: K-means: assegnazione e aggiornamento. all() richiede che tutte le nuove etichette coincidano con quelle precedenti: convergenza delle assegnazioni. (Esercitazione 3, sezione 3.1–3.3.)"
+    },
+    {
+        "domanda": "Quale attributo restituisce il dizionario dei migliori iperparametri?\n\nCODICE PYTHON:\nricerca_boosting.fit(X_train, y_train)\n# quale attributo?",
+        "opzioni": [
+            "ricerca_boosting.n_estimators_",
+            "ricerca_boosting.cv_results_",
+            "ricerca_boosting.best_params_",
+            "ricerca_boosting.best_score_"
+        ],
+        "soluzioni": [
+            "ricerca_boosting.best_params_"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Gradient Boosting e ricerca degli iperparametri. best_params_ contiene i valori degli iperparametri della combinazione vincente. (Esercitazione 3, sezione 1.5.)"
+    },
+    {
+        "domanda": "Perché fit_transform riceve tutti i pinguini in questa parte?\n\nCODICE PYTHON:\nZ = StandardScaler().fit_transform(X)",
+        "opzioni": [
+            "Si sta valutando un classificatore sul test set",
+            "Lo scaler richiede sempre il test set",
+            "Si sta esplorando il clustering senza target sull'intero dataset",
+            "Si vogliono prevedere le specie a partire dal sesso"
+        ],
+        "soluzioni": [
+            "Si sta esplorando il clustering senza target sull'intero dataset"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: K-means: assegnazione e aggiornamento. Nel problema esplorativo del notebook non si stima la generalizzazione su un test separato: si cercano gruppi nei 333 pinguini. (Esercitazione 3, sezione 3.1–3.3.)"
+    },
+    {
+        "domanda": "Qual è la distanza euclidea del pinguino (42, 13) da quello nuovo (45, 17)?\n\nCODICE PYTHON:\nd = ((42 - 45)**2 + (13 - 17)**2)**0.5",
+        "opzioni": [
+            "7",
+            "25",
+            "5",
+            "3"
+        ],
+        "soluzioni": [
+            "5"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN a mano e classificazione. Formula d = √(3²+4²) = √25 = 5. (Esercitazione 3, sezione 2.1–2.2.)"
+    },
+    {
+        "domanda": "Quale attributo contiene l'inertia dopo fit?\n\nCODICE PYTHON:\nmodello = KMeans(n_clusters=3, n_init=10, random_state=0).fit(Z)",
+        "opzioni": [
+            "modello.cluster_centers_",
+            "modello.labels_",
+            "modello.n_clusters",
+            "modello.inertia_"
+        ],
+        "soluzioni": [
+            "modello.inertia_"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scelta di k, silhouette e ARI. inertia_ contiene la somma delle distanze quadrate dei punti dai centroidi assegnati. (Esercitazione 3, sezione 3.5–3.7.)"
+    },
+    {
+        "domanda": "Qual è lo scopo di stratify=y?\n\nCODICE PYTHON:\ntrain_test_split(X, y, test_size=0.3, random_state=0, stratify=y)",
+        "opzioni": [
+            "Ordinare le righe per sesso",
+            "Usare il sesso come feature di input",
+            "Mantenere proporzioni simili delle classi nei due insiemi",
+            "Garantire lo stesso numero assoluto di maschi e femmine"
+        ],
+        "soluzioni": [
+            "Mantenere proporzioni simili delle classi nei due insiemi"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Preparazione dati e cross-validation. La stratificazione preserva approssimativamente le proporzioni delle classi, non impone un bilanciamento artificiale. (Esercitazione 3, sezione 1, 1.1.)"
+    },
+    {
+        "domanda": "Quale istruzione manca per poter usare albero_scelto in predict dopo averlo valutato soltanto con cross_val_score?\n\nCODICE PYTHON:\npunteggi = cross_val_score(albero_scelto, X_train, y_train, cv=cv)\n# istruzione mancante\nalbero_scelto.predict(X_train)",
+        "opzioni": [
+            "albero_scelto.predict(y_train)",
+            "punteggi.mean()",
+            "albero_scelto.fit(X_test, y_test)",
+            "albero_scelto.fit(X_train, y_train)"
+        ],
+        "soluzioni": [
+            "albero_scelto.fit(X_train, y_train)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Preparazione dati e cross-validation. cross_val_score addestra copie del modello e non quello originale; occorre fit sul training set. (Esercitazione 3, sezione 1, 1.1.)"
+    },
+    {
+        "domanda": "Quale riga riporta i centroidi scalati nelle unità originali?\n\nCODICE PYTHON:\n# kmeans è la pipeline già addestrata",
+        "opzioni": [
+            "kmeans[1].predict(X)",
+            "kmeans[0].inverse_transform(kmeans[1].cluster_centers_)",
+            "kmeans[0].fit_transform(kmeans[1].cluster_centers_)",
+            "kmeans[1].cluster_centers_.mean()"
+        ],
+        "soluzioni": [
+            "kmeans[0].inverse_transform(kmeans[1].cluster_centers_)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KMeans in scikit-learn. inverse_transform inverte la standardizzazione usando media e deviazione apprese. (Esercitazione 3, sezione 3.4.)"
+    },
+    {
+        "domanda": "Quale risultato rappresenta il voto dei vicini?\n\nCODICE PYTHON:\npiu_vicini = vicini.sort_values(\"distanza\").head(k)\nprint(piu_vicini[\"sesso\"].value_counts())",
+        "opzioni": [
+            "La media della lunghezza del becco",
+            "Il conteggio dei vicini per sesso",
+            "Il numero totale di righe del training",
+            "La distanza minima per specie"
+        ],
+        "soluzioni": [
+            "Il conteggio dei vicini per sesso"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN a mano e classificazione. value_counts conta quante volte ciascuna etichetta compare tra i k vicini. (Esercitazione 3, sezione 2.1–2.2.)"
+    },
+    {
+        "domanda": "A che serve np.allclose in questa verifica?\n\nCODICE PYTHON:\nnp.allclose(nuovi_centroidi.to_numpy(), attesi)",
+        "opzioni": [
+            "Controllare che i centroidi siano ordinati",
+            "Contare i pinguini del cluster",
+            "Verificare che i centroidi coincidano entro una tolleranza numerica",
+            "Calcolare l'inertia dei centroidi"
+        ],
+        "soluzioni": [
+            "Verificare che i centroidi coincidano entro una tolleranza numerica"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: K-means: assegnazione e aggiornamento. allclose confronta i numeri con una tolleranza, utile per differenze di arrotondamento. (Esercitazione 3, sezione 3.1–3.3.)"
+    },
+    {
+        "domanda": "Quale riga aggiorna i centroidi usando i gruppi assegnati?\n\nCODICE PYTHON:\n# passo contiene cluster, lunghezza e profondita",
+        "opzioni": [
+            "passo.groupby(\"cluster\")[[\"lunghezza\", \"profondita\"]].sum()",
+            "passo[[\"lunghezza\", \"profondita\"]].mean()",
+            "passo.groupby(\"lunghezza\")[[\"cluster\", \"profondita\"]].mean()",
+            "passo.groupby(\"cluster\")[[\"lunghezza\", \"profondita\"]].mean()"
+        ],
+        "soluzioni": [
+            "passo.groupby(\"cluster\")[[\"lunghezza\", \"profondita\"]].mean()"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: K-means: assegnazione e aggiornamento. Ogni centroide è la media coordinata per coordinata dei punti del suo cluster. (Esercitazione 3, sezione 3.1–3.3.)"
+    },
+    {
+        "domanda": "Quale parametro impone almeno 10 campioni in ogni foglia dell'albero scelto?\n\nCODICE PYTHON:\nalbero_scelto = DecisionTreeClassifier(max_depth=5, min_samples_leaf=10, random_state=0)",
+        "opzioni": [
+            "min_samples_leaf",
+            "random_state",
+            "n_splits",
+            "max_depth"
+        ],
+        "soluzioni": [
+            "min_samples_leaf"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Preparazione dati e cross-validation. min_samples_leaf è il limite minimo di osservazioni in una foglia; max_depth limita la profondità. (Esercitazione 3, sezione 1, 1.1.)"
+    },
+    {
+        "domanda": "Quale metodo di linkage è usato e quale criterio applica?\n\nCODICE PYTHON:\nunioni = linkage(Z_campione, method=\"ward\")",
+        "opzioni": [
+            "K-means++: inizializza i centroidi",
+            "Complete: usa la distanza massima",
+            "Single: minimizza la distanza tra due punti",
+            "Ward: minimizza l'aumento dell'inertia a ogni fusione"
+        ],
+        "soluzioni": [
+            "Ward: minimizza l'aumento dell'inertia a ogni fusione"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Clustering gerarchico. Il notebook usa Ward, che sceglie la fusione con il minore incremento della dispersione interna. (Esercitazione 3, sezione 3.8.)"
+    },
+    {
+        "domanda": "Quale centroide viene calcolato per i tre punti del cluster 0?\n\nCODICE PYTHON:\npasso = pd.DataFrame({\"cluster\": [0, 0, 0], \"lunghezza\": [1, 3, 5], \"profondita\": [2, 4, 0]})\npasso.groupby(\"cluster\")[[\"lunghezza\", \"profondita\"]].mean()",
+        "opzioni": [
+            "(9, 6)",
+            "(3, 4)",
+            "(2, 3)",
+            "(3, 2)"
+        ],
+        "soluzioni": [
+            "(3, 2)"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: K-means: assegnazione e aggiornamento. μ = ((1+3+5)/3, (2+4+0)/3) = (3,2). (Esercitazione 3, sezione 3.1–3.3.)"
+    },
+    {
+        "domanda": "Perché viene usato copy() prima di aggiungere le colonne?\n\nCODICE PYTHON:\nvicini = X_train.copy()\nvicini[\"sesso\"] = y_train",
+        "opzioni": [
+            "Per non modificare X_train aggiungendo sesso e distanza",
+            "Per eliminare i pinguini ripetuti",
+            "Per calcolare subito le distanze",
+            "Per dividere il training in fold"
+        ],
+        "soluzioni": [
+            "Per non modificare X_train aggiungendo sesso e distanza"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN a mano e classificazione. copy() crea una tabella separata, sulla quale si possono aggiungere le colonne necessarie. (Esercitazione 3, sezione 2.1–2.2.)"
+    },
+    {
+        "domanda": "Che cosa controlla n_estimators?\n\nCODICE PYTHON:\nforesta = RandomForestClassifier(n_estimators=200, oob_score=True, random_state=0)",
+        "opzioni": [
+            "Il numero di alberi",
+            "La profondità di ogni albero",
+            "Il numero di feature del dataset",
+            "Il numero di fold"
+        ],
+        "soluzioni": [
+            "Il numero di alberi"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Bootstrap e Random Forest. n_estimators indica quanti alberi compongono la foresta. (Esercitazione 3, sezione 1.2–1.4.)"
+    },
+    {
+        "domanda": "Che cosa rappresenta risultati[\"test_score\"] in questo ciclo?\n\nCODICE PYTHON:\nrisultati = cross_validate(modello, X4_train, y_train, cv=cv)",
+        "opzioni": [
+            "Le accuracy dei pinguini del test finale",
+            "Le durate dei fit in secondi",
+            "Le accuracy dei cinque fold di validazione",
+            "Le predizioni di classe per tutti i pinguini"
+        ],
+        "soluzioni": [
+            "Le accuracy dei cinque fold di validazione"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Benchmark e valutazione finale. test_score in cross_validate riguarda i fold tenuti fuori per la validazione, non X4_test. (Esercitazione 3, sezione 2.5.)"
+    },
+    {
+        "domanda": "Quanti elementi contiene cluster dopo il fit_predict dei 333 pinguini?\n\nCODICE PYTHON:\ncluster = kmeans.fit_predict(X)",
+        "opzioni": [
+            "333",
+            "666",
+            "3",
+            "2"
+        ],
+        "soluzioni": [
+            "333"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KMeans in scikit-learn. Una etichetta per ogni pinguino, indipendentemente dal numero di centroidi. (Esercitazione 3, sezione 3.4.)"
+    },
+    {
+        "domanda": "Che cosa contengono le caselle della tabella pivot?\n\nCODICE PYTHON:\npd.DataFrame(ricerca_boosting.cv_results_).pivot_table(\n    index=\"param_learning_rate\", columns=\"param_n_estimators\", values=\"mean_test_score\")",
+        "opzioni": [
+            "Le accuracy sul test set finale",
+            "I valori degli alberi stimati",
+            "I tempi medi di addestramento",
+            "Le accuracy medie in CV di ogni coppia di iperparametri"
+        ],
+        "soluzioni": [
+            "Le accuracy medie in CV di ogni coppia di iperparametri"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Gradient Boosting e ricerca degli iperparametri. values=\"mean_test_score\" seleziona le medie dei punteggi sui fold di validazione. (Esercitazione 3, sezione 1.5.)"
+    },
+    {
+        "domanda": "Quale pipeline rispetta l'ordine delle trasformazioni del notebook?\n\nCODICE PYTHON:\n# costruire un KNN scalato con k = 5",
+        "opzioni": [
+            "make_pipeline(StandardScaler(), DecisionTreeClassifier(max_depth=5))",
+            "KNeighborsClassifier(n_neighbors=5)",
+            "make_pipeline(StandardScaler(), KNeighborsClassifier(n_neighbors=5))",
+            "make_pipeline(KNeighborsClassifier(n_neighbors=5), StandardScaler())"
+        ],
+        "soluzioni": [
+            "make_pipeline(StandardScaler(), KNeighborsClassifier(n_neighbors=5))"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Scalatura e pipeline. Prima si scalano le feature, poi il classificatore lavora nello spazio trasformato. (Esercitazione 3, sezione 2.3.)"
+    },
+    {
+        "domanda": "Quali dati vengono passati al fit del modello vincitore?\n\nCODICE PYTHON:\nmodello_scelto = modelli[migliore[\"modello\"]].fit(X4_train, y_train)",
+        "opzioni": [
+            "L'intero test set con quattro feature",
+            "L'intero training set con quattro feature",
+            "Tutti i pinguini senza etichette",
+            "Soltanto il fold di validazione migliore"
+        ],
+        "soluzioni": [
+            "L'intero training set con quattro feature"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Benchmark e valutazione finale. Dopo la scelta con CV si riaddestra sul training completo e solo poi si valuta sul test. (Esercitazione 3, sezione 2.5.)"
+    },
+    {
+        "domanda": "Quanti punteggi restituisce questo codice?\n\nCODICE PYTHON:\ncv = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)\npunteggi = cross_val_score(albero_scelto, X_train, y_train, cv=cv)",
+        "opzioni": [
+            "1",
+            "5",
+            "233",
+            "4"
+        ],
+        "soluzioni": [
+            "5"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Preparazione dati e cross-validation. Un punteggio per fold: n_splits = 5. (Esercitazione 3, sezione 1, 1.1.)"
+    },
+    {
+        "domanda": "Quanto vale errore?\n\nCODICE PYTHON:\npesi = np.array([0.1, 0.2, 0.3, 0.4])\ny_num = np.array([1, 1, -1, -1])\nh = np.array([1, -1, -1, -1])\nerrore = pesi[h != y_num].sum()",
+        "opzioni": [
+            "0.80",
+            "0.25",
+            "0.20",
+            "0.40"
+        ],
+        "soluzioni": [
+            "0.20"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: AdaBoost. Solo il secondo esempio è errato: ε = somma dei pesi degli errori = 0.2. (Esercitazione 3, sezione 1.6.)"
+    },
+    {
+        "domanda": "Quanti punti vengono creati per tracciare le curve di regressione?\n\nCODICE PYTHON:\npinne = pd.DataFrame({\"pinna\": np.linspace(150, 260, 500)})",
+        "opzioni": [
+            "500",
+            "260",
+            "501",
+            "110"
+        ],
+        "soluzioni": [
+            "500"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN per regressione. linspace crea esattamente 500 valori equidistanti inclusi gli estremi. (Esercitazione 3, sezione 2.6.)"
+    },
+    {
+        "domanda": "Quanti addestramenti sui fold sono richiesti per questa griglia, senza refit finale?\n\nCODICE PYTHON:\ngriglia_knn = {\"kneighborsclassifier__n_neighbors\": list(range(1, 32, 2))}\nGridSearchCV(make_pipeline(StandardScaler(), KNeighborsClassifier()), griglia_knn, cv=cv).fit(X4_train, y_train)",
+        "opzioni": [
+            "160",
+            "80",
+            "81",
+            "16"
+        ],
+        "soluzioni": [
+            "80"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: GridSearchCV per KNN. 16 valori di k × 5 fold = 80 fit di CV; l'eventuale refit è escluso. (Esercitazione 3, sezione 2.4.)"
+    },
+    {
+        "domanda": "Qual è la classe predetta se il voto dei cinque vicini restituisce femmina: 4, maschio: 1?\n\nCODICE PYTHON:\nprint(piu_vicini[\"sesso\"].value_counts())",
+        "opzioni": [
+            "Adelie",
+            "femmina",
+            "maschio",
+            "Gentoo"
+        ],
+        "soluzioni": [
+            "femmina"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: KNN a mano e classificazione. Il voto uniforme di maggioranza seleziona femmina: 4 voti su 5. (Esercitazione 3, sezione 2.1–2.2.)"
+    },
+    {
+        "domanda": "Quale variabile contiene il target per il primo problema?\n\nCODICE PYTHON:\nX = df[[\"becco_lunghezza\", \"becco_profondita\"]]\ny = df[\"sesso\"]",
+        "opzioni": [
+            "X, contenente il peso",
+            "y, contenente la specie",
+            "y, contenente il sesso",
+            "X, contenente il sesso"
+        ],
+        "soluzioni": [
+            "y, contenente il sesso"
+        ],
+        "tipologia": "singola",
+        "spiegazione": "Argomento: Preparazione dati e cross-validation. Le due misure del becco sono le feature; si vuole prevedere maschio o femmina. (Esercitazione 3, sezione 1, 1.1.)"
+    }
+]

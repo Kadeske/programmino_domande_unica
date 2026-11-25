@@ -21,6 +21,7 @@ campo_marcata = "_marcata"  # domanda marcata dall'utente
 elenco_file: list[str] = []  # elenco file con domande scelti
 randomizza_domande = True
 randomizza_ordine_opzioni = True
+mostra_spiegazioni = True
 
 # tipologie di domande accettate
 # singola, multiple, aperta,
@@ -286,6 +287,7 @@ def genera_schermata_scelta_file():
 
     var_ordine_domande_random = tk.BooleanVar(value=randomizza_domande)
     var_ordine_opzioni_random = tk.BooleanVar(value=randomizza_ordine_opzioni)
+    var_spiegazioni = tk.BooleanVar(value=mostra_spiegazioni)
     UI.Opzione(
         card_opz, "Ordine casuale delle domande", var_ordine_domande_random
     ).pack(fill="x", pady=3)
@@ -293,8 +295,19 @@ def genera_schermata_scelta_file():
         card_opz, "Ordine casuale delle risposte", var_ordine_opzioni_random
     ).pack(fill="x", pady=3)
 
+    def aggiorna_opzione_spiegazioni():
+        global mostra_spiegazioni
+        mostra_spiegazioni = var_spiegazioni.get()
+
+    opz_spiegazioni = UI.Opzione(
+        card_opz, "Mostra le spiegazioni dopo la verifica", var_spiegazioni,
+        comando=aggiorna_opzione_spiegazioni,
+    )
+    opz_spiegazioni.pack(fill="x", pady=3)
+    callback_wrap.append(lambda w: opz_spiegazioni.set_wrap(w - 130))
+
     def conferma():
-        global randomizza_domande, randomizza_ordine_opzioni
+        global randomizza_domande, randomizza_ordine_opzioni, mostra_spiegazioni
 
         # aggiorno elenco file scelti
         for var, file in scelte:
@@ -304,9 +317,10 @@ def genera_schermata_scelta_file():
         if not elenco_file:
             return
 
-        # set var globali per l'ordine
+        # set var globali per le opzioni del quiz
         randomizza_domande = var_ordine_domande_random.get()
         randomizza_ordine_opzioni = var_ordine_opzioni_random.get()
+        mostra_spiegazioni = var_spiegazioni.get()
         inizio_quiz()
 
     btn = UI.bottone(
@@ -727,6 +741,33 @@ def genera_schermata(dati, img=None):
             return
 
         dati[campo_esito] = esito
+
+        # La spiegazione è facoltativa e compare solo dopo una verifica valida.
+        spiegazione = dati.get("spiegazione")
+        if mostra_spiegazioni and isinstance(spiegazione, str) and spiegazione.strip():
+            box_soluzione = tk.Frame(card_domanda, bg=C["spiegazione_bg"], padx=14, pady=12)
+            box_soluzione.pack(fill="x", pady=(10, 0))
+            tk.Label(
+                box_soluzione, text="Soluzione", bg=C["spiegazione_bg"],
+                fg=C["spiegazione_testo"], font=UI.font_testo(0, "bold"),
+                anchor="w",
+            ).pack(fill="x", pady=(0, 6))
+            lbl_spiegazione = tk.Label(
+                box_soluzione, text=spiegazione, bg=C["spiegazione_bg"],
+                fg=C["spiegazione_testo"], font=UI.font_testo(),
+                justify="left", anchor="w",
+            )
+            lbl_spiegazione.pack(fill="x")
+
+            def wrap_spiegazione(w):
+                lbl_spiegazione.config(wraplength=max(100, w - 100))
+
+            callback_wrap.append(wrap_spiegazione)
+            wrap_spiegazione(colonna.winfo_width())
+            # Se il testo è lungo, mantieni l'esito e l'inizio della soluzione
+            # raggiungibili attraverso lo scroll già presente nella schermata.
+            scroll.force_scroll_update()
+
         aggiorna_punti()
         aggiorna_pannello()
 
