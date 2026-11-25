@@ -28,3 +28,9 @@ Nei file JSON ogni domanda può contenere il campo `"spiegazione"` con una strin
 Se presente e non vuoto, viene mostrato in un riquadro giallo «Soluzione» dopo la verifica, indipendentemente dall'esito.
 Prima di iniziare il quiz è possibile disattivare «Mostra le spiegazioni dopo la verifica» per tutte le domande.
 I file senza questo campo funzionano come prima.
+
+
+### Organizzazione delle domande
+I file JSON stanno in `domande/`, divisi in una sottocartella per esame (es. `domande/SO/`, `domande/DB/`, `domande/ALF/`).
+Il programma cerca i file anche nelle sottocartelle e nella schermata iniziale li raggruppa sotto il nome della cartella.
+Per aggiungere un nuovo esame basta creare una nuova cartella con la sua sigla e metterci dentro i file.

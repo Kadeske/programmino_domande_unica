@@ -17,6 +17,7 @@ campo_risposte_domanda = "risposte"
 campo_ordine_opzioni = "_ordine_opzioni"
 campo_esito = "_esito"  # 'corretta', 'parziale', 'errata' (dopo la verifica)
 campo_marcata = "_marcata"  # domanda marcata dall'utente
+campo_file = "_file"  # nome del file da cui proviene la domanda
 
 elenco_file: list[str] = []  # elenco file con domande scelti
 randomizza_domande = True
@@ -144,6 +145,21 @@ def nome_leggibile(percorso):
     return nome.replace("_", " ")
 
 
+def nome_file_origine(percorso):
+    """Nome da mostrare per il file di una domanda, es. "SO / SO domande parziale 1 TEORIA".
+    Per i file dentro la cartella delle domande include la sottocartella."""
+    cartella = os.path.abspath(utils.config.get("path_domande", "domande/"))
+    cartella_file = os.path.dirname(os.path.abspath(percorso))
+    nome = nome_leggibile(percorso)
+    try:
+        rel = os.path.relpath(cartella_file, cartella)
+    except ValueError:  # su Windows: dischi diversi
+        return nome
+    if rel == "." or rel.startswith(".."):
+        return nome
+    return f"{rel.replace(os.sep, ' / ')} / {nome}"
+
+
 def conta_domande(percorso):
     try:
         with open(percorso, "r", encoding="utf-8") as f:
@@ -222,9 +238,24 @@ def genera_schermata_scelta_file():
             ok = any(var.get() for var, _ in scelte) or len(elenco_file) > 0
             btn_inizia.set_abilitato(ok)
 
-    for file in sorted(
-        utils.elenca_file_json(utils.config.get("path_domande", "domande/"))
-    ):
+    cartella_domande = utils.config.get("path_domande", "domande/")
+    gruppo_corrente = None
+    for file in utils.elenca_file_json(cartella_domande):
+        # intestazione per ogni sottocartella (es. SO, DB, ALF)
+        gruppo = os.path.relpath(os.path.dirname(file), cartella_domande)
+        gruppo = "" if gruppo == "." else gruppo.replace(os.sep, " / ")
+        if gruppo != gruppo_corrente:
+            gruppo_corrente = gruppo
+            if gruppo:
+                tk.Label(
+                    card_file,
+                    text=gruppo,
+                    bg=C["card"],
+                    fg=C["testo"],
+                    font=UI.font_info("bold"),
+                    anchor="w",
+                ).pack(fill="x", pady=(12 if scelte else 0, 4))
+
         var = tk.BooleanVar()
         n = conta_domande(file)
         opz = UI.Opzione(
@@ -649,6 +680,19 @@ def genera_schermata(dati, img=None):
     }.get(tipo_domanda, tipo_domanda)
     titolo_sezione(card_domanda, descrizione_tipo)
 
+    if dati.get(campo_file):
+        lbl_file = tk.Label(
+            card_domanda,
+            text=f"File: {dati[campo_file]}",
+            bg=C["card"],
+            fg=C["testo_secondario"],
+            font=UI.font_piccolo(""),
+            justify="left",
+            anchor="w",
+        )
+        lbl_file.pack(fill="x", pady=(0, 10))
+        callback_wrap.append(lambda w: lbl_file.config(wraplength=max(200, w - 70)))
+
     lbl_domanda = tk.Label(
         card_domanda,
         text=domanda,
@@ -942,7 +986,12 @@ def inizializza_dati():
     for nome_file in elenco_file:
         try:
             with open(nome_file, "r", encoding="utf-8") as file:
-                domande += json.load(file)
+                nuove = json.load(file)
+            origine = nome_file_origine(nome_file)
+            for d in nuove:
+                if isinstance(d, dict):
+                    d[campo_file] = origine
+            domande += nuove
         except FileNotFoundError:
             messagebox.showerror("Errore", f"File {nome_file} non trovato!")
         except json.JSONDecodeError:

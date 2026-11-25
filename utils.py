@@ -30,18 +30,17 @@ def randomizza_lista(list_inp):
 
 
 def elenca_file_json(cartella="./"):
-    files_json = []
-
-    try:
-        tutti_i_file = os.listdir(cartella)
-
-        for file in tutti_i_file:
-            if file.lower().endswith(".json"):
-                files_json.append(f"{cartella}{file}")
-
-    except FileNotFoundError:
+    """Restituisce i file .json in `cartella` e in tutte le sue sottocartelle."""
+    if not os.path.isdir(cartella):
         print(f"Errore: La cartella '{cartella}' non esiste.")
         return []
+
+    files_json = []
+    for radice, sottocartelle, files in os.walk(cartella):
+        sottocartelle.sort()
+        for file in sorted(files):
+            if file.lower().endswith(".json"):
+                files_json.append(os.path.join(radice, file))
 
     return files_json
 
