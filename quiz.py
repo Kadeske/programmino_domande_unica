@@ -153,6 +153,12 @@ def conta_domande(percorso):
 
 
 def gestisci_tasto(event):
+    # ignora i tasti premuti nelle finestre di dialogo (es. conferma)
+    try:
+        if event.widget.winfo_toplevel() is not root:
+            return
+    except (AttributeError, tk.TclError):
+        return
     # niente scorciatoie mentre si scrive in un campo di testo
     if isinstance(event.widget, (tk.Entry, tk.Text)) and event.keysym not in (
         "Return",
@@ -558,6 +564,15 @@ def genera_schermata(dati, img=None):
         UI.font_piccolo(),
         padx=10,
         pady=5,
+    ).pack(side="left", padx=(0, 6))
+    UI.bottone(
+        barra,
+        "⌂  Menu",
+        torna_alla_scelta_file,
+        "secondario",
+        UI.font_piccolo(),
+        padx=10,
+        pady=5,
     ).pack(side="left", padx=(0, 10))
     tk.Label(
         barra,
@@ -872,6 +887,19 @@ def genera_schermata_finale():
     azioni_tastiera["Return"] = ricomincia
     azioni_tastiera["KP_Enter"] = ricomincia
     azioni_tastiera["Left"] = carica_domanda_precedente
+
+
+def torna_alla_scelta_file():
+    """Torna alla schermata iniziale, dopo aver chiesto conferma (il progresso va perso)."""
+    conferma = messagebox.askyesno(
+        "Tornare al menu?",
+        "Vuoi tornare alla scelta dei file?\nIl progresso del quiz attuale andrà perso.",
+        icon=messagebox.WARNING,
+        default=messagebox.NO,
+        parent=root,
+    )
+    if conferma:
+        ricomincia()
 
 
 def ricomincia():
