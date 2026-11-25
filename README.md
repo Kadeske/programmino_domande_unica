@@ -22,3 +22,9 @@ E' un misto di domande dai vecchi form con aggiunte le domande dei quiz di prees
 
 Le domande non sono le stesse dell'esame ma sono molto simili. Spesso sono identiche ma con risposte diverse.
 
+
+### Spiegazioni delle domande (facoltative)
+Nei file JSON ogni domanda può contenere il campo `"spiegazione"` con una stringa di testo.
+Se presente e non vuoto, viene mostrato in un riquadro giallo «Soluzione» dopo la verifica, indipendentemente dall'esito.
+Prima di iniziare il quiz è possibile disattivare «Mostra le spiegazioni dopo la verifica» per tutte le domande.
+I file senza questo campo funzionano come prima.
