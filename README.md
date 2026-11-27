@@ -17,6 +17,7 @@ E' un misto di domande dai vecchi form con aggiunte le domande dei quiz di prees
 - `Invio`: verifica la risposta / passa alla prossima
 - `→` / `←`: prossima / precedente
 - `1`-`9`: seleziona la risposta corrispondente
+- `V` / `F`: risponde vero / falso (solo nelle domande vero/falso)
 
 #### potrebbero esserci errori
 
@@ -34,3 +35,16 @@ I file senza questo campo funzionano come prima.
 I file JSON stanno in `domande/`, divisi in una sottocartella per esame (es. `domande/SO/`, `domande/DB/`, `domande/ALF/`).
 Il programma cerca i file anche nelle sottocartelle e nella schermata iniziale li raggruppa sotto il nome della cartella.
 Per aggiungere un nuovo esame basta creare una nuova cartella con la sua sigla e metterci dentro i file.
+
+
+### Domande vero/falso
+Si possono scrivere domande vero/falso con `"tipologia": "vero_falso"`: le opzioni «Vero» e «Falso» vengono aggiunte in automatico (sempre in quest'ordine) e il campo `"opzioni"` si può omettere.
+La soluzione può essere scritta come `true`/`false` oppure `"Vero"`/`"Falso"`:
+```json
+{
+  "domanda": "I bastoncelli sono in numero diverso per ogni colore.",
+  "tipologia": "vero_falso",
+  "soluzioni": [false]
+}
+```
+Se manca `"tipologia"` e la soluzione è un solo `true`/`false` (anche senza lista, es. `"soluzioni": true`), la domanda viene riconosciuta automaticamente come vero/falso.

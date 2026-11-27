@@ -8,7 +8,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nel processo di design, gli utenti coinvolti possono essere sempre sostituiti da un esperto nella creazione di interfacce",
@@ -19,7 +19,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "I requisiti non forniscono alcuna informazione sul contesto d'uso",
@@ -30,7 +30,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "I requisiti forniscono una informazione approssimativa su ciò che si vuole realizzare",
@@ -41,7 +41,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "I bastoncelli sono in numero diverso per ogni colore.",
@@ -52,7 +52,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il nostro cervello percepisce oggetti familiari con dimensioni costanti, anche variando l'angolo visuale.",
@@ -63,7 +63,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "L'indizio di profondità della prospettiva lineare può modificare la percezione delle dimensioni di un oggetto.",
@@ -74,7 +74,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le immagini percepite dagli occhi sono perfettamente uguali.",
@@ -85,7 +85,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La percezione visiva è un processo combinato di acquisizione dell'informazione dagli occhi e elaborazione da parte del cervello.",
@@ -96,7 +96,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La lunghezza della riga ha impatto sulla velocità di lettura.",
@@ -107,7 +107,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Per facilitare il processo di lettura, la scelta del font e delle sue dimensioni non è influenzata dall'età media degli utenti.",
@@ -118,7 +118,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "È possibile aumentare la leggibilità del testo aumentando il contrasto fra colore di foreground e background.",
@@ -129,7 +129,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il riconoscimento di una parola avviene durante la fissazione.",
@@ -140,7 +140,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nel processo di lettura, nel caso una parola fosse sconosciuta al lettore, si avrà un numero maggiore di fissazioni dovuto alla scansione delle lettere.",
@@ -151,7 +151,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La legge di Fitts predice il tempo di movimento per puntare un oggetto date le dimensioni e la distanza da coprire tramite il puntatore.",
@@ -162,7 +162,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La legge di Fitts è utile per calcolare in modo preciso il tempo medio di puntamento per ogni pulsante.",
@@ -173,7 +173,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "È possibile modellare gli angoli attivi come punti a distanza infinita.",
@@ -184,7 +184,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Per calcolare il tempo di movimento è necessario conoscere la relazione fra la distanza percorsa dal mouse sulla scrivania e quella percorsa dal puntatore sullo schermo.",
@@ -195,7 +195,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La legge di Fitts è utilizzata dai progettisti di interfacce per privilegiare il puntamento delle funzionalità utilizzate più di frequente.",
@@ -206,7 +206,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria a breve termine organizza le informazioni in blocchi.",
@@ -217,7 +217,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria a breve termine può essere suddivisa in più componenti per stimolo sensoriale.",
@@ -228,7 +228,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria a breve termine ha una rapidità intermedia sia per l'accesso che per decadimento rispetto alle altre tipologie di memoria.",
@@ -239,7 +239,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria a breve termine passa informazioni alla memoria a lungo termine tramite il meccanismo di attenzione.",
@@ -250,7 +250,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il designer di una interfaccia non può influenzare in nessun modo la formazione di chunk nella memoria a breve termine",
@@ -261,7 +261,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria a lungo termine permette di mantenere le relazioni tra informazioni.",
@@ -272,7 +272,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria a lungo termine ha una struttura che può essere rappresentata con vari modelli.",
@@ -283,7 +283,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il modello delle regole di produzione permette di esprimere le relazioni tipo-sottotipo.",
@@ -294,7 +294,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il processo del riconoscimento è più difficoltoso rispetto al ricordo",
@@ -305,7 +305,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "In generale, le persone tendono a richiamare dalla memoria a lungo termine esperienze positive e a inibire l'accesso a quelle negative.",
@@ -316,7 +316,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria a lungo termine conscia ci permette di gestire la coordinazione di movimenti che abbiamo imparato con la pratica, come per esempio andare in bicicletta.",
@@ -327,7 +327,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "È possibile che nella memoria a lungo termine l'informazione vecchia interferisca con la nuova",
@@ -338,7 +338,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Per facilitare la memorizzazione delle funzionalità di una applicazione è necessario utilizzare nomi più corti possibile",
@@ -349,7 +349,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La capacità di risolvere un problema può essere stimolata tramite l'uso di analogie.",
@@ -360,7 +360,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Gli operatori sono quegli stati intermedi dello spazio del problema che ci avvicinano alla soluzione.",
@@ -371,18 +371,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Nel caso si abbia un'intenzione corretta ma si fallisca nel metterla in atto, siamo di fronte ad un lapsus.",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La teoria del problem space tiene conto delle condizioni emotive della persona.",
@@ -393,7 +382,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nella teoria del problem space, tutti gli operatori sono applicabili a prescindere dalla configurazione dello stato del problema.",
@@ -404,7 +393,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le personas sono delle persone reali",
@@ -415,7 +404,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le personas servono a focalizzare le categorie di utenti per l'applicazione considerata",
@@ -426,7 +415,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le personas non contengono alcuna informazione sugli interessi che non siano correlati all'applicazione in oggetto",
@@ -437,7 +426,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le personas rappresentano una descrizione astratta di una categoria di utenti",
@@ -448,7 +437,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Gli scenari vengono utilizzati per focalizzare un caso di utilizzo dell'applicazione",
@@ -459,7 +448,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Gli scenari possono contenere la descrizione del comportamento del software",
@@ -470,7 +459,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Gli scenari si utilizzano per descrivere interazioni che allo stato attuale della tecnologia non si possono supportare",
@@ -481,7 +470,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le persone che interagiscono nella descrizione di uno scenario sono generiche",
@@ -492,7 +481,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Vari sensi condividono lo stesso buffer di memoria sensoriale",
@@ -503,18 +492,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "I touchscreen sono soggetti al problema dell'occlusione",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il modello della memoria a lungo termine delle regole di produzione permette di modellare regole del tipo condizione-azione",
@@ -525,7 +503,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il numero dei coni nel nostro occhio è lo stesso per tutti i colori",
@@ -536,7 +514,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "I blocchi della memoria sono 20 +- 7",
@@ -547,7 +525,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "I blocchi della memoria a breve termine sono mediamente 7 +- 2",
@@ -558,7 +536,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria semantica è una parte della memoria a lungo termine esplicita",
@@ -569,18 +547,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Lo stato emotivo dell'utente può aumentare il numero di errori commessi durante l'interazione",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Secondo Miller, con l'allenamento è possibile aumentare il numero di blocchi disponibili in memoria a breve termine",
@@ -591,7 +558,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nella memoria sensoriale, il buffer aptico mantiene le informazioni visuali",
@@ -602,18 +569,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Nel modello di Norman, il golfo di valutazione rappresenta la differenza fra le aspettative dell'utente e la presentazione del sistema",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La pupilla è la parte colorata dell'occhio",
@@ -624,7 +580,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Suoni inaspettati possono distogliere l'utente dal suo compito corrente",
@@ -635,18 +591,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Gli utenti non notano differenze fra le tastiere fisiche e virtuali",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il modello dei frames descrive la memoria organizzata come un grafo",
@@ -657,40 +602,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Nel caso l'utente formuli un obiettivo o intenzione errati, siamo di fronte ad uno sbaglio (mistake).",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "È possibile che un utente percepisca come più usabile un'applicazione esteticamente curata",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Le immagini di tipo bitmap utilizzano una rappresentazione dei dati analoga agli schermi LCD.",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il processo di riconoscimento è cognitivamente meno impegnativo del processo di ricordo",
@@ -701,7 +613,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il ragionamento induttivo deriva le conseguenze dalle premesse in modo logico",
@@ -712,7 +624,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le metafore sono sempre il modo migliore per rappresentare concetti digitali",
@@ -723,7 +635,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La legge di Fitts stabilisce che il tempo di movimento cresce linearmente rispetto alla distanza fra il puntatore e l'oggetto",
@@ -734,29 +646,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Le periferiche d'ingresso trasducono i segnali dal mondo analogico a quello digitale",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "È possibile supportare la stessa semantica di interazione anche tramite widget diversi",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le metafore non hanno alcun impatto sui tempi di apprendimento",
@@ -767,7 +657,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nel leggere una pagina web, l'utente segue sempre la F-shape qualsiasi sia la formattazione dei contenuti",
@@ -778,7 +668,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Alcune zone del nostro corpo sono più sensibili di altre agli stimoli tattili",
@@ -789,7 +679,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "I bastoncelli sono poco sensibili all'illuminazione",
@@ -800,7 +690,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Miller sostiene che la memoria a breve termine contenga 7 +- 2 blocchi di informazione",
@@ -811,7 +701,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "In una pagina web utilizziamo il grassetto per evidenziare i sostantivi e gli aggettivi importanti",
@@ -822,40 +712,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Per la conferma di azioni in modalità audio, è possibile utilizzare solo toni musicali che l'utente impara ad interpretare",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il modello di Abowd e Beale considera la comunicazione tra sistema e interfaccia",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Stimolare emozioni positive può rendere più accettabili per l'utente i difetti dell'interfaccia",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Per facilitare il processo di lettura, la scelta della dimensione del font non dipende dalla tipologia di utente che mediamente utilizzerà l'applicazione",
@@ -866,7 +723,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "L'indizio della convergenza prospettica può alterare la percezione delle dimensioni di un oggetto",
@@ -877,18 +734,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il ciclo di valutazione/esecuzione misura l'efficienza dell'utente nell'utilizzo di applicazioni interattive.",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La cinestesia è la consapevolezza della posizione (e del moto) propria del corpo e degli arti",
@@ -899,7 +745,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nella teoria del problem space, le condizioni consentono alle persone di modificare lo stato del problema",
@@ -910,7 +756,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "L'utilizzo di indizi visuali, come icone e immagini, può aiutare l'utente a ritrovare informazioni nelle memoria a lungo termine per completare un compito",
@@ -921,7 +767,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le metafore possono essere utilizzate solo se sono in grado di descrivere l'intero funzionamento del sistema",
@@ -932,7 +778,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il ragionamento deduttivo deriva conclusioni logiche dalle premesse",
@@ -943,7 +789,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il ragionamento abduttivo si basa su una generalizzazione a partire da un insieme ristretto di istanze",
@@ -954,7 +800,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La lettura avviene lettera per lettera",
@@ -965,7 +811,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "L'occhio compensa la sovrastimolazione dovuta ad un colore con il colore opposto",
@@ -976,7 +822,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le ombre sono usate come indizio di profondità",
@@ -987,7 +833,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "I bastoncelli ci permettono di vedere oggetti in movimento anche in scarse condizioni di luminosità",
@@ -998,7 +844,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Ingrandire le dimensioni di un oggetto su schermo non sempre migliora in modo sensibile il tempo impiegato per puntarlo",
@@ -1009,7 +855,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "E' possibile che alcune informazioni memorizzate in memoria a lungo termine interferiscano fra loro al momento del recupero",
@@ -1020,29 +866,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il ciclo di valutazione/esecuzione tiene in considerazione lo stato emotivo dell'utente",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "I modelli dei task possono essere utilizzati per analizzare un'applicazione esistente",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Per una lettura facilitata, è bene bilanciare le aree piene di testo e gli spazi vuoti all'interno di una pagina web",
@@ -1053,7 +877,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Considerando l'utilizzo di un mouse, nella seconda fase del movimento, l'utente diminuisce la velocità per migliorare la precisione",
@@ -1064,18 +888,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Nel modello di Norman, una volta stabilita l'intenzione, la sequenza di azioni scelta non può essere sbagliata",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nell'ultima parte del movimento per puntare un oggetto su schermo l'utente aumenta la velocità",
@@ -1086,18 +899,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il modello di Abowd e Beale deriva dal modello di Norman",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Per aumentare le possibilità di memorizzazione a breve termine, è utile aiutare l'utente nella creazione di blocchi di informazione",
@@ -1108,7 +910,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il tempo impiegato da un utente a puntare un oggetto su schermo può essere predetto in modo preciso con la legge di Fitts",
@@ -1119,7 +921,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La percezione del colore non dipende dall'età",
@@ -1130,7 +932,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria iconica mantiene le informazioni visuali",
@@ -1141,51 +943,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "La capacità di ragionamento non è influenzata dallo stress dell'utente",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Nel ciclo di valutazione/esecuzione, una volta formulata l'intenzione, l'utente è sempre in grado di concludere l'interazione in modo corretto",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il progettista non può contrastare gli errori di tipo svista (intenzione corretta ed esecuzione dell'azione errata) nemmeno per azioni potenzialmente distruttive.",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Nel modello di Abowd e Beale la fase di osservazione traduce le informazioni dal linguaggio di output a quello dei task",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nel processo di lettura, la percezione delle parole avviene durante le fissazioni",
@@ -1196,40 +954,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "I trackpad possono essere considerati un dispositivo di puntamento diretto",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Non è possibile collocare l'errore lapsus nel modello di Norman",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Le immagini di tipo RGB utilizzano una sintesi additiva dei colori.",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il modello delle regole di produzione della memoria a lungo termine ci permette di rappresentare la conoscenza procedurale",
@@ -1240,18 +965,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il modello di Abowd e Beale utilizza quattro componenti per modellare l'interazione (utente, sistema, input e output)",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Per favorire la lettura, è utile utilizzare i cosiddetti \"wall of text\"",
@@ -1262,7 +976,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La teoria del problem space modella il processo di risoluzione di un problema come una visita di un grafo",
@@ -1273,18 +987,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Durante l'esecuzione, l'utente analizza il risultato dell'interazione",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le metafore a volte rendono necessarie alcune forzature nella rappresentazione",
@@ -1295,18 +998,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il mouse si basa sul riconoscimento del movimento relativo in uno spazio diverso da quello dello schermo",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il ragionamento abduttivo risale dagli eventi alle cause",
@@ -1317,29 +1009,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il golfo dell'esecuzione rappresenta la differenza tra le azioni formulate dall'utente per raggiungere l'obiettivo e le azioni permesse dal sistema",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "I touchscreen possono affaticare le braccia",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "I colori analoghi garantiscono un alto contrasto",
@@ -1350,18 +1020,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Nel modello di Norman, l'interfaccia è rappresentata in modo esplicito come un'entità",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nella teoria del problem space, l'utente non considera gli stati successivi che, a suo parere, lo allontanerebbero dalla soluzione",
@@ -1372,7 +1031,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Per contrastare l'F-shape è utile posizionare i contenuti più importanti nei primi due paragrafi della pagina",
@@ -1383,7 +1042,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La percezione visiva dipende dall'illuminazione degli oggetti",
@@ -1394,7 +1053,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria sensoriale ha il tempo di accesso più rapido rispetto alle altre tipologie",
@@ -1405,7 +1064,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il carico cognitivo del puntamento di un oggetto su schermo è modellato dalla legge di Fitts",
@@ -1416,7 +1075,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La generalizzazione da casi visti a casi non visti è una forma di ragionamento non sempre affidabile",
@@ -1427,7 +1086,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nell'occhio umano, i coni permettono di percepire i colori",
@@ -1438,40 +1097,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Le immagini di tipo vettoriale perdono definizione se ingrandite.",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il modello di Norman è un'estensione di quello di Abowd e Beale.",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il modello di Norman è incentrato sulla visione che il progettista ha dell'interazione",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La legge di Fitts stabilisce che, data una icona a distanza d, il tempo di movimento può essere raddoppiato a distanza 2d",
@@ -1482,7 +1108,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Stabilire una analogia equivale a stabilire una funzione fra due grafi del problem space per due domini differenti.",
@@ -1493,18 +1119,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Nel modello di Abowd e Beale l'articolazione di un compito può essere inibita da una assenza di indizi nella presentazione",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Per diminuire il tempo di movimento si può aumentare la distanza fra il puntatore e l'oggetto da puntare",
@@ -1515,7 +1130,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nel processo di lettura, il riconoscimento delle parole avviene durante le saccadi",
@@ -1526,18 +1141,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Le emozioni possono inibire le capacità di ragionamento",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "I concetti in memoria semantica non hanno nulla a che fare con le nostre esperienze, ma solo con lo studio astratto",
@@ -1548,7 +1152,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Per diminuire il tempo di puntamento, si può ridurre la distanza fra oggetti correlati",
@@ -1559,29 +1163,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Nel modello di Abowd e Beale i componenti di input e output sono separati dal sistema",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Le immagini possono essere utilizzate per codificare una URL e leggerla tramite fotocamera.",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le metafore costituiscono l'unica strada percorribile per aiutare a risolvere il suo problema",
@@ -1592,7 +1174,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria sensoriale viene controllata dalla persona in modo conscio",
@@ -1603,7 +1185,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria sensoriale passa informazioni alla memoria a breve termine tramite il meccanismo dell'attenzione",
@@ -1614,7 +1196,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria sensoriale ha la capacità più alta rispetto alle altre tipologie",
@@ -1625,40 +1207,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Un utente esperto può aumentare la sua capacità di risolvere problemi migliorando la formazione di blocchi di memoria a breve termine",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Nel modello di Abowd e Beale, ogni componente ha il suo linguaggio associato",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il giudizio estetico dell'utente non ha impatto sull'impressione di corretto funzionamento del sistema",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "L'interferenza retroattiva è legata all'impossibilita di recuperare una vecchia informazione rimpiazzata da una nuova",
@@ -1669,29 +1218,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Per le segnalazioni di errore in modalità audio è possibile utilizzare solo suoni comuni provocati dall'interazione con oggetti tangibili",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Le interfacce a manipolazione diretta escludono l'utilizzo di una metafora",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria sensoriale passa informazioni alla memoria a breve termine tramite il meccanismo della ripetizione",
@@ -1702,7 +1229,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nella teoria del problem space, gli operatori sono applicabili solo nel caso siano rispettate determinate condizioni",
@@ -1713,7 +1240,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Nella modellazione della legge di Fitts, gli angoli attivi possono essere considerati dei punti a distanza infinita",
@@ -1724,7 +1251,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il raggruppamento dei contenuti non ha impatto nel contrastare l'F-shape",
@@ -1735,7 +1262,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le persone utilizzano la loro conoscenza del mondo per rimediare a conclusioni di ragionamento impossibili",
@@ -1746,7 +1273,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il modello di memoria a lungo termine delle regole di produzione spiega i meccanismi di reazione a stimoli esterni",
@@ -1757,7 +1284,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Per facilitare la lettura, si deve tenere conto del supporto utilizzato per la visualizzazione del testo per la scelta del font",
@@ -1768,7 +1295,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La percezione del colore di primo piano non è influenzata dallo sfondo",
@@ -1779,18 +1306,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il modello di Norman si basa sul ciclo di valutazione/esecuzione.",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il ragionamento induttivo generalizza dai casi visti a quelli non visti",
@@ -1801,7 +1317,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La distribuzione dei recettori tattili è uniforme su tutto il corpo",
@@ -1812,7 +1328,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "La memoria sensoriale ha un tempo di accesso rapidissimo",
@@ -1823,7 +1339,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il ragionamento deduttivo generalizza da casi visti a non visti",
@@ -1834,7 +1350,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Le fissazioni occupano una parte minoritaria nel tempo di lettura",
@@ -1845,18 +1361,7 @@
     "soluzioni": [
       "Falso"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il mouse è un dispositivo di puntamento indiretto",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il recupero di informazione della memoria a lungo termine può avvenire per riconoscimento",
@@ -1867,40 +1372,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "I menu sono utilizzati sia su dispositivi desktop che mobili",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il golfo di esecuzione rappresenta la differenza fra la presentazione del sistema e le aspettative delle utente.",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il ciclo di valutazione esecuzione è un ciclo che modella l'interazione fra un utente e l'interfaccia di una applicazione",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "È possibile per l'uomo essere cosciente della propria posizione nello spazio anche senza l'utilizzo della vista",
@@ -1911,7 +1383,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Il modello della memoria a lungo termine degli scripts ci permette di spiegare il meccanismo di ricostruzione di informazioni contestuali",
@@ -1922,18 +1394,7 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Il modello di Norman è incentrato sulla visione che ha l'utente dell'interazione",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Vero"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   },
   {
     "domanda": "Alcune conclusioni logiche derivate dal ragionamento possono essere giudicate senza senso facendo affidamento sulla propria conoscenza del mondo",
@@ -1944,17 +1405,6 @@
     "soluzioni": [
       "Vero"
     ],
-    "tipologia": "singola"
-  },
-  {
-    "domanda": "Gli errori di tipo sbaglio sono legati alla formulazione corretta dell'intenzione con una esecuzione errata dell'azione",
-    "opzioni": [
-      "Vero",
-      "Falso"
-    ],
-    "soluzioni": [
-      "Falso"
-    ],
-    "tipologia": "singola"
+    "tipologia": "vero_falso"
   }
 ]

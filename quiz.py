@@ -25,7 +25,8 @@ randomizza_ordine_opzioni = True
 mostra_spiegazioni = True
 
 # tipologie di domande accettate
-# singola, multiple, aperta,
+# singola, multiple, aperta, vero_falso
+OPZIONI_VERO_FALSO = ["Vero", "Falso"]
 
 # assegnati in main(), prima che venga usato qualsiasi altro widget
 root: tk.Tk
@@ -384,7 +385,8 @@ def ordina_opzioni(dati):
     """Mischia le opzioni una volta sola per domanda (così non cambiano ad ogni refresh)"""
     if campo_ordine_opzioni not in dati:
         opzioni = dati["opzioni"]
-        if randomizza_ordine_opzioni:
+        # per vero/falso l'ordine resta sempre "Vero", "Falso"
+        if randomizza_ordine_opzioni and dati.get("tipologia") != "vero_falso":
             opzioni = utils.randomizza_lista(opzioni)
         dati[campo_ordine_opzioni] = list(opzioni)
     return dati[campo_ordine_opzioni]
@@ -677,6 +679,7 @@ def genera_schermata(dati, img=None):
         "multiple": "Risposta multipla · seleziona tutte le risposte corrette",
         "singola": "Risposta singola",
         "aperta": "Risposta aperta · inserisci un numero",
+        "vero_falso": "Vero o falso",
     }.get(tipo_domanda, tipo_domanda)
     titolo_sezione(card_domanda, descrizione_tipo)
 
@@ -728,7 +731,7 @@ def genera_schermata(dati, img=None):
     match tipo_domanda:
         case "multiple":
             lista_opzioni = g_risp_multiple(card_domanda, dati, callback_wrap)
-        case "singola":
+        case "singola" | "vero_falso":
             lista_opzioni = g_risp_singola(card_domanda, dati, callback_wrap)
         case "aperta":
             entry = g_risp_aperta(card_domanda, dati, callback_wrap)
@@ -764,9 +767,12 @@ def genera_schermata(dati, img=None):
     btn_valida = UI.bottone(frame_tasti, "Verifica", None, "primario")
     btn_valida.pack(side="right", padx=10)
 
+    testo_scorciatoie = "Invio: verifica / prossima   ·   ← →: naviga   ·   1-9: seleziona risposta   ·   M: marca"
+    if tipo_domanda == "vero_falso":
+        testo_scorciatoie += "   ·   V / F: vero / falso"
     tk.Label(
         colonna,
-        text="Invio: verifica / prossima   ·   ← →: naviga   ·   1-9: seleziona risposta   ·   M: marca",
+        text=testo_scorciatoie,
         bg=C["sfondo"],
         fg=C["testo_secondario"],
         font=UI.font_piccolo(""),
@@ -779,7 +785,7 @@ def genera_schermata(dati, img=None):
         match tipo_domanda:
             case "multiple":
                 esito, testo = valida_risposte_multiple(dati, soluzioni, lista_opzioni)
-            case "singola":
+            case "singola" | "vero_falso":
                 esito, testo = valida_risposta_singola(dati, soluzioni, lista_opzioni)
             case "aperta" if entry is not None:
                 esito, testo = valida_risposta_aperta(dati, soluzioni, entry)
@@ -855,9 +861,12 @@ def genera_schermata(dati, img=None):
     if indice >= 1:
         azioni_tastiera["Left"] = carica_domanda_precedente
     azioni_tastiera["m"] = azioni_tastiera["M"] = lambda: cambia_marca(indice)
-    if tipo_domanda in ("multiple", "singola"):
+    if tipo_domanda in ("multiple", "singola", "vero_falso"):
         for i, opz in enumerate(lista_opzioni[:9]):
             azioni_tastiera[str(i + 1)] = opz.clicca
+    if tipo_domanda == "vero_falso" and len(lista_opzioni) == 2:
+        azioni_tastiera["v"] = azioni_tastiera["V"] = lista_opzioni[0].clicca
+        azioni_tastiera["f"] = azioni_tastiera["F"] = lista_opzioni[1].clicca
 
     # valida automaticamente (senza dare punti) se la domanda è già stata completata
     if dati[campo_check_domanda]:
@@ -969,7 +978,30 @@ def inizio_quiz():
         ricomincia()
 
 
-def deduci_tipologia(n_opzioni, n_soluzioni):
+def valore_vero_falso(valore):
+    """Converte una soluzione vero/falso (true/false, "Vero"/"Falso", "V"/"F", ...)
+    in "Vero" o "Falso". Ritorna None se il valore non è riconosciuto."""
+    if isinstance(valore, bool):
+        return "Vero" if valore else "Falso"
+    testo = str(valore).strip().lower()
+    if testo in ("vero", "v", "true", "t"):
+        return "Vero"
+    if testo in ("falso", "f", "false"):
+        return "Falso"
+    return None
+
+
+def normalizza_vero_falso(item):
+    """Opzioni fisse "Vero"/"Falso" e soluzione nel formato del testo delle opzioni."""
+    item["opzioni"] = list(OPZIONI_VERO_FALSO)
+    soluzioni = [valore_vero_falso(s) for s in item["soluzioni"]]
+    item["soluzioni"] = [s for s in soluzioni if s is not None][:1]
+
+
+def deduci_tipologia(n_opzioni, soluzioni):
+    n_soluzioni = len(soluzioni)
+    if n_opzioni == 0 and n_soluzioni == 1 and isinstance(soluzioni[0], bool):
+        return "vero_falso"
     if n_opzioni > 0 and n_soluzioni > 1:
         return "multiple"
     if n_opzioni > 0 and n_soluzioni == 1:
@@ -1006,12 +1038,16 @@ def inizializza_dati():
         item.pop(campo_esito, None)
         item.pop(campo_marcata, None)
         item.setdefault("opzioni", [])
+        # "soluzioni" può essere anche un valore singolo (es. true per vero/falso)
+        if not isinstance(item.get("soluzioni"), list):
+            item["soluzioni"] = [item["soluzioni"]] if "soluzioni" in item else []
 
         # controllo esistenza campo tipologia
         if "tipologia" not in item:
-            item["tipologia"] = deduci_tipologia(
-                len(item["opzioni"]), len(item["soluzioni"])
-            )
+            item["tipologia"] = deduci_tipologia(len(item["opzioni"]), item["soluzioni"])
+
+        if item["tipologia"] == "vero_falso":
+            normalizza_vero_falso(item)
 
     # randomizza le domande
     if randomizza_domande:

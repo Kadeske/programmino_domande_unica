@@ -1,0 +1,552 @@
+[
+  {
+    "domanda": "Nel caso si abbia un'intenzione corretta ma si fallisca nel metterla in atto, siamo di fronte ad un lapsus.",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "I touchscreen sono soggetti al problema dell'occlusione",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Lo stato emotivo dell'utente può aumentare il numero di errori commessi durante l'interazione",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Nel modello di Norman, il golfo di valutazione rappresenta la differenza fra le aspettative dell'utente e la presentazione del sistema",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Gli utenti non notano differenze fra le tastiere fisiche e virtuali",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Nel caso l'utente formuli un obiettivo o intenzione errati, siamo di fronte ad uno sbaglio (mistake).",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "È possibile che un utente percepisca come più usabile un'applicazione esteticamente curata",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Le immagini di tipo bitmap utilizzano una rappresentazione dei dati analoga agli schermi LCD.",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Le periferiche d'ingresso trasducono i segnali dal mondo analogico a quello digitale",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "È possibile supportare la stessa semantica di interazione anche tramite widget diversi",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Per la conferma di azioni in modalità audio, è possibile utilizzare solo toni musicali che l'utente impara ad interpretare",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il modello di Abowd e Beale considera la comunicazione tra sistema e interfaccia",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Stimolare emozioni positive può rendere più accettabili per l'utente i difetti dell'interfaccia",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il ciclo di valutazione/esecuzione misura l'efficienza dell'utente nell'utilizzo di applicazioni interattive.",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il ciclo di valutazione/esecuzione tiene in considerazione lo stato emotivo dell'utente",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "I modelli dei task possono essere utilizzati per analizzare un'applicazione esistente",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Nel modello di Norman, una volta stabilita l'intenzione, la sequenza di azioni scelta non può essere sbagliata",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il modello di Abowd e Beale deriva dal modello di Norman",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "La capacità di ragionamento non è influenzata dallo stress dell'utente",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Nel ciclo di valutazione/esecuzione, una volta formulata l'intenzione, l'utente è sempre in grado di concludere l'interazione in modo corretto",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il progettista non può contrastare gli errori di tipo svista (intenzione corretta ed esecuzione dell'azione errata) nemmeno per azioni potenzialmente distruttive.",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Nel modello di Abowd e Beale la fase di osservazione traduce le informazioni dal linguaggio di output a quello dei task",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "I trackpad possono essere considerati un dispositivo di puntamento diretto",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Non è possibile collocare l'errore lapsus nel modello di Norman",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Le immagini di tipo RGB utilizzano una sintesi additiva dei colori.",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il modello di Abowd e Beale utilizza quattro componenti per modellare l'interazione (utente, sistema, input e output)",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Durante l'esecuzione, l'utente analizza il risultato dell'interazione",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il mouse si basa sul riconoscimento del movimento relativo in uno spazio diverso da quello dello schermo",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il golfo dell'esecuzione rappresenta la differenza tra le azioni formulate dall'utente per raggiungere l'obiettivo e le azioni permesse dal sistema",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "I touchscreen possono affaticare le braccia",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Nel modello di Norman, l'interfaccia è rappresentata in modo esplicito come un'entità",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Le immagini di tipo vettoriale perdono definizione se ingrandite.",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il modello di Norman è un'estensione di quello di Abowd e Beale.",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il modello di Norman è incentrato sulla visione che il progettista ha dell'interazione",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Nel modello di Abowd e Beale l'articolazione di un compito può essere inibita da una assenza di indizi nella presentazione",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Le emozioni possono inibire le capacità di ragionamento",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Nel modello di Abowd e Beale i componenti di input e output sono separati dal sistema",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Le immagini possono essere utilizzate per codificare una URL e leggerla tramite fotocamera.",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Un utente esperto può aumentare la sua capacità di risolvere problemi migliorando la formazione di blocchi di memoria a breve termine",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Nel modello di Abowd e Beale, ogni componente ha il suo linguaggio associato",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il giudizio estetico dell'utente non ha impatto sull'impressione di corretto funzionamento del sistema",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Per le segnalazioni di errore in modalità audio è possibile utilizzare solo suoni comuni provocati dall'interazione con oggetti tangibili",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Le interfacce a manipolazione diretta escludono l'utilizzo di una metafora",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il modello di Norman si basa sul ciclo di valutazione/esecuzione.",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il mouse è un dispositivo di puntamento indiretto",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "I menu sono utilizzati sia su dispositivi desktop che mobili",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il golfo di esecuzione rappresenta la differenza fra la presentazione del sistema e le aspettative delle utente.",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il ciclo di valutazione esecuzione è un ciclo che modella l'interazione fra un utente e l'interfaccia di una applicazione",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Il modello di Norman è incentrato sulla visione che ha l'utente dell'interazione",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Vero"
+    ],
+    "tipologia": "vero_falso"
+  },
+  {
+    "domanda": "Gli errori di tipo sbaglio sono legati alla formulazione corretta dell'intenzione con una esecuzione errata dell'azione",
+    "opzioni": [
+      "Vero",
+      "Falso"
+    ],
+    "soluzioni": [
+      "Falso"
+    ],
+    "tipologia": "vero_falso"
+  }
+]
